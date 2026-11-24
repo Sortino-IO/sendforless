@@ -1,0 +1,90 @@
+---
+layout: ../../layouts/ArticleLayout.astro
+sectionName: "Comparisons"
+sectionHref: "/compare/"
+title: "Flodesk vs Mailchimp"
+description: "Flodesk vs Mailchimp for newsletters. Flodesk Email is $46 a month at any list size. Mailchimp Standard starts at $20 for 500 contacts. Checked 24 November 2026."
+kicker: Comparison
+lede: "Flodesk Email is $46 a month whether you have 500 subscribers or 50,000. Mailchimp Standard starts at $20 a month for 500 contacts and then follows the contact tier."
+crumb: "Flodesk vs Mailchimp"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: answer
+    label: The comparison
+  - id: prices
+    label: What we can price
+  - id: features
+    label: Flat rate or a contact database
+  - id: third
+    label: When MailCheap costs less
+  - id: faq
+    label: FAQ
+related:
+  - flodesk-pricing
+  - mailchimp-alternatives
+  - mailcheap-review
+  - mailerlite-vs-mailchimp
+faqs:
+  - q: Is Flodesk cheaper than Mailchimp?
+    a: "<p>At 500 contacts, Mailchimp Standard starts at $20 a month and Essentials at $13, while Flodesk Email is $46. Flodesk does not get more expensive as the list grows. Whether that $46 is under your Mailchimp tier depends on the contact total on Mailchimp’s pricing page. We do not publish an estimated Mailchimp price above 500 contacts.</p>"
+  - q: Does Flodesk have a free sending plan?
+    a: "<p>No. The Free plan covers forms and landing pages. Flodesk’s FAQ says it does not include email sending. Mailchimp Free sends, up to 250 contacts and 500 emails a month.</p>"
+---
+
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="answer">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Flodesk vs Mailchimp</p>
+  <h2>Flodesk is one sending price. Mailchimp is a contact tier that starts lower and then moves.</h2>
+  <p>New Flodesk customers buy <strong>Email at $46 a month</strong> ($38 a month if you pay $456 a year) or <strong>Everything at $99 a month</strong> ($79 a month, $948 a year). Both paid plans include unlimited subscribers and unlimited emails. From 10 November 2026 those are the only paid plans Flodesk sells to new members.</p>
+  <p>Mailchimp Free is $0 for 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20 a month, each for up to 500 contacts. Above that, [check current pricing](https://mailchimp.com/pricing/marketing/). Unsubscribed contacts count until you archive them.</p>
+</section>
+
+<Shot
+  name="flodesk-pricing"
+  alt="Flodesk pricing page showing Email at $38 a month on yearly billing and Everything at $79 a month on yearly billing."
+  caption="Flodesk’s pricing page on 24 November 2026 with annual billing selected. Monthly billing is $46 for Email and $99 for Everything."
+/>
+
+<Shot
+  name="mailchimp-pricing"
+  alt="Mailchimp pricing page for the Standard plan, starting at $20 a month for 0 to 500 contacts."
+  caption="Mailchimp’s Standard plan on 24 November 2026, limited to 500 contacts at the starting price of $20 a month."
+/>
+
+## What we can price
+
+| Situation | Flodesk | Mailchimp |
+| --- | --- | --- |
+| Under 250 contacts, light sending | Free does not send. Email is $46 if you need to mail. | $0 Free, within 500 sends and 250 a day |
+| 500 contacts | $46 Email | $13 Essentials or $20 Standard to start |
+| A few thousand contacts, weekly newsletter | $46 Email, same price | Check current pricing, after you archive people you will not mail |
+| 25,000 subscribers, weekly | $46 Email | Check current pricing |
+| Selling through the email tool | Everything, $99 a month, plus Stripe. Checkout is limited to certain countries. | Store connections and journeys on paid plans. This is a different job from a letter. |
+
+Flodesk's plans and a cost table by list size are on [Flodesk pricing](/pricing/flodesk/).
+
+## Flat rate or a contact database
+
+Flodesk Email is a design-led sending tool: templates, workflows, A/B subject lines, and a price that ignores list size. It is a poor fit if you need Mailchimp’s audiences, store automations, or a free plan that actually sends.
+
+Mailchimp is the better fit when the account is the customer database. A newsletter that happens to live there can still be expensive, because you pay for contacts you store. Archive unsubscribed people before you decide Flodesk’s $46 is the discount. It might be, once you have read your own tier. It is not, at 500 contacts, where Standard starts at $20.
+
+Mailchimp’s send limit scales with the contact tier (12 times the contact limit on Standard). Flodesk does not meter sends on Email or Everything. A daily newsletter does not raise Flodesk’s price. It can raise Mailchimp’s tier if the send multiple is too small.
+
+## When MailCheap costs less than Flodesk
+
+MailCheap is a third option for the send, not for Mailchimp’s store. Starter is $19 for 20,000 emails. Growth is $39 for 75,000. Growth covers a weekly list up to about 17,300 subscribers in an average month, or 15,000 if a five-send month also has to fit. Above that, MailCheap Pro is $79 and Flodesk's $46 is lower.
+
+MailCheap does not include Flodesk’s A/B tests or Mailchimp’s commerce journeys. It has no free hosted plan.
+
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://flodesk.com/pricing" rel="noopener" target="_blank">Flodesk pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The Flodesk button is not.</span>
+</p>
+
+If you are leaving Mailchimp for any of these, the migration notes are on [Mailchimp alternatives](/alternatives/mailchimp/).

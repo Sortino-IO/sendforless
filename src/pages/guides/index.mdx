@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: "Newsletter guides for choosing a platform"
-description: "Practical guides for starting a newsletter and reading a platform bill, including how to start and how sendforless checks prices."
+title: "Newsletter guides"
+description: "Practical guides for starting a newsletter and reading a platform bill, including how sendforless checks prices."
 kicker: Guides
-lede: "Start with the reader and the cadence. The platform is the third decision, and it should be the cheapest one that still does the job."
+lede: "Start free if a free plan covers your list. Compare paid plans once it doesn't."
 crumb: Guides
 schemaType: WebPage
 affiliate: false
@@ -12,7 +12,7 @@ datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
   - id: start
-    label: Starting
+    label: Where to start
   - id: pages
     label: The guides
 related:
@@ -22,11 +22,21 @@ related:
 faqs: []
 ---
 
-## Starting, and the bill that comes later
+import { mailcheapHref } from "../../lib/site";
 
-A new letter does not need a paid plan on day one if Kit, beehiiv, or Substack will send it for $0. Kit’s free plan covers broadcasts up to 10,000 subscribers. beehiiv Free stops at 2,500. Substack has no monthly fee until you charge readers, and then it keeps 10%. MailCheap’s hosted plans start at $19 and are the wrong first account if a free plan already sends the issue.
+## Where to start
 
-Once a list exists, the same arithmetic decides a switch. Weekly volume is subscribers times 52 divided by 12. Tools that charge per email, or that cap emails at a multiple of the tier, care about that number. Tools that charge per subscriber do not. The [home page calculator](/#calculator) runs the comparison. [How we test](/how-we-test/) lists which prices are official and which are still placeholders.
+If the list is still small, a free plan is often enough. Kit’s free plan covers broadcasts up to 10,000 subscribers. beehiiv Free stops at 2,500. Substack has no monthly fee until you charge readers, and then it keeps 10%.
+
+When the list no longer fits those caps, or you are already paying a bill that climbs with subscribers, compare the monthly cost of a real send. A weekly issue is about 4.33 sends a month.
+
+MailCheap Starter is $19 a month for 20,000 emails and 10,000 subscribers. Use it when that allowance covers the way you send, and when you do not need paid subscriptions, an ad network, a referral program, or A/B tests inside the tool. The [calculator](/#calculator) runs the same comparison at your numbers. [How we compare prices](/how-we-test/) lists the official sources behind the dollars.
+
+<p class="cta-row">
+  <a class="btn btn-primary" href="/#calculator">Compare your list</a>
+  <a class="btn btn-secondary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <span class="btn-note">Affiliate link. We may earn a commission. The price you pay does not change. Use it when a free plan no longer covers the send.</span>
+</p>
 
 ## The guides
 
@@ -34,21 +44,21 @@ Once a list exists, the same arithmetic decides a switch. Weekly volume is subsc
   <a class="card article-card" href="/guides/how-to-start-a-newsletter/">
     <p class="kicker">Guide</p>
     <h3>How to start a newsletter</h3>
-    <p>Write the promise, pick a cadence you can keep, and only then choose a platform whose free plan or list price matches that job.</p>
-    <span class="arrow">Read guide →</span>
+    <p>Define the audience, pick a schedule you can keep, and match a platform to your list size and bill.</p>
+    <span class="arrow">Read</span>
   </a>
-  <a class="card article-card" href="/">
+  <a class="card article-card" href="/#calculator">
     <p class="kicker">Calculator</p>
-    <h3>Best newsletter platforms, by cost</h3>
-    <p>The cost calculator and the worked example at 4,000 subscribers and one issue a week.</p>
-    <span class="arrow">Open the calculator →</span>
+    <h3>Cost at your list size</h3>
+    <p>Enter subscribers and issues per week. Known list prices are plotted. Missing prices are left as a link to the vendor.</p>
+    <span class="arrow">Open the calculator</span>
   </a>
   <a class="card article-card" href="/how-we-test/">
     <p class="kicker">Method</p>
     <h3>How we test</h3>
-    <p>Official sources, the email formula, and the Mailchimp and Kit figures we will not treat as settled.</p>
-    <span class="arrow">Read the method →</span>
+    <p>Official sources, the email estimate, and the Mailchimp and Kit figures we do not print.</p>
+    <span class="arrow">Read the method</span>
   </a>
 </div>
 
-If you already pay a platform, the exit routes are the [alternatives](/alternatives/) roundups, not this starting guide.
+If you already pay a platform, the [alternatives](/alternatives/) roundups are the next step.

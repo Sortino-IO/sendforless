@@ -2,77 +2,82 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Pricing"
 sectionHref: "/pricing/"
-title: "beehiiv pricing in 2026: every Lite and Pro tier"
-description: "beehiiv pricing for 2026, from the official tier table: Free, Lite, and Pro at each subscriber bucket, yearly versus monthly, plus what a newsletter costs on other platforms."
+title: "beehiiv pricing 2026: Free, Lite and Pro plans"
+description: "beehiiv pricing from the official tier table: Free, Lite, and Pro at each subscriber bucket, yearly versus monthly, checked 24 November 2026."
 kicker: Pricing
-lede: "beehiiv pricing in 2026 is a subscriber bucket, not a send meter. Free stops at 2,500 people. Lite and Pro jump at published steps from 1,000 to 250,000. This page lists every monthly and annual figure beehiiv publishes, then puts that bill next to what a weekly newsletter costs elsewhere."
+lede: "beehiiv Free is $0 up to 2,500 subscribers. Lite starts at $59 a month, or $49 a month billed annually, at the up-to-1,000 bucket. You pay for the subscriber bucket. Sends are not metered."
 crumb: "beehiiv pricing"
 affiliate: true
 datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
-  - id: verdict
-    label: The short version
+  - id: answer
+    label: The price
   - id: plans
-    label: Free, Lite, Pro, Enterprise
+    label: Free, Lite, Pro
   - id: tiers
     label: Every subscriber tier
   - id: yearly
-    label: Yearly versus monthly
-  - id: what-it-costs
-    label: What a newsletter costs
-  - id: sends
-    label: Unlimited sends
-  - id: when
-    label: When the price is worth it
+    label: Yearly and monthly
+  - id: newsletter
+    label: A weekly newsletter
+  - id: worth
+    label: When the tier is worth it
   - id: faq
     label: FAQ
 related:
   - beehiiv-alternatives
   - mailcheap-vs-beehiiv
   - beehiiv-vs-substack
-  - how-to-start-a-newsletter
+  - beehiiv-review
 faqs:
-  - q: How much is beehiiv in 2026?
-    a: "<p>Free is $0 up to 2,500 subscribers. Lite starts at $59 a month, or $49 a month billed annually, at the up-to-1,000 bucket, and rises to $469 a month at 100,000. Pro starts at $109 a month, or $95 annually, at 1,000 subscribers, and is $999 a month at the 250,000 bucket. Enterprise is custom. These are beehiiv’s published USD list prices as of 24 November 2026.</p>"
-  - q: Is beehiiv pricing 2026 different from 2025?
-    a: "<p>Yes. beehiiv announced new plans on 1 October 2026. Launch mapped to Free, Scale to Lite, and Max to Pro. New customers got the new prices immediately. Existing customers move at their first renewal on or after 1 November 2026, and annual customers keep the old price until that term ends. If your invoice still shows an old plan name, you are in that window. Price the renewal, not the current screenshot.</p>"
+  - q: How much is beehiiv?
+    a: "<p>Free is $0 up to 2,500 subscribers. Lite starts at $59 a month, or $49 a month billed annually, at the up-to-1,000 bucket, and is $469 a month at 100,000. Pro starts at $109 a month, or $95 annually, at 1,000 subscribers, and is $999 a month at the 250,000 bucket. Enterprise is custom. These are beehiiv’s published USD list prices as of 24 November 2026.</p>"
   - q: Does beehiiv charge per email?
-    a: "<p>No. Every plan, including Free, includes unlimited email sends. You are billed for the subscriber bucket. A second weekly issue does not move you up a tier. Welcome mail and broadcasts are not metered the way they are on MailCheap or on MailerLite Comfort.</p>"
+    a: "<p>No. Every plan, including Free, includes unlimited email sends. A second weekly issue does not move you up a tier.</p>"
   - q: Does beehiiv take a percentage of subscriptions?
-    a: "<p>beehiiv’s pricing FAQ says no. The platform take rate on paid subscriptions is 0%. Stripe’s fee still applies. beehiiv quotes that fee at 2.9% + $0.30 per transaction. Substack keeps an additional 10%.</p>"
+    a: "<p>beehiiv’s pricing FAQ says the platform take rate on paid subscriptions is 0% on paid plans. Stripe still applies. beehiiv quotes 2.9% + $0.30 per transaction. Substack keeps an additional 10%.</p>"
   - q: What does a 4,000-subscriber newsletter cost on beehiiv?
     a: "<p>4,000 people sit in the up-to-5,000 bucket. Lite is $109 a month, or $1,140 a year (about $95 a month). Pro in that bucket is $199 a month, or $2,028 a year (about $169 a month). Free has already ended at 2,500.</p>"
 ---
 
-<section class="verdict" id="verdict">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> beehiiv pricing 2026</p>
-  <h2>You pay for the bucket you have crossed, and sends are not the meter.</h2>
-  <p>At 1,000 subscribers, beehiiv’s own pricing page defaults to annual billing and shows <strong>Lite at $49 a month</strong> and <strong>Pro at $95 a month</strong>. The month-to-month prices at that same bucket are $59 and $109. Free is $0 until 2,500 subscribers, with a shorter feature list. Past 2,500, a weekly newsletter is a paid Lite or Pro plan even if you never touch ads or paid subscriptions.</p>
-  <p>If you will not use those paid features, price a sender instead of the next Lite tier. MailCheap Starter is $19 a month for a weekly list of a few thousand, and it cannot do what Lite does. Kit is $0 up to 10,000 subscribers for broadcasts. The numbers below are so you can see the beehiiv invoice before you decide the feature is worth it.</p>
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="answer">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> beehiiv pricing</p>
+  <h2>You pay for your subscriber bucket. Sends are unlimited.</h2>
+  <p>At 1,000 subscribers, beehiiv’s pricing page defaults to annual billing and shows <strong>Lite at $49 a month</strong> and <strong>Pro at $95 a month</strong>. The month-to-month prices at that bucket are $59 and $109. Free is $0 until 2,500 subscribers. Past 2,500, the newsletter is a paid Lite or Pro plan even if you never use ads or paid subscriptions.</p>
+  <p>The figures below are from [beehiiv.com/pricing.md](https://www.beehiiv.com/pricing.md), which beehiiv says is generated from the same data as the pricing page. Read on 24 November 2026. Do not estimate a price between rows. 3,200 subscribers is the up-to-5,000 price.</p>
 </section>
+
+<Shot
+  name="beehiiv-pricing"
+  alt="beehiiv pricing page at 1,000 subscribers showing Free at $0, Lite at $49 a month, and Pro at $95 a month on yearly billing."
+  caption="beehiiv’s pricing page on 24 November 2026, yearly billing, up to 1,000 subscribers. Monthly prices at that bucket are $59 for Lite and $109 for Pro."
+/>
 
 ## Free, Lite, Pro, and Enterprise
 
-beehiiv sells four plans. The plan picks the features. The subscriber tier picks the price inside Lite and Pro. beehiiv asks you not to interpolate between rows: 3,200 subscribers is the up-to-5,000 price, not a point on a line between 2,500 and 5,000.
+The plan picks the features. The subscriber tier picks the price inside Lite and Pro.
 
-**Free** is $0. It includes up to 2,500 subscribers and unlimited sends, a website, a podcast within 5,000 downloads a month, the recommendation network, and a read-only API and MCP. It does not include automations, paid subscriptions, the ad network, A/B tests, or custom domains. One publication, one seat, analytics lookback of 30 days, three segments. It is a real product for a new letter. It is not a trial of Lite with the logo left on.
+**Free** is $0. It includes up to 2,500 subscribers and unlimited sends, a website, a podcast within 5,000 downloads a month, and the recommendation network. It does not include automations, paid subscriptions, the ad network, A/B tests, or custom domains. One publication, one seat, 30 days of analytics, three segments.
 
-**Lite** is the plan most growing newsletters actually buy. It adds paid subscriptions at a 0% platform fee, the ad network (not in every region, and not during the trial), automations, polls, A/B tests, custom domains, surveys, and write access to the API and MCP. Limits from beehiiv’s feature table: up to 100,000 subscribers, 2 seats, 3 guest authors, 3 publications, 12 months of analytics, 10 custom pages, 10 live automations, 10 segments. Branding stays. If removing “powered by beehiiv” matters, that is Pro, not a setting.
+**Lite** adds paid subscriptions at a 0% platform fee, the ad network (not in every region, and not during the trial), automations, polls, A/B tests, custom domains, and surveys. beehiiv’s feature table caps Lite at 100,000 subscribers, 2 seats, 3 publications, and 10 live automations. Branding stays on.
 
-**Pro** adds branding removal, up to 250,000 subscribers, 10 seats, 10 publications, unlimited guest authors, unlimited analytics history, dynamic content, webhooks without the Lite cap of three, click-triggered automations, and priority support. It is the plan beehiiv marks as the one for a content business rather than a solo letter. At every bucket we checked, Pro is $50 to $230 a month more than Lite on monthly billing. That gap is the branding, the team, and the ceiling. It is not a second copy of the send button.
+**Pro** adds branding removal, up to 250,000 subscribers, 10 seats, dynamic content, and more publications. On the monthly prices we checked, Pro is $50 to $230 a month more than Lite in the same bucket. That gap is branding, team limits, and the ceiling.
 
-**Enterprise** is a conversation. Custom subscriber limits, SSO, dedicated IPs, a success manager. There is no public price, so we will not invent one.
+**Enterprise** is custom. There is no public price.
 
-beehiiv’s October 2026 post maps the old names: Launch became Free, Scale became Lite, Max became Pro. New customers are on the new grid. Existing customers switch at the first renewal on or after 1 November 2026. Annual subscribers keep their current rate until the term renews. If you are comparing a friend’s invoice to this page, ask whether they have renewed.
+[beehiiv’s October 2026 plan notes](https://www.beehiiv.com/blog/beehiiv-pricing-2026) map older names: Launch became Free, Scale became Lite, and Max became Pro. Existing customers move at the first renewal on or after 1 November 2026. Annual customers keep the prior rate until that term ends.
 
 ## Every published tier
 
-Source: [beehiiv.com/pricing.md](https://www.beehiiv.com/pricing.md), which beehiiv says is generated from the same data as the pricing page. Read on 24 November 2026. “Annual /mo” is the effective monthly rate, not what you are charged each month. You pay the annual total up front.
+“Annual /mo” is the yearly charge divided by 12. You pay the annual total up front.
 
 <div class="table-wrap">
   <table>
-    <caption>beehiiv Lite and Pro by subscriber bucket, USD</caption>
+    <caption>beehiiv Lite and Pro by subscriber bucket, USD, 24 November 2026</caption>
     <thead>
       <tr>
         <th scope="col">Subscribers, up to</th>
@@ -141,22 +146,22 @@ Source: [beehiiv.com/pricing.md](https://www.beehiiv.com/pricing.md), which beeh
       </tr>
       <tr>
         <th scope="row">150,000</th>
-        <td class="num" data-label="Lite monthly">—</td>
-        <td class="num" data-label="Lite annual">—</td>
+        <td class="num" data-label="Lite monthly">n/a</td>
+        <td class="num" data-label="Lite annual">n/a</td>
         <td class="num" data-label="Pro monthly">$799</td>
         <td class="num" data-label="Pro annual">$689</td>
       </tr>
       <tr>
         <th scope="row">200,000</th>
-        <td class="num" data-label="Lite monthly">—</td>
-        <td class="num" data-label="Lite annual">—</td>
+        <td class="num" data-label="Lite monthly">n/a</td>
+        <td class="num" data-label="Lite annual">n/a</td>
         <td class="num" data-label="Pro monthly">$899</td>
         <td class="num" data-label="Pro annual">$779</td>
       </tr>
       <tr>
         <th scope="row">250,000</th>
-        <td class="num" data-label="Lite monthly">—</td>
-        <td class="num" data-label="Lite annual">—</td>
+        <td class="num" data-label="Lite monthly">n/a</td>
+        <td class="num" data-label="Lite annual">n/a</td>
         <td class="num" data-label="Pro monthly">$999</td>
         <td class="num" data-label="Pro annual">$869</td>
       </tr>
@@ -164,97 +169,46 @@ Source: [beehiiv.com/pricing.md](https://www.beehiiv.com/pricing.md), which beeh
   </table>
 </div>
 
-<p class="method-note">Lite is not sold past 100,000 subscribers. The annual totals beehiiv publishes at 1,000 subscribers are $588 for Lite and $1,140 for Pro. At the 5,000 bucket they are $1,140 and $2,028. Do not multiply the “per month” annual figure by 12 and expect a different total. 49 × 12 is 588. The math is already done.</p>
+<p class="method-note">Lite is not sold past 100,000 subscribers. The annual totals beehiiv publishes at 1,000 subscribers are $588 for Lite and $1,140 for Pro. At the 5,000 bucket they are $1,140 and $2,028.</p>
 
-A few buckets people ask for that are not their own row:
+List sizes that are not their own row:
 
 - **4,000 subscribers** pays the 5,000 price. Lite $109 monthly, about $95 on annual.
 - **7,500** pays the 10,000 price. Lite $139 monthly.
-- **15,000** pays the 25,000 price. Lite $199 monthly. The jump from 10,000 to 25,000 is a wide step. Crossing 10,001 is a $60 monthly increase on Lite, not a gentle slope.
-- **120,000** is Pro, in the 150,000 bucket, at $799 monthly. Lite cannot hold the list.
+- **15,000** pays the 25,000 price. Lite $199 monthly. Crossing 10,000 is a $60 monthly increase on Lite.
+- **120,000** is Pro, in the 150,000 bucket, at $799 monthly.
 
-Free still covers 1,000 and 2,500 if you do not need Lite’s features. The table is the price of needing them, or of simply having more subscribers than 2,500.
+## Yearly and monthly
 
-## Yearly versus monthly
+At 1,000 subscribers, Lite monthly is $59 and the annual effective rate is $49, which is $588 a year instead of $708. You save $120 and you prepay. At 10,000, Lite monthly is $139 and the annual total is $1,428 instead of $1,668.
 
-beehiiv says yearly billing saves up to about 20% against month-to-month. The table matches that shape. At 1,000 subscribers, Lite monthly is $59 and the annual effective rate is $49, which is $588 a year instead of $708. You save $120 and you prepay. At 10,000, Lite monthly is $139 and annual is $1,428 instead of $1,668. The saving is $240 and the check you write in January is the whole $1,428.
+Annual billing is the ordinary yearly price on beehiiv’s page. It is a poor fit if you are still testing whether you will use the ad network. MailCheap’s yearly rule is different: you pay for 10 months and get 12. Ten times $19 is $190. Compare the dollars, not the percent off.
 
-Annual is the right default if you already know you will use the product for the year. It is the wrong default if you are testing whether recommendations or the ad network work for your topic. A monthly Lite bill is the option value. MailCheap’s yearly rule is different: you pay for 10 months and get 12, which is a larger percentage off a much smaller base. Ten times $19 is $190. Do not compare “20% off” with “two months free” without comparing the base. A percentage off an expensive plan can still be the expensive plan.
+## A weekly newsletter beside beehiiv
 
-Taxes, local currency, and any private arrangement are not in this table. The pricing page is USD list price. Your card statement can differ.
+One issue a week, month-to-month, 24 November 2026.
 
-## What a newsletter costs
+| Subscribers | beehiiv Lite | Kit | MailCheap | Ghost(Pro) |
+| --- | --- | --- | --- | --- |
+| 1,000 | $0 Free, or $59 if you need Lite | $0 Free, or $39 Creator for sequences | $19 Starter | $18 Starter, no paid members |
+| 4,000 | $109 | $0 for broadcasts | $19 Starter. A month with five weekly sends is 20,000 emails, the whole allowance, before welcomes. | $75 Publisher |
+| 10,000 | $139 | $0 at the free cap | $39 Growth | $105 Publisher |
+| 25,000 | $199 | Check current pricing | $79 Pro | $169 Publisher |
 
-beehiiv’s price is one answer to a blunt question: what does it cost to send a newsletter for a year? The other answers, for one issue a week, using the same 52 ÷ 12 email estimate and month-to-month rates:
+Over a year of monthly billing, a 4,000-person weekly letter is $1,308 on beehiiv Lite if you need Lite’s features. It is $228 on MailCheap Starter if the issues are the only mail and a five-issue month does not also include welcomes and tests. It is $0 on Kit Free or Substack if you never enable the paid features those $0 plans withhold.
 
-<div class="table-wrap">
-  <table>
-    <caption>What a weekly newsletter costs per month, beside beehiiv Lite</caption>
-    <thead>
-      <tr>
-        <th scope="col">Subscribers</th>
-        <th scope="col">beehiiv Lite</th>
-        <th scope="col">Kit</th>
-        <th scope="col">MailCheap</th>
-        <th scope="col">Ghost(Pro)</th>
-        <th scope="col">Substack</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1,000</th>
-        <td data-label="beehiiv">$0 Free, or $59 if you need Lite</td>
-        <td data-label="Kit">$0 Free, or $39 Creator for sequences</td>
-        <td data-label="MailCheap">$19 Starter</td>
-        <td data-label="Ghost">$18 Starter, no paid members</td>
-        <td data-label="Substack">$0, or 10% of paid revenue</td>
-      </tr>
-      <tr>
-        <th scope="row">4,000</th>
-        <td data-label="beehiiv">$109</td>
-        <td data-label="Kit">$0 for broadcasts</td>
-        <td data-label="MailCheap">$19</td>
-        <td data-label="Ghost">$75 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="beehiiv">$139</td>
-        <td data-label="Kit">$0 at the free cap, or about $139 Creator on the slider capture</td>
-        <td data-label="MailCheap">$39 Growth</td>
-        <td data-label="Ghost">$105 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="beehiiv">$199</td>
-        <td data-label="Kit">Slider capture $199 Creator. Confirm it.</td>
-        <td data-label="MailCheap">$79 Pro</td>
-        <td data-label="Ghost">$169 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+MailerLite Comfort at the 5,000-subscriber tier, which contains 4,000 people, is $49 a month and allows 50,000 emails. The grid is on [MailerLite alternatives](/alternatives/mailerlite/).
 
-Over a year of monthly billing, a 4,000-person weekly letter is $1,308 on beehiiv Lite, $228 on MailCheap Starter, $900 on Ghost(Pro) Publisher, and $0 on Kit Free or Substack if you never enable the paid features those $0 plans withhold. That spread is the reason this site exists. It is not a ranking of quality. Kit Free will not run beehiiv’s ad network. Substack will take 10% the moment you charge. Ghost’s $75 includes memberships and a real site. MailCheap’s $19 includes the send and excludes the marketplace. Pick the row whose exclusions you can live with.
+Substack is $0 to send. If readers pay, Substack keeps 10%. At a $109 Lite bill, 10% is the larger fee only after subscription revenue passes about $1,090 a month, before Stripe. The walk-through is [beehiiv vs Substack](/compare/beehiiv-vs-substack/).
 
-MailerLite belongs in the same conversation and is easy to forget because it is not a “creator” brand. Comfort at the 5,000-subscriber tier, which contains 4,000 people, is $49 a month and allows 50,000 emails, enough for the weekly issue. At 10,000 it is $89. At 25,000 it is $179. Power, with unlimited emails, is $69, $129, and $239 at those tiers. The full grid is on the [MailerLite alternatives](/alternatives/mailerlite/) page, from MailerLite’s own pricing markdown.
+## When the tier is worth paying
 
-Add the costs that never appear as the platform fee. A custom domain is a yearly registrar bill, except where a host includes the first year. Stripe takes its cut on every paid tool except the ones that have not turned payments on. Your time to rebuild automations is not zero. A deliverability consultant is optional and not cheap. “What a newsletter costs” is the platform plus the payment processor plus the hour you spend on DNS. The platform is the only line we can put in a table without pretending the others are universal.
+Pay for Lite if you will charge readers, use the ad network, or run automations you do not already have somewhere else. The 0% take rate is the comparison with Substack once subscription revenue is larger than the Lite bill.
 
-## Unlimited sends, and the catch
+Stay on Free if you are under 2,500 and Free already sends the issue. Move to Pro for a Pro reason: branding removal, more seats, dynamic content, or the higher subscriber ceiling. If the only job is the Sunday send, Kit Free (under 10,000) or MailCheap is the closer price. The roundup is [beehiiv alternatives](/alternatives/beehiiv/). The feature-by-feature comparison with MailCheap is [MailCheap vs beehiiv](/compare/mailcheap-vs-beehiiv/). Who beehiiv suits: [beehiiv review](/reviews/beehiiv/).
 
-beehiiv is explicit that no plan meters email volume. A daily briefing to 10,000 people is still the $139 Lite tier, not a surprise overage. That is the feature to value if your cadence is bursty. It is wasted money if you send once a week and you are only on Lite because you crossed 2,500 names.
-
-The catch is the feature gate, not the send gate. Recommendations exist on Free. The referral program, paid subscriptions, ads, automations, and A/B tests do not. Writers sometimes upgrade at 800 subscribers because they want the paywall, then feel the tier climb later and blame the send. The send was never the expensive part. The bucket was.
-
-Podcast downloads, community notifications, and digital-product counts have their own caps in the feature table. “Unlimited email” is not “unlimited everything.” A podcast that crosses 5,000 downloads a month on Free, or 15,000 on Lite, is a plan change even if the email list is calm. Read the row for the product you actually use.
-
-## When Lite is worth the invoice
-
-Pay for Lite if you will charge readers, sell through the ad network, or run automations you do not already have somewhere else. The 0% take rate is the argument against Substack, and it is a good argument once subscription revenue is larger than the Lite bill. At $109 a month, you need more than $1,090 a month of subscription revenue before beehiiv’s 0% beats Substack’s 10% on the revenue alone, and that comparison ignores Substack’s discovery and beehiiv’s other tools. Do the math with your price and your conversion, not with a slogan. Our [beehiiv vs Substack](/compare/beehiiv-vs-substack/) piece walks through it.
-
-Do not pay for Lite if you are under 2,500 and Free already sends the issue. Do not pay for Pro to get features you have not used on Lite, unless the specific Pro item — branding removal, a tenth seat, dynamic content — is the reason. Do not pay either tier if the only job is “mail this list every Sunday” and a $19 or $0 tool will do it. The alternatives roundup is [beehiiv alternatives](/alternatives/beehiiv/). Moving the list is a CSV export, documented in the [MailCheap comparison](/compare/mailcheap-vs-beehiiv/) if that is the destination, and it is the wrong destination if you still need the paywall.
-
-The pricing page can change. When it does, the markdown file beehiiv publishes next to it is the artifact to re-read, not a blog post from last spring. We will update this guide when we re-read it. Until then, the table above is the 24 November 2026 list price, and your checkout is the price that matters.
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://www.beehiiv.com/pricing" rel="noopener" target="_blank">beehiiv pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The beehiiv button is not.</span>
+</p>

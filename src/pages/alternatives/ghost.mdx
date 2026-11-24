@@ -2,225 +2,86 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Alternatives"
 sectionHref: "/alternatives/"
-title: "Ghost alternatives when you do not need a full membership site"
-description: "Ghost alternatives for newsletters that do not need Ghost(Pro)’s membership site, plus cheaper options as the member count grows. Prices from Ghost’s official plan data."
+title: "Ghost alternatives"
+description: "Ghost alternatives when you do not need a full membership site, with Ghost(Pro) prices from the official plan data."
 kicker: Roundup
-lede: "Ghost is a membership website that also sends the newsletter. That is the right product when the site is the publication. It is an expensive way to mail a list you already host somewhere else. These are the alternatives, priced from Ghost’s own plan data."
+lede: "Ghost is a membership website that also sends the newsletter. Keep it when members log in. These are the alternatives when you were paying for the send."
 crumb: "Ghost alternatives"
 affiliate: true
 datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
-  - id: verdict
-    label: Our verdict
-  - id: ghost-prices
-    label: What Ghost(Pro) costs
-  - id: prices
-    label: Alternatives at the same size
   - id: stay
     label: When to keep Ghost
-  - id: beehiiv
-    label: beehiiv
-  - id: substack
-    label: Substack
-  - id: kit
-    label: Kit
-  - id: mailcheap
-    label: MailCheap
-  - id: mailerlite
-    label: MailerLite
-  - id: selfhost
-    label: Self-hosting
+  - id: prices
+    label: What Ghost costs
+  - id: options
+    label: Alternatives
   - id: faq
     label: FAQ
 related:
+  - ghost-vs-substack
   - substack-alternatives
   - beehiiv-alternatives
   - mailcheap-review
-  - how-to-start-a-newsletter
 faqs:
   - q: How much is Ghost(Pro)?
-    a: "<p>From the pricing data Ghost’s site loaded on 24 November 2026: Starter is $18 a month or $180 a year for up to 1,000 members, without paid subscriptions. Publisher starts at $35 a month or $348 a year at 1,000 members and includes paid subscriptions at a 0% platform fee. At 5,000 members Publisher is $75 a month. At 10,000 it is $105. At 25,000 it is $169. At 100,000 it is $329. Business starts at $239 a month and includes 10,000 members at that flat rate before it climbs.</p>"
+    a: "<p>From the pricing data Ghost’s site loaded on 24 November 2026: Starter is $18 a month or $180 a year for up to 1,000 members, without paid subscriptions. Publisher starts at $35 a month ($348 a year) at 1,000 members. At 5,000 members Publisher is $75 a month. At 10,000 it is $105. At 25,000 it is $169. At 100,000 it is $329. Business is $239 a month through 10,000 members on those monthly prices.</p>"
   - q: Is there a free Ghost plan?
-    a: "<p>There is no free Ghost(Pro) tier. The Ghost software is open source and can be self-hosted, which removes the Ghost(Pro) invoice and leaves you with a server, email delivery, and upgrades. That is a different product decision from picking a hosted alternative.</p>"
-  - q: What is cheaper than Ghost for a newsletter only?
-    a: "<p>Kit is $0 up to 10,000 subscribers for broadcasts. Substack is $0 to publish. MailCheap is $19 a month for a weekly list that fits inside 20,000 emails, and it will not run your membership site. beehiiv Free is $0 to 2,500 subscribers. All of them are cheaper than Publisher because they are not trying to be Ghost.</p>"
+    a: "<p>There is no free Ghost(Pro) tier. The software can be self-hosted. That removes the Ghost invoice and leaves you with a server, email delivery, and upgrades.</p>"
   - q: Does Ghost take a cut of memberships?
-    a: "<p>Publisher, Business, and Custom take 0% as a platform fee. Stripe’s processing fee still applies. Starter cannot sell memberships at all.</p>"
+    a: "<p>Publisher takes 0% as a platform fee. Stripe still applies. Starter cannot sell memberships.</p>"
 ---
 
-<section class="verdict" id="verdict">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="stay">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Ghost alternatives</p>
   <h2>Keep Ghost if members log in. Leave it if you only needed the send.</h2>
-  <p>Ghost(Pro) Publisher at a few thousand members is $55 to $105 a month and takes nothing from membership revenue. That is a fair price for a publication. It is a high price for a weekly email you could send on Kit for $0 or on MailCheap for $19 to $39. <strong>Switch to a sender only when the theme, the members, and the paywall are not the product.</strong> If they are, the alternatives are beehiiv and Substack, not a cheaper SMTP bill.</p>
+  <p>Publisher at a few thousand members is $55 to $105 a month and takes nothing from membership revenue. That is a fair price for a publication. It is a high price for a weekly email you could send on Kit for $0 or on MailCheap for $19 to $39. Switch to a sender when the theme, the members, and the paywall are not the product.</p>
 </section>
 
-## What Ghost(Pro) costs as the list grows
+<Shot
+  name="ghost-pricing"
+  alt="Ghost pricing page at 1,000 members showing Starter, Publisher, and Business on yearly billing."
+  caption="Ghost’s pricing page on 24 November 2026, yearly billing at 1,000 members. Monthly Starter is $18 and monthly Publisher is $35."
+/>
 
-We pulled these from the pricing data Ghost’s pricing page loads (`pricing.min.js` on ghost.org), on 24 November 2026. Monthly figures are what you pay each month. Yearly figures are the annual charge, and the “per month” column is that charge divided by 12. Ghost’s slider matches these bands.
+## What Ghost costs
 
-<div class="table-wrap">
-  <table>
-    <caption>Ghost(Pro) Publisher and Starter, official bands</caption>
-    <thead>
-      <tr>
-        <th scope="col">Members, up to</th>
-        <th scope="col">Starter monthly</th>
-        <th scope="col">Publisher monthly</th>
-        <th scope="col">Publisher yearly total</th>
-        <th scope="col">Yearly, per month</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1,000</th>
-        <td data-label="Starter">$18</td>
-        <td data-label="Publisher monthly">$35</td>
-        <td data-label="Yearly total">$348</td>
-        <td data-label="Per month">$29</td>
-      </tr>
-      <tr>
-        <th scope="row">2,500</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$55</td>
-        <td data-label="Yearly total">$552</td>
-        <td data-label="Per month">$46</td>
-      </tr>
-      <tr>
-        <th scope="row">5,000</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$75</td>
-        <td data-label="Yearly total">$756</td>
-        <td data-label="Per month">$63</td>
-      </tr>
-      <tr>
-        <th scope="row">7,500</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$95</td>
-        <td data-label="Yearly total">$948</td>
-        <td data-label="Per month">$79</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$105</td>
-        <td data-label="Yearly total">$1,056</td>
-        <td data-label="Per month">$88</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$169</td>
-        <td data-label="Yearly total">$1,692</td>
-        <td data-label="Per month">$141</td>
-      </tr>
-      <tr>
-        <th scope="row">50,000</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$249</td>
-        <td data-label="Yearly total">$2,496</td>
-        <td data-label="Per month">$208</td>
-      </tr>
-      <tr>
-        <th scope="row">100,000</th>
-        <td data-label="Starter">—</td>
-        <td data-label="Publisher monthly">$329</td>
-        <td data-label="Yearly total">$3,288</td>
-        <td data-label="Per month">$274</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+Monthly list prices from ghost.org’s pricing data, 24 November 2026. The yearly “per month” figure is the annual charge divided by 12.
 
-Business is the team plan. At 1,000 through 10,000 members the monthly price in that same file is $239, and the yearly charge is $2,388, which is $199 a month. It climbs after 10,000: $319 a month at 25,000 members, $399 at 50,000, $479 at 100,000. You buy staff seats, higher limits, and priority support. Most solo newsletters never need it. If you are on Business to get around a Publisher limit you do not use, you are the reader this page is for.
+| Members, up to | Starter monthly | Publisher monthly | Publisher, annual per month |
+| --- | --- | --- | --- |
+| 1,000 | $18 | $35 | $29 |
+| 2,500 | n/a | $55 | $46 |
+| 5,000 | n/a | $75 | $63 |
+| 7,500 | n/a | $95 | $79 |
+| 10,000 | n/a | $105 | $88 |
+| 25,000 | n/a | $169 | $141 |
+| 50,000 | n/a | $249 | $208 |
+| 75,000 | n/a | $289 | $241 |
+| 100,000 | n/a | $329 | $274 |
 
-Ghost counts members, free and paid, as people with an account on the site. Staff users are separate. Sends are not the meter. A daily letter does not push you into a higher band. A successful free signup form does. That is the surprise for people who came from a tool that only counted “subscribed and mailable.” A member who never opens the email still counts.
+Starter stops at 1,000 members. The direct comparison with Substack’s 10% is [Ghost vs Substack](/compare/ghost-vs-substack/).
 
-## The same audience, other bills
+## Alternatives
 
-One issue a week, so email caps are visible. Member count equals subscriber count for this comparison. They are not the same field in real life. Ghost members can include people who only read the site.
+**Substack** if you want $0 until readers pay and you can live with 10% after that. You give up theme control.
 
-<div class="table-wrap">
-  <table>
-    <caption>Monthly list price if you stopped paying for a Ghost membership site</caption>
-    <thead>
-      <tr>
-        <th scope="col">People</th>
-        <th scope="col">Ghost Publisher</th>
-        <th scope="col">beehiiv</th>
-        <th scope="col">Kit</th>
-        <th scope="col">MailCheap</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1,000</th>
-        <td data-label="Ghost">$35, or $18 Starter with no paywall</td>
-        <td data-label="beehiiv">$0 Free, or $59 Lite</td>
-        <td data-label="Kit">$0, or $39 Creator</td>
-        <td data-label="MailCheap">$19</td>
-      </tr>
-      <tr>
-        <th scope="row">5,000</th>
-        <td data-label="Ghost">$75</td>
-        <td data-label="beehiiv">$109 Lite</td>
-        <td data-label="Kit">$0 broadcasts</td>
-        <td data-label="MailCheap">$39 Growth. A weekly send is about 21,667 emails.</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="Ghost">$105</td>
-        <td data-label="beehiiv">$139 Lite</td>
-        <td data-label="Kit">$0 at the cap</td>
-        <td data-label="MailCheap">$39 Growth</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="Ghost">$169</td>
-        <td data-label="beehiiv">$199 Lite</td>
-        <td data-label="Kit">About $199 Creator, confirm the slider</td>
-        <td data-label="MailCheap">$79 Pro</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+**beehiiv** if you want a hosted publication with recommendations and ads. Lite at 10,000 subscribers is $139, against Publisher at $105. The products are not the same stack. [beehiiv pricing](/pricing/beehiiv/).
 
-At 5,000 people, leaving Ghost for beehiiv Lite would **raise** the bill from $75 to $109 and add a network you may want. Leaving for Kit Free would drop it to $0 and delete the membership site. Leaving for MailCheap would drop a weekly send to $39 and delete the membership site. The table is not a ranking of better products. It is a map of what you are paying Ghost to be.
+**Kit** if the list is a creator funnel. Free to 10,000 for broadcasts. [Kit pricing](/pricing/convertkit/).
 
-Substack is missing from the grid because its monthly fee is $0 and its tax on paid revenue is 10%. A Ghost publication doing $2,000 a month in memberships pays $75 to Ghost at the 5,000 band and would pay $200 to Substack, plus the loss of the theme. A Ghost publication doing $200 a month would pay $20 to Substack and might still miss the site. Revenue first, then the band. The longer fee comparison is [Substack alternatives](/alternatives/substack/).
+**MailerLite** if you want pages and automations without running Ghost. Comfort at 10,000 subscribers is $89.
 
-## When Ghost is still the right invoice
+**MailCheap** if the Ghost site was a thin wrapper around a send and you do not sell memberships. A weekly letter to 10,000 subscribers is $39 on Growth. You lose the theme, the member portal, and the 0% commerce. [MailCheap review](/reviews/mailcheap/).
 
-Keep Ghost if readers have accounts, you use tiers, and the archive is a site people visit on purpose. The 0% fee is worth more every time membership revenue grows, while the band only steps when members do. Keep it if custom themes, multi-author workflows, or the portal are in use. Keep Starter if you are under 1,000 members, you do not sell anything, and $18 is acceptable for the site. Moving a Starter blog to a $19 email tool plus a separate host is two systems to save a dollar.
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://ghost.org/pricing/" rel="noopener" target="_blank">Ghost pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The Ghost button is not. Keep Ghost if members log in.</span>
+</p>
 
-Keep it, also, if you are only angry at the latest band because the list grew. That is the product working. A 10,000-member publication at $105 a month is $0.0105 per member. You can find a lower number. You should ask what those members do on the site before you chase it.
-
-## beehiiv, Substack, and Kit
-
-beehiiv is the Ghost alternative for publishers who want recommendations and an ad network more than they want a theme. Lite is often more expensive than Publisher at the same headcount, and it includes tools Ghost does not have. The website inside beehiiv is real and it is not Ghost. If you have spent a year on a custom theme, budget a redesign, not an import. Pricing is in [beehiiv pricing](/pricing/beehiiv/). Fit is in [beehiiv alternatives](/alternatives/beehiiv/).
-
-Substack is the Ghost alternative for writers who will trade the theme for distribution and accept 10% on paid. It is the wrong alternative if the reason you chose Ghost was independence from a platform’s network. You would be walking back into one.
-
-Kit is the Ghost alternative for a creator who wants sequences and products and does not need the public archive to be a CMS. Free to 10,000 subscribers is the number that makes Ghost look heavy for a simple letter. Creator is how you get the automations Ghost’s member emails only partly resemble. See [Kit alternatives](/alternatives/convertkit/).
-
-## MailCheap
-
-MailCheap is the Ghost alternative we will recommend in one situation: the Ghost site is a thin wrapper around a send, you already have a home for the writing or you do not need one, and you do not sell memberships. Then Publisher’s price is a membership product you are not using. A weekly list of 10,000 is $39 on MailCheap Growth. A weekly list of 25,000 is $79 on Pro. You lose tiers, the theme, the member portal, and the 0% commerce Ghost was doing. You keep a newsletter, a basic site on the paid plan, segments, automations, and a lower invoice.
-
-Do not recommend MailCheap to a Ghost publisher with paying members. There is nowhere for those members to go inside the product. Move them to beehiiv, Kit, MailerLite, or stay. The [review](/reviews/mailcheap/) is blunt about this on purpose. Our link may earn a commission. Ghost’s pricing page is not an affiliate relationship.
-
-## MailerLite
-
-MailerLite can host a site, sell a paid newsletter, and automate, at Comfort prices of $49 (5,000 tier), $89 (10,000), and $179 (25,000). That last figure is $10 more than Ghost Publisher at 25,000 members, so “cheaper than Ghost” is not automatic. At 5,000 and 10,000, Comfort undercuts Publisher and gives you a different site builder. Power is the unlimited-email step if you mail daily. It is a practical alternative for operators and a stylistic downgrade for publications that care about the theme. The plan details are in [MailerLite alternatives](/alternatives/mailerlite/).
-
-## Self-hosting instead of switching
-
-If the issue is Ghost(Pro)’s bill and the issue is not Ghost itself, self-hosting the open-source software is the alternative that keeps your theme and your members. You then provide the server, the database, upgrades, and the email delivery. Many self-hosters send through a separate provider and still pay per email there. Add that bill before you call self-hosting free. If you do not want to be on call when the upgrade fails, you want a hosted alternative, not a VPS.
-
-MailCheap also offers an AGPL self-host of its own sender. That does not import a Ghost theme. It is a different app. Mentioning it here is only so you do not confuse “I can self-host Ghost” with “I can self-host anything.”
-
-Export members before you cancel Ghost(Pro). Ghost’s admin can give you a CSV. Map paid status with care, and talk to Stripe if subscriptions must keep charging. A member export is a list of people, not a set of live Stripe subscriptions. If you move paid readers to beehiiv, Kit, or MailerLite, recreate the offer and charge a test card — yours — before you tell anyone the old portal is closed. MailCheap cannot take those subscriptions at all. Cancel the host after the new site resolves on your domain, not before. DNS is the migration. The CSV is the backup.
-
-Give yourself one overlapping week. Keep Ghost’s domain responding, send one ordinary issue from the new platform to recent readers, and only then change the DNS. A clever redirect that loses the member login is a bigger failure than a boring week of two invoices. If the theme is the thing you will miss, you are not done deciding. Stay on Ghost, or self-host it, instead of discovering the loss after the export. The people who regret leaving are rarely the ones who only used Ghost as a send button. They are the ones who had a decade of posts, a custom theme, and a handful of loyal members, and who priced the invoice without pricing the archive.
-
-If you are choosing a first tool rather than leaving Ghost, and you know you want members and a site, start on Ghost. The alternatives on this page are for the moment you discover you did not. The starting guide is [how to start a newsletter](/guides/how-to-start-a-newsletter/).
+Export members before you cancel. A CSV is a list of people, not a set of live Stripe subscriptions. If paid readers move to another tool that can charge them, run a test payment before you close the old portal. MailCheap cannot take those subscriptions.

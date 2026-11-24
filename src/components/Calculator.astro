@@ -27,13 +27,13 @@ function barWidth(row: QuoteRow, maxPaid: number) {
       <div class="field">
         <label for="issues">Issues per week</label>
         <select id="issues" name="issues">
-          <option value="1" selected>1 — a weekly newsletter</option>
+          <option value="1" selected>1 (weekly)</option>
           <option value="2">2</option>
           <option value="3">3</option>
-          <option value="5">5 — weekdays</option>
-          <option value="7">7 — daily</option>
+          <option value="5">5 (weekdays)</option>
+          <option value="7">7 (daily)</option>
         </select>
-        <p class="hint">Volume is subscribers × issues × 52 ÷ 12, so months with five weeks are included.</p>
+        <p class="hint">Estimate: subscribers × issues per week × 4.33. A month with five send weeks is higher. Welcome emails and tests are extra on MailCheap.</p>
       </div>
     </div>
     <dl class="calc-summary">
@@ -60,7 +60,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
   {sortedRows(initial.rows).map((row) => {
     const best = lowestPaid(initial.rows);
     const max = Math.max(...initial.rows.filter((item) => typeof item.monthly === "number" && item.monthly > 0).map((item) => item.monthly as number));
-    const isBest = row.platform === "MailCheap" && row.monthly === best;
+    const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
     const isFree = row.monthly === 0;
     const width = barWidth(row, max);
     return (
@@ -72,8 +72,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
             <div class="meta">
               <span>{row.plan}</span>
               {row.affiliate && <span class="tag tag-affiliate">Affiliate</span>}
-              {row.placeholder && <span class="tag tag-placeholder">Placeholder</span>}
-              {isBest && <span class="badge-best">Best paid value</span>}
+              {isBest && <span class="badge-best">Lowest paid price</span>}
             </div>
           </div>
         </div>
@@ -81,7 +80,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
           {row.monthly !== null && row.monthly > 0 && <div class="bar-fill" style={`--w:${width}%`}></div>}
         </div>
         <div class="bar-price">
-          {row.monthly === null ? "Custom" : <>{money(row.monthly)}<span>/mo</span></>}
+          {row.priceKind === "check" ? "Check current pricing" : row.monthly === null ? "Custom" : <>{money(row.monthly)}<span>/mo</span></>}
         </div>
         <p class="bar-note">
           {row.note}{" "}
@@ -128,7 +127,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
     bars.replaceChildren();
 
     sortedRows(out.rows).forEach((row) => {
-      const isBest = row.platform === "MailCheap" && row.monthly === best;
+      const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
       const isFree = row.monthly === 0;
       const article = document.createElement("article");
       article.className = "bar-row" + (isBest ? " is-best" : "") + (isFree ? " is-free" : "");
@@ -152,16 +151,10 @@ function barWidth(row: QuoteRow, maxPaid: number) {
         tag.textContent = "Affiliate";
         meta.appendChild(tag);
       }
-      if (row.placeholder) {
-        const tag = document.createElement("span");
-        tag.className = "tag tag-placeholder";
-        tag.textContent = "Placeholder";
-        meta.appendChild(tag);
-      }
       if (isBest) {
         const badge = document.createElement("span");
         badge.className = "badge-best";
-        badge.textContent = "Best paid value";
+        badge.textContent = "Lowest paid price";
         meta.appendChild(badge);
       }
       ident.append(name, meta);
@@ -179,7 +172,9 @@ function barWidth(row: QuoteRow, maxPaid: number) {
 
       const price = document.createElement("div");
       price.className = "bar-price";
-      if (row.monthly === null) {
+      if (row.priceKind === "check") {
+        price.textContent = "Check current pricing";
+      } else if (row.monthly === null) {
         price.textContent = "Custom";
       } else {
         price.append(document.createTextNode(money(row.monthly)));
