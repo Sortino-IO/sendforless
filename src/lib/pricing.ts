@@ -2,20 +2,24 @@
  * Month-to-month USD list prices used by the calculator and articles.
  * Promotions are ignored. Checked 24 November 2026.
  *
+ * A dollar amount is included only when it was read from the vendor’s own
+ * pricing page, pricing file, or help article on that date. If a list size
+ * is not in that material, the calculator says to check current pricing
+ * and does not rank the tool.
+ *
  * Sources:
- * - MailCheap plans: https://mailcheap.ai/help/plans
- * - beehiiv tiers: https://www.beehiiv.com/pricing.md (same data as the pricing page)
- * - Ghost(Pro): prices embedded in https://ghost.org/js/pricing.min.js, loaded by https://ghost.org/pricing/
- * - MailerLite: https://www.mailerlite.com/pricing.md (page last updated 8 September 2026)
- * - Substack: https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost
- * - Kit free plan: https://help.kit.com/en/articles/16627071-the-kit-free-plan
- *   Creator ladder: Kit publishes prices on a slider, not a static table. The bands
- *   below are the capture shipped with the approved calculator (24 November 2026).
- *   The $39 Creator start at 1,000 subscribers matches Kit’s pricing page. Confirm
- *   every other Creator band on https://kit.com/pricing before you buy.
- * - Mailchimp: Free limits and the Standard/Essentials *starting* prices are official.
- *   Mid-tier Standard amounts are placeholders and are flagged. Confirm on
- *   https://mailchimp.com/pricing/marketing/
+ * - MailCheap plans: https://mailcheap.ai/help/plans and https://mailcheap.ai/pricing
+ * - beehiiv tiers: https://www.beehiiv.com/pricing.md
+ * - Ghost(Pro): https://ghost.org/js/pricing.min.js, loaded by https://ghost.org/pricing/
+ * - MailerLite: https://www.mailerlite.com/pricing.md (file last updated 8 September 2026)
+ * - Substack: https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost (updated 29 October 2026)
+ * - Kit free plan: https://help.kit.com/en/articles/16627071-the-kit-free-plan (23 September 2026)
+ *   Creator $39 up to 1,000 and the $59 / 3,000 example: https://help.kit.com/en/articles/2502679-billing-at-kit
+ *   Pro $79 at 1,000 subscribers, monthly: https://kit.com/pricing
+ * - Flodesk Email and Everything: https://flodesk.com/pricing and https://help.flodesk.com/en/articles/14551297 (edited 19 November 2026)
+ * - Mailchimp Free limits: https://mailchimp.com/help/about-mailchimp-pricing-plans/
+ *   Essentials from $13 and Standard from $20 at 500 contacts: Mailchimp’s plan pages.
+ *   Prices above 500 contacts are not published as a static table here.
  */
 import { mailcheapHref } from "./site";
 
@@ -25,8 +29,6 @@ export type Band = {
   max: number;
   monthly: number;
   yearlyMo?: number;
-  /** False when the dollar amount is not from a static official table. */
-  official?: boolean;
 };
 
 export const MAILCHEAP = [
@@ -63,55 +65,12 @@ export const BEEHIIV_PRO: Band[] = [
   { max: 250000, monthly: 999, yearlyMo: 869 },
 ];
 
-/** Slider capture. See file header. Not a static official table. */
-export const KIT_CREATOR: Band[] = [
-  { max: 1000, monthly: 39, official: true },
-  { max: 3000, monthly: 59, official: false },
-  { max: 5000, monthly: 89, official: false },
-  { max: 8000, monthly: 119, official: false },
-  { max: 10000, monthly: 139, official: false },
-  { max: 15000, monthly: 169, official: false },
-  { max: 20000, monthly: 189, official: false },
-  { max: 25000, monthly: 199, official: false },
-  { max: 35000, monthly: 259, official: false },
-  { max: 45000, monthly: 319, official: false },
-  { max: 55000, monthly: 379, official: false },
-  { max: 65000, monthly: 439, official: false },
-  { max: 75000, monthly: 499, official: false },
-  { max: 85000, monthly: 559, official: false },
-  { max: 95000, monthly: 619, official: false },
-  { max: 105000, monthly: 679, official: false },
-  { max: 115000, monthly: 739, official: false },
-  { max: 125000, monthly: 799, official: false },
-  { max: 135000, monthly: 859, official: false },
-  { max: 145000, monthly: 919, official: false },
-  { max: 155000, monthly: 979, official: false },
-  { max: 165000, monthly: 1039, official: false },
-  { max: 175000, monthly: 1099, official: false },
-  { max: 185000, monthly: 1159, official: false },
-  { max: 195000, monthly: 1219, official: false },
-  { max: 205000, monthly: 1279, official: false },
-  { max: 215000, monthly: 1339, official: false },
-  { max: 225000, monthly: 1399, official: false },
-  { max: 235000, monthly: 1459, official: false },
-  { max: 245000, monthly: 1519, official: false },
-  { max: 255000, monthly: 1579, official: false },
-  { max: 265000, monthly: 1639, official: false },
-  { max: 275000, monthly: 1699, official: false },
-  { max: 285000, monthly: 1759, official: false },
-  { max: 295000, monthly: 1819, official: false },
-  { max: 305000, monthly: 1879, official: false },
-  { max: 315000, monthly: 1939, official: false },
-  { max: 325000, monthly: 1999, official: false },
-  { max: 335000, monthly: 2059, official: false },
-  { max: 345000, monthly: 2119, official: false },
-  { max: 355000, monthly: 2179, official: false },
-  { max: 365000, monthly: 2239, official: false },
-  { max: 400000, monthly: 2299, official: false },
-  { max: 500000, monthly: 2499, official: false },
-];
+/** Prices read from Kit’s help and the pricing page at 1,000 subscribers. Not a full slider. */
+export const KIT_CREATOR_KNOWN = [
+  { max: 1000, monthly: 39 },
+  { max: 3000, monthly: 59 },
+] as const;
 
-/** Monthly list prices from ghost.org pricing data, 24 November 2026. */
 export const GHOST_PUBLISHER: Band[] = [
   { max: 1000, monthly: 35, yearlyMo: 29 },
   { max: 2500, monthly: 55, yearlyMo: 46 },
@@ -122,26 +81,6 @@ export const GHOST_PUBLISHER: Band[] = [
   { max: 50000, monthly: 249, yearlyMo: 208 },
   { max: 75000, monthly: 289, yearlyMo: 241 },
   { max: 100000, monthly: 329, yearlyMo: 274 },
-];
-
-/**
- * Mailchimp Standard. Only the 500-contact start is an official published price.
- * Higher bands are placeholders from the approved calculator and must stay labeled.
- */
-export const MAILCHIMP_STANDARD: Band[] = [
-  { max: 500, monthly: 20, official: true },
-  { max: 1500, monthly: 45, official: false },
-  { max: 2500, monthly: 60, official: false },
-  { max: 5000, monthly: 100, official: false },
-  { max: 10000, monthly: 135, official: false },
-  { max: 15000, monthly: 230, official: false },
-  { max: 20000, monthly: 285, official: false },
-  { max: 25000, monthly: 310, official: false },
-  { max: 30000, monthly: 340, official: false },
-  { max: 40000, monthly: 410, official: false },
-  { max: 50000, monthly: 450, official: false },
-  { max: 75000, monthly: 630, official: false },
-  { max: 100000, monthly: 800, official: false },
 ];
 
 /** MailerLite Comfort / Power, monthly billing, from the official pricing markdown. */
@@ -159,6 +98,11 @@ export const MAILERLITE = [
   { max: 100000, comfort: 439, power: 489 },
 ] as const;
 
+export const FLODESK_EMAIL_MONTHLY = 46;
+export const FLODESK_EMAIL_ANNUAL_MO = 38;
+export const FLODESK_EVERYTHING_MONTHLY = 99;
+export const FLODESK_EVERYTHING_ANNUAL_MO = 79;
+
 export type QuoteRow = {
   platform: string;
   plan: string;
@@ -166,10 +110,11 @@ export type QuoteRow = {
   note: string;
   href: string;
   affiliate: boolean;
-  placeholder: boolean;
   available: boolean;
   initials: string;
   avatar: string;
+  /** known = show the dollar. check = no verified dollar for this list. custom = the vendor quotes it. */
+  priceKind: "known" | "check" | "custom";
 };
 
 export function money(n: number): string {
@@ -180,6 +125,11 @@ export function money(n: number): string {
 
 export function emailsPerMonth(subs: number, issuesPerWeek: number): number {
   return Math.ceil(subs * issuesPerWeek * WEEKS_PER_MONTH);
+}
+
+/** Emails in a month that contains five send weeks, before welcome mail and tests. */
+export function peakEmails(subs: number, issuesPerWeek: number): number {
+  return subs * issuesPerWeek * 5;
 }
 
 export function pickBand<T extends { max: number }>(bands: readonly T[], subs: number): T | null {
@@ -196,103 +146,115 @@ export function mailcheapPlan(subs: number, emails: number) {
   return null;
 }
 
-export function mailerliteComfort(subs: number) {
-  return pickBand(MAILERLITE, subs);
+export function mailerlitePlan(subs: number, emails: number) {
+  if (subs <= 250 && emails <= 2500) return { plan: "Free", monthly: 0, max: 250 };
+  let best: { plan: "Comfort" | "Power"; monthly: number; max: number } | null = null;
+  for (const tier of MAILERLITE) {
+    if (subs <= tier.max && emails <= tier.max * 10) {
+      const option = { plan: "Comfort" as const, monthly: tier.comfort, max: tier.max };
+      if (!best || option.monthly < best.monthly) best = option;
+    }
+    if (subs <= tier.max && subs <= 200000) {
+      const option = { plan: "Power" as const, monthly: tier.power, max: tier.max };
+      if (!best || option.monthly < best.monthly) best = option;
+    }
+  }
+  return best;
 }
 
-export function quote(subs: number, issuesPerWeek: number): { emails: number; rows: QuoteRow[] } {
+export function quote(subs: number, issuesPerWeek: number): { emails: number; peak: number; rows: QuoteRow[] } {
   const emails = emailsPerMonth(subs, issuesPerWeek);
+  const peak = peakEmails(subs, issuesPerWeek);
   const rows: QuoteRow[] = [];
 
-  const kitBand = pickBand(KIT_CREATOR, subs);
   const kitFree = subs <= 10000;
-  const kitMonthly = kitFree ? 0 : kitBand?.monthly;
   rows.push({
     platform: "Kit",
     plan: kitFree ? "Free" : "Creator",
-    monthly: kitMonthly === undefined ? null : kitMonthly,
+    monthly: kitFree ? 0 : null,
     note: kitFree
-      ? `Free covers broadcasts up to 10,000 subscribers. Creator is ${money(kitBand?.monthly ?? 0)}/mo at this list size if you need visual automations or sequences. That Creator figure is a slider capture — confirm it on Kit’s pricing page.`
-      : kitBand
-        ? `Creator list price from Kit’s subscriber slider as captured 24 November 2026, monthly billing. ${kitBand.official ? "The $39 start at 1,000 subscribers is the published entry price." : "This band is not a static official table — confirm it on kit.com/pricing."} Free ends at 10,000 subscribers. A first-three-months promotion ending 1 December 2026 is ignored.`
-        : "Above the captured Creator bands. Kit asks you to talk to them past 500,000 subscribers.",
+      ? `Free includes unlimited broadcasts up to 10,000 subscribers. Creator is ${money(39)}/mo up to 1,000 subscribers, and Kit’s billing help uses ${money(59)}/mo for the up-to-3,000 tier, if you need sequences or visual automations. Pro is ${money(79)}/mo at 1,000 subscribers. Above those stops, check Kit’s pricing page.`
+      : "Free stops at 10,000 subscribers. Creator is $39/mo up to 1,000 and Kit’s billing help uses $59/mo up to 3,000. The price for this list size is on Kit’s pricing page.",
     href: "https://kit.com/pricing",
     affiliate: false,
-    placeholder: !kitFree && !kitBand?.official,
-    available: kitFree || Boolean(kitBand),
+    available: kitFree,
     initials: "Kt",
     avatar: "av-green",
+    priceKind: kitFree ? "known" : "check",
   });
 
   rows.push({
     platform: "Substack",
     plan: "Free publishing",
     monthly: 0,
-    note: "No monthly platform fee. If you turn on paid subscriptions, Substack keeps 10% of subscription revenue, plus Stripe processing. A custom domain is a separate one-time $50.",
+    note: "No monthly platform fee at any list size. Paid subscriptions cost 10% of subscription revenue, plus Stripe. Substack’s help article quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once.",
     href: "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost",
     affiliate: false,
-    placeholder: false,
     available: true,
     initials: "Sb",
     avatar: "av-orange",
+    priceKind: "known",
   });
 
   const mc = mailcheapPlan(subs, emails);
+  const mcTight = mc ? peak >= mc.emails : false;
   rows.push({
     platform: "MailCheap",
     plan: mc ? mc.name : "Above Ultra",
     monthly: mc ? mc.monthly : null,
     note: mc
-      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails and ${mc.subs.toLocaleString("en-US")} subscribers. No free hosted plan. Every email counts, including welcomes and tests. Yearly billing costs 10 months’ price.`
-      : "Over 5 million emails a month — MailCheap asks you to contact them.",
+      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails and ${mc.subs.toLocaleString("en-US")} subscribers a month. The estimate for this cadence is ${emails.toLocaleString("en-US")} emails. Five send-weeks would be ${peak.toLocaleString("en-US")} emails, before welcome emails and tests.${mcTight ? " That uses this plan’s full email allowance, so price the next plan if you also send welcomes or tests." : ""} Yearly billing costs 10 months’ price. No free hosted plan.`
+      : "Over 5 million emails a month. MailCheap asks you to contact them.",
     href: mailcheapHref("/pricing"),
     affiliate: true,
-    placeholder: false,
     available: Boolean(mc),
     initials: "MC",
     avatar: "av-violet",
+    priceKind: mc ? "known" : "custom",
   });
 
   const beeFree = subs <= 2500;
   const beeLite = pickBand(BEEHIIV_LITE, subs);
   const beePro = pickBand(BEEHIIV_PRO, subs);
-  const beePlan = beeFree ? "Free" : beeLite ? "Lite" : beePro ? "Pro" : null;
+  const beePlan = beeFree ? "Free" : beeLite ? "Lite" : beePro ? "Pro" : "Enterprise";
   const beePrice = beeFree ? 0 : beeLite ? beeLite.monthly : beePro ? beePro.monthly : null;
   const beeYear = beeFree ? 0 : beeLite ? beeLite.yearlyMo : beePro ? beePro.yearlyMo : null;
   rows.push({
     platform: "beehiiv",
-    plan: beePlan ?? "Enterprise",
+    plan: beePlan,
     monthly: beePrice,
     note: beeFree
-      ? `Free covers sending up to 2,500 subscribers. Lite is ${money(beeLite?.monthly ?? 0)}/mo at this list size if you need ads, automations, or paid subscriptions.`
+      ? `Free covers up to 2,500 subscribers and unlimited sends. It does not include automations, the ad network, or paid subscriptions. Lite at this list size is ${money(beeLite?.monthly ?? 0)}/mo, or about ${money(beeLite?.yearlyMo ?? 0)}/mo billed annually.`
       : beeLite
-        ? `Lite, monthly billing. Annual is about ${money(beeYear ?? 0)}/mo. Unlimited sends. Lite stops at 100,000 subscribers.`
+        ? `Lite, monthly billing. Annual is about ${money(beeYear ?? 0)}/mo, paid up front. Unlimited sends. Lite stops at 100,000 subscribers.`
         : beePro
           ? `Lite stops at 100,000 subscribers. This is Pro, monthly billing. Annual is about ${money(beeYear ?? 0)}/mo.`
           : "Custom Enterprise pricing above 250,000 subscribers.",
     href: "https://www.beehiiv.com/pricing",
     affiliate: false,
-    placeholder: false,
     available: beePrice !== null,
     initials: "bh",
     avatar: "av-gold",
+    priceKind: beePrice !== null ? "known" : "custom",
   });
 
   let ghostPlan: string;
   let ghostMonthly: number | null;
   let ghostNote: string;
+  let ghostKind: QuoteRow["priceKind"] = "known";
   if (subs <= 1000) {
     ghostPlan = "Starter";
     ghostMonthly = 18;
     ghostNote =
-      "Starter, monthly billing. Annual is $15/mo ($180/year). Starter stops at 1,000 members and has no paid subscriptions.";
+      "Starter, monthly billing, up to 1,000 members. Annual is $15/mo ($180/year). Starter does not include paid subscriptions. Publisher at this size is $35/mo, or about $29/mo billed annually.";
   } else {
     const gp = pickBand(GHOST_PUBLISHER, subs);
     ghostPlan = gp ? "Publisher" : "Custom";
     ghostMonthly = gp ? gp.monthly : null;
+    ghostKind = gp ? "known" : "custom";
     ghostNote = gp
-      ? `Publisher, monthly billing. Annual is about ${money(gp.yearlyMo ?? 0)}/mo. Unlimited sends. Paid subscriptions are 0% platform fee.`
-      : "Above Ghost(Pro) published Publisher bands — custom pricing.";
+      ? `Publisher, monthly billing. Annual is about ${money(gp.yearlyMo ?? 0)}/mo. Unlimited sends. Paid subscriptions have a 0% platform fee. Stripe still applies.`
+      : "Above the published Publisher bands. Ghost quotes custom pricing.";
   }
   rows.push({
     platform: "Ghost(Pro)",
@@ -301,38 +263,91 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; ro
     note: ghostNote,
     href: "https://ghost.org/pricing/",
     affiliate: false,
-    placeholder: false,
     available: ghostMonthly !== null,
     initials: "Gh",
     avatar: "av-slate",
+    priceKind: ghostKind,
   });
 
-  const mchFree = subs <= 250;
-  const mch = pickBand(MAILCHIMP_STANDARD, subs);
+  const ml = mailerlitePlan(subs, emails);
   rows.push({
-    platform: "Mailchimp",
-    plan: mchFree ? "Free" : mch ? "Standard" : "Custom",
-    monthly: mchFree ? 0 : mch ? mch.monthly : null,
-    note: mchFree
-      ? "Free is limited to 250 contacts and 500 sends a month, with a daily cap of 250."
-      : mch?.official
-        ? "Standard starting price at 500 contacts, monthly billing, from Mailchimp’s pricing page. Essentials starts at $13/mo for the same 500 contacts."
-        : mch
-          ? "Standard mid-tier is a placeholder (not taken from a static official table). Confirm on Mailchimp’s pricing page. Official Standard starts at $20/mo for 500 contacts."
-          : "Mailchimp quotes custom plans above published Standard bands.",
-    href: "https://mailchimp.com/pricing/marketing/",
+    platform: "MailerLite",
+    plan: ml ? ml.plan : "Enterprise",
+    monthly: ml ? ml.monthly : null,
+    note: ml
+      ? ml.plan === "Free"
+        ? "Free is 250 active subscribers and 2,500 emails a month."
+        : `${ml.plan} at the up-to-${ml.max.toLocaleString("en-US")} tier, monthly billing. Comfort’s email allowance is 10 times the tier ceiling. Power removes that email cap, subject to fair use. Annual billing is 10% less. Above 200,000 subscribers, pricing is custom.`
+      : "Above 200,000 subscribers. MailerLite quotes Enterprise.",
+    href: "https://www.mailerlite.com/pricing",
     affiliate: false,
-    placeholder: !mchFree && !mch?.official,
-    available: mchFree || Boolean(mch),
-    initials: "Ch",
-    avatar: "av-yellow",
+    available: Boolean(ml),
+    initials: "ML",
+    avatar: "av-mint",
+    priceKind: ml ? "known" : "custom",
   });
 
-  return { emails, rows };
+  rows.push({
+    platform: "Flodesk",
+    plan: "Email",
+    monthly: FLODESK_EMAIL_MONTHLY,
+    note: `Email is $${FLODESK_EMAIL_MONTHLY}/mo on monthly billing, or $${FLODESK_EMAIL_ANNUAL_MO}/mo billed annually ($${FLODESK_EMAIL_ANNUAL_MO * 12}/year), at any list size. Unlimited subscribers and sends. The Free plan does not include email sending. Everything, which adds checkout, is $${FLODESK_EVERYTHING_MONTHLY}/mo or $${FLODESK_EVERYTHING_ANNUAL_MO}/mo annually.`,
+    href: "https://flodesk.com/pricing",
+    affiliate: false,
+    available: true,
+    initials: "Fd",
+    avatar: "av-teal",
+    priceKind: "known",
+  });
+
+  if (subs <= 250) {
+    rows.push({
+      platform: "Mailchimp",
+      plan: "Free",
+      monthly: 0,
+      note: "Free includes up to 250 contacts and 500 sends a month, with a daily cap of 250. Subscribed, unsubscribed, and non-subscribed contacts all count.",
+      href: "https://mailchimp.com/pricing/marketing/",
+      affiliate: false,
+      available: true,
+      initials: "Ch",
+      avatar: "av-yellow",
+      priceKind: "known",
+    });
+  } else if (subs <= 500) {
+    rows.push({
+      platform: "Mailchimp",
+      plan: "Standard",
+      monthly: 20,
+      note: "Standard starts at $20/mo for up to 500 contacts. Essentials starts at $13/mo for the same 500 contacts, with a shorter feature set. The monthly send limit on Standard is 12 times the contact limit.",
+      href: "https://mailchimp.com/pricing/marketing/",
+      affiliate: false,
+      available: true,
+      initials: "Ch",
+      avatar: "av-yellow",
+      priceKind: "known",
+    });
+  } else {
+    rows.push({
+      platform: "Mailchimp",
+      plan: "Standard",
+      monthly: null,
+      note: "Check current pricing. Standard starts at $20/mo and Essentials at $13/mo, both for up to 500 contacts. Above 500 contacts Mailchimp prices each tier on its pricing page. There is no static table to quote here. Unsubscribed contacts count until you archive them.",
+      href: "https://mailchimp.com/pricing/marketing/",
+      affiliate: false,
+      available: false,
+      initials: "Ch",
+      avatar: "av-yellow",
+      priceKind: "check",
+    });
+  }
+
+  return { emails, peak, rows };
 }
 
 export function sortedRows(rows: QuoteRow[]): QuoteRow[] {
+  const rank = { known: 0, check: 1, custom: 2 };
   return rows.slice().sort((a, b) => {
+    if (a.priceKind !== b.priceKind) return rank[a.priceKind] - rank[b.priceKind];
     if (a.monthly === null && b.monthly === null) return 0;
     if (a.monthly === null) return 1;
     if (b.monthly === null) return -1;
@@ -341,7 +356,7 @@ export function sortedRows(rows: QuoteRow[]): QuoteRow[] {
 }
 
 export function lowestPaid(rows: QuoteRow[]): number | null {
-  const paid = rows.filter((row) => row.available && typeof row.monthly === "number" && row.monthly > 0);
+  const paid = rows.filter((row) => row.priceKind === "known" && row.available && typeof row.monthly === "number" && row.monthly > 0);
   if (!paid.length) return null;
   return Math.min(...paid.map((row) => row.monthly as number));
 }

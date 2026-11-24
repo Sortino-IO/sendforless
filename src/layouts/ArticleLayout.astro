@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import HeroMark from "../components/HeroMark.astro";
 import { guidesBySlug } from "../lib/guides";
 import { mailcheapHref, PRICE_CHECKED_ISO, PRICE_CHECKED_LABEL, SITE_NAME, SITE_URL } from "../lib/site";
 
@@ -13,8 +14,9 @@ interface FaqItem {
 }
 interface ReviewMeta {
   name: string;
-  ratingValue: string;
+  ratingValue?: string;
   reviewBody: string;
+  offerPrice?: string;
 }
 
 interface Frontmatter {
@@ -59,6 +61,14 @@ const {
 } = frontmatter;
 
 const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const ogImage = `/og${Astro.url.pathname.replace(/\/$/, "")}.png`;
+const art =
+  /pricing/i.test(kicker) ? "pricing" :
+  /compar/i.test(kicker) ? "compare" :
+  /review/i.test(kicker) ? "review" :
+  /roundup|alternative/i.test(kicker) ? "roundup" :
+  /guide/i.test(kicker) ? "guide" :
+  "about";
 const crumbName = crumb || title;
 const relatedGuides = guidesBySlug(related);
 
@@ -101,7 +111,7 @@ const article = {
     logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
   },
   mainEntityOfPage: canonical,
-  image: `${SITE_URL}/og-default.png`,
+  image: new URL(ogImage, SITE_URL).href,
 };
 
 const faqSchema = faqs.length
@@ -116,38 +126,42 @@ const faqSchema = faqs.length
     }
   : null;
 
-const reviewSchema = review
-  ? {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      name: title,
-      datePublished,
-      dateModified,
-      reviewBody: review.reviewBody,
-      author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
-      publisher: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
-      itemReviewed: {
-        "@type": "SoftwareApplication",
-        name: review.name,
-        applicationCategory: "BusinessApplication",
-        operatingSystem: "Web",
-        offers: { "@type": "Offer", price: "19", priceCurrency: "USD" },
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.ratingValue,
-        bestRating: "5",
-        worstRating: "1",
-      },
-    }
-  : null;
+const reviewSchema =
+  review && review.ratingValue
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        name: title,
+        datePublished,
+        dateModified,
+        reviewBody: review.reviewBody,
+        author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+        publisher: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+        itemReviewed: {
+          "@type": "SoftwareApplication",
+          name: review.name,
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web",
+          ...(review.offerPrice
+            ? { offers: { "@type": "Offer", price: review.offerPrice, priceCurrency: "USD" } }
+            : {}),
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: review.ratingValue,
+          bestRating: "5",
+          worstRating: "1",
+        },
+      }
+    : null;
 
 const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) as Record<string, unknown>[];
 ---
-<BaseLayout title={title} description={description} disclosure={disclosure} jsonLd={jsonLd}>
+<BaseLayout title={title} description={description} disclosure={disclosure} jsonLd={jsonLd} ogImage={ogImage}>
   <main id="main">
     <header class="article-hero">
-      <div class="wrap">
+      <div class="wrap article-hero-grid">
+        <div>
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumbs">
             <li><a href="/">Home</a></li>
@@ -165,6 +179,8 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) a
           <span>Updated <time datetime={dateModified}>{PRICE_CHECKED_LABEL}</time></span>
           {showPriceByline && <span>Prices from official pages, month-to-month USD list rates</span>}
         </p>
+        </div>
+        <HeroMark variant={art} />
       </div>
     </header>
     <div class="wrap article-layout">

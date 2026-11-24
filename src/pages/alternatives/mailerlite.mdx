@@ -2,231 +2,70 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Alternatives"
 sectionHref: "/alternatives/"
-title: "MailerLite alternatives, priced against Comfort and Power"
-description: "MailerLite alternatives after the 2026 Comfort and Power rename. Free, cheaper, and more expensive options, with official tier prices and a clear note on who should stay."
+title: "MailerLite alternatives"
+description: "MailerLite alternatives after the 2026 Comfort and Power rename, with official tier prices and the cases where you should stay."
 kicker: Roundup
-lede: "MailerLite’s paid plans were renamed in 2026: Growing Business became Comfort, Advanced became Power. Comfort starts at $12 a month and caps emails at ten times your tier. If that bill or that cap is why you are looking, here is the rest of the market, including the cases where MailerLite is already the cheap option."
+lede: "MailerLite Comfort starts at $12 a month and caps emails at ten times your tier. Leave it for a free broadcast plan, or for a sender that meters emails, when you are not using the rest of the product."
 crumb: "MailerLite alternatives"
 affiliate: true
 datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
-  - id: verdict
-    label: Our verdict
-  - id: now
-    label: What MailerLite costs now
-  - id: prices
-    label: Side by side
-  - id: free
-    label: Free options
-  - id: mailcheap
-    label: MailCheap
-  - id: kit
-    label: Kit
-  - id: beehiiv
-    label: beehiiv
-  - id: ghost
-    label: Ghost
-  - id: substack
-    label: Substack
-  - id: mailchimp
-    label: Mailchimp
   - id: stay
     label: When to stay
-  - id: migrate
-    label: Switching
+  - id: prices
+    label: The current prices
+  - id: options
+    label: Alternatives
   - id: faq
     label: FAQ
 related:
-  - mailchimp-alternatives
+  - mailerlite-review
+  - mailerlite-vs-mailchimp
   - convertkit-alternatives
-  - beehiiv-alternatives
   - mailcheap-review
 faqs:
-  - q: Did MailerLite change its prices in 2026?
-    a: "<p>Yes. On 16 June 2026 MailerLite renamed Growing Business to Comfort and Advanced to Power, and it published a new tier table. Free dropped from 500 subscribers and 12,000 emails to 250 subscribers and 2,500 emails. MailerLite’s pricing markdown, last updated 8 September 2026 and re-read by us on 24 November 2026, is the table this guide uses. Old reviews that still say Growing Business are describing a previous plan.</p>"
-  - q: What is the cheapest MailerLite alternative?
-    a: "<p>Kit Free, up to 10,000 subscribers, for broadcasts. beehiiv Free, up to 2,500. Substack, no monthly fee. MailerLite Free itself only reaches 250 people, so it is not the cheap tier it used to be. For a paid weekly send past Kit’s cap, MailCheap is $39 a month at 10,000 subscribers and does not include MailerLite’s website builder or paid newsletters.</p>"
+  - q: What changed in 2026?
+    a: "<p>On 16 June 2026 MailerLite renamed Growing Business to Comfort and Advanced to Power. Free dropped to 250 subscribers and 2,500 emails. The pricing file, last updated 8 September 2026, was re-read on 24 November 2026.</p>"
   - q: Does Comfort allow unlimited emails?
-    a: "<p>No. Comfort allows 10 times the ceiling of your subscriber tier. On the up-to-1,000 tier that is 10,000 emails a month, whether you have 200 subscribers or 900. Power is the plan with unlimited monthly emails, up to 200,000 subscribers, subject to fair use.</p>"
-  - q: Is MailCheap a MailerLite alternative?
-    a: "<p>Only if you do not need paid newsletters, digital products as a focus, a referral program, or A/B tests. MailerLite’s feature table includes those on paid plans. MailCheap’s does not. For a plain weekly letter, MailCheap is often cheaper. For the rest of MailerLite’s product, it is a downgrade.</p>"
+    a: "<p>No. Comfort allows 10 times the ceiling of your subscriber tier. Power is the plan with unlimited monthly emails, up to 200,000 subscribers, subject to fair use.</p>"
 ---
 
-<section class="verdict" id="verdict">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
-  <h2>MailerLite is already a reasonably priced all-rounder. Leave it for a free broadcast plan, or for a sender that meters emails instead of tiers.</h2>
-  <p>Under 10,000 subscribers, <strong>Kit’s free plan</strong> is the alternative that actually changes the invoice, if you can live without MailerLite’s automations and site. Past that, <strong>MailCheap is the cheaper weekly send</strong> — $39 versus Comfort’s $89 at 10,000 — and it is the wrong alternative if you sell a paid newsletter inside the tool. beehiiv and Ghost cost more than Comfort at most of these sizes and buy a different kind of publication. Do not leave MailerLite for Mailchimp to save money. You probably will not.</p>
+import { mailcheapHref } from "../../lib/site";
+
+<section class="verdict" id="stay">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> MailerLite alternatives</p>
+  <h2>Stay if you use the pages and the automations. Switch if you are only paying to broadcast.</h2>
+  <p>Under 10,000 subscribers, Kit’s free plan is the alternative that changes the invoice, if you can live without MailerLite’s automations and site. Past that, MailCheap is $39 against Comfort’s $89 at 10,000 weekly subscribers, and it does not include paid newsletters. beehiiv and Ghost cost more at most of these sizes and buy a publication toolkit. Do not leave MailerLite for Mailchimp to save money until you have read your Mailchimp tier. Above 500 contacts, that price is on Mailchimp’s site, not on this one.</p>
 </section>
 
-## What MailerLite costs now
+## The current prices
 
-The source is MailerLite’s own [pricing markdown](https://www.mailerlite.com/pricing.md), which they publish because the HTML pricing page draws numbers with JavaScript. Last updated on their side on 8 September 2026. We re-read it on 24 November 2026. Annual billing is 10% off. These are monthly USD prices.
+From [MailerLite’s pricing file](https://www.mailerlite.com/pricing.md). The review, which is about whether to stay, is the [MailerLite review](/reviews/mailerlite/). The Mailchimp comparison is [MailerLite vs Mailchimp](/compare/mailerlite-vs-mailchimp/).
 
-Free is $0, 250 active subscribers, 2,500 emails a month, two seats, three automations, one website, one landing page, one digital product. That is a demo, not a home for a newsletter that is working.
+| Subscribers, up to | Comfort | Comfort emails | Power |
+| --- | --- | --- | --- |
+| 1,000 | $19 | 10,000 | $39 |
+| 5,000 | $49 | 50,000 | $69 |
+| 10,000 | $89 | 100,000 | $129 |
+| 25,000 | $179 | 250,000 | $239 |
 
-Comfort starts at $12 a month at 500 subscribers ($10.80 effective on annual). It includes the paid feature set with limits: 50 automations, 10 forms, 10 sites, five digital products, three seats, and monthly emails equal to 10 times the tier ceiling. Power starts at $25 ($22.50 annual) and removes the email cap, the feature caps, and the seat cap, up to 200,000 subscribers. Enterprise is custom above that.
+A daily send often needs Power because Comfort’s email cap is a multiple of the tier. A weekly send to 5,000 people (about 21,700 emails) fits Comfort’s 50,000.
 
-A sample of the official table, the stops that show up in real arguments:
+## Alternatives
 
-<div class="table-wrap">
-  <table>
-    <caption>MailerLite Comfort and Power, monthly billing</caption>
-    <thead>
-      <tr>
-        <th scope="col">Subscribers, up to</th>
-        <th class="num" scope="col">Comfort</th>
-        <th class="num" scope="col">Comfort emails</th>
-        <th class="num" scope="col">Power</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">500</th>
-        <td class="num" data-label="Comfort">$12</td>
-        <td class="num" data-label="Emails">5,000</td>
-        <td class="num" data-label="Power">$25</td>
-      </tr>
-      <tr>
-        <th scope="row">1,000</th>
-        <td class="num" data-label="Comfort">$19</td>
-        <td class="num" data-label="Emails">10,000</td>
-        <td class="num" data-label="Power">$39</td>
-      </tr>
-      <tr>
-        <th scope="row">2,500</th>
-        <td class="num" data-label="Comfort">$33</td>
-        <td class="num" data-label="Emails">25,000</td>
-        <td class="num" data-label="Power">$49</td>
-      </tr>
-      <tr>
-        <th scope="row">5,000</th>
-        <td class="num" data-label="Comfort">$49</td>
-        <td class="num" data-label="Emails">50,000</td>
-        <td class="num" data-label="Power">$69</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td class="num" data-label="Comfort">$89</td>
-        <td class="num" data-label="Emails">100,000</td>
-        <td class="num" data-label="Power">$129</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td class="num" data-label="Comfort">$179</td>
-        <td class="num" data-label="Emails">250,000</td>
-        <td class="num" data-label="Power">$239</td>
-      </tr>
-      <tr>
-        <th scope="row">50,000</th>
-        <td class="num" data-label="Comfort">$319</td>
-        <td class="num" data-label="Emails">500,000</td>
-        <td class="num" data-label="Power">$389</td>
-      </tr>
-      <tr>
-        <th scope="row">100,000</th>
-        <td class="num" data-label="Comfort">$439</td>
-        <td class="num" data-label="Emails">1,000,000</td>
-        <td class="num" data-label="Power">$489</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+**Kit Free** to 10,000 subscribers for broadcasts. Creator is $39 a month up to 1,000 if you need sequences. [Kit pricing](/pricing/convertkit/).
 
-The email column is why daily newsletters end up on Power even when the subscriber tier looks fine. A daily send to 5,000 people is about 151,667 emails a month. Comfort at that tier allows 50,000. You either buy Power at $69 or you buy a higher Comfort tier whose ceiling times 10 covers the volume. The 20,000 tier is $159 and allows 200,000 emails. Power at $69 is the rational daily plan. A weekly send to the same 5,000 people is about 21,667 emails and fits Comfort’s 50,000 with room for a welcome sequence. Price your cadence. The plan name is not the decision.
+**MailCheap** for a weekly send without MailerLite’s paid newsletters or tests. Starter $19, Growth $39, Pro $79. At 4,000 subscribers, five weekly issues use all 20,000 Starter emails before welcomes. [MailCheap review](/reviews/mailcheap/).
 
-MailerLite counts active subscribers, not unsubscribed or bounced addresses, and it warns that anyone active at any point in the billing cycle counts even if you delete them before the anniversary. Cleaning the list on the day before renewal does not rewind the invoice. Clean it early.
+**beehiiv** if you want recommendations and an ad network. Lite at 10,000 subscribers is $139. [beehiiv pricing](/pricing/beehiiv/).
 
-Paid plans include paid newsletters, multivariate tests, a preference center, and the logo removed. Free does not include paid newsletters. That single line sorts a lot of “alternatives.” If you charge readers inside MailerLite, your alternative must be able to charge readers too.
+**Ghost(Pro)** if members log into a site. Publisher at 10,000 members is $105.
 
-## Side by side with the rest of the market
+**Substack** if you want $0 until readers pay, then 10%.
 
-Weekly send, month-to-month, 24 November 2026.
-
-<div class="table-wrap">
-  <table>
-    <caption>Comfort versus other newsletter bills</caption>
-    <thead>
-      <tr>
-        <th scope="col">Subscribers</th>
-        <th scope="col">MailerLite Comfort</th>
-        <th scope="col">Kit</th>
-        <th scope="col">MailCheap</th>
-        <th scope="col">beehiiv Lite</th>
-        <th scope="col">Ghost Publisher</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1,000</th>
-        <td data-label="Comfort">$19</td>
-        <td data-label="Kit">$0</td>
-        <td data-label="MailCheap">$19</td>
-        <td data-label="beehiiv">$0 Free</td>
-        <td data-label="Ghost">$35</td>
-      </tr>
-      <tr>
-        <th scope="row">5,000</th>
-        <td data-label="Comfort">$49</td>
-        <td data-label="Kit">$0</td>
-        <td data-label="MailCheap">$39 Growth</td>
-        <td data-label="beehiiv">$109</td>
-        <td data-label="Ghost">$75</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="Comfort">$89</td>
-        <td data-label="Kit">$0 at the cap</td>
-        <td data-label="MailCheap">$39</td>
-        <td data-label="beehiiv">$139</td>
-        <td data-label="Ghost">$105</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="Comfort">$179</td>
-        <td data-label="Kit">~$199 slider capture</td>
-        <td data-label="MailCheap">$79</td>
-        <td data-label="beehiiv">$199</td>
-        <td data-label="Ghost">$169</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-Comfort at 1,000 subscribers costs the same $19 as MailCheap, and Comfort includes a broader marketing tool. There is no price story at that size unless you can use a free plan. At 10,000 and 25,000 the story appears, and it is MailCheap or Kit, with the feature cuts those names imply. Ghost at 25,000 is $169, ten dollars under Comfort, and it is a membership site rather than a marketing suite. beehiiv Lite is the expensive row in this company until you need the network.
-
-## Free alternatives, and the honest limits
-
-**Kit Free** goes to 10,000 subscribers with unlimited broadcasts, forms, and landing pages. It does not include the visual automations MailerLite users often rely on. If your Comfort account is a weekly campaign and a form, Kit Free replaces it for $0 until 10,000. If it is 15 automations and a paid product, Kit Free does not. Creator starts at $39. See [Kit alternatives](/alternatives/convertkit/).
-
-**beehiiv Free** stops at 2,500 and includes unlimited sends and recommendations, not automations or paid subscriptions. Lite jumps to $59 and up. That is a worse free tier than Kit for a MailerLite refugee and a better growth network. [beehiiv pricing](/pricing/beehiiv/) has the ladder.
-
-**Substack** has no monthly fee and takes 10% when you charge. MailerLite’s paid newsletter is a 0%-style platform fee plus Stripe, on Comfort and Power. Moving a paid MailerLite newsletter to Substack to “save money” can increase the fee once revenue is real. [Substack alternatives](/alternatives/substack/) runs the crossover.
-
-**Mailchimp Free** is 250 contacts and 500 sends. It is not an upgrade from MailerLite Free. It is a sidegrade with a tighter send cap. Skip it unless you need Mailchimp’s store stack. The critique is [Mailchimp alternatives](/alternatives/mailchimp/).
-
-## MailCheap
-
-For a weekly letter, MailCheap undercuts Comfort once the list is past a couple of thousand people, because you pay for the emails. At 5,000 weekly subscribers, about 21,667 emails, you are on Growth at $39 against Comfort at $49. At 10,000, $39 against $89. At 25,000, Pro at $79 against $179. Those are verified MailCheap prices from the plans help page, not a slider.
-
-The missing list is the decision: no paid subscriptions, no referral program, no ad network, no A/B tests, no free hosted plan. MailerLite’s comparison table includes paid newsletters, multivariate tests, and digital products on Comfort. If you use them, MailCheap is not the alternative. If you do not, you are paying Comfort for a suite that is idle, and the gap at 10,000 subscribers is $50 a month. Over a year that is $600, which is worth an afternoon of exporting. It is not worth breaking a store.
-
-Daily senders should re-run the numbers. MailCheap’s cap binds. A daily 10,000-person letter is about 303,334 emails, which is Scale at $149, **more** than Comfort’s $89 only if Comfort’s 100,000-email cap is enough — and it is not. That daily volume needs Power at $129 or a higher Comfort tier. Scale at $149 and Power at $129 are close. Choose on features, not on a weekly screenshot. The [calculator](/#calculator) does this multiplication. The [MailCheap review](/reviews/mailcheap/) lists the refusals in one place. We may earn a commission on MailCheap. We do not on MailerLite.
-
-## beehiiv, Ghost, and the publication tools
-
-beehiiv costs more than Comfort at 5,000 ($109 vs $49), 10,000 ($139 vs $89), and 25,000 ($199 vs $179). You would move for recommendations, the ad network, and a 0% paid subscription, not for a discount. Ghost Publisher is $75, $105, and $169 at those member bands. At 25,000, Ghost is the cheaper publication host and MailerLite is the cheaper marketing suite, by $10. That is not a reason to migrate a working Comfort account. It is a reason to pick Ghost at the start if the site is a magazine. Read [Ghost alternatives](/alternatives/ghost/) from the other side.
-
-## When staying is the cheaper project
-
-Stay on Comfort if the automations, the paid newsletter, and the sites are in use and the tier fits the send cap. A $49 plan that earns its keep is not a problem to solve. Stay on Free if you are under 250 people. The 2026 free-plan cut burned writers who had between 250 and 500 subscribers. If that is why you are angry, the upgrade to Comfort at the 500 tier is $12, and a move to Kit Free is $0 with a rebuild. Twelve dollars is a small price for not rebuilding. Kit is the right move if you wanted an excuse to simplify, not if you wanted revenge.
-
-Stay if you are mid-campaign for a launch. Migrating a live automation during a launch is how people lose a week of sales. Finish the launch. Export next month.
-
-## Switching without losing the subscribers who pay
-
-Export active subscribers. Leave unsubscribed and bounced addresses out of the new tool’s active list. MailerLite’s definition of active is the right filter. Map any paid-product buyers separately, and do not assume the next platform will honor a receipt it cannot see. If you move to Kit, beehiiv, or Ghost, plan the new checkout and email the buyers in MailerLite before you close it. If you move to MailCheap, you are choosing to stop selling inside the email tool. Have the other checkout live first.
-
-Authenticate the domain on the new platform. Send a test. Mail a segment. Cancel MailerLite at the end of the period you have paid for. Annual billing is 10% off and it is also a commitment. Do not buy a year of Comfort in the same week you shop for an alternative.
-
-MailerLite is not a villain in this market. After the 2026 rename it is a clear, published price with a real free tier that is small and a paid tier that is often fair. The alternatives win when you do not use the suite, or when a free plan covers a simpler job. Use the table. Then look at your last ten campaigns and see whether they needed Comfort, or whether they needed a send button and a list you are allowed to mail.
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://www.mailerlite.com/pricing" rel="noopener" target="_blank">MailerLite pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The MailerLite button is not.</span>
+</p>

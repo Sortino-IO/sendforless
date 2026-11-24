@@ -1,0 +1,90 @@
+---
+layout: ../../layouts/ArticleLayout.astro
+sectionName: "Comparisons"
+sectionHref: "/compare/"
+title: "Ghost vs Substack"
+description: "Ghost vs Substack for newsletter publishers. Ghost(Pro) charges a member tier and 0% of payments. Substack charges 10% when readers pay. Checked 24 November 2026."
+kicker: Comparison
+lede: "Substack is free to publish and keeps 10% when readers pay. Ghost(Pro) has no free hosted plan. Publisher starts at $35 a month and takes 0% of memberships. MailCheap is a sending tool, not a replacement for either site."
+crumb: "Ghost vs Substack"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: answer
+    label: The comparison
+  - id: prices
+    label: Price by scenario
+  - id: features
+    label: Site or network
+  - id: sender
+    label: If you only need email
+  - id: faq
+    label: FAQ
+related:
+  - ghost-alternatives
+  - substack-alternatives
+  - beehiiv-vs-substack
+  - mailcheap-review
+faqs:
+  - q: Is Ghost cheaper than Substack?
+    a: "<p>Only after readers pay you enough that 10% exceeds Ghost’s member tier. Publisher at 1,000 members is $35 a month. Substack on $200 a month of subscriptions is $20, plus Stripe. Substack on $2,000 a month is $200. There is no Ghost hosted plan at $0.</p>"
+  - q: Does Ghost take a cut of memberships?
+    a: "<p>Publisher takes 0% as a platform fee. Stripe still applies. Starter, at $18 a month up to 1,000 members, cannot sell memberships at all.</p>"
+  - q: Can MailCheap replace Ghost or Substack?
+    a: "<p>No, if the product is the site, the member login, or the paywall. MailCheap sends the email. It does not host a membership site and it does not sell subscriptions. It is relevant when you already have a home for the writing and you are paying Ghost only to mail the list.</p>"
+---
+
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="answer">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Ghost vs Substack</p>
+  <h2>Substack taxes revenue. Ghost charges for members, and you own the theme.</h2>
+  <p>Publishing on Substack is free at any list size. The cost starts when you turn on paid subscriptions: <strong>10% to Substack, plus Stripe</strong>. Ghost(Pro) has no monthly fee of zero. <strong>Starter is $18 a month</strong> up to 1,000 members and cannot sell memberships. <strong>Publisher is $35 a month</strong> at 1,000 members, with paid subscriptions at a 0% platform fee.</p>
+  <p>Pick Substack if you want the simplest paid switch and the network, and the 10% is still smaller than Publisher. Pick Ghost if members log in to a site you theme, and the membership revenue clears the tier. Prices were read on 24 November 2026 from Ghost’s pricing data and Substack’s help article (updated 29 October 2026).</p>
+</section>
+
+<Shot
+  name="ghost-pricing"
+  alt="Ghost pricing page at 1,000 members on yearly billing, showing Starter at $15 a month, Publisher at $29 a month, and Business at $199 a month."
+  caption="Ghost’s pricing page on 24 November 2026, yearly billing, 1,000 members. Monthly prices are $18 for Starter and $35 for Publisher at that size. Business is $239 a month through 10,000 members in Ghost’s pricing data."
+/>
+
+## Price by scenario
+
+Ghost’s monthly bands below are from the pricing file its site loads. The yearly page shows Starter at $15 a month ($180 a year) and Publisher at about $29 a month ($348 a year) for 1,000 members.
+
+| Situation | Substack | Ghost(Pro) |
+| --- | --- | --- |
+| 1,000 free readers, nothing for sale | $0 | $18 Starter. No paid memberships on this plan. |
+| 1,000 members, $300 a month in subscriptions | $30, plus Stripe | $35 Publisher, plus Stripe, 0% platform fee |
+| 5,000 members, $1,000 a month in subscriptions | $100 | $75 Publisher |
+| 10,000 members, $2,000 a month in subscriptions | $200 | $105 Publisher |
+| 25,000 members, $3,000 a month in subscriptions | $300 | $169 Publisher |
+
+Substack does not charge for free readers. Ghost’s member count includes free and paid members. A large free audience raises Ghost’s tier and does not raise Substack’s 10%.
+
+A custom domain on Substack is $50 once. Ghost(Pro) includes custom domains, and the pricing page includes a one-year free .link registration that renews at the registrar’s rate. Stripe applies on both paid setups. Substack’s help article quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing.
+
+## Site or network
+
+Ghost is a membership website that also sends the newsletter. You get themes on Publisher, multiple tiers, and a 0% platform fee. You do not get Substack’s reader app or its recommendation graph. Ghost has its own recommendations and an Explore directory. We did not measure either network.
+
+Substack is the faster way to charge readers and to be discovered inside Substack. You give up theme control and you pay 10% for as long as the paid tier runs. Leaving a substack.com address later is a redirect problem. Leaving a domain you control is a DNS change.
+
+If you want beehiiv’s ad network in this decision, that is a third product. See [beehiiv vs Substack](/compare/beehiiv-vs-substack/).
+
+## If you only need the email
+
+MailCheap is not a Ghost and it is not a Substack. Use it when the publication already lives somewhere else, or when you were paying Ghost(Pro) only to mail a list and you do not sell memberships.
+
+A weekly list of 10,000 is about 43,300 emails, which is MailCheap Growth at $39. Publisher at 10,000 members is $105. The $39 plan does not include member login, themes, or paid subscriptions. If those are the product, the $105 is the relevant bill and MailCheap is the wrong comparison.
+
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://ghost.org/pricing/" rel="noopener" target="_blank">Ghost pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The Ghost button is not. Use MailCheap only when you do not need the membership site.</span>
+</p>
+
+More on leaving the site: [Ghost alternatives](/alternatives/ghost/). More on the 10% fee: [Substack alternatives](/alternatives/substack/).

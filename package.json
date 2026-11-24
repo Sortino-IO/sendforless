@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/generate-og.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
@@ -15,5 +15,10 @@
     "@fontsource/inter": "^5.2.8",
     "@fontsource/space-grotesk": "^5.2.8",
     "astro": "^5.15.9"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.63.2",
+    "sharp": "^0.35.5"
   }
 }

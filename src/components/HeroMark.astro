@@ -1,0 +1,68 @@
+---
+interface Props {
+  variant?: "pricing" | "compare" | "review" | "roundup" | "guide" | "about" | "home";
+}
+const { variant = "about" } = Astro.props;
+---
+<div class="hero-mark" aria-hidden="true">
+  {variant === "pricing" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <rect x="8" y="8" width="104" height="104" rx="22" stroke="#8B7CFF" stroke-opacity="0.45" />
+      <rect x="28" y="68" width="14" height="28" rx="3" fill="#22D3EE" />
+      <rect x="48" y="48" width="14" height="48" rx="3" fill="#8B7CFF" />
+      <rect x="68" y="32" width="14" height="64" rx="3" fill="#34D399" />
+      <path d="M24 40h72" stroke="#F5A524" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  )}
+  {variant === "compare" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <rect x="16" y="22" width="38" height="76" rx="12" stroke="#8B7CFF" stroke-width="2" />
+      <rect x="66" y="22" width="38" height="76" rx="12" stroke="#22D3EE" stroke-width="2" />
+      <rect x="26" y="36" width="18" height="6" rx="3" fill="#8B7CFF" />
+      <rect x="76" y="36" width="18" height="6" rx="3" fill="#22D3EE" />
+      <rect x="26" y="50" width="18" height="28" rx="4" fill="#8B7CFF" fill-opacity="0.35" />
+      <rect x="76" y="50" width="18" height="18" rx="4" fill="#34D399" fill-opacity="0.7" />
+    </svg>
+  )}
+  {variant === "review" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="46" stroke="#8B7CFF" stroke-opacity="0.4" />
+      <circle cx="60" cy="60" r="30" stroke="#22D3EE" stroke-opacity="0.7" />
+      <circle cx="60" cy="60" r="10" fill="#34D399" />
+      <path d="M60 14v12M60 94v12M14 60h12M94 60h12" stroke="#F5A524" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  )}
+  {variant === "roundup" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <rect x="18" y="18" width="28" height="28" rx="8" fill="#8B7CFF" />
+      <rect x="54" y="18" width="28" height="28" rx="8" fill="#22D3EE" fill-opacity="0.85" />
+      <rect x="90" y="18" width="12" height="28" rx="6" fill="#F5A524" />
+      <rect x="18" y="54" width="48" height="22" rx="8" fill="#34D399" fill-opacity="0.8" />
+      <rect x="74" y="54" width="28" height="48" rx="8" stroke="#8B7CFF" stroke-width="2" />
+      <rect x="18" y="84" width="48" height="18" rx="8" stroke="#22D3EE" stroke-width="2" />
+    </svg>
+  )}
+  {variant === "guide" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <path d="M24 86c18-28 28-28 36-8s16 20 36-28" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" />
+      <circle cx="24" cy="86" r="6" fill="#8B7CFF" />
+      <circle cx="60" cy="70" r="6" fill="#34D399" />
+      <circle cx="96" cy="42" r="6" fill="#F5A524" />
+      <rect x="16" y="18" width="88" height="14" rx="7" stroke="#8B7CFF" stroke-opacity="0.5" />
+    </svg>
+  )}
+  {variant === "home" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <rect x="10" y="10" width="100" height="100" rx="24" fill="#8B7CFF" fill-opacity="0.08" stroke="#8B7CFF" stroke-opacity="0.4" />
+      <path d="M30 78h14V48H30v30zm22 0h14V36H52v42zm22 0h14V58H74v20z" fill="#22D3EE" />
+      <circle cx="86" cy="34" r="7" fill="#F5A524" />
+    </svg>
+  )}
+  {variant === "about" && (
+    <svg viewBox="0 0 120 120" fill="none">
+      <rect x="22" y="22" width="76" height="76" rx="20" stroke="#8B7CFF" stroke-width="2" />
+      <path d="M40 74V46h12l8 16 8-16h12v28" stroke="#22D3EE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="86" cy="36" r="5" fill="#34D399" />
+    </svg>
+  )}
+</div>

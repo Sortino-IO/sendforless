@@ -1,0 +1,65 @@
+---
+interface Row {
+  label: string;
+  value: number;
+  note?: string;
+}
+interface Props {
+  title: string;
+  description: string;
+  rows: Row[];
+  caption?: string;
+}
+const { title, description, rows, caption } = Astro.props;
+const uid = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+const max = Math.max(1, ...rows.map((row) => row.value));
+const colors = ["#8B7CFF", "#22D3EE", "#34D399", "#F5A524", "#C4B5FD", "#67E8F9", "#A7F3D0"];
+const rowH = 36;
+const padT = 8;
+const height = padT + rows.length * rowH + 8;
+const labelW = 132;
+const valueW = 72;
+const chartW = 640;
+const barW = chartW - labelW - valueW - 16;
+
+function money(n: number) {
+  return n === 0 ? "$0" : "$" + n.toLocaleString("en-US");
+}
+---
+<figure class="cost-chart">
+  <svg viewBox={`0 0 ${chartW} ${height}`} role="img" aria-labelledby={`${uid}-title ${uid}-desc`} width={chartW} height={height}>
+    <title id={`${uid}-title`}>{title}</title>
+    <desc id={`${uid}-desc`}>{description}</desc>
+    {rows.map((row, index) => {
+      const y = padT + index * rowH;
+      const width = row.value === 0 ? 3 : Math.max(8, (row.value / max) * barW);
+      return (
+        <g>
+          <text x="0" y={y + 22} fill="#d2d2dc" font-size="13" font-family="Inter, sans-serif">{row.label}</text>
+          <rect x={labelW} y={y + 8} width={width} height="16" rx="4" fill={colors[index % colors.length]} />
+          <text x={chartW} y={y + 22} fill="#f5f5f7" font-size="13" font-family="Inter, sans-serif" text-anchor="end">{money(row.value)}</text>
+        </g>
+      );
+    })}
+  </svg>
+  {caption && <p class="chart-caption">{caption}</p>}
+  <table class="visually-hidden">
+    <caption>{title}. {description}</caption>
+    <thead>
+      <tr>
+        <th scope="col">Platform</th>
+        <th scope="col">Monthly price</th>
+        {rows.some((row) => row.note) && <th scope="col">Note</th>}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          <th scope="row">{row.label}</th>
+          <td>{money(row.value)}</td>
+          {rows.some((item) => item.note) && <td>{row.note ?? ""}</td>}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</figure>

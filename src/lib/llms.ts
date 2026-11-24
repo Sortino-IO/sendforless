@@ -17,15 +17,24 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
   },
   {
     heading: "Pricing",
-    slugs: ["pricing/index", "pricing/beehiiv"],
+    slugs: ["pricing/index", "pricing/beehiiv", "pricing/convertkit", "pricing/flodesk"],
   },
   {
     heading: "Comparisons",
-    slugs: ["compare/index", "compare/mailcheap-vs-beehiiv", "compare/beehiiv-vs-substack"],
+    slugs: [
+      "compare/index",
+      "compare/mailcheap-vs-beehiiv",
+      "compare/beehiiv-vs-substack",
+      "compare/mailerlite-vs-mailchimp",
+      "compare/convertkit-vs-mailchimp",
+      "compare/ghost-vs-substack",
+      "compare/beehiiv-vs-convertkit",
+      "compare/flodesk-vs-mailchimp",
+    ],
   },
   {
     heading: "Reviews",
-    slugs: ["reviews/index", "reviews/mailcheap"],
+    slugs: ["reviews/index", "reviews/mailcheap", "reviews/beehiiv", "reviews/mailerlite"],
   },
   {
     heading: "Guides",

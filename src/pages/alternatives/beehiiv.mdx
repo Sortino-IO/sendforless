@@ -2,163 +2,72 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Alternatives"
 sectionHref: "/alternatives/"
-title: "beehiiv alternatives if you want the list without the tier"
-description: "beehiiv alternatives compared on monthly list price, growth tools, and migration. When to leave Lite, when Free is enough, and who should not switch to a cheaper sender."
+title: "beehiiv alternatives"
+description: "beehiiv alternatives if you want the list without the subscriber tier. Prices, missing features, and when Free or Lite is still the right bill."
 kicker: Roundup
-lede: "beehiiv is a growth platform that prices you by subscriber bucket. The alternatives are either other growth platforms with a different fence, or plain senders that cost less and grow nothing for you. This guide separates those jobs before it talks about a CSV."
+lede: "beehiiv prices you by subscriber bucket and includes growth tools. The alternatives are other publication platforms, or senders that cost less and do not grow the list for you."
 crumb: "beehiiv alternatives"
 affiliate: true
 datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
-  - id: verdict
-    label: Our verdict
+  - id: stay
+    label: When to stay
   - id: prices
-    label: Price comparison
-  - id: kit
-    label: Kit
-  - id: substack
-    label: Substack
-  - id: ghost
-    label: Ghost
-  - id: mailcheap
-    label: MailCheap
-  - id: mailerlite
-    label: MailerLite
-  - id: mailchimp
-    label: Mailchimp
-  - id: migrate
-    label: Migrate from beehiiv
+    label: The same list elsewhere
+  - id: options
+    label: Alternatives
   - id: faq
     label: FAQ
 related:
   - beehiiv-pricing
+  - beehiiv-review
   - mailcheap-vs-beehiiv
   - beehiiv-vs-substack
-  - convertkit-alternatives
 faqs:
   - q: What is the cheapest beehiiv alternative?
-    a: "<p>Under 2,500 subscribers, beehiiv Free is already $0, so the cheapest alternative is staying. From 2,501 to 10,000, Kit’s free plan is $0 for broadcasts. Substack is $0 to publish at any size and takes 10% if you charge readers. MailCheap is the cheapest paid sender we can verify for a weekly list past those free caps, starting at $19 a month, and it has none of beehiiv’s growth or subscription tools.</p>"
-  - q: Can I move paid subscribers out of beehiiv?
-    a: "<p>You can export the email addresses. You cannot export beehiiv’s billing relationship into a tool that does not sell subscriptions. MailCheap does not sell them. Ghost and Kit and MailerLite can sell them, but the Stripe subscriptions themselves have to be recreated or migrated with a plan, not with a CSV of emails. If people pay you inside beehiiv, solve the billing before you solve the broadcast.</p>"
-  - q: Does beehiiv’s recommendation network export?
-    a: "<p>No. Recommendations, boosts, and the ad network are beehiiv’s marketplace. A CSV of subscribers does not include the graph that sent them. If that graph is how the list grows, a cheaper sender will shrink your acquisition the month you leave. Measure it before you export.</p>"
-  - q: How do I export from beehiiv?
-    a: "<p>beehiiv’s own help, which MailCheap’s migration notes also point at, is Settings, then Export data, then the full subscriber export if you want tags, custom fields, and stats. The quick export is email and status only. beehiiv emails you the file.</p>"
+    a: "<p>Under 2,500 subscribers, beehiiv Free is $0, so the cheapest move is to stay. Under 10,000, Kit Free is $0 for broadcasts. For a paid weekly send past those caps, MailCheap is $19 to $79 on the volumes in the table, and it does not include recommendations, ads, or paid subscriptions.</p>"
+  - q: Where is the full tier table?
+    a: "<p>On <a href=\"/pricing/beehiiv/\">beehiiv pricing</a>. This page does not repeat every bucket.</p>"
 ---
 
-<section class="verdict" id="verdict">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
-  <h2>Replace beehiiv with another growth tool, or with a sender. Do not pretend those are the same switch.</h2>
-  <p>If you use recommendations, ads, or paid subscriptions, the alternatives are Kit, Substack, Ghost, and MailerLite — each missing a different piece of beehiiv and each priced differently. If you only write and send, <strong>MailCheap is the inexpensive hosted alternative past the free caps</strong>, at $19 to $79 a month for the weekly volumes most independents actually have, and it will not grow the list for you. Under 2,500 subscribers, do not pay anyone. beehiiv Free still fits.</p>
+import { mailcheapHref } from "../../lib/site";
+
+<section class="verdict" id="stay">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> beehiiv alternatives</p>
+  <h2>Stay on Free or Lite if you use the network. Leave if you are paying for a send button.</h2>
+  <p>Under 2,500 subscribers, Free already sends, with unlimited email and the recommendation network. Paying anyone else is an extra bill. Past 2,500, Lite is the price of the bucket you have crossed. If recommendations, ads, or paid subscriptions earn more than that tier, Lite is the product. If they earn nothing because you will not use them, a sender is the relevant alternative.</p>
 </section>
 
-Writers start looking for beehiiv alternatives at two moments. The first is the day the list crosses 2,500 and Free becomes Lite. At the up-to-5,000 bucket that is $109 a month, or about $95 if you pay annually. The second is later, when a 10,000-person Lite plan at $139 or a 25,000-person plan at $199 feels like rent on a send button. Both moments are real. They are not the same decision. The first might mean you wanted Lite’s features and the free ride ended. The second might mean you never used them.
+## The same list elsewhere
 
-The full tier table, including Pro, is on the [beehiiv pricing](/pricing/beehiiv/) page. Pro is not the alternative to Lite if you are trying to spend less. Pro costs more at every bucket: $199 a month where Lite is $109, at the 5,000-subscriber step. People land on Pro because they want the branding gone or they have a team. That is a different article. This one is about leaving, or about not leaving.
+Weekly, month-to-month, 24 November 2026. beehiiv figures are Lite unless Free still applies.
 
-## Prices at the sizes that trigger the search
+| Subscribers | beehiiv | Kit | MailCheap | Ghost Publisher | Substack |
+| --- | --- | --- | --- | --- | --- |
+| 1,000 | $0 | $0 | $19 | $35, or $18 Starter with no paid members | $0 |
+| 4,000 | $109 | $0 | $19, if five issues plus welcomes still fit in 20,000 emails | $75 | $0 to send |
+| 10,000 | $139 | $0 at the cap | $39 | $105 | $0 to send |
+| 25,000 | $199 | Check current pricing | $79 | $169 | $0 to send |
 
-Monthly list prices, 24 November 2026. One issue a week where a sender meters emails.
+Substack’s $0 becomes 10% when readers pay. The crossover math is [beehiiv vs Substack](/compare/beehiiv-vs-substack/).
 
-<div class="table-wrap">
-  <table>
-    <caption>beehiiv Lite against the alternatives people actually mean</caption>
-    <thead>
-      <tr>
-        <th scope="col">Subscribers</th>
-        <th scope="col">beehiiv</th>
-        <th scope="col">Kit</th>
-        <th scope="col">MailCheap</th>
-        <th scope="col">Ghost(Pro)</th>
-        <th scope="col">Substack</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">2,500</th>
-        <td data-label="beehiiv">$0 Free, at the cap</td>
-        <td data-label="Kit">$0</td>
-        <td data-label="MailCheap">$19</td>
-        <td data-label="Ghost">$55 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-      <tr>
-        <th scope="row">4,000</th>
-        <td data-label="beehiiv">$109 Lite</td>
-        <td data-label="Kit">$0 broadcasts</td>
-        <td data-label="MailCheap">$19 Starter</td>
-        <td data-label="Ghost">$75 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="beehiiv">$139 Lite</td>
-        <td data-label="Kit">$0 at the cap, or ~$139 Creator</td>
-        <td data-label="MailCheap">$39 Growth</td>
-        <td data-label="Ghost">$105 Publisher</td>
-        <td data-label="Substack">$0 to send</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="beehiiv">$199 Lite</td>
-        <td data-label="Kit">~$199 Creator, slider capture</td>
-        <td data-label="MailCheap">$79 Pro</td>
-        <td data-label="Ghost">$169 Publisher</td>
-        <td data-label="Substack">$0 to send, 10% if readers pay</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+## Alternatives
 
-<p class="method-note">Kit Creator figures above $39 at 1,000 subscribers are a slider capture. Confirm them. MailerLite Comfort is $33 at 2,500, $49 at the 5,000 tier, $89 at 10,000, and $179 at 25,000, from MailerLite’s pricing markdown.</p>
+**Kit** for sequences and a longer free broadcast plan. [beehiiv vs Kit](/compare/beehiiv-vs-convertkit/).
 
-The 4,000-subscriber column is the one that makes people angry, and the anger is fair if they are paying $109 to do what Kit does for $0 or MailCheap does for $19. The anger is misplaced if the $109 is buying ads, a paywall with a 0% platform fee, and a recommendation engine that acquired a third of the list. Pull the acquisition report before you pull the export.
+**Substack** for a percent of revenue instead of a tier, if you can live in its network.
 
-## Kit
+**Ghost** for a membership site you theme. [Ghost alternatives](/alternatives/ghost/) if you are choosing the site, not the exit from beehiiv.
 
-Kit is the closest “stay in creator software, pay less at the start” move. The free plan runs to 10,000 subscribers and includes broadcasts, forms, tagging, and a recommendation network of Kit’s own, with paid plans featured more often. Sequences and visual automations are Creator, from $39 a month at 1,000 subscribers. Kit also sells digital products and subscriptions on the free plan, so a beehiiv paid tier can have a home here in a way it cannot on MailCheap.
+**MailerLite Comfort** if you want automations and a paid newsletter without beehiiv’s ad exchange. At 10,000 subscribers Comfort is $89 and Lite is $139. Comfort’s email cap is 100,000 at that tier, enough for a weekly issue and not for a daily one.
 
-The mismatch is the network. beehiiv recommendations and Kit recommendations are different rooms. You do not bring your boost history with you. You start again, and Kit’s help is frank that free accounts get a smaller share. If recommendations are a side channel, Kit Free between 2,500 and 10,000 subscribers is the obvious beehiiv alternative. If they are the channel, model a quarter of slower growth and see whether Lite was cheap. More on the product is in [Kit alternatives](/alternatives/convertkit/), which is written for people leaving Kit and still describes the fence accurately.
+**MailCheap** for the send alone. The feature gap is the point of [MailCheap vs beehiiv](/compare/mailcheap-vs-beehiiv/). Who beehiiv is for, without this table, is the [beehiiv review](/reviews/beehiiv/).
 
-## Substack
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="/pricing/beehiiv/">beehiiv tiers</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. Use it after you decide you do not need the growth tools.</span>
+</p>
 
-Substack is the alternative when you want the fee to scale with revenue and you are willing to be inside Substack’s app and discovery. There is no monthly platform fee. Paid subscriptions cost 10% plus Stripe’s processing, which Substack’s help article lists at 2.9% + $0.30 for US cards and 0.7% for Billing on recurring charges. A custom domain is $50 once.
-
-At $139 a month of Lite, Substack is cheaper on fees until subscription revenue is high enough that 10% exceeds the Lite invoice. At $139, that crossover is $1,390 a month of subscription payments, before you count Stripe and before you count what each network does for growth. Many newsletters never get there, which is an argument for Substack. Some get there in a year, which is an argument for beehiiv’s 0% or for Ghost’s 0%. The head-to-head is [beehiiv vs Substack](/compare/beehiiv-vs-substack/). The “I am ready to leave Substack” version is [Substack alternatives](/alternatives/substack/).
-
-Substack will not replace beehiiv’s ad network or its automation canvas. It will replace the send and the paywall. For a lot of writers that is the whole product.
-
-## Ghost
-
-Ghost is the alternative when the beehiiv website was never quite the site you wanted, and memberships are the business. Ghost(Pro) Publisher takes 0% of subscription revenue. At 4,000 members the monthly price is $75, which is already less than Lite at $109, and you get a CMS rather than a newsletter site with pages. Starter at $18 cannot sell memberships and stops at 1,000 members, so it is not a beehiiv Lite replacement.
-
-You give up the recommendation marketplace and the ad network. You take on themes, members, and the habit of publishing to a site first. Self-hosting is available if you want the software without Ghost(Pro)’s invoice. It is a project. The roundup of people leaving Ghost, which doubles as a map of the neighborhood, is [Ghost alternatives](/alternatives/ghost/).
-
-## MailCheap
-
-MailCheap is the alternative we recommend only in the narrow case: you send on a regular cadence, you care what the invoice says, and you do not need paid subscriptions, an ad network, a referral program, or A/B tests. There is no free hosted plan. For the weekly sizes in the table, the verified prices are $19, $19, $39, and $79. Yearly billing costs 10 months. Every email counts, including tests and welcomes.
-
-That is a worse growth platform than beehiiv and a cheaper sender. Both sentences fit. The [direct comparison](/compare/mailcheap-vs-beehiiv/) is the long version. The [review](/reviews/mailcheap/) is where we score it 4 out of 5 for the sending job and tell you to ignore it for the media job. If you use our pricing link we may earn a commission. That fact does not add a referral program to the product.
-
-Choose MailCheap over Kit only after Kit’s free plan no longer covers you, or when you need the email-cap model more than you need Kit’s sequences. Choose it over Ghost when you already have a website. Choose it over Substack when you do not want 10% later and you also do not want Substack’s network now.
-
-## MailerLite
-
-MailerLite is the underrated beehiiv alternative for operators who want automations, a site, digital products, and paid newsletters without joining a creator network. Comfort starts at $12 a month. At 10,000 subscribers it is $89, under Lite’s $139, with a send cap of 10 times the tier ceiling — 100,000 emails, which covers a weekly issue and not a daily one. Power is $129 at that tier and lifts the cap. The June 2026 rename means old “Growing Business” screenshots are the Comfort plan now. Read [MailerLite alternatives](/alternatives/mailerlite/) if MailerLite is where you already are. If you are leaving beehiiv, Comfort is the row to put on the spreadsheet next to Lite, especially if you want paid subscriptions and you do not care about beehiiv’s ad exchange.
-
-## Mailchimp
-
-Mailchimp is a beehiiv alternative in the way a pickup truck is an alternative to a bicycle. It can carry email. It charges for contacts, including unsubscribed ones, and the free plan is 250 people. Standard starts at $20 a month for 500 contacts. We do not publish a pretend price for 10,000 contacts. If your reason for leaving beehiiv is “I want a store and ads in the classic marketing-cloud sense,” Mailchimp is in the conversation. If your reason is the Lite invoice, Mailchimp is how you get a new invoice you cannot predict from a static page. See [Mailchimp alternatives](/alternatives/mailchimp/).
-
-## Migrate from beehiiv
-
-Do the commercial audit first. Write down whether you have: paying subscribers, an ad network placement, recommendation swaps you agreed to, a podcast, a community, a custom domain on beehiiv, and automations that are not “send a welcome.” Anything in that list with a yes is a project. The CSV is the easy part.
-
-Export the full subscriber file from Settings → Export data so status, signup date, tags, and stats come along. The quick file is only email and status. In the next tool, import and watch the status mapping. Unsubscribed and invalid readers must not become active. MailCheap’s migration note says it maps inactive, invalid, and unsubscribed readers so they get nothing, and it asks you to confirm consent. Other platforms have the same duty even when the button is labeled differently.
-
-Leave recommendations and ads behind on purpose. Tell the writers you swap with that the swap is ending. Cancel beehiiv after one clean send on the new platform, not before. Annual plans run to the end of the term. Monthly plans are easier to exit and easier to regret. If you are inside a renewal window from the October 2026 price change, you may still be on an old rate. Check the renewal date before you burn a prepaid year to make a point.
-
-Domain authentication is the step that protects the list you just exported. Put the new service’s SPF and DKIM on the domain, send a test to two inboxes you control, and only then mail a recent-opener segment. beehiiv’s unlimited sends may have trained you to mail everyone, every time. A new platform’s first week is a bad time to keep that habit, especially on MailCheap, where the test itself spends the allowance.
-
-If you are not migrating and you are choosing a first platform, the order of operations is in [how to start a newsletter](/guides/how-to-start-a-newsletter/). beehiiv Free is a fair place to start. So is Kit. Paying Lite on day one, with 80 subscribers, is how the tier becomes the product before the writing does.
+Export subscribers from beehiiv before you cancel. Paid billing, recommendations, and the website do not come along in the CSV.

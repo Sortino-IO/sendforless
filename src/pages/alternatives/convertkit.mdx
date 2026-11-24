@@ -2,174 +2,75 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Alternatives"
 sectionHref: "/alternatives/"
-title: "Kit alternatives (ConvertKit) when the free plan ends"
-description: "Kit, formerly ConvertKit, alternatives compared on price and features. When the free plan is enough, when Creator is worth $39, and what is cheaper after 10,000 subscribers."
+title: "Kit alternatives (ConvertKit)"
+description: "Kit, formerly ConvertKit, alternatives on price and features. When the free plan is enough, and what is cheaper after 10,000 subscribers."
 kicker: Roundup
-lede: "Kit, the product that used to be called ConvertKit, is free until 10,000 subscribers if you only broadcast. Creator starts at $39 a month when you need sequences. After the free cap, the bill follows the list. These are the alternatives, including the ones that are wrong for a creator business."
+lede: "Kit is free until 10,000 subscribers if you only broadcast. Creator starts at $39 a month when you need sequences. These are the alternatives after that, including the ones that are wrong for a creator business."
 crumb: "Kit alternatives"
 affiliate: true
 datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
-  - id: verdict
-    label: Our verdict
-  - id: kit-costs
-    label: What Kit costs
-  - id: prices
-    label: Price comparison
   - id: stay
-    label: When to stay on Kit
-  - id: mailcheap
-    label: MailCheap
-  - id: beehiiv
-    label: beehiiv
-  - id: ghost
-    label: Ghost
-  - id: substack
-    label: Substack
-  - id: mailerlite
-    label: MailerLite
-  - id: mailchimp
-    label: Mailchimp
-  - id: migrate
-    label: Moving off Kit
+    label: When to stay
+  - id: prices
+    label: Prices we can cite
+  - id: options
+    label: Alternatives
   - id: faq
     label: FAQ
 related:
-  - mailchimp-alternatives
-  - beehiiv-alternatives
+  - convertkit-pricing
+  - convertkit-vs-mailchimp
+  - beehiiv-vs-convertkit
   - mailcheap-review
-  - how-to-start-a-newsletter
 faqs:
   - q: Is Kit the same as ConvertKit?
-    a: "<p>Yes. ConvertKit was renamed Kit. Pricing pages, help articles, and exports you already have are the same product. Older tutorials that say ConvertKit are talking about this app.</p>"
-  - q: Is Kit actually free up to 10,000 subscribers?
-    a: "<p>Kit’s help center, updated 23 September 2026, says the free plan is $0 for up to 10,000 subscribers and includes unlimited broadcasts, forms, landing pages, tagging, segmentation, and selling digital products and subscriptions. Visual automations, sequences, rules, and RSS campaigns need a paid plan. Past 10,000 subscribers you have to upgrade to keep sending.</p>"
-  - q: What does Creator cost?
-    a: "<p>Creator starts at $39 a month for up to 1,000 subscribers on monthly billing. Kit says annual billing works out to two months free. Higher subscriber bands are on a slider, not a static table. A capture of that slider on 24 November 2026 is in our calculator and is labeled where it is not the published $39 entry price. A 50% promotion on the first three months was dated to end 1 December 2026. We ignore it.</p>"
+    a: "<p>Yes. The product was renamed. Older tutorials are about this app.</p>"
   - q: What is cheaper than Kit after 10,000 subscribers?
-    a: "<p>For a weekly broadcast, MailCheap Growth is $39 a month at 10,000 subscribers (about 43,334 emails) and Pro is $79 at 25,000 (about 108,334 emails). Those are verified hosted prices. They buy a send, segments, automations, and an API. They do not buy Kit’s visual sequences, Creator Network, or commerce. If those are why you pay Kit, a cheaper sender is not a substitute.</p>"
-  - q: Should a new newsletter start on Kit?
-    a: "<p>Often, yes, if the list will stay under 10,000 for a while and you want forms and a free broadcast. Start on Free. Move to Creator only when a sequence is doing a job you can name. Do not start on MailCheap at $19 if Kit Free already covers the send.</p>"
+    a: "<p>For a weekly broadcast, MailCheap Growth is $39 a month at 10,000 subscribers (about 43,300 emails) and Pro is $79 at 25,000 (about 108,300 emails). Those prices buy a send. They do not buy Kit’s sequences or Creator Network. If those are why you pay, a cheaper sender is not a substitute. Kit’s own price past the tiers we could read is on kit.com/pricing.</p>"
 ---
 
-<section class="verdict" id="verdict">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
-  <h2>Stay on Kit Free while it fits. Pay Creator for sequences. Leave for price only after 10,000, and only if you do not use the commerce.</h2>
-  <p>Kit’s free plan is one of the best deals in newsletter software, and it is a deal with a fence: 10,000 subscribers, broadcasts rather than visual automations. Inside that fence, recommending a paid alternative is usually a mistake. Outside it, a weekly sender can pay less on MailCheap than on Creator, and will give up the Creator Network, the sequence builder, and Kit’s commerce. Pay that trade with your eyes open. If you sell from the list, stay.</p>
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="stay">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Kit alternatives</p>
+  <h2>Stay on Kit Free while it fits. Pay Creator for sequences. Compare other paid tools after 10,000.</h2>
+  <p>Inside the free cap, a paid alternative is usually an extra bill. Outside it, a weekly sender can pay less on MailCheap than a subscriber-priced Creator plan, and will give up the sequences and the Creator Network. If you sell from the list, price that loss before you export.</p>
 </section>
 
-## What Kit costs in practice
+<Shot
+  name="kit-pricing"
+  alt="Kit pricing page showing the free plan, Creator, and Pro at 1,000 subscribers."
+  caption="Kit’s pricing page on 24 November 2026. Creator’s list price at 1,000 subscribers is $39 a month. The lower introductory figure ends 1 December 2026."
+/>
 
-Kit prices paid plans by active subscribers and says you are not charged for unsubscribers. Sends on paid plans are unlimited. The free plan’s help article is the piece of pricing that does not require a slider: $0, 10,000 subscribers, unlimited broadcasts, forms, landing pages, tags, segments, API access, A/B tests on broadcasts, and the ability to sell digital products and subscriptions. You also get the Creator Network, with five Smart Recommendation slots and a smaller share of distribution than paid accounts. Earning from paid recommendations needs a paid plan. You can turn recommendations off.
+## Prices we can cite
 
-Creator is the step up for visual automations, sequences, rules, and RSS. The price everyone can see without dragging a control is **$39 a month at 1,000 subscribers**. Kit’s own site says you can pay annually and get two months free. Pro sits above Creator and adds the reporting and team tools Kit aims at a bigger operation. We are not printing a Pro price grid. The official page renders it on a slider, and we did not re-read every Pro stop on 24 November 2026. Open [kit.com/pricing](https://kit.com/pricing) for the stop that matches your list.
+The full notes are [Kit pricing](/pricing/convertkit/). Short version, 24 November 2026:
 
-The Creator slider capture used in our calculator, which we are not going to pretend is a Kit PDF, reads roughly like this at the stops people ask about: $39 at 1,000, $59 at 3,000, $89 at 5,000, $139 at 10,000, $199 at 25,000. Confirm each one. They are labeled in the calculator when they are not the official $39 entry price. A checkout promotion — half off the first three months, ending 1 December 2026 on the pricing page we saw referenced in Kit’s own interface copy — is not a price. It expires, and it is not how you should choose a home for the list.
+- Free: $0, up to 10,000 subscribers, unlimited broadcasts. Sequences need a paid plan.
+- Creator: $39 a month up to 1,000 subscribers. Kit’s billing help uses $59 a month for the up-to-3,000 tier.
+- Pro: $79 a month at 1,000 subscribers on the pricing page.
+- Above those stops: [check current pricing](https://kit.com/pricing).
 
-Past 10,000 subscribers the free plan stops sending. Kit’s help says everything you built remains, and automations unlock when you upgrade. You cannot hover at 10,001 on Free. That cliff is the moment this article is about.
+## Alternatives
 
-## A weekly list, side by side
+**beehiiv** if you want recommendations and ads. Free stops at 2,500, which is a shorter gift than Kit’s 10,000. Lite at 10,000 subscribers is $139. [beehiiv vs Kit](/compare/beehiiv-vs-convertkit/).
 
-Month-to-month list prices, 24 November 2026. Kit paid cells other than $39 are the slider capture.
+**MailCheap** for a weekly broadcast past the free cap. Growth is $39 at 10,000 subscribers. It does not include visual sequences or the Creator Network. At 4,000 subscribers you are still on Kit Free, and MailCheap’s $19 is not a reason to move. [MailCheap review](/reviews/mailcheap/).
 
-<div class="table-wrap">
-  <table>
-    <caption>Where Kit’s bill sits against other newsletter platforms</caption>
-    <thead>
-      <tr>
-        <th scope="col">Subscribers</th>
-        <th scope="col">Kit</th>
-        <th scope="col">MailCheap, weekly</th>
-        <th scope="col">beehiiv</th>
-        <th scope="col">Ghost(Pro)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1,000</th>
-        <td data-label="Kit">$0, or $39 Creator</td>
-        <td data-label="MailCheap">$19 Starter</td>
-        <td data-label="beehiiv">$0 Free, or $59 Lite</td>
-        <td data-label="Ghost">$18 Starter</td>
-      </tr>
-      <tr>
-        <th scope="row">4,000</th>
-        <td data-label="Kit">$0 for broadcasts</td>
-        <td data-label="MailCheap">$19 Starter</td>
-        <td data-label="beehiiv">$109 Lite</td>
-        <td data-label="Ghost">$75 Publisher</td>
-      </tr>
-      <tr>
-        <th scope="row">10,000</th>
-        <td data-label="Kit">$0 at the cap, or $139 Creator (capture)</td>
-        <td data-label="MailCheap">$39 Growth</td>
-        <td data-label="beehiiv">$139 Lite</td>
-        <td data-label="Ghost">$105 Publisher</td>
-      </tr>
-      <tr>
-        <th scope="row">25,000</th>
-        <td data-label="Kit">$199 Creator (capture)</td>
-        <td data-label="MailCheap">$79 Pro</td>
-        <td data-label="beehiiv">$199 Lite</td>
-        <td data-label="Ghost">$169 Publisher</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+**Ghost(Pro)** when the newsletter is a membership site. Publisher at 10,000 members is $105.
 
-Under 10,000, Kit Free wins on price against every paid row, including MailCheap. We will not dress $19 up as a Kit alternative for a writer who only broadcasts. The alternative to Kit Free is another free plan with a different fence: beehiiv to 2,500, Substack with a 10% fee if you charge, MailerLite Free only to 250.
+**Substack** when you want the fee to be a percent of revenue. Publishing stays $0 at list sizes where Kit Free has ended.
 
-At 10,000 and 25,000, the weekly MailCheap row is lower than the Creator capture and lower than beehiiv Lite. Ghost(Pro) is in between at 25,000 ($169) and includes memberships Kit also has and a website that is the product, not a landing page. Use the row as a prompt to open the official slider, not as a quote you paste into a sponsor deck.
+**MailerLite and Mailchimp** are rarely a discount versus Kit Free. Comfort at 10,000 subscribers is $89. Mailchimp’s price above 500 contacts is on Mailchimp’s site. [Kit vs Mailchimp](/compare/convertkit-vs-mailchimp/).
 
-## When staying on Kit is the correct spend
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <a class="btn btn-secondary" href="https://kit.com/pricing" rel="noopener" target="_blank">Kit pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. The Kit button is not.</span>
+</p>
 
-Stay when a sequence makes money. A five-email course pitch that runs every time someone takes a tag is the thing Creator is for. Rebuilding it elsewhere to save $50 a month is a false economy the first time the new automation drops a buyer. Stay when you sell digital products or subscriptions inside Kit and the checkout is already trusted by your readers. Stay when the Creator Network is a measured source of subscribers, not a vanity graph. Paid plans get a larger share of those recommendations. If you can see the subscribers in Kit’s reporting, price them against Creator before you export the CSV.
-
-Stay on Free, specifically, when you are tempted by Creator because the automation canvas looks like work. Looking at the canvas is free. Publishing a sequence is not. If you send one letter and reply to people by hand, you do not have a Creator problem. You have a writing practice. Keep the $39.
-
-Move when the list crosses 10,000 and the only paid feature you would unlock is “Mailchimp let me send.” That feature is available in more than one place, and Kit’s price at that size is a subscriber price, the thing this site keeps measuring. Move when you want a membership website more than a creator CRM. Move when you want beehiiv’s ad network and you have the traffic for it. Do not move because a comparison site told you a logo was cheaper. Check the feature you used last Tuesday.
-
-## MailCheap
-
-MailCheap is the alternative we will actually name for a price-sensitive weekly sender past Kit’s free cap, with the usual refusal attached. No free hosted plan. No paid subscriptions. No referral program. No ad network. No A/B tests. Starter is $19 for 20,000 emails and 10,000 subscribers, which does **not** cover a weekly 10,000-person send. That send is about 43,334 emails, so the plan is Growth at $39. A weekly 25,000-person send is about 108,334 emails, Pro at $79.
-
-$39 against a Creator slider price around $139 is a large gap. It buys segments, automations, a custom domain, CSV import (Kit is one of the documented sources), an API, and MCP. It does not buy the visual journey builder or the Creator Network. If your Kit account is a broadcast plus a form, the gap is the point. If your Kit account is twelve sequences and a product catalog, the gap is a trap. The long review is the [MailCheap review](/reviews/mailcheap/). We earn a commission if you use our link. Kit’s pricing link on this page is not an affiliate link.
-
-## beehiiv
-
-beehiiv competes with Kit for creators who want the platform to help them grow and charge. Free stops at 2,500, which is a smaller gift than Kit’s 10,000. Lite at 10,000 subscribers is $139 a month, in the same neighborhood as the Creator capture, and it includes a 0% take rate, an ad network where beehiiv offers it, recommendations, and automations. Pro is a further step up for teams and branding removal.
-
-Choose beehiiv over Kit when the recommendation network and the ad stack are the growth plan, and you have more than a landing page in mind. Choose Kit over beehiiv when you are under 10,000 and you want $0, or when sequences and a creator CRM are the business. The tier table is [beehiiv pricing](/pricing/beehiiv/). The “I like the growth tools and not the invoice” version is [beehiiv alternatives](/alternatives/beehiiv/).
-
-## Ghost
-
-Ghost(Pro) is the alternative when the newsletter is a publication with members, not a creator funnel. Starter is $18 a month up to 1,000 members and cannot sell subscriptions. Publisher at the 10,000-member band is $105 a month, $88 on the annual effective rate, and takes 0% plus Stripe. At 25,000 members Publisher is $169 a month. You get a real CMS, themes on Publisher, and memberships. You do not get Kit’s recommendation network.
-
-Self-hosting Ghost is the path for people who already run it. It is a poor “cheaper than Creator” plan for someone who wants to stop thinking about software. If the site is the point, start with [Ghost alternatives](/alternatives/ghost/) rather than with Kit’s slider.
-
-## Substack
-
-Substack is the alternative for writers who want the platform fee to be a percentage of revenue instead of a monthly bill, and who can live with Substack’s discovery model. Publishing is free at any list size. Paid subscriptions cost 10% plus Stripe. There is no Creator-style visual automation product hiding in the settings. There is a network of recommendations that is Substack’s, not yours to export as a strategy.
-
-Under 10,000 subscribers, Kit Free is usually the more capable $0. Over 10,000, Substack remains $0 to send and Kit does not. The question is whether you will turn on paid subscriptions. If yes, model 10% against Creator’s monthly price. If a $199 Creator bill is less than 10% of subscription revenue, Kit can be the cheaper business. If you have no paid tier, Substack’s fee is theoretical and Kit’s bill is not. See [Substack alternatives](/alternatives/substack/).
-
-## MailerLite and Mailchimp
-
-MailerLite Comfort is $12 a month at 500 subscribers, $19 at 1,000, $49 at 5,000, $89 at 10,000, and $179 at 25,000, from the official pricing markdown. Emails on Comfort are 10 times the tier ceiling, so a weekly send fits and a daily send often does not. Power starts at $25 and lifts the email cap. MailerLite is a credible Kit alternative if you want landing pages, automations, and paid newsletters without the creator-network positioning. It is not free at Kit’s scale. Free is 250 subscribers and 2,500 emails after the June 2026 change.
-
-Mailchimp is rarely the place a Kit user should go to save money. Free stops at 250 contacts and 500 sends. Standard starts at $20 for 500 contacts, and unsubscribed people count until you archive them. The mid-tier prices are not a public static table, which is why our calculator marks them as placeholders. If you left Mailchimp for Kit years ago, going back is a workflow decision about stores and ads, not a discount. The roundup is [Mailchimp alternatives](/alternatives/mailchimp/), written from the other direction.
-
-## Moving the list
-
-Kit’s help says you can export subscribers. MailCheap’s import notes list Kit among the CSVs it can read, alongside beehiiv, Substack, and Mailchimp. The shape of a careful move:
-
-1. Export only people you may still mail. Do not import unsubscribed addresses as active.
-2. Authenticate the new domain and send yourself a test before the list sees anything.
-3. Rebuild the sequences you can explain. Let the others die. A migration is a chance to count how many automations are actually on.
-4. Overlap the two bills for one cycle. Cancel Kit after a send you trust, not before.
-5. If you were on Free, there may be nothing to cancel except the habit of logging in. Turn off recommendations if you do not want the old account to keep trading your name.
-
-Commerce does not move cleanly. Subscribers to a Kit product need a new way to pay and a new way to receive the file. If that sentence made your stomach drop, you are not in the “cheaper sender” segment. Stay on Kit until the new checkout has taken a real payment from you, the owner, in a test.
-
-The [calculator](/#calculator) is the right last step. Put in the list size and the real cadence. If Kit Free still covers you, close the tab. If it does not, compare the Creator number on Kit’s site today with the MailCheap plan the email volume selects, and with beehiiv Lite at the same bucket. Then decide which feature you would miss on a Wednesday, not which logo is on sale.
+Export only people you may still mail. Commerce does not move cleanly. If subscribers pay for a Kit product, keep Kit until the new checkout has taken a real test payment.

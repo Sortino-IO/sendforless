@@ -1,4 +1,4 @@
-/* sendforless — dark premium design system
+/* sendforless: dark premium design system
    Two fonts: Space Grotesk (display) + Inter (body/UI). */
 
 @font-face {
@@ -418,6 +418,7 @@ summary:focus-visible {
 .av-slate { background: linear-gradient(135deg, #e5e7eb, #64748b); color: #111; }
 .av-yellow { background: linear-gradient(135deg, #fde68a, #f59e0b); color: #1a1204; }
 .av-teal { background: linear-gradient(135deg, #2dd4bf, #0284c7); }
+.av-mint { background: linear-gradient(135deg, #6ee7b7, #059669); color: #052e1c; }
 
 .tag {
   display: inline-flex;
@@ -899,7 +900,34 @@ select:focus {
 /* Article
    -------------------------------------------------------------------------- */
 .article-hero { padding: 3.5rem 0 0; }
-.article-hero .page-title { max-width: 18ch; }
+.article-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 8.75rem;
+  gap: 1.5rem 2rem;
+  align-items: end;
+}
+.hero-mark { width: 8.75rem; height: 8.75rem; }
+.hero-mark svg { width: 100%; height: 100%; }
+.article-hero .page-title { max-width: 22em; }
+.shot { margin: 1.25rem 0 1.5rem; max-width: 42rem; }
+.shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0c0c14;
+}
+.shot figcaption { margin: 0.5rem 0 0; font-size: 0.82rem; color: var(--faint); max-width: 42rem; }
+.cost-chart {
+  margin: 1.25rem 0 1.5rem;
+  max-width: 42rem;
+  background: #07070c;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.9rem 1rem 0.85rem;
+}
+.cost-chart svg { width: 100%; height: auto; }
+.cost-chart .chart-caption { margin: 0.55rem 0 0; font-size: 0.82rem; color: var(--faint); }
 .byline {
   display: flex;
   flex-wrap: wrap;
@@ -1076,7 +1104,7 @@ tr.is-lowest td, tr.is-lowest th {
   color: var(--faint);
   font-weight: 500;
 }
-.faq details[open] summary::after { content: "–"; }
+.faq details[open] summary::after { content: "\2212"; }
 .faq details p { margin: 0.55rem 0 0.2rem; }
 
 /* Mobile
@@ -1085,6 +1113,7 @@ tr.is-lowest td, tr.is-lowest th {
   .wrap, .header-inner { width: min(calc(100% - 1.5rem), var(--wrap)); }
   .hero { padding: 2.4rem 0 2.2rem; }
   .hero-grid,
+  .article-hero-grid,
   .calc-grid,
   .card-grid,
   .footer-grid,
