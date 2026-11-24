@@ -786,6 +786,58 @@ select:focus {
   max-width: 56rem;
 }
 
+.how-compared {
+  margin: 0.8rem 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  max-width: 40rem;
+}
+
+.choice-grid,
+.pros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+.choice-card { padding: 1.1rem 1.15rem 1rem; }
+.choice-card h3,
+.pros-grid h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+}
+.choice-card p,
+.pros-grid li { color: var(--muted); }
+.choice-card p { margin: 0.45rem 0; }
+.choice-price {
+  margin: 0.75rem 0 0.1rem;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+.choice-plan { margin: 0; color: var(--faint); font-size: 0.82rem; }
+.pros-grid ul { margin: 0; padding-left: 1.1rem; }
+.pros-grid li { margin: 0.35rem 0; }
+
+.cheaper-toggle {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.cheaper-toggle input { margin-top: 0.25rem; }
+.bar-row.is-cheaper { display: none; }
+.calc-block:has(.cheaper-toggle-input:checked) .bar-row.is-cheaper { display: grid; }
+
+@media (max-width: 720px) {
+  .choice-grid,
+  .pros-grid { grid-template-columns: 1fr; }
+}
+
 /* Honesty
    -------------------------------------------------------------------------- */
 .honesty {
@@ -949,7 +1001,7 @@ select:focus {
   top: 5.5rem;
   padding: 1rem 0;
 }
-.toc h2 {
+.toc-label {
   font-family: var(--font-display);
   font-size: 0.72rem;
   letter-spacing: 0.12em;

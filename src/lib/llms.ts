@@ -17,7 +17,16 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
   },
   {
     heading: "Pricing",
-    slugs: ["pricing/index", "pricing/beehiiv", "pricing/convertkit", "pricing/flodesk"],
+    slugs: [
+      "pricing/index",
+      "pricing/beehiiv",
+      "pricing/convertkit",
+      "pricing/flodesk",
+      "pricing/mailerlite",
+      "pricing/mailchimp",
+      "pricing/ghost",
+      "pricing/substack",
+    ],
   },
   {
     heading: "Comparisons",

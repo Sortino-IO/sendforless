@@ -1,0 +1,34 @@
+export type DiffRow = { topic: string; favors: string; why: string };
+export type MatrixRow = { feature: string; a: string; b: string };
+export type MatrixGroup = { name: string; rows: MatrixRow[] };
+export type ProCon = { pros: string[]; cons: string[] };
+export type RelatedLink = { href: string; kicker: string; title: string };
+export type CompareSection = { id: string; title: string; paragraphs: string[]; fees?: "beehiiv" | "ghost" };
+
+export type CompareDoc = {
+  id: string;
+  a: string;
+  b: string;
+  platformA: string;
+  platformB: string;
+  cheaperToggle: boolean;
+  chooseA: string;
+  chooseB: string;
+  priceNoteA: string;
+  priceNoteB: string;
+  linkA: { href: string; label: string; affiliate?: boolean };
+  linkB: { href: string; label: string; affiliate?: boolean };
+  differencesIntro: string[];
+  differences: DiffRow[];
+  pricingIntro: string[];
+  featuresIntro: string[];
+  matrix: MatrixGroup[];
+  sections: CompareSection[];
+  prosA: ProCon;
+  prosB: ProCon;
+  who: string[];
+  switching: string[];
+  cheaper: string[] | null;
+  faqs: { q: string; a: string }[];
+  related: RelatedLink[];
+};

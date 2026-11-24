@@ -378,3 +378,23 @@ export function lowestPaid(rows: QuoteRow[]): number | null {
   if (!paid.length) return null;
   return Math.min(...paid.map((row) => row.monthly as number));
 }
+
+/** List size and cadence the static calculator cards use before any input. */
+export const DEFAULT_SUBS = 4000;
+export const DEFAULT_ISSUES = 1;
+
+/**
+ * Keep the platforms named in `data-platforms`. An empty list keeps every row.
+ * `includeCheaper` adds MailCheap for the send-only toggle.
+ */
+export function selectRows(rows: QuoteRow[], platforms: readonly string[] | null, includeCheaper: boolean): QuoteRow[] {
+  if (!platforms || platforms.length === 0) return rows;
+  const allow = new Set(platforms);
+  if (includeCheaper) allow.add("MailCheap");
+  return rows.filter((row) => allow.has(row.platform));
+}
+
+/** The lowest-paid badge is withheld when any visible row has no verified dollar. */
+export function showLowestBadge(rows: QuoteRow[]): boolean {
+  return rows.length > 0 && !rows.some((row) => row.priceKind === "check");
+}

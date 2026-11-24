@@ -1,0 +1,145 @@
+---
+layout: ../../layouts/ArticleLayout.astro
+sectionName: "Pricing"
+sectionHref: "/pricing/"
+title: "Ghost pricing 2026: Starter, Publisher, and Business"
+description: "Ghost(Pro) pricing from the official price file: Starter, Publisher, and Business by member count, monthly and annual, checked 24 November 2026."
+kicker: Pricing
+lede: "Ghost(Pro) Starter is $18 a month, or $15 billed annually, for up to 1,000 members, without paid subscriptions. Publisher at 1,000 members is $35 a month, or $29 billed annually, and takes 0% of payments. There is no hosted free plan."
+crumb: "Ghost pricing"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: answer
+    label: The price
+  - id: plans
+    label: Starter, Publisher, Business
+  - id: tiers
+    label: Member tiers
+  - id: fee
+    label: The 0% fee
+  - id: newsletter
+    label: Compared with Substack
+  - id: faq
+    label: FAQ
+related:
+  - ghost-vs-substack
+  - ghost-alternatives
+  - substack-pricing
+  - how-we-test
+faqs:
+  - q: How much does Ghost cost?
+    a: "<p>Starter is $18 a month or $180 a year for up to 1,000 members. Publisher starts at $35 a month or $348 a year at 1,000 members. At 10,000 members Publisher is $105 a month or $1,056 a year. Business is $239 a month through 10,000 members, or $2,388 a year. Checked 24 November 2026 in ghost.org/js/pricing.min.js.</p>"
+  - q: Does Ghost take a cut of memberships?
+    a: "<p>The pricing page lists a 0% transaction fee on Publisher and Business. Stripe still charges, in your own Stripe account. Starter does not include paid subscriptions.</p>"
+  - q: Is there a free Ghost plan?
+    a: "<p>Not on Ghost(Pro). The pricing page discusses self-hosting as the alternative to the hosted bill and does not publish a hosting price for it. Substack publishes for $0 and then takes 10% when readers pay.</p>"
+  - q: What is Ghost at 25,000 members?
+    a: "<p>Publisher is $169 a month, or $141 a month billed annually ($1,692 a year). Business at that band is $319 a month, or $266 a month billed annually ($3,192 a year).</p>"
+---
+
+import { mailcheapHref } from "../../lib/site";
+import Shot from "../../components/Shot.astro";
+
+<section class="verdict" id="answer">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Ghost pricing</p>
+  <h2>You pay for members on the hosted site. Sends are unlimited.</h2>
+  <p>Prices are the monthly and yearly objects in <a href="https://ghost.org/js/pricing.min.js">ghost.org/js/pricing.min.js</a>, loaded by <a href="https://ghost.org/pricing/">ghost.org/pricing</a>, read 24 November 2026. "Annual /mo" means the yearly charge divided by 12. You pay the year up front. A 4,000-member site is the up-to-5,000 Publisher price, $75 a month or $756 a year.</p>
+</section>
+
+<Shot
+  name="ghost-pricing"
+  alt="Ghost(Pro) pricing page with Starter, Publisher, and Business plans."
+  caption="Ghost's pricing page on 24 November 2026. The page opens on yearly billing. Monthly Starter is $18 and monthly Publisher at 1,000 members is $35."
+/>
+
+## Starter, Publisher, and Business
+
+**Starter** is $18 a month or $180 a year, up to 1,000 members. The pricing page lists one staff user, design settings rather than custom themes, one newsletter, and no paid subscriptions. There is no custom sending domain.
+
+**Publisher** is the membership plan. The pricing page lists 3 staff users, custom and marketplace themes, paid subscriptions, a 0% transaction fee, and a custom sending domain. Three premium tiers are included. Newsletters: 3.
+
+**Business** is $239 a month from 1,000 through 10,000 members ($2,388 a year, $199 a month). The pricing page lists 15 staff users. At 25,000 members the price file is $319 a month or $3,192 a year.
+
+**Custom** is the band past the published member steps. The slider's last stop points you to Ghost's team.
+
+Whitelabel branding is listed on every hosted plan. Recommendations and Ghost Explore are listed on every plan. This page does not measure whether Explore replaces another network.
+
+## Member tiers
+
+<div class="table-wrap">
+  <table>
+    <caption>Ghost(Pro) Publisher by member band, USD, from pricing.min.js on 24 November 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Members, up to</th>
+        <th class="num" scope="col">Publisher monthly</th>
+        <th class="num" scope="col">Publisher annual /mo</th>
+        <th class="num" scope="col">Yearly total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1,000</th>
+        <td class="num" data-label="Monthly">$35</td>
+        <td class="num" data-label="Annual /mo">$29</td>
+        <td class="num" data-label="Yearly total">$348</td>
+      </tr>
+      <tr>
+        <th scope="row">2,500</th>
+        <td class="num" data-label="Monthly">$55</td>
+        <td class="num" data-label="Annual /mo">$46</td>
+        <td class="num" data-label="Yearly total">$552</td>
+      </tr>
+      <tr>
+        <th scope="row">5,000</th>
+        <td class="num" data-label="Monthly">$75</td>
+        <td class="num" data-label="Annual /mo">$63</td>
+        <td class="num" data-label="Yearly total">$756</td>
+      </tr>
+      <tr>
+        <th scope="row">10,000</th>
+        <td class="num" data-label="Monthly">$105</td>
+        <td class="num" data-label="Annual /mo">$88</td>
+        <td class="num" data-label="Yearly total">$1,056</td>
+      </tr>
+      <tr>
+        <th scope="row">25,000</th>
+        <td class="num" data-label="Monthly">$169</td>
+        <td class="num" data-label="Annual /mo">$141</td>
+        <td class="num" data-label="Yearly total">$1,692</td>
+      </tr>
+      <tr>
+        <th scope="row">50,000</th>
+        <td class="num" data-label="Monthly">$249</td>
+        <td class="num" data-label="Annual /mo">$208</td>
+        <td class="num" data-label="Yearly total">$2,496</td>
+      </tr>
+      <tr>
+        <th scope="row">100,000</th>
+        <td class="num" data-label="Monthly">$329</td>
+        <td class="num" data-label="Annual /mo">$274</td>
+        <td class="num" data-label="Yearly total">$3,288</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The price file also has 7,500 and 75,000. 7,500 members pays the 10,000 price only if you round the wrong way. It does not. 7,500 is its own band: Publisher $95 a month or $948 a year ($79). Use the next band that is greater than or equal to your member count. Starter exists only at 1,000.</p>
+
+## The 0% fee
+
+Ghost's cut is $0 on Publisher. You still pay the member tier in a quiet month, and you still pay Stripe. Members can be exported, and an import can include stripe_customer_id when the subscription already lives in your Stripe account. That portability is described in Ghost's import help. It is not a promise that a Substack paid reader arrives as a paid Ghost member.
+
+## Compared with a percent
+
+At $1,000, $5,000, and $10,000 a month of subscription revenue, Substack's platform fee is $100, $500, and $1,000, before Stripe. Ghost's platform fee is $0, plus whichever row in the table matches your member count. The worked comparison is <a href="/compare/ghost-vs-substack/">Ghost vs Substack</a>. Substack's own numbers are on <a href="/pricing/substack/">Substack pricing</a>. Other exits are on <a href="/alternatives/ghost/">Ghost alternatives</a>.
+
+If you do not need member login or a theme, a sending plan can be the smaller bill. MailCheap is one of those, from $19 a month, and it does not sell memberships.
+
+<p class="cta-row">
+  <a class="btn btn-secondary" href="https://ghost.org/pricing/" rel="noopener" target="_blank">Open Ghost pricing</a>
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+  <span class="btn-note">The MailCheap button is an affiliate link. We may earn a commission. This does not change the price you pay.</span>
+</p>

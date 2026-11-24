@@ -1,70 +1,126 @@
 ---
-import { emailsPerMonth, lowestPaid, money, quote, sortedRows, type QuoteRow } from "../lib/pricing";
+import {
+  DEFAULT_ISSUES,
+  DEFAULT_SUBS,
+  emailsPerMonth,
+  lowestPaid,
+  money,
+  quote,
+  selectRows,
+  showLowestBadge,
+  sortedRows,
+  type QuoteRow,
+} from "../lib/pricing";
 
-const defaultSubs = 4000;
-const defaultIssues = 1;
+interface Props {
+  platforms?: string[];
+  idPrefix?: string;
+  /** Adds the MailCheap send-only toggle. Leave off when MailCheap is already one of the two platforms. */
+  cheaperToggle?: boolean;
+  defaultSubs?: number;
+  defaultIssues?: number;
+}
+
+const {
+  platforms,
+  idPrefix = "calc",
+  cheaperToggle = false,
+  defaultSubs = DEFAULT_SUBS,
+  defaultIssues = DEFAULT_ISSUES,
+} = Astro.props;
+
+const platformList = platforms && platforms.length ? platforms : null;
 const initial = quote(defaultSubs, defaultIssues);
+const visible = selectRows(initial.rows, platformList, false);
+const cheaperRow = cheaperToggle ? initial.rows.find((row) => row.platform === "MailCheap") : undefined;
+const dataPlatforms = platformList ? platformList.join(",") : "";
 
 function barWidth(row: QuoteRow, maxPaid: number) {
   if (row.monthly === null || row.monthly === 0) return 0;
   return Math.max(8, Math.round((row.monthly / maxPaid) * 1000) / 10);
 }
----
-<div class="calc">
-  <form id="calc-form" action="#results">
-    <div class="calc-grid">
-      <div class="field">
-        <label for="subs">Subscribers</label>
-        <input id="subs" name="subs" type="number" inputmode="numeric" min="1" max="500000" step="1" value={defaultSubs} />
-        <div class="presets" role="group" aria-label="Subscriber presets">
-          <button type="button" class="chip" data-subs="1000">1,000</button>
-          <button type="button" class="chip" data-subs="2500">2,500</button>
-          <button type="button" class="chip is-active" data-subs="4000">4,000</button>
-          <button type="button" class="chip" data-subs="10000">10,000</button>
-          <button type="button" class="chip" data-subs="25000">25,000</button>
-        </div>
-      </div>
-      <div class="field">
-        <label for="issues">Issues per week</label>
-        <select id="issues" name="issues">
-          <option value="1" selected>1 (weekly)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="5">5 (weekdays)</option>
-          <option value="7">7 (daily)</option>
-        </select>
-        <p class="hint">Estimate: subscribers × issues per week × 4.33. A month with five send weeks is higher. Welcome emails and tests are extra on MailCheap.</p>
-      </div>
-    </div>
-    <dl class="calc-summary">
-      <div class="stat">
-        <dt>List size</dt>
-        <dd id="stat-subs">{defaultSubs.toLocaleString("en-US")}</dd>
-      </div>
-      <div class="stat">
-        <dt>Cadence</dt>
-        <dd id="stat-issues">{defaultIssues} issue</dd>
-      </div>
-      <div class="stat">
-        <dt>Emails / month</dt>
-        <dd id="stat-emails">{emailsPerMonth(defaultSubs, defaultIssues).toLocaleString("en-US")}</dd>
-      </div>
-    </dl>
-  </form>
-</div>
 
-<p class="results-caption" id="results-caption">
-  Estimated monthly platform bill for {defaultSubs.toLocaleString("en-US")} subscribers and 1 issue a week ({initial.emails.toLocaleString("en-US")} emails a month). Month-to-month USD list prices.
-</p>
-<div class="results" id="results-bars" aria-live="polite">
-  {sortedRows(initial.rows).map((row) => {
-    const best = lowestPaid(initial.rows);
-    const max = Math.max(...initial.rows.filter((item) => typeof item.monthly === "number" && item.monthly > 0).map((item) => item.monthly as number));
-    const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
+function renderRows(rows: QuoteRow[], extraClass = "", allowBadge = true) {
+  const badgeOn = allowBadge && showLowestBadge(rows);
+  const best = badgeOn ? lowestPaid(rows) : null;
+  const paid = rows.filter((item) => typeof item.monthly === "number" && item.monthly > 0);
+  const max = paid.length ? Math.max(...paid.map((item) => item.monthly as number)) : 1;
+  return rows.map((row) => {
+    const isBest = badgeOn && row.priceKind === "known" && row.monthly === best && best !== null;
     const isFree = row.monthly === 0;
     const width = barWidth(row, max);
-    return (
-      <article class:list={["bar-row", { "is-best": isBest, "is-free": isFree }]}>
+    return { row, isBest, isFree, width, extraClass };
+  });
+}
+
+const staticRows = renderRows(sortedRows(visible));
+const staticCheaper = cheaperRow ? renderRows(sortedRows([cheaperRow]), "is-cheaper", false) : [];
+---
+
+<div
+  class="calc-block"
+  data-calc
+  data-prefix={idPrefix}
+  data-platforms={dataPlatforms}
+  data-cheaper={cheaperToggle ? "1" : "0"}
+  data-default-subs={defaultSubs}
+  data-default-issues={defaultIssues}
+>
+  <div class="calc">
+    <form id={`${idPrefix}-form`} action="#results">
+      <div class="calc-grid">
+        <div class="field">
+          <label for={`${idPrefix}-subs`}>Subscribers</label>
+          <input id={`${idPrefix}-subs`} name="subs" type="number" inputmode="numeric" min="1" max="500000" step="1" value={defaultSubs} />
+          <div class="presets" role="group" aria-label="Subscriber presets">
+            <button type="button" class="chip" data-subs="1000">1,000</button>
+            <button type="button" class="chip" data-subs="2500">2,500</button>
+            <button type="button" class:list={["chip", { "is-active": defaultSubs === 4000 }]} data-subs="4000">4,000</button>
+            <button type="button" class="chip" data-subs="10000">10,000</button>
+            <button type="button" class="chip" data-subs="25000">25,000</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for={`${idPrefix}-issues`}>Issues per week</label>
+          <select id={`${idPrefix}-issues`} name="issues">
+            <option value="1" selected={defaultIssues === 1}>1 (weekly)</option>
+            <option value="2" selected={defaultIssues === 2}>2</option>
+            <option value="3" selected={defaultIssues === 3}>3</option>
+            <option value="5" selected={defaultIssues === 5}>5 (weekdays)</option>
+            <option value="7" selected={defaultIssues === 7}>7 (daily)</option>
+          </select>
+          <p class="hint">Estimate: subscribers x issues per week x 4.33. A month with five send weeks is higher. Welcome emails and tests are extra on MailCheap.</p>
+        </div>
+      </div>
+      {cheaperToggle && (
+        <label class="cheaper-toggle">
+          <input id={`${idPrefix}-cheaper`} class="cheaper-toggle-input" type="checkbox" />
+          <span>Show a cheaper send-only option (MailCheap, affiliate)</span>
+        </label>
+      )}
+      <dl class="calc-summary">
+        <div class="stat">
+          <dt>List size</dt>
+          <dd id={`${idPrefix}-stat-subs`}>{defaultSubs.toLocaleString("en-US")}</dd>
+        </div>
+        <div class="stat">
+          <dt>Cadence</dt>
+          <dd id={`${idPrefix}-stat-issues`}>{defaultIssues} {defaultIssues === 1 ? "issue" : "issues"}</dd>
+        </div>
+        <div class="stat">
+          <dt>Emails / month</dt>
+          <dd id={`${idPrefix}-stat-emails`}>{emailsPerMonth(defaultSubs, defaultIssues).toLocaleString("en-US")}</dd>
+        </div>
+      </dl>
+    </form>
+  </div>
+
+  <p class="results-caption" id={`${idPrefix}-caption`}>
+    Estimated monthly platform bill for {defaultSubs.toLocaleString("en-US")} subscribers and {defaultIssues} issue{defaultIssues === 1 ? "" : "s"} a week ({initial.emails.toLocaleString("en-US")} emails a month). Month-to-month USD list prices.
+  </p>
+  <div class="results" id={`${idPrefix}-bars`} aria-live="polite">
+    {[...staticRows, ...staticCheaper].map(({ row, isBest, isFree, width, extraClass }) => (
+      <article class:list={["bar-row", extraClass, { "is-best": isBest, "is-free": isFree }]} data-platform={row.platform}>
         <div class="plat">
           <span class:list={["avatar", row.avatar]}>{row.initials}</span>
           <div>
@@ -89,23 +145,45 @@ function barWidth(row: QuoteRow, maxPaid: number) {
           </a>
         </p>
       </article>
-    );
-  })}
+    ))}
+  </div>
+  {cheaperToggle && (
+    <p class="method-note">MailCheap links in this calculator are affiliate links. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</p>
+  )}
 </div>
 
 <script>
-  import { lowestPaid, money, quote, sortedRows } from "../lib/pricing";
+  import { lowestPaid, money, quote, selectRows, showLowestBadge, sortedRows } from "../lib/pricing";
 
-  function render(subs: number, issues: number) {
+  function track(root: HTMLElement, action: string, subs: number, issues: number, cheaper: boolean) {
+    const w = window as Window & { dataLayer?: Record<string, unknown>[] };
+    const layer = (w.dataLayer = w.dataLayer || []);
+    layer.push({
+      event: "calculator_interact",
+      action,
+      subscribers: subs,
+      issues_per_week: issues,
+      platforms: root.dataset.platforms || "all",
+      cheaper_option: cheaper,
+      page_path: location.pathname,
+    });
+  }
+
+  function paint(root: HTMLElement, subs: number, issues: number) {
+    const prefix = root.dataset.prefix || "calc";
+    const platforms = root.dataset.platforms ? root.dataset.platforms.split(",") : null;
+    const cheaperInput = root.querySelector<HTMLInputElement>(`#${prefix}-cheaper`);
+    const includeCheaper = Boolean(cheaperInput?.checked);
     const out = quote(subs, issues);
-    const emailsEl = document.getElementById("stat-emails");
-    const subsEl = document.getElementById("stat-subs");
-    const issuesEl = document.getElementById("stat-issues");
+    const rows = sortedRows(selectRows(out.rows, platforms, includeCheaper));
+    const emailsEl = root.querySelector<HTMLElement>(`#${prefix}-stat-emails`);
+    const subsEl = root.querySelector<HTMLElement>(`#${prefix}-stat-subs`);
+    const issuesEl = root.querySelector<HTMLElement>(`#${prefix}-stat-issues`);
     if (emailsEl) emailsEl.textContent = out.emails.toLocaleString("en-US");
     if (subsEl) subsEl.textContent = subs.toLocaleString("en-US");
     if (issuesEl) issuesEl.textContent = issues + (issues === 1 ? " issue" : " issues");
 
-    const caption = document.getElementById("results-caption");
+    const caption = root.querySelector<HTMLElement>(`#${prefix}-caption`);
     if (caption) {
       caption.textContent =
         "Estimated monthly platform bill for " +
@@ -119,18 +197,20 @@ function barWidth(row: QuoteRow, maxPaid: number) {
         " emails a month). Month-to-month USD list prices.";
     }
 
-    const best = lowestPaid(out.rows);
-    const paid = out.rows.filter((row) => typeof row.monthly === "number" && row.monthly > 0);
+    const badgeOn = showLowestBadge(rows);
+    const best = badgeOn ? lowestPaid(rows) : null;
+    const paid = rows.filter((row) => typeof row.monthly === "number" && row.monthly > 0);
     const maxPaid = paid.length ? Math.max(...paid.map((row) => row.monthly as number)) : 1;
-    const bars = document.getElementById("results-bars");
+    const bars = root.querySelector<HTMLElement>(`#${prefix}-bars`);
     if (!bars) return;
     bars.replaceChildren();
 
-    sortedRows(out.rows).forEach((row) => {
-      const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
+    rows.forEach((row) => {
+      const isBest = badgeOn && row.priceKind === "known" && row.monthly === best && best !== null;
       const isFree = row.monthly === 0;
       const article = document.createElement("article");
       article.className = "bar-row" + (isBest ? " is-best" : "") + (isFree ? " is-free" : "");
+      article.dataset.platform = row.platform;
 
       const plat = document.createElement("div");
       plat.className = "plat";
@@ -198,9 +278,10 @@ function barWidth(row: QuoteRow, maxPaid: number) {
     });
   }
 
-  function current() {
-    const subsInput = document.getElementById("subs") as HTMLInputElement | null;
-    const issuesInput = document.getElementById("issues") as HTMLSelectElement | null;
+  function read(root: HTMLElement) {
+    const prefix = root.dataset.prefix || "calc";
+    const subsInput = root.querySelector<HTMLInputElement>(`#${prefix}-subs`);
+    const issuesInput = root.querySelector<HTMLSelectElement>(`#${prefix}-issues`);
     let subs = parseInt(subsInput?.value || "1", 10);
     let issues = parseInt(issuesInput?.value || "1", 10);
     if (!subs || subs < 1) subs = 1;
@@ -208,34 +289,66 @@ function barWidth(row: QuoteRow, maxPaid: number) {
     return { subs, issues };
   }
 
-  function setActiveChip(subs: number) {
-    document.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
-      btn.classList.toggle("is-active", parseInt(btn.getAttribute("data-subs") || "0", 10) === subs);
-    });
-  }
-
-  function bind() {
-    const form = document.getElementById("calc-form");
+  function bind(root: HTMLElement) {
+    if (root.dataset.bound === "1") return;
+    root.dataset.bound = "1";
+    const prefix = root.dataset.prefix || "calc";
+    const form = root.querySelector<HTMLFormElement>(`#${prefix}-form`);
     if (!form) return;
-    const run = () => {
-      const values = current();
-      setActiveChip(values.subs);
-      render(values.subs, values.issues);
+    let timer = 0;
+    const run = (action: string) => {
+      const values = read(root);
+      root.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
+        btn.classList.toggle("is-active", parseInt(btn.getAttribute("data-subs") || "0", 10) === values.subs);
+      });
+      const cheaper = Boolean(root.querySelector<HTMLInputElement>(`#${prefix}-cheaper`)?.checked);
+      paint(root, values.subs, values.issues);
+      track(root, action, values.subs, values.issues, cheaper);
     };
-    form.addEventListener("input", run);
-    form.addEventListener("change", run);
+    form.addEventListener("input", (event) => {
+      const target = event.target as HTMLElement | null;
+      if (target?.id === `${prefix}-cheaper`) return;
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => run("change"), 400);
+    });
+    form.addEventListener("change", (event) => {
+      const target = event.target as HTMLElement | null;
+      if (target?.id === `${prefix}-cheaper`) {
+        run("cheaper_toggle");
+        return;
+      }
+      window.clearTimeout(timer);
+      run("change");
+    });
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      run();
+      window.clearTimeout(timer);
+      run("change");
     });
-    document.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
+    root.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const input = document.getElementById("subs") as HTMLInputElement | null;
+        const input = root.querySelector<HTMLInputElement>(`#${prefix}-subs`);
         if (input) input.value = btn.getAttribute("data-subs") || input.value;
-        run();
+        window.clearTimeout(timer);
+        run("preset");
       });
+    });
+    root.addEventListener("click", (event) => {
+      const node = event.target as HTMLElement | null;
+      const link = node?.closest?.("a");
+      if (!link?.href) return;
+      let host = "";
+      try {
+        host = new URL(link.href).hostname.toLowerCase();
+      } catch {
+        return;
+      }
+      if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
+      const values = read(root);
+      const cheaper = Boolean(root.querySelector<HTMLInputElement>(`#${prefix}-cheaper`)?.checked);
+      track(root, "affiliate_link", values.subs, values.issues, cheaper);
     });
   }
 
-  bind();
+  document.querySelectorAll<HTMLElement>("[data-calc]").forEach(bind);
 </script>

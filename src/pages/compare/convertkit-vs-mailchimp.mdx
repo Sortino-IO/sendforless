@@ -1,93 +1,14 @@
 ---
-layout: ../../layouts/ArticleLayout.astro
-sectionName: "Comparisons"
-sectionHref: "/compare/"
-title: "Kit (ConvertKit) vs Mailchimp"
-description: "ConvertKit vs Mailchimp for newsletters. Kit is free to 10,000 subscribers for broadcasts. Mailchimp Free stops at 250 contacts. Checked 24 November 2026."
+layout: ../../layouts/CompareLayout.astro
+title: "Kit (ConvertKit) vs Mailchimp (2026): Pricing, Features, Which Fits"
+description: "Kit (ConvertKit) vs Mailchimp: free broadcasts to 10,000 subscribers, Creator from $39, sequences, and paid newsletters. Mailchimp above 500 contacts is check current pricing."
+h1: "Kit (ConvertKit) vs Mailchimp"
+lede: "Kit, formerly ConvertKit, is $0 up to 10,000 subscribers for broadcasts. Mailchimp Free stops at 250 contacts and 500 sends a month. Creator, which adds sequences, is $39 a month up to 1,000 subscribers and $59 a month up to 3,000. Above those published tiers, check the current price."
 kicker: Comparison
-lede: "Kit, formerly ConvertKit, is $0 up to 10,000 subscribers for broadcasts. Mailchimp Free stops at 250 contacts and 500 sends. Creator on Kit starts at $39 a month when you need sequences."
 crumb: "Kit vs Mailchimp"
-affiliate: true
+sectionName: Comparisons
+sectionHref: /compare/
 datePublished: 2026-11-24
 dateModified: 2026-11-24
-toc:
-  - id: answer
-    label: The comparison
-  - id: prices
-    label: Price by scenario
-  - id: features
-    label: What you give up
-  - id: who
-    label: Who should pick which
-  - id: faq
-    label: FAQ
-related:
-  - convertkit-pricing
-  - convertkit-alternatives
-  - mailchimp-alternatives
-  - mailcheap-review
-faqs:
-  - q: Is Kit cheaper than Mailchimp?
-    a: "<p>For broadcasts under 10,000 subscribers, Kit’s free plan is $0 and Mailchimp Free stops at 250 contacts. Mailchimp Standard starts at $20 a month for 500 contacts. Above 500 contacts, check Mailchimp’s pricing page. We do not print an estimated Mailchimp price for a few thousand contacts.</p>"
-  - q: Is ConvertKit the same as Kit?
-    a: "<p>Yes. The product was renamed Kit. Same app, same account.</p>"
-  - q: Does either one charge per email?
-    a: "<p>Kit says there is no sending limit on any plan. Mailchimp sets a monthly send limit from your contact tier. Free is 500 sends, with a daily cap of 250. Standard’s limit is 12 times the contact limit.</p>"
+compareId: convertkit-vs-mailchimp
 ---
-
-import { mailcheapHref } from "../../lib/site";
-import Shot from "../../components/Shot.astro";
-
-<section class="verdict" id="answer">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Kit vs Mailchimp</p>
-  <h2>For a newsletter that only broadcasts, Kit’s free plan is the one that still fits past a few hundred people.</h2>
-  <p>Mailchimp bills for every contact you store. Subscribed, unsubscribed, and non-subscribed people all count toward the bill. Kit’s free plan, documented in a help article updated 23 September 2026, covers <strong>10,000 subscribers and unlimited broadcasts</strong>. Sequences and visual automations are what move you to Creator, at <strong>$39 a month up to 1,000 subscribers</strong>.</p>
-  <p>If the Mailchimp account is really a store, this comparison is the wrong reason to leave. The journeys will not come with a CSV.</p>
-</section>
-
-<Shot
-  name="kit-pricing"
-  alt="Kit pricing page with Free at $0, Creator listed at $39, and Pro at $79 a month for 1,000 subscribers."
-  caption="Kit’s pricing page on 24 November 2026 at 1,000 subscribers. The $20 offer is introductory and ends 1 December 2026. List price for Creator is $39."
-/>
-
-## Price by scenario
-
-Checked 24 November 2026. Kit details are on [Kit pricing](/pricing/convertkit/). Mailchimp’s starting prices are from its plan pages. Higher Mailchimp tiers: [check current pricing](https://mailchimp.com/pricing/marketing/).
-
-| Situation | Kit | Mailchimp |
-| --- | --- | --- |
-| 200 contacts, a few sends a month | $0 Free | $0 Free, if you stay under 250 contacts and 500 sends |
-| 1,000 subscribers, weekly broadcast | $0 Free | Check current pricing. Standard starts at $20 for 500 contacts. |
-| 1,000 subscribers, and you need a sequence | $39 Creator | Check current pricing. Automations on Essentials are short. Standard is the fuller automation plan. |
-| 4,000 subscribers, weekly broadcast | $0 Free | Check current pricing |
-| 10,000 subscribers, weekly broadcast | $0, at the free cap | Check current pricing |
-| 25,000 subscribers | Check current pricing. Free has ended. | Check current pricing |
-
-Kit’s billing help uses $59 a month as the Creator price for up to 3,000 subscribers. Pro is $79 a month at 1,000 subscribers on the pricing page. We do not have a verified Creator dollar for 10,000 or 25,000 subscribers.
-
-A weekly letter to 10,000 subscribers is about 43,300 emails. MailCheap Growth is $39 for 75,000 emails and 40,000 subscribers. That is a verified paid price for the same send, if you do not need Kit’s sequences.
-
-## What you give up
-
-**Stay on Mailchimp** if you use customer journeys tied to a store, ads audiences you already sync, or a team that lives in Mailchimp. Newsletter tools do not import those automations.
-
-**Move to Kit Free** if the Mailchimp account is a weekly letter, the list is under 10,000, and you can live without visual automations. You gain forms, tagging, and broadcasts at $0. You do not get Mailchimp’s commerce journeys.
-
-**Pay for Kit Creator** when a sequence has a job you can name: a course pitch, a welcome series you will not send by hand. Looking at the automation screen is free. Publishing a sequence is not.
-
-Mailchimp counts unsubscribed contacts until you archive them. Export and archive people you will never mail before you decide the bill is the reason to leave.
-
-## Who should pick which
-
-Pick **Kit** for a creator newsletter under 10,000 subscribers that broadcasts, sells a digital product, or needs sequences. The full plan notes are [Kit pricing](/pricing/convertkit/). Other exits are [Kit alternatives](/alternatives/convertkit/).
-
-Pick **Mailchimp** when the account runs more than the letter. The longer exit guide, written from Mailchimp’s side, is [Mailchimp alternatives](/alternatives/mailchimp/).
-
-Pick **MailCheap** when you are past Kit’s free cap, or you are paying Mailchimp for stored contacts, and the job is a scheduled send without a paywall inside the tool. For a weekly letter to 10,000 subscribers, Growth is $39. The review is [MailCheap](/reviews/mailcheap/).
-
-<p class="cta-row">
-  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
-  <a class="btn btn-secondary" href="https://kit.com/pricing" rel="noopener" target="_blank">Kit pricing</a>
-  <span class="btn-note">The MailCheap button is an affiliate link. The Kit button is not.</span>
-</p>
