@@ -94,8 +94,26 @@ export const MAILERLITE = [
   { max: 15000, comfort: 129, power: 179 },
   { max: 20000, comfort: 159, power: 219 },
   { max: 25000, comfort: 179, power: 239 },
+  { max: 30000, comfort: 229, power: 279 },
+  { max: 35000, comfort: 249, power: 309 },
+  { max: 40000, comfort: 269, power: 329 },
+  { max: 45000, comfort: 289, power: 359 },
   { max: 50000, comfort: 319, power: 389 },
+  { max: 60000, comfort: 359, power: 419 },
+  { max: 70000, comfort: 379, power: 439 },
+  { max: 80000, comfort: 399, power: 459 },
+  { max: 90000, comfort: 419, power: 469 },
   { max: 100000, comfort: 439, power: 489 },
+  { max: 110000, comfort: 489, power: 599 },
+  { max: 120000, comfort: 529, power: 649 },
+  { max: 130000, comfort: 559, power: 689 },
+  { max: 140000, comfort: 589, power: 719 },
+  { max: 150000, comfort: 619, power: 759 },
+  { max: 160000, comfort: 659, power: 829 },
+  { max: 170000, comfort: 699, power: 899 },
+  { max: 180000, comfort: 739, power: 959 },
+  { max: 190000, comfort: 779, power: 1029 },
+  { max: 200000, comfort: 819, power: 1119 },
 ] as const;
 
 export const FLODESK_EMAIL_MONTHLY = 46;
@@ -173,8 +191,8 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     plan: kitFree ? "Free" : "Creator",
     monthly: kitFree ? 0 : null,
     note: kitFree
-      ? `Free includes unlimited broadcasts up to 10,000 subscribers. Creator is ${money(39)}/mo up to 1,000 subscribers, and Kit’s billing help uses ${money(59)}/mo for the up-to-3,000 tier, if you need sequences or visual automations. Pro is ${money(79)}/mo at 1,000 subscribers. Above those stops, check Kit’s pricing page.`
-      : "Free stops at 10,000 subscribers. Creator is $39/mo up to 1,000 and Kit’s billing help uses $59/mo up to 3,000. The price for this list size is on Kit’s pricing page.",
+      ? `Free includes unlimited broadcasts up to 10,000 subscribers. Creator is $39/mo up to 1,000 subscribers, and Creator is $59/mo up to 3,000 (per Kit’s billing help), if you need sequences or visual automations. Pro is $79/mo at 1,000 subscribers. Above 3,000 subscribers on Creator, or above 1,000 on Pro, check Kit’s pricing page.`
+      : "Free stops at 10,000 subscribers. Creator is $39/mo up to 1,000 and Creator is $59/mo up to 3,000 (per Kit’s billing help). The price for this list size is on Kit’s pricing page.",
     href: "https://kit.com/pricing",
     affiliate: false,
     available: kitFree,
@@ -203,7 +221,7 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     plan: mc ? mc.name : "Above Ultra",
     monthly: mc ? mc.monthly : null,
     note: mc
-      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails and ${mc.subs.toLocaleString("en-US")} subscribers a month. The estimate for this cadence is ${emails.toLocaleString("en-US")} emails. Five send-weeks would be ${peak.toLocaleString("en-US")} emails, before welcome emails and tests.${mcTight ? " That uses this plan’s full email allowance, so price the next plan if you also send welcomes or tests." : ""} Yearly billing costs 10 months’ price. No free hosted plan.`
+      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails a month for up to ${mc.subs.toLocaleString("en-US")} subscribers. The estimate for this cadence is ${emails.toLocaleString("en-US")} emails. A month with five sends would be ${peak.toLocaleString("en-US")} emails, before welcome emails and tests.${mcTight ? " That uses this plan’s full email allowance, so price the next plan if you also send welcomes or tests." : ""} Yearly billing costs the price of 10 months. No free hosted plan.`
       : "Over 5 million emails a month. MailCheap asks you to contact them.",
     href: mailcheapHref("/pricing"),
     affiliate: true,
@@ -277,7 +295,7 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     note: ml
       ? ml.plan === "Free"
         ? "Free is 250 active subscribers and 2,500 emails a month."
-        : `${ml.plan} at the up-to-${ml.max.toLocaleString("en-US")} tier, monthly billing. Comfort’s email allowance is 10 times the tier ceiling. Power removes that email cap, subject to fair use. Annual billing is 10% less. Above 200,000 subscribers, pricing is custom.`
+        : `${ml.plan} at the up-to-${ml.max.toLocaleString("en-US")} tier, monthly billing. Comfort’s email allowance is 10 times the tier ceiling. Power removes that email cap, subject to fair use. Annual billing is 10% less.`
       : "Above 200,000 subscribers. MailerLite quotes Enterprise.",
     href: "https://www.mailerlite.com/pricing",
     affiliate: false,
@@ -309,20 +327,20 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
       href: "https://mailchimp.com/pricing/marketing/",
       affiliate: false,
       available: true,
-      initials: "Ch",
+      initials: "Mc",
       avatar: "av-yellow",
       priceKind: "known",
     });
   } else if (subs <= 500) {
     rows.push({
       platform: "Mailchimp",
-      plan: "Standard",
-      monthly: 20,
-      note: "Standard starts at $20/mo for up to 500 contacts. Essentials starts at $13/mo for the same 500 contacts, with a shorter feature set. The monthly send limit on Standard is 12 times the contact limit.",
+      plan: "Essentials",
+      monthly: 13,
+      note: "Essentials is $13/mo for up to 500 contacts. Standard is $20/mo for the same 500 contacts and includes longer automations. Essentials allows 10 times the contact limit in sends. Standard allows 12 times.",
       href: "https://mailchimp.com/pricing/marketing/",
       affiliate: false,
       available: true,
-      initials: "Ch",
+      initials: "Mc",
       avatar: "av-yellow",
       priceKind: "known",
     });
@@ -331,11 +349,11 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
       platform: "Mailchimp",
       plan: "Standard",
       monthly: null,
-      note: "Check current pricing. Standard starts at $20/mo and Essentials at $13/mo, both for up to 500 contacts. Above 500 contacts Mailchimp prices each tier on its pricing page. There is no static table to quote here. Unsubscribed contacts count until you archive them.",
+      note: "Check current pricing. Essentials is $13/mo and Standard is $20/mo, both for up to 500 contacts. Above 500 contacts Mailchimp prices each tier on its pricing page. Unsubscribed contacts count until you archive them.",
       href: "https://mailchimp.com/pricing/marketing/",
       affiliate: false,
       available: false,
-      initials: "Ch",
+      initials: "Mc",
       avatar: "av-yellow",
       priceKind: "check",
     });

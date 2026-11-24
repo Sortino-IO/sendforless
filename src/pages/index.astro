@@ -27,13 +27,13 @@ const description =
         <div>
           <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Newsletter platforms</p>
           <h1>What your newsletter costs, at your list size</h1>
-          <p class="lede">A platform bill is a subscriber bucket, an email cap, or a percent of revenue. Enter your list and how often you send. The calculator maps that onto published month-to-month prices.</p>
+          <p class="lede">Newsletter platforms charge by subscribers, by emails sent, or by a share of paid revenue. Enter your list size and how often you send to see each bill.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#calculator">Open the calculator</a>
             <a class="btn btn-secondary" href="/compare/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a>
           </div>
           <div class="platform-row">
-            <p class="hint">Start with a price page</p>
+            <p class="hint">Jump to a platform</p>
             <a class="chip" href="/reviews/mailcheap/"><span class="avatar av-violet">MC</span> MailCheap</a>
             <a class="chip" href="/pricing/beehiiv/"><span class="avatar av-gold">bh</span> beehiiv</a>
             <a class="chip" href="/pricing/convertkit/"><span class="avatar av-green">Kt</span> Kit</a>
@@ -62,7 +62,7 @@ const description =
                 <span class="sub">Monthly billing, up to 5,000 subscribers</span>
               </div>
             </div>
-            <p class="chart-foot">Five weekly issues to 4,000 people are 20,000 emails, before welcome emails and tests. That uses all of Starter. If you send those too, price Growth at $39. Kit and Substack can still be $0 here. Prices checked 24 November 2026.</p>
+            <p class="chart-foot">A month with five weekly sends to 4,000 people is 20,000 emails, before welcome emails and tests. That uses all of Starter. If you send those too, price Growth at $39. Kit and Substack can still be $0 here. Prices checked 24 November 2026.</p>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@ const description =
         <CostChart
           title="Monthly cost at 4,000 subscribers, one issue a week"
           description="Verified month-to-month list prices. Kit and Substack are $0. Mailchimp is omitted because its price above 500 contacts is not a published table."
-          caption="Mailchimp Standard starts at $20 a month for 500 contacts. For 4,000 contacts, check Mailchimp’s pricing page. Five send weeks at this list size use 20,000 MailCheap emails before welcomes and tests."
+          caption="Mailchimp isn't in this chart because it doesn't publish a fixed price above 500 contacts. Standard starts at $20 a month for 500 contacts."
           rows={[
             { label: "Kit Free", value: 0, note: "Broadcasts" },
             { label: "Substack", value: 0, note: "No monthly fee" },
@@ -96,7 +96,7 @@ const description =
 
         <div class="section-head" style="margin-top:2.5rem">
           <h2>What changes the bill</h2>
-          <p>Same list, one issue a week, about 17,300 emails. The lower number is not always the right product.</p>
+          <p>Same list, one issue a week, about 17,300 emails.</p>
         </div>
         <div class="table-wrap">
           <table>
@@ -161,7 +161,7 @@ const description =
             </tbody>
           </table>
         </div>
-        <p class="method-note">At 4,000 subscribers, five weekly issues use all 20,000 emails on MailCheap Starter, before welcome emails and tests. If you also send those, price Growth ($39) before you switch. The MailCheap link in the calculator is an affiliate link (<a href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">pricing</a>). The other links in the table are not. MailCheap does not include paid subscriptions, an ad network, a referral program, or A/B tests. Kit Free or Substack is the lower cost if either one already does the job.</p>
+        <p class="method-note">The MailCheap link in the calculator is an affiliate link (<a href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">pricing</a>). The other links in the table are not. MailCheap does not include paid subscriptions, an ad network, a referral program, or A/B tests. Kit Free or Substack is the lower cost if either one already does the job.</p>
         <p class="cta-row">
           <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
           <a class="btn btn-secondary" href="/reviews/mailcheap/">Read the MailCheap review</a>

@@ -33,7 +33,7 @@ export const guides: Guide[] = [
     href: "/pricing/convertkit/",
     kicker: "Pricing",
     title: "Kit (formerly ConvertKit) pricing",
-    blurb: "The free plan to 10,000 subscribers, Creator at $39, and the list sizes we could not read as a fixed price.",
+    blurb: "The free plan to 10,000 subscribers, Creator from $39, Pro from $79, and where to check larger lists.",
   },
   {
     slug: "flodesk-pricing",
@@ -131,7 +131,7 @@ export const guides: Guide[] = [
     href: "/reviews/beehiiv/",
     kicker: "Review",
     title: "beehiiv review",
-    blurb: "Who the growth tools are for, with links to the pricing and comparison pages instead of a second price table.",
+    blurb: "Who beehiiv's growth tools suit, what they cost to start, and when to use something else.",
   },
   {
     slug: "mailerlite-review",
@@ -145,7 +145,7 @@ export const guides: Guide[] = [
     href: "/guides/how-to-start-a-newsletter/",
     kicker: "Guide",
     title: "How to start a newsletter",
-    blurb: "Write the promise, pick a cadence you can keep, then match a platform to that list and that bill.",
+    blurb: "Define the audience, pick a schedule you can keep, and match a platform to your list size and bill.",
   },
   {
     slug: "how-we-test",

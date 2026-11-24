@@ -60,7 +60,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
   {sortedRows(initial.rows).map((row) => {
     const best = lowestPaid(initial.rows);
     const max = Math.max(...initial.rows.filter((item) => typeof item.monthly === "number" && item.monthly > 0).map((item) => item.monthly as number));
-    const isBest = row.platform === "MailCheap" && row.monthly === best;
+    const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
     const isFree = row.monthly === 0;
     const width = barWidth(row, max);
     return (
@@ -127,7 +127,7 @@ function barWidth(row: QuoteRow, maxPaid: number) {
     bars.replaceChildren();
 
     sortedRows(out.rows).forEach((row) => {
-      const isBest = row.platform === "MailCheap" && row.monthly === best;
+      const isBest = row.priceKind === "known" && row.monthly === best && best !== null;
       const isFree = row.monthly === 0;
       const article = document.createElement("article");
       article.className = "bar-row" + (isBest ? " is-best" : "") + (isFree ? " is-free" : "");
