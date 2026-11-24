@@ -8,7 +8,7 @@
  * and does not rank the tool.
  *
  * Sources:
- * - MailCheap plans: https://mailcheap.ai/help/plans and https://mailcheap.ai/pricing
+ * - MailCheap plans: https://mailcheap.ai/help/plans?via=analyst and https://mailcheap.ai/pricing?via=analyst
  * - beehiiv tiers: https://www.beehiiv.com/pricing.md
  * - Ghost(Pro): https://ghost.org/js/pricing.min.js, loaded by https://ghost.org/pricing/
  * - MailerLite: https://www.mailerlite.com/pricing.md (file last updated 8 September 2026)
@@ -221,7 +221,7 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     plan: mc ? mc.name : "Above Ultra",
     monthly: mc ? mc.monthly : null,
     note: mc
-      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails a month for up to ${mc.subs.toLocaleString("en-US")} subscribers. The estimate for this cadence is ${emails.toLocaleString("en-US")} emails. A month with five sends would be ${peak.toLocaleString("en-US")} emails, before welcome emails and tests.${mcTight ? " That uses this plan’s full email allowance, so price the next plan if you also send welcomes or tests." : ""} Yearly billing costs the price of 10 months. No free hosted plan.`
+      ? `${mc.name} includes ${mc.emails.toLocaleString("en-US")} emails a month for up to ${mc.subs.toLocaleString("en-US")} subscribers. The estimate for this cadence is ${emails.toLocaleString("en-US")} emails.${mcTight ? " That uses this plan's full email allowance, so price the next plan if you also send welcomes or tests." : ""} Yearly billing costs the price of 10 months. No free hosted plan.`
       : "Over 5 million emails a month. MailCheap asks you to contact them.",
     href: mailcheapHref("/pricing"),
     affiliate: true,
@@ -377,4 +377,28 @@ export function lowestPaid(rows: QuoteRow[]): number | null {
   const paid = rows.filter((row) => row.priceKind === "known" && row.available && typeof row.monthly === "number" && row.monthly > 0);
   if (!paid.length) return null;
   return Math.min(...paid.map((row) => row.monthly as number));
+}
+
+/** List size and cadence the static calculator cards use before any input. */
+export const DEFAULT_SUBS = 4000;
+export const DEFAULT_ISSUES = 1;
+
+/**
+ * Keep the platforms named in `data-platforms`. An empty list keeps every row.
+ * `includeCheaper` adds MailCheap for the send-only toggle.
+ */
+export function selectRows(rows: QuoteRow[], platforms: readonly string[] | null, includeCheaper: boolean): QuoteRow[] {
+  if (!platforms || platforms.length === 0) return rows;
+  const allow = new Set(platforms);
+  if (includeCheaper) allow.add("MailCheap");
+  return rows.filter((row) => allow.has(row.platform));
+}
+
+/** Badge only when at least two known paid prices can be compared, and none say to check. */
+export function showLowestBadge(rows: QuoteRow[]): boolean {
+  return (
+    rows.length > 0 &&
+    !rows.some((row) => row.priceKind === "check") &&
+    rows.filter((row) => row.priceKind === "known" && typeof row.monthly === "number" && row.monthly > 0).length >= 2
+  );
 }

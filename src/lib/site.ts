@@ -25,8 +25,8 @@ export const GA_MEASUREMENT_ID = "G-G7X8CD2S9Y";
 
 const MAILCHEAP_ORIGIN = "https://mailcheap.ai";
 
-/** Affiliate URL. `"/"` → https://mailcheap.ai/?via=analyst. `"/pricing"` → pricing page. */
-export function mailcheapHref(path: "/" | "/pricing" = "/pricing"): string {
+/** Affiliate URL. Adds `?via=analyst` to any MailCheap path. */
+export function mailcheapHref(path: string = "/pricing"): string {
   const url = new URL(path, MAILCHEAP_ORIGIN);
   url.searchParams.set("via", AFFILIATE_CODE);
   return url.toString();

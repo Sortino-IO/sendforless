@@ -1,0 +1,152 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import HeroMark from "../components/HeroMark.astro";
+import CompareArticle from "../components/CompareArticle.astro";
+import { comparisons } from "../data/comparisons";
+import { PRICE_CHECKED_ISO, PRICE_CHECKED_LABEL, SITE_NAME, SITE_URL } from "../lib/site";
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  h1: string;
+  lede: string;
+  kicker?: string;
+  datePublished?: string;
+  dateModified?: string;
+  compareId: string;
+  crumb?: string;
+  sectionName?: string;
+  sectionHref?: string;
+}
+
+const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const {
+  title,
+  description,
+  h1,
+  lede,
+  kicker = "Comparison",
+  datePublished = PRICE_CHECKED_ISO,
+  dateModified = PRICE_CHECKED_ISO,
+  compareId,
+  crumb,
+  sectionName = "Comparisons",
+  sectionHref = "/compare/",
+} = frontmatter;
+
+const doc = comparisons[compareId];
+if (!doc) throw new Error(`Missing comparison data for ${compareId}`);
+
+const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const ogImage = `/og${Astro.url.pathname.replace(/\/$/, "")}.png`;
+const crumbName = crumb || h1;
+
+function plain(html: string) {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+const crumbItems = [
+  { name: "Home", item: `${SITE_URL}/` },
+  { name: sectionName, item: new URL(sectionHref, SITE_URL).href },
+  { name: crumbName, item: canonical },
+];
+
+const breadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.item,
+  })),
+};
+
+const article = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  name: title,
+  description,
+  datePublished,
+  dateModified,
+  author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+  publisher: {
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
+  },
+  mainEntityOfPage: canonical,
+  image: new URL(ogImage, SITE_URL).href,
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  dateModified,
+  mainEntity: doc.faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: plain(item.a) },
+  })),
+};
+
+const toc = [
+  { id: "short-answer", label: "The short answer" },
+  { id: "differences", label: "Key differences" },
+  { id: "pricing", label: "Pricing" },
+  { id: "features", label: "Features" },
+  ...doc.sections.map((section) => ({ id: section.id, label: section.title })),
+  { id: "pros-a", label: `${doc.a} pros and cons` },
+  { id: "pros-b", label: `${doc.b} pros and cons` },
+  { id: "who", label: "Who should choose" },
+  { id: "switching", label: "Switching" },
+  ...(doc.cheaper ? [{ id: "cheaper", label: "A cheaper send-only option" }] : []),
+  { id: "faq", label: "FAQ" },
+  { id: "related", label: "Related comparisons and pricing" },
+];
+---
+
+<BaseLayout title={title} description={description} jsonLd={[breadcrumbs, article, faqSchema]} ogImage={ogImage}>
+  <main id="main">
+    <header class="article-hero">
+      <div class="wrap article-hero-grid">
+        <div>
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumbs">
+              <li><a href="/">Home</a></li>
+              <li><a href={sectionHref}>{sectionName}</a></li>
+              <li><span aria-current="page">{crumbName}</span></li>
+            </ol>
+          </nav>
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> {kicker}</p>
+          <h1 class="page-title">{h1}</h1>
+          <p class="lede">{lede}</p>
+          <p class="byline">
+            <span>By sendforless</span>
+            <span>Updated <time datetime={dateModified}>{PRICE_CHECKED_LABEL}</time></span>
+            <span>Prices from official pages, month-to-month USD list rates</span>
+          </p>
+          <p class="how-compared">
+            How we compared: pricing and documentation only. <a href="/how-we-test/">How we compare prices</a>.
+          </p>
+        </div>
+        <HeroMark variant="compare" />
+      </div>
+    </header>
+    <div class="wrap article-layout">
+      <nav class="toc" aria-label="In this article">
+        <p class="toc-label">In this article</p>
+        <ol>
+          {toc.map((item) => (
+            <li><a href={`#${item.id}`}>{item.label}</a></li>
+          ))}
+        </ol>
+      </nav>
+      <article class="article-body">
+        <CompareArticle doc={doc} />
+      </article>
+    </div>
+  </main>
+</BaseLayout>

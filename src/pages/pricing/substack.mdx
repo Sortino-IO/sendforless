@@ -1,0 +1,134 @@
+---
+layout: ../../layouts/ArticleLayout.astro
+sectionName: "Pricing"
+sectionHref: "/pricing/"
+title: "Substack pricing 2026: the 10% fee and the $0 plan"
+description: "Substack pricing from the official help article: $0 to publish, 10% of subscription revenue, Stripe on top, and a $50 custom domain. Updated 29 October 2026, re-read 24 November 2026."
+kicker: Pricing
+lede: "Publishing on Substack is free at any list size. Paid subscriptions cost 10% of subscription revenue, plus Stripe. A custom domain is $50 once. There is no monthly platform tier to look up by subscriber count."
+crumb: "Substack pricing"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: answer
+    label: The price
+  - id: fee
+    label: The 10% fee
+  - id: stripe
+    label: Stripe
+  - id: compare
+    label: Against a flat plan
+  - id: faq
+    label: FAQ
+related:
+  - beehiiv-vs-substack
+  - ghost-vs-substack
+  - substack-alternatives
+  - beehiiv-pricing
+  - how-we-test
+faqs:
+  - q: How much does Substack cost?
+    a: "<p>Nothing, until readers pay. Then Substack keeps 10% of subscription revenue. Stripe is extra. The help article, updated 29 October 2026 and re-read 24 November 2026, quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once.</p>"
+  - q: Is the 10% the whole fee?
+    a: "<p>No. It is Substack's share. Card processing and Stripe Billing sit on top. In-app iOS purchases can cost more if you raise prices to cover Apple. Substack's 10% on those purchases is based on your web price.</p>"
+  - q: What is 10% of $5,000 a month?
+    a: "<p>$500, before Stripe. At $1,000 a month the platform fee is $100. At $10,000 a month it is $1,000. A flat Ghost or beehiiv tier can be lower or higher depending on member count. This is not a monthly average of your traffic.</p>"
+  - q: Can I export my list?
+    a: "<p>Substack's export help says Settings, then Exports, then Create new export. The zip includes posts, the subscriber list, and statistics. Paid charges do not become paid subscriptions on another platform by themselves.</p>"
+---
+
+<section class="verdict" id="answer">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Substack pricing</p>
+  <h2>The platform fee is 10% of what readers pay, not a tier.</h2>
+  <p>The source is <a href="https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost">How much does Substack cost?</a>, updated 29 October 2026 and re-read 24 November 2026. Publishing stays free no matter how many subscribers you have. Readers pay the monthly, annual, or founding price you set. Substack does not add a fee on top of web payments beyond the 10% and Stripe. Tax, if you add it, is separate. Some European readers may see local payment methods, and those Stripe rates depend on the country of the Stripe account.</p>
+</section>
+
+## The 10% at three revenue levels
+
+These are platform fees only. They assume the revenue number is what readers paid for subscriptions. They do not include Stripe, refunds, or tax.
+
+<div class="table-wrap">
+  <table>
+    <caption>Substack's 10% platform fee at three monthly revenue levels, from the help article re-read 24 November 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Subscription revenue / month</th>
+        <th scope="col">Substack 10%</th>
+        <th scope="col">Stripe</th>
+        <th scope="col">Monthly platform tier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">$1,000</th>
+        <td data-label="Substack 10%">$100</td>
+        <td data-label="Stripe">Extra. Depends on the number of payments</td>
+        <td data-label="Platform tier">$0</td>
+      </tr>
+      <tr>
+        <th scope="row">$5,000</th>
+        <td data-label="Substack 10%">$500</td>
+        <td data-label="Stripe">Extra</td>
+        <td data-label="Platform tier">$0</td>
+      </tr>
+      <tr>
+        <th scope="row">$10,000</th>
+        <td data-label="Substack 10%">$1,000</td>
+        <td data-label="Stripe">Extra</td>
+        <td data-label="Platform tier">$0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>A custom domain is $50 once. It is not a monthly line. In-app purchases on iOS may be priced higher so Apple's fee is covered, or left at the web price so you absorb it. You choose that in the settings the help article describes.</p>
+
+## Stripe, stated as Substack states it
+
+For a US card the article quotes 2.9% + $0.30 per payment, and 0.7% for Stripe Billing on recurring payments, noting the Billing figure as of July 2024. Local methods have their own rates. The article's US examples include iDEAL at 80 cents, Bancontact and Sofort at 1.4% + 30 cents, and SEPA Direct Debit at 0.8% + 30 cents, capped at $6, with a $10 charge on failed or disputed SEPA payments. Use the row that matches how your readers pay. Do not add all of them.
+
+To see a real fee, the article says to open a succeeded payment in the Stripe dashboard and read the breakdown, then check payouts for the Billing line.
+
+## Against a flat plan
+
+A flat plan wins when it costs less than 10% and you can live without discovery inside Substack. It loses when revenue is small.
+
+<div class="table-wrap">
+  <table>
+    <caption>A flat plan next to 10% of $1,000 a month, using each vendor's published list price on 24 November 2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Option</th>
+        <th scope="col">Platform fee on $1,000</th>
+        <th scope="col">Separate monthly price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Substack</th>
+        <td data-label="Fee">$100, plus Stripe</td>
+        <td data-label="Monthly price">$0</td>
+      </tr>
+      <tr>
+        <th scope="row">beehiiv Lite at 1,000 subscribers</th>
+        <td data-label="Fee">$0 on a paid plan, plus Stripe</td>
+        <td data-label="Monthly price">$59, or $49 annual</td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost Publisher at 1,000 members</th>
+        <td data-label="Fee">$0, plus Stripe</td>
+        <td data-label="Monthly price">$35, or $29 annual</td>
+      </tr>
+      <tr>
+        <th scope="row">beehiiv Lite at 10,000 subscribers</th>
+        <td data-label="Fee">$0 on a paid plan, plus Stripe</td>
+        <td data-label="Monthly price">$139, or $119 annual</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The beehiiv and Ghost prices change with the list, not with revenue. Run your own pair on <a href="/compare/beehiiv-vs-substack/">beehiiv vs Substack</a> and <a href="/compare/ghost-vs-substack/">Ghost vs Substack</a>. If you are not charging readers, Substack's platform fee is $0 and a paid sending tool needs another reason. Alternatives are collected on <a href="/alternatives/substack/">Substack alternatives</a>.</p>
+
+<p>MailCheap does not replace the 10% product. It cannot bill subscribers. It is a send-only plan from $19 a month when that is the job.</p>

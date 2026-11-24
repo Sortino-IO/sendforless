@@ -37,6 +37,7 @@ interface Frontmatter {
   review?: ReviewMeta;
   schemaType?: "Article" | "WebPage";
   showPriceByline?: boolean;
+  itemList?: { name: string; url: string }[];
 }
 
 const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
@@ -58,6 +59,7 @@ const {
   review,
   schemaType = "Article",
   showPriceByline = true,
+  itemList = [],
 } = frontmatter;
 
 const canonical = new URL(Astro.url.pathname, SITE_URL).href;
@@ -118,10 +120,25 @@ const faqSchema = faqs.length
   ? {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      dateModified,
       mainEntity: faqs.map((item) => ({
         "@type": "Question",
         name: item.q,
         acceptedAnswer: { "@type": "Answer", text: plain(item.a) },
+      })),
+    }
+  : null;
+
+const itemListSchema = itemList.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      numberOfItems: itemList.length,
+      itemListElement: itemList.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: item.url.startsWith("http") ? item.url : new URL(item.url, SITE_URL).href,
       })),
     }
   : null;
@@ -155,7 +172,7 @@ const reviewSchema =
       }
     : null;
 
-const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) as Record<string, unknown>[];
+const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema, itemListSchema].filter(Boolean) as Record<string, unknown>[];
 ---
 <BaseLayout title={title} description={description} disclosure={disclosure} jsonLd={jsonLd} ogImage={ogImage}>
   <main id="main">
@@ -185,8 +202,8 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) a
     </header>
     <div class="wrap article-layout">
       {toc.length > 0 && (
-        <nav class="toc" aria-label="Table of contents">
-          <h2>In this article</h2>
+        <nav class="toc" aria-label="In this article">
+          <p class="toc-label">In this article</p>
           <ol>
             {toc.map((item) => (
               <li><a href={`#${item.id}`}>{item.label}</a></li>
@@ -218,7 +235,7 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) a
         )}
         {relatedGuides.length > 0 && (
           <div class="related">
-            <h2>Keep reading</h2>
+            <h2>Related reading</h2>
             <div class="related-grid">
               {relatedGuides.map((guide) => (
                 <a class="card" href={guide.href}>

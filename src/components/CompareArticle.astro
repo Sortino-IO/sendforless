@@ -1,0 +1,274 @@
+---
+import Calculator from "./Calculator.astro";
+import { DEFAULT_ISSUES, DEFAULT_SUBS, money, quote } from "../lib/pricing";
+import { FEE_MRR, SCENARIO_SUBS, scenarioCell } from "../lib/scenarios";
+import { PRICE_CHECKED_LABEL, mailcheapHref } from "../lib/site";
+import type { CompareDoc } from "../data/comparisons/types";
+
+interface Props {
+  doc: CompareDoc;
+}
+
+const { doc } = Astro.props;
+const quoted = quote(DEFAULT_SUBS, DEFAULT_ISSUES);
+const rowA = quoted.rows.find((row) => row.platform === doc.platformA);
+const rowB = quoted.rows.find((row) => row.platform === doc.platformB);
+
+function priceLabel(monthly: number | null | undefined, kind: string | undefined) {
+  if (kind === "check" || monthly === null || monthly === undefined) return "Check current pricing";
+  if (kind === "custom") return "Custom";
+  return `${money(monthly)}/mo`;
+}
+
+const cardA = {
+  price: priceLabel(rowA?.monthly, rowA?.priceKind),
+  plan: rowA?.plan ?? "",
+};
+const cardB = {
+  price: priceLabel(rowB?.monthly, rowB?.priceKind),
+  plan: rowB?.plan ?? "",
+};
+
+const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Lite or Pro" : "Ghost(Pro) Publisher");
+---
+
+<section id="short-answer">
+  <h2>{doc.a} vs {doc.b}: the short answer</h2>
+  <p>
+    Prices in the cards are for {DEFAULT_SUBS.toLocaleString("en-US")} subscribers and {DEFAULT_ISSUES} issue a week, month-to-month USD, checked {PRICE_CHECKED_LABEL}.
+  </p>
+  <div class="choice-grid">
+    <article class="card choice-card">
+      <h3>Choose {doc.a} if</h3>
+      <p>{doc.chooseA}</p>
+      <p class="choice-price">{cardA.price}</p>
+      <p class="choice-plan">{cardA.plan}{cardA.plan ? ". " : ""}{doc.priceNoteA}</p>
+      <p class="cta-row">
+        <a class="btn btn-secondary" href={doc.linkA.href} rel={doc.linkA.affiliate ? "sponsored nofollow noopener" : "noopener"} target="_blank">{doc.linkA.label}</a>
+        {doc.linkA.affiliate && <span class="btn-note">Affiliate link. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</span>}
+      </p>
+    </article>
+    <article class="card choice-card">
+      <h3>Choose {doc.b} if</h3>
+      <p>{doc.chooseB}</p>
+      <p class="choice-price">{cardB.price}</p>
+      <p class="choice-plan">{cardB.plan}{cardB.plan ? ". " : ""}{doc.priceNoteB}</p>
+      <p class="cta-row">
+        <a class="btn btn-secondary" href={doc.linkB.href} rel={doc.linkB.affiliate ? "sponsored nofollow noopener" : "noopener"} target="_blank">{doc.linkB.label}</a>
+        {doc.linkB.affiliate && <span class="btn-note">Affiliate link. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</span>}
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="differences">
+  <h2>Key differences between {doc.a} and {doc.b}</h2>
+  {doc.differencesIntro.map((html) => <p set:html={html} />)}
+  <div class="table-wrap">
+    <table>
+      <caption>Key differences between {doc.a} and {doc.b}, checked {PRICE_CHECKED_LABEL}</caption>
+      <thead>
+        <tr>
+          <th scope="col">Topic</th>
+          <th scope="col">Who it favors</th>
+          <th scope="col">Why, with the number</th>
+        </tr>
+      </thead>
+      <tbody>
+        {doc.differences.map((row) => (
+          <tr>
+            <th scope="row">{row.topic}</th>
+            <td data-label="Who it favors">{row.favors}</td>
+            <td data-label="Why">{row.why}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>{doc.a} vs {doc.b} pricing at 1,000 to 25,000 subscribers</h2>
+  {doc.pricingIntro.map((html) => <p set:html={html} />)}
+  <Calculator
+    platforms={[doc.platformA, doc.platformB]}
+    idPrefix={doc.id}
+    cheaperToggle={doc.cheaperToggle}
+    defaultSubs={DEFAULT_SUBS}
+    defaultIssues={DEFAULT_ISSUES}
+  />
+  <div class="table-wrap">
+    <table>
+      <caption>
+        {doc.a} and {doc.b} at 1,000 to 25,000 subscribers, one issue a week, checked {PRICE_CHECKED_LABEL}. Monthly is the month-to-month list price. Annual is the effective monthly rate on yearly billing.
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Subscribers</th>
+          <th scope="col">{doc.a} monthly</th>
+          <th scope="col">{doc.a} annual effective</th>
+          <th scope="col">{doc.b} monthly</th>
+          <th scope="col">{doc.b} annual effective</th>
+        </tr>
+      </thead>
+      <tbody>
+        {SCENARIO_SUBS.map((subs) => {
+          const left = scenarioCell(doc.platformA, subs);
+          const right = scenarioCell(doc.platformB, subs);
+          return (
+            <tr>
+              <th scope="row">{subs.toLocaleString("en-US")}</th>
+              <td data-label={`${doc.a} monthly`}>{left.monthly}</td>
+              <td data-label={`${doc.a} annual effective`}>{left.annual}</td>
+              <td data-label={`${doc.b} monthly`}>{right.monthly}</td>
+              <td data-label={`${doc.b} annual effective`}>{right.annual}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  <p class="method-note">Emails are subscribers × 4.33 a week, rounded up; annual is the yearly charge ÷ 12.</p>
+</section>
+
+<section id="features">
+  <h2>{doc.a} vs {doc.b} features compared</h2>
+  {doc.featuresIntro.map((html) => <p set:html={html} />)}
+  {doc.matrix.map((group) => (
+    <div class="table-wrap">
+      <table>
+        <caption>{group.name}, {doc.a} vs {doc.b}, checked {PRICE_CHECKED_LABEL}</caption>
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">{doc.a}</th>
+            <th scope="col">{doc.b}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {group.rows.map((row) => (
+            <tr>
+              <th scope="row">{row.feature}</th>
+              <td data-label={doc.a}>{row.a}</td>
+              <td data-label={doc.b}>{row.b}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ))}
+</section>
+
+{doc.sections.map((section) => (
+  <section id={section.id}>
+    <h2>{section.title}</h2>
+    {section.paragraphs.map((html) => <p set:html={html} />)}
+    {section.fees && (
+      <div class="table-wrap">
+        <table>
+          <caption>
+            Platform fee on subscription revenue, {feeName(section.fees)} vs Substack, checked {PRICE_CHECKED_LABEL}. Stripe is extra on both. The plan price is separate and follows the subscriber or member count, not this revenue.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Subscription revenue / month</th>
+              <th scope="col">Substack 10% platform fee</th>
+              <th scope="col">{feeName(section.fees)} platform fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            {FEE_MRR.map((mrr) => (
+              <tr>
+                <th scope="row">{money(mrr)}</th>
+                <td data-label="Substack 10%">{money(mrr / 10)}</td>
+                <td data-label={`${feeName(section.fees)} fee`}>$0 on the paid plan</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+))}
+
+<section id="pros-a">
+  <h2>{doc.a} pros and cons</h2>
+  <div class="pros-grid">
+    <div class="card choice-card">
+      <h3>Pros</h3>
+      <ul>
+        {doc.prosA.pros.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="card choice-card">
+      <h3>Cons</h3>
+      <ul>
+        {doc.prosA.cons.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pros-b">
+  <h2>{doc.b} pros and cons</h2>
+  <div class="pros-grid">
+    <div class="card choice-card">
+      <h3>Pros</h3>
+      <ul>
+        {doc.prosB.pros.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+    <div class="card choice-card">
+      <h3>Cons</h3>
+      <ul>
+        {doc.prosB.cons.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <h2>Who should choose {doc.a} vs {doc.b}</h2>
+  {doc.who.map((html) => <p set:html={html} />)}
+</section>
+
+<section id="switching">
+  <h2>Switching from {doc.a} to {doc.b}</h2>
+  {doc.switching.map((html) => <p set:html={html} />)}
+</section>
+
+{doc.cheaper && (
+  <section id="cheaper">
+    <h2>A cheaper option if you only need to send</h2>
+    {doc.cheaper.map((html) => <p set:html={html} />)}
+    <p class="cta-row">
+      <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
+      <a class="btn btn-secondary" href="/reviews/mailcheap/">Read the MailCheap review</a>
+      <span class="btn-note">Affiliate link. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</span>
+    </p>
+  </section>
+)}
+
+<section id="faq">
+  <h2>{doc.a} vs {doc.b} FAQ</h2>
+  <div class="faq">
+    {doc.faqs.map((item, index) => (
+      <details open={index === 0}>
+        <summary>{item.q}</summary>
+        <div set:html={item.a} />
+      </details>
+    ))}
+  </div>
+</section>
+
+<section id="related" class="related">
+  <h2>Related comparisons and pricing</h2>
+  <div class="related-grid">
+    {doc.related.map((item) => (
+      <a class="card" href={item.href}>
+        <p class="kicker">{item.kicker}</p>
+        <strong>{item.title}</strong>
+      </a>
+    ))}
+  </div>
+</section>

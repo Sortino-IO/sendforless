@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
 title: "Newsletter platform comparisons"
-description: "Side-by-side comparisons of newsletter platforms on list price and the features a cheaper invoice leaves out."
+description: "Side-by-side comparisons of newsletter platforms on list price and the features a cheaper invoice leaves out. Prices at 4,000 subscribers, checked 24 November 2026."
 kicker: Comparisons
-lede: "Each comparison is two products, a list size, and a plain account of what the lower bill does not include."
+lede: "Each comparison is two products, a list size, and a plain account of what the lower bill does not include. The table uses 4,000 subscribers and one issue a week. Where a dollar is missing, the cell says to check current pricing."
 crumb: Comparisons
 schemaType: WebPage
 affiliate: false
@@ -12,69 +12,97 @@ datePublished: 2026-11-24
 dateModified: 2026-11-24
 toc:
   - id: method
-    label: How to read a table
-  - id: pages
-    label: The matchups
+    label: How to read a row
+  - id: pairs
+    label: All pairs
+  - id: hubs
+    label: Pricing and alternatives
 related:
   - how-we-test
   - mailcheap-review
   - beehiiv-pricing
+  - mailerlite-pricing
+  - mailchimp-pricing
+itemList:
+  - name: MailerLite vs Mailchimp
+    url: /compare/mailerlite-vs-mailchimp/
+  - name: Flodesk vs Mailchimp
+    url: /compare/flodesk-vs-mailchimp/
+  - name: Kit (ConvertKit) vs Mailchimp
+    url: /compare/convertkit-vs-mailchimp/
+  - name: beehiiv vs Substack
+    url: /compare/beehiiv-vs-substack/
+  - name: Ghost vs Substack
+    url: /compare/ghost-vs-substack/
+  - name: beehiiv vs Kit (ConvertKit)
+    url: /compare/beehiiv-vs-convertkit/
+  - name: MailCheap vs beehiiv
+    url: /compare/mailcheap-vs-beehiiv/
 faqs: []
 ---
 
-## How to read a table
+## How to read a row
 
-We use a weekly cadence unless the comparison is about daily sending. Emails are subscribers times issues per week times 4.33, rounded up. A month with five send weeks is higher. On MailCheap, welcome emails and tests count on top of that.
+We use one issue a week unless the comparison says otherwise. Emails, where a tool meters them, are subscribers × 4.33, rounded up. A month with five send weeks is higher. On MailCheap, welcome emails and tests count on top of that.
 
-Under 2,500 subscribers, beehiiv Free is $0. Under 10,000, Kit’s free plan covers broadcasts. Substack’s platform fee is $0 until readers pay, and then it is 10% plus Stripe. MailCheap is the lower paid row when you are past those caps, the cadence fits a published plan, and you do not need paid subscriptions, an ad network, a referral program, or A/B tests.
+Under 2,500 subscribers, beehiiv Free is $0. Under 10,000, Kit's free plan covers broadcasts. Substack's platform fee is $0 until readers pay, and then it is 10% plus Stripe. MailCheap is the lower paid row when you are past those caps, the cadence fits a published plan, and you do not need paid subscriptions, an ad network, a referral program, or A/B tests.
 
-Prices we could not read say “check current pricing” and are not ranked. The rules are on [How we compare prices](/how-we-test/).
+Unpublished prices say "Check current pricing" and are not ranked. The rules are on [How we compare prices](/how-we-test/). Plan-by-plan tables live on the [pricing hub](/pricing/). The "if you leave" pages are the [alternatives hub](/alternatives/).
 
-## The matchups
+## All pairs
 
-<div class="card-grid">
-  <a class="card article-card" href="/compare/mailcheap-vs-beehiiv/">
-    <p class="kicker">Comparison</p>
-    <h3>MailCheap vs beehiiv</h3>
-    <p>At 4,000 subscribers and one issue a week, Starter is $19 and beehiiv Lite is $109.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/beehiiv-vs-substack/">
-    <p class="kicker">Comparison</p>
-    <h3>beehiiv vs Substack</h3>
-    <p>A monthly Lite tier against 10% of subscription revenue.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/mailerlite-vs-mailchimp/">
-    <p class="kicker">Comparison</p>
-    <h3>MailerLite vs Mailchimp</h3>
-    <p>Comfort’s published tiers against Mailchimp’s starting prices.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/convertkit-vs-mailchimp/">
-    <p class="kicker">Comparison</p>
-    <h3>Kit vs Mailchimp</h3>
-    <p>Kit’s free broadcasts to 10,000 subscribers, next to Mailchimp’s 250-contact free plan.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/beehiiv-vs-convertkit/">
-    <p class="kicker">Comparison</p>
-    <h3>beehiiv vs Kit</h3>
-    <p>Recommendations and ads on one side, sequences and a free 10,000-subscriber plan on the other.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/ghost-vs-substack/">
-    <p class="kicker">Comparison</p>
-    <h3>Ghost vs Substack</h3>
-    <p>A membership site with a 0% platform fee, or 10% when readers pay.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/compare/flodesk-vs-mailchimp/">
-    <p class="kicker">Comparison</p>
-    <h3>Flodesk vs Mailchimp</h3>
-    <p>A flat $46 sending plan against a contact tier that starts at $20 for 500 people.</p>
-    <span class="arrow">Read</span>
-  </a>
+<div class="table-wrap">
+  <table>
+    <caption>Every comparison on sendforless, with who it fits and the month-to-month price at 4,000 subscribers and one issue a week. Checked 24 November 2026.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Pair</th>
+        <th scope="col">Who it fits</th>
+        <th scope="col">Price at 4,000 subscribers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="/compare/mailerlite-vs-mailchimp/">MailerLite vs Mailchimp</a></th>
+        <td data-label="Who it fits">MailerLite when you want a published tier, pages, and automations. Mailchimp when the account also runs a store.</td>
+        <td data-label="Price at 4,000">Comfort $49. Mailchimp: Check current pricing.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/flodesk-vs-mailchimp/">Flodesk vs Mailchimp</a></th>
+        <td data-label="Who it fits">Flodesk when you want one design-led price at any list size. Mailchimp when 500 contacts at $20 still covers you, or the journeys stay.</td>
+        <td data-label="Price at 4,000">Email $46. Mailchimp: Check current pricing.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/convertkit-vs-mailchimp/">Kit (ConvertKit) vs Mailchimp</a></th>
+        <td data-label="Who it fits">Kit Free when you broadcast under 10,000 subscribers. Creator when you need sequences. Mailchimp when the store stays.</td>
+        <td data-label="Price at 4,000">Kit $0 for broadcasts. Mailchimp: Check current pricing.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/beehiiv-vs-substack/">beehiiv vs Substack</a></th>
+        <td data-label="Who it fits">Substack when 10% of revenue is still under Lite. beehiiv when you want the bucket price and a 0% cut.</td>
+        <td data-label="Price at 4,000">Lite $109. Substack $0 platform fee.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/ghost-vs-substack/">Ghost vs Substack</a></th>
+        <td data-label="Who it fits">Ghost when members log into a site you theme. Substack when the network and a $0 start matter more than the percent.</td>
+        <td data-label="Price at 4,000">Publisher $75. Substack $0 platform fee.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/beehiiv-vs-convertkit/">beehiiv vs Kit (ConvertKit)</a></th>
+        <td data-label="Who it fits">Kit for broadcasts and, on Creator, sequences. beehiiv for a publication site, recommendations, and ads on Lite.</td>
+        <td data-label="Price at 4,000">Lite $109. Kit $0 for broadcasts.</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/compare/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a></th>
+        <td data-label="Who it fits">MailCheap when the job is a counted send. beehiiv when you need paid subscriptions, ads, or the recommendation network past 2,500 subscribers.</td>
+        <td data-label="Price at 4,000">Starter $19, with the five-week caveat above. Lite $109.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-The MailCheap write-up is the [MailCheap review](/reviews/mailcheap/). The beehiiv tier table is [beehiiv pricing](/pricing/beehiiv/).
+## Pricing and alternatives
+
+The same products have their own price pages: [beehiiv](/pricing/beehiiv/), [Kit](/pricing/convertkit/), [Flodesk](/pricing/flodesk/), [MailerLite](/pricing/mailerlite/), [Mailchimp](/pricing/mailchimp/), [Ghost](/pricing/ghost/), and [Substack](/pricing/substack/).
+
+If the question is "what do I use instead," start at the [alternatives hub](/alternatives/) and the [MailCheap review](/reviews/mailcheap/). The review is an affiliate page. The commission does not change the $19 price, and it does not add features MailCheap does not have.
