@@ -1,0 +1,203 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Calculator from "../components/Calculator.astro";
+import { guides } from "../lib/guides";
+import { mailcheapHref } from "../lib/site";
+
+const homeGuides = [
+  "mailchimp-alternatives",
+  "mailerlite-alternatives",
+  "beehiiv-pricing",
+  "substack-alternatives",
+  "convertkit-alternatives",
+  "ghost-alternatives",
+  "beehiiv-alternatives",
+  "mailcheap-vs-beehiiv",
+].map((slug) => guides.find((guide) => guide.slug === slug)!);
+
+const description =
+  "Independent comparisons of the best newsletter platforms and newsletter software, ranked by what a weekly issue actually costs. Includes MailCheap, beehiiv, Kit, Ghost, Mailchimp, and Substack.";
+---
+<BaseLayout title="Best newsletter platforms, compared by cost" description={description}>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Newsletter platforms, compared</p>
+          <h1>The <span class="grad">best newsletter platforms</span>, ranked by what they actually cost</h1>
+          <p class="lede">Most newsletter software charges you for every name on the list. We compare public list prices — including tools that charge only for the emails you send — so indie writers can see the real monthly bill.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#calculator">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3.5h10v9H3z" stroke="currentColor" stroke-width="1.4"></path><path d="M3 6.5h10M6.5 3.5v9" stroke="currentColor" stroke-width="1.4"></path></svg>
+              Open the calculator
+            </a>
+            <a class="btn btn-secondary" href="/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a>
+          </div>
+          <div class="platform-row">
+            <p class="hint">Compared in this guide</p>
+            <a class="chip" href="/mailcheap-review/"><span class="avatar av-violet">MC</span> MailCheap</a>
+            <a class="chip" href="/beehiiv-pricing/"><span class="avatar av-gold">bh</span> beehiiv</a>
+            <a class="chip" href="/convertkit-alternatives/"><span class="avatar av-green">Kt</span> Kit</a>
+            <a class="chip" href="/ghost-alternatives/"><span class="avatar av-slate">Gh</span> Ghost</a>
+            <a class="chip" href="/mailchimp-alternatives/"><span class="avatar av-yellow">Ch</span> Mailchimp</a>
+            <a class="chip" href="/substack-alternatives/"><span class="avatar av-orange">Sb</span> Substack</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="chart-card">
+            <div class="chart-head">
+              <h2>Paid plans at 4,000 subscribers</h2>
+              <p>One issue a week · monthly list prices</p>
+            </div>
+            <div class="hero-compare">
+              <div class="big-stat">
+                <span class="label">MailCheap Starter</span>
+                <span class="val grad">$19</span>
+                <span class="sub">Best paid value in this example</span>
+              </div>
+              <div class="vs">vs</div>
+              <div class="big-stat">
+                <span class="label">beehiiv Lite</span>
+                <span class="val">$109</span>
+                <span class="sub">Same list size, monthly billing</span>
+              </div>
+            </div>
+            <div class="mini-bars" aria-hidden="true">
+              <div class="mini-bar">
+                <div class="name"><span class="avatar av-violet">MC</span> MailCheap</div>
+                <div class="track"><div class="fill" style="--w:17.4%"></div></div>
+                <div class="amt">$19</div>
+              </div>
+              <div class="mini-bar is-other">
+                <div class="name"><span class="avatar av-slate">Gh</span> Ghost</div>
+                <div class="track"><div class="fill" style="--w:68.8%"></div></div>
+                <div class="amt">$75</div>
+              </div>
+              <div class="mini-bar is-other">
+                <div class="name"><span class="avatar av-yellow">Ch</span> Mailchimp</div>
+                <div class="track"><div class="fill" style="--w:91.7%"></div></div>
+                <div class="amt">$100*</div>
+              </div>
+              <div class="mini-bar is-other">
+                <div class="name"><span class="avatar av-gold">bh</span> beehiiv</div>
+                <div class="track"><div class="fill" style="--w:100%"></div></div>
+                <div class="amt">$109</div>
+              </div>
+            </div>
+            <p class="chart-foot">Kit and Substack can be $0 at this size if a free plan covers you. *Mailchimp mid-tier is a placeholder — confirm on the official page. Prices checked 24 November 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calculator" aria-labelledby="calc-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="calc-title">Cost calculator</h2>
+          <p>Enter your list size and how often you write. We map that to each platform’s published plan, using month-to-month USD list prices, and plot the bill as bars.</p>
+        </div>
+        <Calculator />
+        <p class="method-note" id="method">
+          Prices checked 24 November 2026. We use month-to-month USD list prices and ignore limited-time promotions — including Kit’s 50% off the first three months of Creator, which Kit’s pricing page said ends 1 December 2026. MailCheap, beehiiv, Ghost(Pro), and Substack figures come from official pricing pages or the public price data those pages load. Kit’s free plan (to 10,000 subscribers) is from Kit’s help center; Creator bands above the $39 starting price are a slider capture and are marked when they are not a published static figure. Mailchimp prices above the 500-contact starting tier are placeholders and are marked as such. Welcome emails, tests, and payment-processing fees are not included in the email count. The full method is on <a href="/how-we-test/">How we test</a>.
+        </p>
+
+        <div class="section-head" style="margin-top:2.5rem">
+          <h2>What the best newsletter software actually charges for</h2>
+          <p>Same list, one issue a week. The winner changes if you need a free plan, paid subscriptions, or a publication website.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Monthly list price at 4,000 subscribers, one issue a week (about 17,334 emails)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Platform</th>
+                <th scope="col">You pay for</th>
+                <th class="num" scope="col">This example</th>
+                <th scope="col">Free hosted plan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-lowest">
+                <th scope="row">MailCheap</th>
+                <td data-label="You pay for">Emails sent, plus a subscriber cap</td>
+                <td class="num" data-label="This example"><span class="price">$19</span><span class="price-sub">Starter</span></td>
+                <td data-label="Free hosted plan">No. Open-source self-hosting is separate.</td>
+              </tr>
+              <tr>
+                <th scope="row">Ghost(Pro)</th>
+                <td data-label="You pay for">Members on the site</td>
+                <td class="num" data-label="This example"><span class="price">$75</span><span class="price-sub">Publisher</span></td>
+                <td data-label="Free hosted plan">No hosted free plan. The software can be self-hosted.</td>
+              </tr>
+              <tr>
+                <th scope="row">beehiiv</th>
+                <td data-label="You pay for">Subscribers. Sends are unlimited.</td>
+                <td class="num" data-label="This example"><span class="price">$109</span><span class="price-sub">Lite, monthly</span></td>
+                <td data-label="Free hosted plan">Yes, up to 2,500 subscribers.</td>
+              </tr>
+              <tr>
+                <th scope="row">Kit</th>
+                <td data-label="You pay for">Subscribers, if you outgrow Free</td>
+                <td class="num" data-label="This example"><span class="price">$0</span><span class="price-sub">Free, for broadcasts</span></td>
+                <td data-label="Free hosted plan">Yes, up to 10,000 subscribers.</td>
+              </tr>
+              <tr>
+                <th scope="row">Substack</th>
+                <td data-label="You pay for">10% of paid-subscription revenue</td>
+                <td class="num" data-label="This example"><span class="price">$0</span><span class="price-sub">Publishing fee</span></td>
+                <td data-label="Free hosted plan">Yes. No monthly platform fee.</td>
+              </tr>
+              <tr>
+                <th scope="row">Mailchimp</th>
+                <td data-label="You pay for">Contacts stored, including unsubscribed</td>
+                <td class="num" data-label="This example"><span class="price">Placeholder</span><span class="price-sub">Standard starts at $20 / 500 contacts</span></td>
+                <td data-label="Free hosted plan">Yes, 250 contacts and 500 sends a month.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="method-note">MailCheap’s link in the calculator is an affiliate link (<a href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">pricing</a>). Nothing else in the table is. Read the <a href="/mailcheap-review/">MailCheap review</a> before you treat the $19 row as a recommendation — it is the cheapest paid send in this example, and it is the wrong product if you need ads, paid subscriptions, or a free hosted plan.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="honesty-title">
+      <div class="wrap">
+        <div class="honesty">
+          <div class="honesty-head">
+            <span class="icon-warn" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2.4 16.2 15H1.8L9 2.4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"></path><path d="M9 7.2v3.6M9 13.2h.01" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path></svg>
+            </span>
+            <h2 id="honesty-title">Who should not use MailCheap</h2>
+          </div>
+          <p>MailCheap is often the cheapest paid way to send a mid-size weekly newsletter. It is not the right tool for everyone, and it is not the cheapest option if a free plan already covers you.</p>
+          <ul>
+            <li>You want a free hosted plan. MailCheap’s hosted product starts at $19 a month. There is no free hosted tier. (It is open source, AGPL-3.0, if you self-host.)</li>
+            <li>Your list is still small and you only need to send issues. Kit is free to 10,000 subscribers, beehiiv is free to 2,500, and Substack has no monthly platform fee.</li>
+            <li>You need paid subscriptions, an ad network, a referral program, or A/B tests. MailCheap does not offer those.</li>
+            <li>You want a recommendation network, built-in growth marketplace, or visual automation journeys. beehiiv and Kit are built around those features.</li>
+            <li>You are choosing a platform mostly for a publication website with memberships. Ghost is the stronger fit.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guides" aria-labelledby="guides-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="guides-title">Guides to the best newsletter software</h2>
+          <p>Start with the alternative roundups if you already use a platform, or with pricing explainers if you are still choosing.</p>
+        </div>
+        <div class="card-grid">
+          {homeGuides.map((guide) => (
+            <a class="card article-card" href={guide.href}>
+              <p class="kicker">{guide.kicker}</p>
+              <h3>{guide.title}</h3>
+              <p>{guide.blurb}</p>
+              <span class="arrow">{guide.kicker === "Comparison" ? "Read comparison →" : "Read guide →"}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
