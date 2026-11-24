@@ -30,6 +30,8 @@ interface Frontmatter {
   affiliate?: boolean;
   disclosure?: string;
   crumb?: string;
+  sectionName?: string;
+  sectionHref?: string;
   review?: ReviewMeta;
   schemaType?: "Article" | "WebPage";
   showPriceByline?: boolean;
@@ -49,6 +51,8 @@ const {
   affiliate = false,
   disclosure,
   crumb,
+  sectionName,
+  sectionHref,
   review,
   schemaType = "Article",
   showPriceByline = true,
@@ -62,13 +66,23 @@ function plain(html: string) {
   return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 }
 
+const crumbItems = [
+  { name: "Home", item: `${SITE_URL}/` },
+  ...(sectionName && sectionHref
+    ? [{ name: sectionName, item: new URL(sectionHref, SITE_URL).href }]
+    : []),
+  { name: crumbName, item: canonical },
+];
+
 const breadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: crumbName, item: canonical },
-  ],
+  itemListElement: crumbItems.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.item,
+  })),
 };
 
 const article = {
@@ -137,6 +151,9 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) a
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumbs">
             <li><a href="/">Home</a></li>
+            {sectionName && sectionHref && (
+              <li><a href={sectionHref}>{sectionName}</a></li>
+            )}
             <li><span aria-current="page">{crumbName}</span></li>
           </ol>
         </nav>

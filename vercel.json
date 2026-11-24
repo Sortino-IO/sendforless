@@ -1,5 +1,29 @@
 {
   "trailingSlash": true,
+  "redirects": [
+    { "source": "/mailchimp-alternatives", "destination": "/alternatives/mailchimp/", "statusCode": 301 },
+    { "source": "/mailchimp-alternatives/", "destination": "/alternatives/mailchimp/", "statusCode": 301 },
+    { "source": "/mailerlite-alternatives", "destination": "/alternatives/mailerlite/", "statusCode": 301 },
+    { "source": "/mailerlite-alternatives/", "destination": "/alternatives/mailerlite/", "statusCode": 301 },
+    { "source": "/substack-alternatives", "destination": "/alternatives/substack/", "statusCode": 301 },
+    { "source": "/substack-alternatives/", "destination": "/alternatives/substack/", "statusCode": 301 },
+    { "source": "/convertkit-alternatives", "destination": "/alternatives/convertkit/", "statusCode": 301 },
+    { "source": "/convertkit-alternatives/", "destination": "/alternatives/convertkit/", "statusCode": 301 },
+    { "source": "/beehiiv-alternatives", "destination": "/alternatives/beehiiv/", "statusCode": 301 },
+    { "source": "/beehiiv-alternatives/", "destination": "/alternatives/beehiiv/", "statusCode": 301 },
+    { "source": "/ghost-alternatives", "destination": "/alternatives/ghost/", "statusCode": 301 },
+    { "source": "/ghost-alternatives/", "destination": "/alternatives/ghost/", "statusCode": 301 },
+    { "source": "/beehiiv-pricing", "destination": "/pricing/beehiiv/", "statusCode": 301 },
+    { "source": "/beehiiv-pricing/", "destination": "/pricing/beehiiv/", "statusCode": 301 },
+    { "source": "/beehiiv-vs-substack", "destination": "/compare/beehiiv-vs-substack/", "statusCode": 301 },
+    { "source": "/beehiiv-vs-substack/", "destination": "/compare/beehiiv-vs-substack/", "statusCode": 301 },
+    { "source": "/mailcheap-vs-beehiiv", "destination": "/compare/mailcheap-vs-beehiiv/", "statusCode": 301 },
+    { "source": "/mailcheap-vs-beehiiv/", "destination": "/compare/mailcheap-vs-beehiiv/", "statusCode": 301 },
+    { "source": "/mailcheap-review", "destination": "/reviews/mailcheap/", "statusCode": 301 },
+    { "source": "/mailcheap-review/", "destination": "/reviews/mailcheap/", "statusCode": 301 },
+    { "source": "/how-to-start-a-newsletter", "destination": "/guides/how-to-start-a-newsletter/", "statusCode": 301 },
+    { "source": "/how-to-start-a-newsletter/", "destination": "/guides/how-to-start-a-newsletter/", "statusCode": 301 }
+  ],
   "headers": [
     {
       "source": "/fonts/(.*)",

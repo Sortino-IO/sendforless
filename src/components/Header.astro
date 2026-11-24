@@ -4,15 +4,15 @@ import Logo from "./Logo.astro";
 const path = Astro.url.pathname;
 const links = [
   { href: "/#calculator", label: "Calculator" },
-  { href: "/#guides", label: "Guides" },
-  { href: "/mailcheap-vs-beehiiv/", label: "Comparisons" },
+  { href: "/guides/", label: "Guides" },
+  { href: "/compare/", label: "Comparisons" },
   { href: "/how-we-test/", label: "Method" },
 ];
 
 function current(href: string) {
   const clean = href.split("#")[0];
   if (!clean || clean === "/") return undefined;
-  return path === clean ? "page" : undefined;
+  return path === clean || path.startsWith(clean) ? "page" : undefined;
 }
 ---
 <header class="site-header">
