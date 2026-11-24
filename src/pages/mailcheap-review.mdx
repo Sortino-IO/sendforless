@@ -1,0 +1,201 @@
+---
+layout: ../layouts/ArticleLayout.astro
+title: "MailCheap review: pay-per-email pricing, without the extras"
+description: "An independent MailCheap review of hosted plans, pay-per-email billing, missing features, and who should not use the product. Not an official MailCheap page."
+kicker: Review
+lede: "MailCheap charges for emails you send, not for names you store. The hosted product starts at $19 a month, has no free tier and no trial, and leaves out the growth tools other newsletter platforms sell. That is either the whole pitch or a reason to walk away."
+crumb: "MailCheap review"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+review:
+  name: MailCheap
+  ratingValue: "4"
+  reviewBody: "MailCheap is a strong fit for a regular, price-sensitive sender who does not need paid subscriptions, an ad network, a referral program, or A/B tests. It is a poor fit if you want a free hosted plan or an all-in-one media business. This is an independent editorial review, not a MailCheap rating."
+toc:
+  - id: verdict
+    label: Verdict
+  - id: pricing
+    label: What pay-per-email means
+  - id: plans
+    label: The plans
+  - id: included
+    label: What you get
+  - id: missing
+    label: What you do not get
+  - id: who
+    label: Who it is for
+  - id: import
+    label: Imports and switching
+  - id: selfhost
+    label: Self-hosting
+  - id: faq
+    label: FAQ
+related:
+  - mailcheap-vs-beehiiv
+  - mailchimp-alternatives
+  - beehiiv-alternatives
+  - how-we-test
+faqs:
+  - q: Is this an official MailCheap review?
+    a: "<p>No. sendforless is independent. We may earn a commission if you subscribe through our links. We do not speak for MailCheap, we do not set its prices, and this page is not a MailCheap property.</p>"
+  - q: Why a 4 out of 5?
+    a: "<p>The score is for the job the product claims: sending a newsletter without charging you for idle subscribers, at a published price, with the same features on every plan. It is not a score for “best all-in-one creator platform.” The missing paid subscriptions, ads, referral program, and A/B tests are why it is not a 5, and why plenty of writers should not use it at all.</p>"
+  - q: Is there a free plan?
+    a: "<p>There is no free hosted plan and no trial. Hosted plans start at $19 a month. The application is open source under AGPL-3.0, so you can run it yourself and pay an email provider such as Amazon SES instead. That is free of MailCheap’s invoice and not free of servers, DNS, and deliverability work.</p>"
+  - q: What counts as an email?
+    a: "<p>MailCheap’s help says every email it sends for you: issues, automation emails, last-chance emails, tests, and welcome and confirmation emails. An issue to 1,000 people is 1,000 emails. The count resets each month on the day the plan started. Yearly plans get the same monthly allowance.</p>"
+  - q: What happens at the cap?
+    a: "<p>Signups keep working and confirmation emails still go out. A campaign or test that needs more emails than you have left waits until you upgrade or the next month starts. Once the allowance is gone, welcome emails pause, and people who join in the meantime do not get one later. Automation emails wait and are sent when there is room. If you have more active subscribers than the plan allows, sending waits until you upgrade.</p>"
+---
+
+<section class="verdict" id="verdict">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Verdict</p>
+  <h2>A 4 out of 5 for senders. The wrong product if you need a media business.</h2>
+  <p>We would use MailCheap for a weekly or twice-weekly letter whose money is made somewhere else: a job, a course, sponsorships sold by hand, a site that already exists. We would not use it to launch a paid newsletter, to run an ad network, or to avoid paying anything at all. The hosted price is honest. The gaps are equally honest. Our score is <strong>4 out of 5 for that narrower job</strong>, not a claim that MailCheap beats beehiiv, Kit, or Ghost at theirs.</p>
+  <p>The score is an editorial judgment from this site. It is not a user-review average, and it is not MailCheap grading itself.</p>
+</section>
+
+## What pay-per-email actually means
+
+Most newsletter software picks a subscriber bucket and charges you for it whether you write or not. A 10,000-person list on a subscriber-priced tool costs the 10,000-person price on a quiet month. MailCheap’s model is the other way around. Each hosted plan includes a monthly email allowance and a subscriber ceiling. You have to fit inside both. A small list that you mail every day can blow the email allowance. A huge list you mail once a month can blow the subscriber ceiling while the email allowance still has room.
+
+The arithmetic we use throughout sendforless is subscribers × issues per week × 52 ÷ 12, rounded up. The 52 ÷ 12 term is there so a month with five Mondays is already in the estimate. A weekly letter to 4,000 people is 17,334 emails. That fits Starter, which is 20,000 emails and 10,000 subscribers for $19. The same list, seven days a week, is about 121,334 emails and needs Pro at $79. If you only remember one sentence from this review, remember that one. “Pay per email” is cheap when you send like a magazine and ordinary when you send like a daily.
+
+Tests count. Welcome emails count. Confirmation emails count. The last-chance note MailCheap sends to readers who have gone quiet counts. MailCheap’s pricing FAQ is explicit that the meter is every email the product sends for you, and that the count starts over on the billing anniversary, not on the first of the calendar month. Yearly plans do not bank unused months into a bigger allowance. You get the same monthly number, and you pay for 10 months instead of 12.
+
+Subscribers, in MailCheap’s definition, are active contacts who receive issues, across your newsletters. People who have not confirmed, dormant contacts, and anyone who unsubscribed, bounced, or complained stay in the database and do not count. That is the opposite of Mailchimp, which bills you for unsubscribed contacts until you archive or delete them. If you are leaving Mailchimp because of that, the definition is the feature. If your list is already clean, it changes the invoice less than the email cap does.
+
+There is no free trial. MailCheap’s pricing FAQ says plans start at $19 and you can cancel anytime. The help page adds a narrower promise: if they cannot take a new newsletter on after review, or a new account is blocked before the second issue and before renewal, they cancel and refund the first payment without you asking. Later blocks pause billing instead. Partial months are not refunded when you cancel a plan you simply do not want. Read that as a review policy for senders they will not onboard, not as a 30-day money-back offer.
+
+## The plans
+
+Checked against [MailCheap’s plans help](https://mailcheap.ai/help/plans) on 24 November 2026. Monthly USD list prices. A yearly plan costs ten times the monthly price.
+
+<div class="table-wrap">
+  <table>
+    <caption>MailCheap hosted plans</caption>
+    <thead>
+      <tr>
+        <th scope="col">Plan</th>
+        <th class="num" scope="col">Emails / month</th>
+        <th class="num" scope="col">Subscribers</th>
+        <th class="num" scope="col">Monthly</th>
+        <th class="num" scope="col">Yearly, 10 months</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Starter</th>
+        <td class="num" data-label="Emails">20,000</td>
+        <td class="num" data-label="Subscribers">10,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$19</span></td>
+        <td class="num" data-label="Yearly">$190</td>
+      </tr>
+      <tr>
+        <th scope="row">Growth</th>
+        <td class="num" data-label="Emails">75,000</td>
+        <td class="num" data-label="Subscribers">40,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$39</span></td>
+        <td class="num" data-label="Yearly">$390</td>
+      </tr>
+      <tr>
+        <th scope="row">Pro</th>
+        <td class="num" data-label="Emails">200,000</td>
+        <td class="num" data-label="Subscribers">100,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$79</span></td>
+        <td class="num" data-label="Yearly">$790</td>
+      </tr>
+      <tr>
+        <th scope="row">Scale</th>
+        <td class="num" data-label="Emails">500,000</td>
+        <td class="num" data-label="Subscribers">250,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$149</span></td>
+        <td class="num" data-label="Yearly">$1,490</td>
+      </tr>
+      <tr>
+        <th scope="row">Max</th>
+        <td class="num" data-label="Emails">2,000,000</td>
+        <td class="num" data-label="Subscribers">1,000,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$349</span></td>
+        <td class="num" data-label="Yearly">$3,490</td>
+      </tr>
+      <tr>
+        <th scope="row">Ultra</th>
+        <td class="num" data-label="Emails">5,000,000</td>
+        <td class="num" data-label="Subscribers">2,500,000</td>
+        <td class="num" data-label="Monthly"><span class="price">$799</span></td>
+        <td class="num" data-label="Yearly">$7,990</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Above Ultra, MailCheap says to talk to them. Starter’s effective rate at a full 20,000 emails is $0.95 per thousand, which is the figure on the pricing page. You do not get a discount for sending fewer. An idle month is still $19. The saving versus subscriber pricing shows up when the other tool’s bucket is large and your send volume is not. Compare a real month in the [calculator](/#calculator) rather than the per-thousand line.
+
+Signup traffic is rate-limited so a leaked key cannot mail strangers. On Starter, MailCheap’s help lists 100 signup emails every 10 minutes, 1,000 confirmation emails a day, 600 API signups an hour, and 300 form signups every 10 minutes. The ceilings rise with the plan. Those are abuse limits, not the monthly email allowance. Hitting them means new people wait. It does not mean your Tuesday issue failed.
+
+Without a plan you can draft, preview, upload images, add three contacts a day by hand, and build automations you cannot turn on. Sending, tests, imports, exports, your domain, API keys, assistants, and the public website require a plan. That is consistent with “no free hosted tier,” and it means you cannot fully evaluate the product on a zero invoice. Budget the $19 as the cost of finding out.
+
+## What a paid plan includes
+
+MailCheap says every plan has every feature, and the docs we read match a single feature set gated by volume:
+
+- Campaigns, including tests and scheduling. The docs say sends that cannot be undone are marked that way for API and assistant clients, which should ask you first.
+- A newsletter website and signup forms, on your plan, with a custom domain once the domain is verified.
+- Automations. You can draft them before you pay. Turning them on, and sending automation mail, requires the plan. Automation mail waits at the cap instead of being dropped.
+- Segments. The API documents list, count, create, update, and delete.
+- CSV import and export. Documented paths include beehiiv, Substack, Mailchimp, and Kit. The importer keeps status and signup date when the file has them, and can read open and click fields when the export includes them.
+- REST API at `https://mailcheap.ai/api/v1` and an MCP server at `https://mailcheap.ai/mcp`. Both need a plan. Keys are shown once. A signups-only key can add contacts and cannot send.
+- List cleanup on by default. Readers who ignore issues for months get one last email. No answer, and MailCheap stops sending them issues. They are not deleted and not marked unsubscribed. They become people you are not paying to mail. That default is aligned with the pricing model. A tool that charges per subscriber earns more when you never clean. A tool that charges per email earns more when you mail people who will not read, and then earns a spam problem. The cleanup is the product’s answer. You can still disagree with a machine deciding who is asleep. Check the setting before the first send if your list is new and quiet for innocent reasons.
+
+None of this is a design award. We did not run a months-long deliverability study, and we are not going to invent inbox rates. What we can say is that the pricing and the limits are published in one place, in dollars, without a slider. For a comparison site, that is a feature.
+
+## What you do not get
+
+This is the section that should talk you out of the product if any line is your actual plan.
+
+- **No free hosted plan and no trial.** Kit is free to 10,000 subscribers for broadcasts. beehiiv is free to 2,500. Substack has no monthly platform fee. MailerLite Free is small (250 subscribers) but it exists. MailCheap hosted starts at $19.
+- **No paid subscriptions.** You cannot put a Stripe paywall on the newsletter inside MailCheap. beehiiv and Ghost(Pro) Publisher take 0% of that revenue and charge a platform fee instead. Substack takes 10%. If the business is the paywall, MailCheap is not in the set.
+- **No ad network.** beehiiv sells one on paid plans, with regional limits. You can still sell your own sponsorships and paste them into an issue. You cannot flip on a marketplace.
+- **No referral program.** beehiiv and Kit use recommendations as a growth channel. MailCheap does not replace that. If your list growth depends on being recommended inside the tool, budget the other tool.
+- **No A/B tests.** Subject-line tests are a paid-plan habit on Kit, beehiiv, and Mailchimp. MailCheap does not offer them. Send the subject you mean.
+- **No all-in-one publication stack.** There is a website. There is not beehiiv’s podcast-plus-community-plus-digital-products bundle, and there is not Ghost’s membership site. If you are choosing a home for the writing, read [Ghost alternatives](/ghost-alternatives/) and [beehiiv vs Substack](/beehiiv-vs-substack/) before you read another pricing table.
+
+The missing pieces are not “coming soon” in the pages we checked. They are the boundary of the product. Treat anyone who waves them away, including us, as someone who did not read the list.
+
+## Who should use it, and who should not
+
+Use MailCheap if all of these are true: you send on a schedule you can estimate, the estimate fits a published plan, you are sensitive to the monthly bill, and you do not need paid subscriptions, ads, a referral program, or A/B tests. A 4,000-person weekly letter at $19 against beehiiv Lite at $109 is the case the [comparison](/mailcheap-vs-beehiiv/) is about. A 25,000-person weekly letter is about 108,334 emails, which is Pro at $79 against beehiiv Lite at $199. The gap stays wide for as long as you send about once a week.
+
+Do not use MailCheap if any of these are true:
+
+- You want to pay $0 to find out whether you will keep writing. Use Kit, beehiiv Free, or Substack.
+- Your list is under the other product’s free cap and the free plan already sends the issue.
+- You sell, or want to sell, subscriptions to the newsletter itself.
+- You want the platform to bring you readers. MailCheap will not.
+- You need experiments on every subject line.
+- You want a membership website more than you want a sender. Ghost is the clearer buy.
+- You send every day to a large list and have not checked the email cap. Do the multiplication first. Pro at 200,000 emails is a daily letter of roughly 6,500 people, not 25,000.
+
+“Price-sensitive” is not a personality. It is a spreadsheet. If the features you will use cost $90 more on another platform and those features earn more than $90, you are not price-sensitive, you are underpricing the feature. We would rather you stay on beehiiv than switch because an affiliate link existed.
+
+## Imports, in practice
+
+MailCheap’s import help is specific. You upload a CSV. Email is the only required column. Status values it understands become subscribed, unsubscribed, bounced, or complained. A status it does not understand, such as unconfirmed, comes in dormant, and dormant contacts are not mailed. Signup date is kept when the column is there. Open and click stats are read when the export has them, which beehiiv’s full subscriber export does. Tags can be comma-separated. You get a preview, you tick that these people agreed to hear from you, and the import runs in the background up to 250,000 rows.
+
+The beehiiv path is Settings → Export data → full subscriber export. The Substack path is Subscribers → Export → All columns. Mailchimp and Kit exports are linked from the import window. Role addresses, invalid domains, duplicates, and known complainers are left out. A purchased list is against the rules and can get the account blocked. None of this is exotic. It is the minimum a sender should demand, and it is written down, which is more than some “just reconnect Zapier” migrations give you.
+
+What does not import: the other platform’s automations, paid billing relationships, recommendation graph, themes, or website. Budget an afternoon to rebuild the welcome email and nothing else until the first issue has gone out cleanly.
+
+## Self-hosting
+
+The same application is [published for self-hosting](https://mailcheap.ai/self-hosted) under AGPL-3.0. MailCheap’s page says you pay nothing for the app and you pay your email provider for the sends. The reference stack they describe is MongoDB, Amazon SES or their PostShiba option, a queue, and a Node 22 host. They estimate about an hour, most of it DNS and provider approval. There is no support on the self-hosted install. You patch it. Cloud and self-hosted are described as the same code with billing on top of Cloud.
+
+Self-hosting is the honest free tier. It is also a second job. We do not recommend it as the default Mailchimp alternative. We mention it because “MailCheap has no free plan” is true for the hosted product and incomplete for the software. If you already run servers and you already have SES in production, the economics change. If you do not, $19 is the cheaper way to learn the product.
+
+## How this review was done
+
+We read MailCheap’s pricing page, the plans and billing help, the import help, the migration notes for beehiiv and Substack, the self-host page, and the API and MCP docs, on 24 November 2026. We compared those limits with the official price files for beehiiv, Ghost(Pro), MailerLite, Kit’s free plan, Substack’s fee schedule, and Mailchimp’s published starting prices. We did not buy a plan, send a production list, or measure inbox placement. Where a behavior is described above, it is their documentation, not a lab result. The method page is [How we test](/how-we-test/).
+
+If you want the short version: pay $19 if you send a weekly letter and you do not need the marketplace. Pay someone else if the marketplace is the business. Pay nothing if a free plan still fits. The button below is an affiliate link to MailCheap’s pricing page. The decision should already be made before you use it.

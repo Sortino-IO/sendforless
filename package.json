@@ -1,0 +1,19 @@
+{
+  "name": "sendforless",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.7",
+    "@astrojs/sitemap": "^3.6.0",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.8",
+    "astro": "^5.15.9"
+  }
+}

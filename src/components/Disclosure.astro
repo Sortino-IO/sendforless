@@ -1,0 +1,13 @@
+---
+interface Props {
+  text?: string;
+}
+const {
+  text = "Some links to MailCheap are affiliate links. We may earn a commission if you subscribe, at no extra cost to you. sendforless is an independent site. We are not affiliated with, sponsored by, or speaking for MailCheap or any other newsletter platform.",
+} = Astro.props;
+---
+<div class="disclosure-bar">
+  <div class="wrap">
+    <p><strong>Affiliate disclosure.</strong> {text} <a href="/affiliate-disclosure/">Read the full disclosure</a>.</p>
+  </div>
+</div>

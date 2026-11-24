@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Page not found"
+  description="That page is not on sendforless. Try the cost calculator or one of the newsletter platform guides."
+  noindex={true}
+>
+  <main id="main">
+    <div class="wrap not-found">
+      <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> 404</p>
+      <h1>That page is not here.</h1>
+      <p class="lede">The link may be old, or the address may be missing a letter. The comparisons are all one level down from the home page.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/">Back home</a>
+        <a class="btn btn-secondary" href="/#calculator">Open the calculator</a>
+      </div>
+      <ul class="contact-list" style="margin-top:1.5rem">
+        <li><a href="/mailchimp-alternatives/">Mailchimp alternatives</a></li>
+        <li><a href="/beehiiv-pricing/">beehiiv pricing</a></li>
+        <li><a href="/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a></li>
+        <li><a href="/how-to-start-a-newsletter/">How to start a newsletter</a></li>
+      </ul>
+    </div>
+  </main>
+</BaseLayout>

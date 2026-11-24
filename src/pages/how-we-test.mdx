@@ -1,0 +1,99 @@
+---
+layout: ../layouts/ArticleLayout.astro
+title: "How we test newsletter platform prices"
+description: "How sendforless compares newsletter software: which official price sources we use, how the calculator counts emails, and what we do not measure."
+kicker: Method
+lede: "We compare published list prices and documented limits. We do not invent inbox rates, growth lifts, or mid-tier prices a vendor has not put in a table."
+crumb: "How we test"
+affiliate: false
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: scope
+    label: What a test is here
+  - id: sources
+    label: Price sources
+  - id: math
+    label: The email math
+  - id: labels
+    label: Placeholders and captures
+  - id: recommend
+    label: How a recommendation happens
+  - id: not
+    label: What we do not measure
+  - id: faq
+    label: FAQ
+related:
+  - mailcheap-review
+  - beehiiv-pricing
+  - about
+faqs:
+  - q: Did you send a newsletter on every platform?
+    a: "<p>No. This edition is a pricing and documentation comparison. Behaviors described in the guides — import steps, what counts as an email, what happens at a cap — come from the vendor’s help or pricing pages, read on 24 November 2026 unless we name another date. We do not report inbox placement, send speed, or support response times from our own tests, because we did not run those tests.</p>"
+  - q: Why are some Mailchimp prices marked placeholder?
+    a: "<p>Mailchimp publishes starting prices and a slider, not a static mid-tier table we could cite line by line. Free (250 contacts, 500 sends), Essentials from $13 a month, and Standard from $20 a month for 500 contacts are official. Higher Standard amounts in the calculator are placeholders so the chart has a shape. They are labeled. Do not budget them.</p>"
+  - q: Why ignore promotions?
+    a: "<p>A percentage off the first three months changes the first invoice and not the renewal. Kit’s pricing interface described a 50% promotion on the first three months of paid plans ending 1 December 2026. We ignore it, and we ignore any similar introductory offer. Annual billing that a vendor documents as the ordinary yearly price is included, and labeled as annual.</p>"
+---
+
+## What a test is here
+
+sendforless answers a narrow question: for a given list size and a given number of issues per week, what monthly list price does each platform’s public pricing imply, and which documented features make that price the wrong comparison?
+
+That is a test of the pricing page and the help center, not of the sending infrastructure. We say so in the [MailCheap review](/mailcheap-review/) and we mean it everywhere. Hands-on, in this project, means worked examples: a 4,000-person weekly letter, a daily letter that trips an email cap, an import path you can follow from the vendor’s own steps. It does not mean a secret deliverability lab.
+
+When we are wrong, the correction is a re-read of the official page, not a quieter adjective. The date on each guide is the date of that reading: 24 November 2026.
+
+## Price sources
+
+| Platform | What we treated as official | What we did not |
+| --- | --- | --- |
+| MailCheap | The plan table on mailcheap.ai/help/plans, plus the pricing FAQ. Starter $19 through Ultra $799. Yearly equals 10 months. | Competitor comparison pages as a price source. They can be useful for feature claims and stale for numbers. |
+| beehiiv | beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Every Lite and Pro bucket. | Interpolating between buckets. 4,000 subscribers pays the 5,000 price. |
+| Ghost(Pro) | The price objects in ghost.org/js/pricing.min.js, the file the pricing page loads. | Rounding yearly totals into a “two months free” slogan when the charge itself is published. We show the annual charge. |
+| MailerLite | mailerlite.com/pricing.md, last updated 8 September 2026 on their file, re-read 24 November 2026. | Older “Growing Business” prices. That plan was renamed Comfort on 16 June 2026. |
+| Substack | The help article “How much does Substack cost?”, updated 29 October 2026. | Assuming the 10% applies in every country. The same help center lists exceptions. |
+| Kit | The free-plan help article (updated 23 September 2026) and the published Creator start of $39 a month at 1,000 subscribers. | A full Creator or Pro grid. Kit uses a slider. Bands in our calculator above $39 are a capture from the approved price file dated 24 November 2026 and are labeled. |
+| Mailchimp | Free limits from the help center. Essentials “starting at $13/month” and Standard “starting at $20/month” for up to 500 contacts, from Mailchimp’s own plan pages. | Any precise Standard price above 500 contacts. Placeholders only. |
+
+We store MailCheap’s affiliate code in one constant, `analyst`. Changing it changes every MailCheap link. Citation links to MailCheap’s help pages do not carry the code. They are sources, not invitations.
+
+## The email math
+
+Emails per month = subscribers × issues per week × 52 ÷ 12, rounded up.
+
+The 52 ÷ 12 term is about 4.333 weeks. It stops a weekly newsletter from being priced as if every month had four sends. A 4,000-person weekly letter is 17,334 emails. A 10,000-person weekly letter is 43,334. A 4,000-person daily letter is 121,334.
+
+We then pick the cheapest published plan where both the email allowance and the subscriber allowance fit. MailCheap Starter fails the 10,000-person weekly letter on emails even though 10,000 subscribers is exactly the subscriber cap. The plan is Growth at $39. beehiiv does not have an email allowance. The bucket alone decides. Ghost’s member band decides. MailerLite Comfort’s email cap is 10 times the tier ceiling, so a weekly letter and a daily letter at the same list size can be different plans.
+
+Welcome mail, tests, and automation mail are not added on top of the issue estimate. On MailCheap they count, and a heavy welcome series can push you over. The calculator says so in the row note. It does not try to guess your welcome volume.
+
+Payment processing, taxes, and add-on seats are excluded. So are promotions.
+
+## Placeholders and captures
+
+A figure on this site is in one of three states.
+
+**Verified list price.** We can point at an official table, markdown file, help article, or the pricing data file the official page loads. MailCheap’s grid, beehiiv’s buckets, Ghost’s bands, MailerLite’s tiers, Substack’s 10%, Kit’s free cap, and the Mailchimp starting prices are in this state.
+
+**Slider capture.** Kit Creator stops above the $39 entry price. They came from the approved calculator’s reading of Kit’s slider and are marked in the calculator when they are not that entry price. Confirm them on kit.com/pricing the day you buy. We would rather show a labeled capture than pretend Kit publishes a PDF.
+
+**Placeholder.** Mailchimp Standard above 500 contacts. The chart needs a bar. The bar wears a Placeholder tag and the copy tells you the official start is $20. If you see those dollar amounts repeated without the tag, that repetition is a mistake.
+
+## How a recommendation happens
+
+MailCheap is recommended when all of the following are true:
+
+- A free plan does not already cover the send. Under 10,000 subscribers, Kit Free often does. Under 2,500, beehiiv Free often does. Substack covers a free letter at any size.
+- The sender’s cadence fits a published email cap at a price below the tools that also fit.
+- They do not need paid subscriptions, an ad network, a referral program, or A/B tests.
+
+If any condition fails, the guide says so, usually in the verdict, not in a footnote. A lower price is not a recommendation by itself. Ghost can be the right more-expensive tool. beehiiv can be the right more-expensive tool. Staying on Mailchimp can be the right more-expensive tool when the account runs a store.
+
+Affiliate status does not sort the table. The calculator sorts by price and then labels the MailCheap row as Affiliate. “Best paid value” appears only when MailCheap is the lowest paid row in that scenario. A $0 plan can still be the rational choice sitting above it.
+
+## What we do not measure
+
+Inbox placement. Deliverability over time. How a support chat feels at 11 p.m. Whether a recommendation network will work for your topic. The exact open rate you will get. Private enterprise quotes. Prices in currencies other than the vendor’s published USD list, except where MailerLite’s file also prints EUR and we simply do not feature it. The quality of an editor. We will describe a documented limit. We will not award a vibe.
+
+Updates happen when we re-read the sources, not on a silent schedule. If a number on a guide and a number on a vendor page disagree, the vendor page is the one to pay. Tell us at [hello@sendforless.com](mailto:hello@sendforless.com) and name the URL. The [privacy](/privacy/) page covers what that email does and does not collect. The short version is that a correction email is a correction email.

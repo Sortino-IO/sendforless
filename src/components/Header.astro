@@ -1,0 +1,40 @@
+---
+import Logo from "./Logo.astro";
+
+const path = Astro.url.pathname;
+const links = [
+  { href: "/#calculator", label: "Calculator" },
+  { href: "/#guides", label: "Guides" },
+  { href: "/mailcheap-vs-beehiiv/", label: "Comparisons" },
+  { href: "/how-we-test/", label: "Method" },
+];
+
+function current(href: string) {
+  const clean = href.split("#")[0];
+  if (!clean || clean === "/") return undefined;
+  return path === clean ? "page" : undefined;
+}
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="/">
+      <Logo />
+      <span class="wordmark-text">sendforless</span>
+    </a>
+    <details class="nav-toggle">
+      <summary>Menu</summary>
+      <nav class="nav-menu" aria-label="Primary">
+        {links.map((link) => (
+          <a href={link.href} aria-current={current(link.href)}>{link.label}</a>
+        ))}
+        <a class="btn btn-primary nav-cta" href="/#calculator">Compare costs</a>
+      </nav>
+    </details>
+    <nav class="nav-menu" aria-label="Primary">
+      {links.map((link) => (
+        <a href={link.href} aria-current={current(link.href)}>{link.label}</a>
+      ))}
+      <a class="btn btn-primary nav-cta" href="/#calculator">Compare costs</a>
+    </nav>
+  </div>
+</header>

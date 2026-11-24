@@ -1,0 +1,202 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { guidesBySlug } from "../lib/guides";
+import { mailcheapHref, PRICE_CHECKED_ISO, PRICE_CHECKED_LABEL, SITE_NAME, SITE_URL } from "../lib/site";
+
+interface TocItem {
+  id: string;
+  label: string;
+}
+interface FaqItem {
+  q: string;
+  a: string;
+}
+interface ReviewMeta {
+  name: string;
+  ratingValue: string;
+  reviewBody: string;
+}
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  kicker?: string;
+  lede: string;
+  datePublished?: string;
+  dateModified?: string;
+  toc?: TocItem[];
+  faqs?: FaqItem[];
+  related?: string[];
+  affiliate?: boolean;
+  disclosure?: string;
+  crumb?: string;
+  review?: ReviewMeta;
+  schemaType?: "Article" | "WebPage";
+  showPriceByline?: boolean;
+}
+
+const { frontmatter } = Astro.props as { frontmatter: Frontmatter };
+const {
+  title,
+  description,
+  kicker = "Guide",
+  lede,
+  datePublished = PRICE_CHECKED_ISO,
+  dateModified = PRICE_CHECKED_ISO,
+  toc = [],
+  faqs = [],
+  related = [],
+  affiliate = false,
+  disclosure,
+  crumb,
+  review,
+  schemaType = "Article",
+  showPriceByline = true,
+} = frontmatter;
+
+const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const crumbName = crumb || title;
+const relatedGuides = guidesBySlug(related);
+
+function plain(html: string) {
+  return html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+}
+
+const breadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: crumbName, item: canonical },
+  ],
+};
+
+const article = {
+  "@context": "https://schema.org",
+  "@type": schemaType,
+  headline: title,
+  name: title,
+  description,
+  datePublished,
+  dateModified,
+  author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+  publisher: {
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: `${SITE_URL}/`,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.svg` },
+  },
+  mainEntityOfPage: canonical,
+  image: `${SITE_URL}/og-default.png`,
+};
+
+const faqSchema = faqs.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: plain(item.a) },
+      })),
+    }
+  : null;
+
+const reviewSchema = review
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      name: title,
+      datePublished,
+      dateModified,
+      reviewBody: review.reviewBody,
+      author: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+      publisher: { "@type": "Organization", name: SITE_NAME, url: `${SITE_URL}/` },
+      itemReviewed: {
+        "@type": "SoftwareApplication",
+        name: review.name,
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        offers: { "@type": "Offer", price: "19", priceCurrency: "USD" },
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.ratingValue,
+        bestRating: "5",
+        worstRating: "1",
+      },
+    }
+  : null;
+
+const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema].filter(Boolean) as Record<string, unknown>[];
+---
+<BaseLayout title={title} description={description} disclosure={disclosure} jsonLd={jsonLd}>
+  <main id="main">
+    <header class="article-hero">
+      <div class="wrap">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumbs">
+            <li><a href="/">Home</a></li>
+            <li><span aria-current="page">{crumbName}</span></li>
+          </ol>
+        </nav>
+        <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> {kicker}</p>
+        <h1 class="page-title">{title}</h1>
+        <p class="lede">{lede}</p>
+        <p class="byline">
+          <span>By sendforless</span>
+          <span>Updated <time datetime={dateModified}>{PRICE_CHECKED_LABEL}</time></span>
+          {showPriceByline && <span>Prices from official pages, month-to-month USD list rates</span>}
+        </p>
+      </div>
+    </header>
+    <div class="wrap article-layout">
+      {toc.length > 0 && (
+        <nav class="toc" aria-label="Table of contents">
+          <h2>In this article</h2>
+          <ol>
+            {toc.map((item) => (
+              <li><a href={`#${item.id}`}>{item.label}</a></li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      <article class="article-body">
+        <slot />
+        {faqs.length > 0 && (
+          <div>
+            <h2 id="faq">FAQ</h2>
+            <div class="faq">
+              {faqs.map((item, index) => (
+                <details open={index === 0}>
+                  <summary>{item.q}</summary>
+                  <div set:html={item.a} />
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
+        {affiliate && (
+          <p class="cta-row" style="margin-top: 2rem;">
+            <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">View MailCheap pricing</a>
+            <a class="btn btn-secondary" href="/#calculator">Back to the cost calculator</a>
+            <span class="btn-note">Affiliate link. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</span>
+          </p>
+        )}
+        {relatedGuides.length > 0 && (
+          <div class="related">
+            <h2>Keep reading</h2>
+            <div class="related-grid">
+              {relatedGuides.map((guide) => (
+                <a class="card" href={guide.href}>
+                  <p class="kicker">{guide.kicker}</p>
+                  <strong>{guide.title}</strong>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </article>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,246 @@
+---
+import { emailsPerMonth, lowestPaid, money, quote, sortedRows, type QuoteRow } from "../lib/pricing";
+
+const defaultSubs = 4000;
+const defaultIssues = 1;
+const initial = quote(defaultSubs, defaultIssues);
+
+function barWidth(row: QuoteRow, maxPaid: number) {
+  if (row.monthly === null || row.monthly === 0) return 0;
+  return Math.max(8, Math.round((row.monthly / maxPaid) * 1000) / 10);
+}
+---
+<div class="calc">
+  <form id="calc-form" action="#results">
+    <div class="calc-grid">
+      <div class="field">
+        <label for="subs">Subscribers</label>
+        <input id="subs" name="subs" type="number" inputmode="numeric" min="1" max="500000" step="1" value={defaultSubs} />
+        <div class="presets" role="group" aria-label="Subscriber presets">
+          <button type="button" class="chip" data-subs="1000">1,000</button>
+          <button type="button" class="chip" data-subs="2500">2,500</button>
+          <button type="button" class="chip is-active" data-subs="4000">4,000</button>
+          <button type="button" class="chip" data-subs="10000">10,000</button>
+          <button type="button" class="chip" data-subs="25000">25,000</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="issues">Issues per week</label>
+        <select id="issues" name="issues">
+          <option value="1" selected>1 — a weekly newsletter</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="5">5 — weekdays</option>
+          <option value="7">7 — daily</option>
+        </select>
+        <p class="hint">Volume is subscribers × issues × 52 ÷ 12, so months with five weeks are included.</p>
+      </div>
+    </div>
+    <dl class="calc-summary">
+      <div class="stat">
+        <dt>List size</dt>
+        <dd id="stat-subs">{defaultSubs.toLocaleString("en-US")}</dd>
+      </div>
+      <div class="stat">
+        <dt>Cadence</dt>
+        <dd id="stat-issues">{defaultIssues} issue</dd>
+      </div>
+      <div class="stat">
+        <dt>Emails / month</dt>
+        <dd id="stat-emails">{emailsPerMonth(defaultSubs, defaultIssues).toLocaleString("en-US")}</dd>
+      </div>
+    </dl>
+  </form>
+</div>
+
+<p class="results-caption" id="results-caption">
+  Estimated monthly platform bill for {defaultSubs.toLocaleString("en-US")} subscribers and 1 issue a week ({initial.emails.toLocaleString("en-US")} emails a month). Month-to-month USD list prices.
+</p>
+<div class="results" id="results-bars" aria-live="polite">
+  {sortedRows(initial.rows).map((row) => {
+    const best = lowestPaid(initial.rows);
+    const max = Math.max(...initial.rows.filter((item) => typeof item.monthly === "number" && item.monthly > 0).map((item) => item.monthly as number));
+    const isBest = row.platform === "MailCheap" && row.monthly === best;
+    const isFree = row.monthly === 0;
+    const width = barWidth(row, max);
+    return (
+      <article class:list={["bar-row", { "is-best": isBest, "is-free": isFree }]}>
+        <div class="plat">
+          <span class:list={["avatar", row.avatar]}>{row.initials}</span>
+          <div>
+            <strong>{row.platform}</strong>
+            <div class="meta">
+              <span>{row.plan}</span>
+              {row.affiliate && <span class="tag tag-affiliate">Affiliate</span>}
+              {row.placeholder && <span class="tag tag-placeholder">Placeholder</span>}
+              {isBest && <span class="badge-best">Best paid value</span>}
+            </div>
+          </div>
+        </div>
+        <div class="bar-track">
+          {row.monthly !== null && row.monthly > 0 && <div class="bar-fill" style={`--w:${width}%`}></div>}
+        </div>
+        <div class="bar-price">
+          {row.monthly === null ? "Custom" : <>{money(row.monthly)}<span>/mo</span></>}
+        </div>
+        <p class="bar-note">
+          {row.note}{" "}
+          <a href={row.href} rel={row.affiliate ? "sponsored nofollow noopener" : "noopener"} target="_blank">
+            {row.affiliate ? "Pricing (affiliate)" : "Official pricing"}
+          </a>
+        </p>
+      </article>
+    );
+  })}
+</div>
+
+<script>
+  import { lowestPaid, money, quote, sortedRows } from "../lib/pricing";
+
+  function render(subs: number, issues: number) {
+    const out = quote(subs, issues);
+    const emailsEl = document.getElementById("stat-emails");
+    const subsEl = document.getElementById("stat-subs");
+    const issuesEl = document.getElementById("stat-issues");
+    if (emailsEl) emailsEl.textContent = out.emails.toLocaleString("en-US");
+    if (subsEl) subsEl.textContent = subs.toLocaleString("en-US");
+    if (issuesEl) issuesEl.textContent = issues + (issues === 1 ? " issue" : " issues");
+
+    const caption = document.getElementById("results-caption");
+    if (caption) {
+      caption.textContent =
+        "Estimated monthly platform bill for " +
+        subs.toLocaleString("en-US") +
+        " subscribers and " +
+        issues +
+        " issue" +
+        (issues === 1 ? "" : "s") +
+        " a week (" +
+        out.emails.toLocaleString("en-US") +
+        " emails a month). Month-to-month USD list prices.";
+    }
+
+    const best = lowestPaid(out.rows);
+    const paid = out.rows.filter((row) => typeof row.monthly === "number" && row.monthly > 0);
+    const maxPaid = paid.length ? Math.max(...paid.map((row) => row.monthly as number)) : 1;
+    const bars = document.getElementById("results-bars");
+    if (!bars) return;
+    bars.replaceChildren();
+
+    sortedRows(out.rows).forEach((row) => {
+      const isBest = row.platform === "MailCheap" && row.monthly === best;
+      const isFree = row.monthly === 0;
+      const article = document.createElement("article");
+      article.className = "bar-row" + (isBest ? " is-best" : "") + (isFree ? " is-free" : "");
+
+      const plat = document.createElement("div");
+      plat.className = "plat";
+      const avatar = document.createElement("span");
+      avatar.className = "avatar " + row.avatar;
+      avatar.textContent = row.initials;
+      const ident = document.createElement("div");
+      const name = document.createElement("strong");
+      name.textContent = row.platform;
+      const meta = document.createElement("div");
+      meta.className = "meta";
+      const plan = document.createElement("span");
+      plan.textContent = row.plan;
+      meta.appendChild(plan);
+      if (row.affiliate) {
+        const tag = document.createElement("span");
+        tag.className = "tag tag-affiliate";
+        tag.textContent = "Affiliate";
+        meta.appendChild(tag);
+      }
+      if (row.placeholder) {
+        const tag = document.createElement("span");
+        tag.className = "tag tag-placeholder";
+        tag.textContent = "Placeholder";
+        meta.appendChild(tag);
+      }
+      if (isBest) {
+        const badge = document.createElement("span");
+        badge.className = "badge-best";
+        badge.textContent = "Best paid value";
+        meta.appendChild(badge);
+      }
+      ident.append(name, meta);
+      plat.append(avatar, ident);
+
+      const track = document.createElement("div");
+      track.className = "bar-track";
+      if (typeof row.monthly === "number" && row.monthly > 0) {
+        const fill = document.createElement("div");
+        fill.className = "bar-fill";
+        const pct = Math.max(8, Math.round((row.monthly / maxPaid) * 1000) / 10);
+        fill.style.setProperty("--w", pct + "%");
+        track.appendChild(fill);
+      }
+
+      const price = document.createElement("div");
+      price.className = "bar-price";
+      if (row.monthly === null) {
+        price.textContent = "Custom";
+      } else {
+        price.append(document.createTextNode(money(row.monthly)));
+        const unit = document.createElement("span");
+        unit.textContent = "/mo";
+        price.appendChild(unit);
+      }
+
+      const note = document.createElement("p");
+      note.className = "bar-note";
+      note.append(document.createTextNode(row.note + " "));
+      const link = document.createElement("a");
+      link.href = row.href;
+      link.rel = row.affiliate ? "sponsored nofollow noopener" : "noopener";
+      link.target = "_blank";
+      link.textContent = row.affiliate ? "Pricing (affiliate)" : "Official pricing";
+      note.appendChild(link);
+
+      article.append(plat, track, price, note);
+      bars.appendChild(article);
+    });
+  }
+
+  function current() {
+    const subsInput = document.getElementById("subs") as HTMLInputElement | null;
+    const issuesInput = document.getElementById("issues") as HTMLSelectElement | null;
+    let subs = parseInt(subsInput?.value || "1", 10);
+    let issues = parseInt(issuesInput?.value || "1", 10);
+    if (!subs || subs < 1) subs = 1;
+    if (!issues || issues < 1) issues = 1;
+    return { subs, issues };
+  }
+
+  function setActiveChip(subs: number) {
+    document.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
+      btn.classList.toggle("is-active", parseInt(btn.getAttribute("data-subs") || "0", 10) === subs);
+    });
+  }
+
+  function bind() {
+    const form = document.getElementById("calc-form");
+    if (!form) return;
+    const run = () => {
+      const values = current();
+      setActiveChip(values.subs);
+      render(values.subs, values.issues);
+    };
+    form.addEventListener("input", run);
+    form.addEventListener("change", run);
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      run();
+    });
+    document.querySelectorAll<HTMLButtonElement>("[data-subs]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = document.getElementById("subs") as HTMLInputElement | null;
+        if (input) input.value = btn.getAttribute("data-subs") || input.value;
+        run();
+      });
+    });
+  }
+
+  bind();
+</script>

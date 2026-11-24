@@ -1,0 +1,157 @@
+---
+layout: ../layouts/ArticleLayout.astro
+title: "Substack alternatives if you want the fee back"
+description: "Substack alternatives for writers who want to own the list, drop the 10% fee, or leave the network. Compared on price, paid subscriptions, and what you give up."
+kicker: Roundup
+lede: "Substack is free until your readers pay you. Then it keeps 10%, plus Stripe’s fee. The alternatives either charge a monthly plan and take 0%, or charge less per month and cannot sell subscriptions at all. Owning the list is the easy part. Replacing the network is not."
+crumb: "Substack alternatives"
+affiliate: true
+datePublished: 2026-11-24
+dateModified: 2026-11-24
+toc:
+  - id: verdict
+    label: Our verdict
+  - id: fee
+    label: What Substack costs
+  - id: prices
+    label: When 10% loses
+  - id: ghost
+    label: Ghost
+  - id: beehiiv
+    label: beehiiv
+  - id: kit
+    label: Kit
+  - id: mailcheap
+    label: MailCheap
+  - id: mailerlite
+    label: MailerLite
+  - id: own
+    label: Owning the list
+  - id: migrate
+    label: How to leave
+  - id: faq
+    label: FAQ
+related:
+  - beehiiv-vs-substack
+  - ghost-alternatives
+  - beehiiv-pricing
+  - how-to-start-a-newsletter
+faqs:
+  - q: Is Substack free?
+    a: "<p>Publishing is free at any list size. Substack’s help article, updated 29 October 2026, says that if you turn on paid subscriptions, Substack keeps 10% of each subscription payment and Stripe charges its own fees. For a US card those are listed as 2.9% + $0.30, plus 0.7% for Stripe Billing on recurring payments. A custom domain is a one-time $50. Readers pay the price you set, with tax and in-app purchases as the exceptions.</p>"
+  - q: Which alternative takes 0% of subscriptions?
+    a: "<p>beehiiv on Lite and Pro, Ghost(Pro) on Publisher and above, and MailerLite on its paid plans. Stripe still charges. Kit can sell subscriptions too. MailCheap cannot sell them at all, so its 0% is the 0% of a product that does not do the job.</p>"
+  - q: When is Substack’s 10% cheaper than a monthly plan?
+    a: "<p>When 10% of subscription revenue is less than the other platform’s fee. Against beehiiv Lite at $109 a month, that is under $1,090 a month of subscription payments. Against Ghost(Pro) Publisher at $75, it is under $750. Against MailCheap there is no comparison on this axis, because MailCheap will not charge your readers.</p>"
+  - q: Can I export my Substack list?
+    a: "<p>Yes. Substack’s dashboard exports a CSV. MailCheap’s migration notes say to open Subscribers, use the menu, choose Export, and pick All columns. The email list in Settings also works. Addresses with email disabled should come across as unsubscribed, not as people you suddenly mail from a new tool.</p>"
+---
+
+<section class="verdict" id="verdict">
+  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
+  <h2>Leave Substack for the 10% only after the 10% is larger than a real invoice. Leave earlier if you want a site you control.</h2>
+  <p>For a paid newsletter that has outgrown the fee, <strong>Ghost(Pro) Publisher</strong> and <strong>beehiiv Lite</strong> are the alternatives that keep a paywall and take 0% of it. For a free letter that never charges, Substack is already $0 and so is Kit, up to 10,000 subscribers. <strong>MailCheap is not a Substack alternative for paid writers.</strong> It is a cheap way to send a list you monetize somewhere else. If the network inside Substack is how strangers find you, no alternative in this guide replaces that on day one.</p>
+</section>
+
+## What you actually pay Substack
+
+Substack’s support article is unusually plain. Publishing is free no matter how many subscribers you have. Turn on paid subscriptions and Substack keeps 10% of each payment. Stripe keeps a processing fee. The article, updated 29 October 2026, lists 2.9% + $0.30 for US cards and 0.7% for Stripe Billing on recurring payments. Local payment methods are Stripe’s own rates. A custom domain, if you want one, is $50 once. Substack does not add a fee on top of the web price you set. Tax can. iOS in-app prices can, if you choose to pass Apple’s fee through.
+
+There are geographic exceptions. Substack’s payments article says the 10% does not currently apply for creators in a handful of countries, including India and Brazil, and that the fee is planned to apply later. If you are in that set, do not budget 10% you are not being charged, and do not assume the exception is permanent.
+
+Add those pieces before you hate the 10% in the abstract. On a $10 monthly subscription paid by a US card, a rough stack is $1 to Substack, about $0.59 to Stripe’s percentage and fixed fee, and about $0.07 for Billing. You keep something near $8.30 before tax. I am using the published rates, not your Stripe dashboard. Your dashboard is the source of truth for the last cent. The point of the sketch is that “10%” is not the whole haircut, and a platform that advertises 0% still leaves the Stripe line in place.
+
+The non-money cost is the network. Recommendations, the app, and Notes are how a lot of Substack publications grow. None of that is a column in the export. Writers who move and then “lose 15% of new subscribers” are often measuring the network they switched off, not a deliverability bug. Write that number down while you still have it.
+
+## When the 10% is the expensive option
+
+Compare a year of platform fees at a few revenue levels. Monthly plans are the month-to-month list price. Substack is 10% of subscription revenue only. This ignores Stripe on every row, because Stripe is on every row that charges cards.
+
+<div class="table-wrap">
+  <table>
+    <caption>Platform fee per month at selected subscription revenue. Stripe excluded.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Paid revenue / month</th>
+        <th scope="col">Substack 10%</th>
+        <th scope="col">beehiiv Lite, 4,000 subs</th>
+        <th scope="col">Ghost Publisher, 4,000 members</th>
+        <th scope="col">MailerLite Comfort, 5,000 tier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">$300</th>
+        <td data-label="Substack">$30</td>
+        <td data-label="beehiiv">$109</td>
+        <td data-label="Ghost">$75</td>
+        <td data-label="MailerLite">$49</td>
+      </tr>
+      <tr>
+        <th scope="row">$800</th>
+        <td data-label="Substack">$80</td>
+        <td data-label="beehiiv">$109</td>
+        <td data-label="Ghost">$75</td>
+        <td data-label="MailerLite">$49</td>
+      </tr>
+      <tr>
+        <th scope="row">$2,000</th>
+        <td data-label="Substack">$200</td>
+        <td data-label="beehiiv">$109</td>
+        <td data-label="Ghost">$75</td>
+        <td data-label="MailerLite">$49</td>
+      </tr>
+      <tr>
+        <th scope="row">$6,000</th>
+        <td data-label="Substack">$600</td>
+        <td data-label="beehiiv">$109, if the list still fits that bucket</td>
+        <td data-label="Ghost">$75, if members still fit</td>
+        <td data-label="MailerLite">$49, if subscribers fit the tier</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+At $300 a month of paid revenue, Substack is the cheap platform and the monthly plans are a luxury. At $2,000, Substack is the expensive one if your list still fits a $109 or $75 plan. The list size and the revenue are different axes. A 25,000-person beehiiv list is Lite at $199, not $109. A Ghost site with 25,000 members is Publisher at $169. Run the row that matches your member count, from [beehiiv pricing](/beehiiv-pricing/) and [Ghost alternatives](/ghost-alternatives/), not the row that flatters the move.
+
+Free subscribers change the monthly plans and do not change Substack’s 10%. beehiiv and Ghost bill you for the whole audience. A publication with 20,000 free readers and $400 of paid revenue is a bad candidate for “leave Substack to save the fee.” The fee is $40. The bucket is not.
+
+## Ghost
+
+Ghost is the alternative we would look at first for a writer who wants the archive, the custom domain, and the membership to feel like a publication rather than a feed. Publisher includes paid subscriptions at 0% and starts at $35 a month for up to 1,000 members, or $29 a month billed yearly. At the 2,500-member band it is $55. At 5,000 it is $75. At 10,000 it is $105. Starter is $18 and cannot charge anyone. Do not “save money” by landing on Starter if the reason you left Substack was the paywall. You would have deleted the paywall.
+
+Ghost’s software can be self-hosted. Ghost(Pro) is the hosted product with the prices above. Themes, staff seats, and file sizes step up with the plan. There is no Substack-style recommendation network. You will need another way to be introduced to readers: your own site, other people’s newsletters, search, or a social account you actually use. That is the trade. For some publications it is the point, because they did not want the network’s taste.
+
+## beehiiv
+
+beehiiv is the alternative that tries to replace the network rather than abandon it. Recommendations exist on Free. Paid recommendations, the referral program, ads, and paid subscriptions at 0% start on Lite. Free ends at 2,500 subscribers, so a Substack publication larger than that starts on a paid bucket. Lite at 5,000 is $109 a month. The 0% take rate is the financial argument. The network is the growth argument, and it is a different network. You are not “taking your Substack recommendations with you.” You are joining a new room.
+
+Read [beehiiv vs Substack](/beehiiv-vs-substack/) before you move a paid list. Read [beehiiv alternatives](/beehiiv-alternatives/) if you already know you dislike subscriber tiers and you are shopping for the exit from beehiiv in advance. Some writers do that loop — Substack to beehiiv to a sender — and pay for two migrations. Decide whether you want a network at all.
+
+## Kit
+
+Kit is the alternative when the list is also a creator business: sequences, digital products, recommendations among Kit creators. Publishing broadcasts is free up to 10,000 subscribers. Past that, Creator is a subscriber price. Our slider capture puts it near $139 at 10,000 and $199 at 25,000. Confirm the stop. Kit can sell subscriptions, so it belongs in the paid-newsletter set in a way MailCheap does not. It is a weaker fit if what you wanted from Substack was a simple public archive and a Notes feed. It is a stronger fit if you already think in automations. See [Kit alternatives](/convertkit-alternatives/).
+
+## MailCheap
+
+MailCheap sends email. It does not sell subscriptions, run a referral program, or place ads. Recommending it as a Substack alternative is only honest for the free publication that wants a lower long-term risk than “10% whenever we turn on paid,” and that is willing to charge readers somewhere else — a course, a separate membership, a sponsor. If you might turn on paid inside the newsletter this year, do not move to a tool that cannot do it.
+
+The prices, if you are in that narrower group: $19 a month up to 20,000 emails and 10,000 subscribers, $39 up to 75,000 emails, $79 up to 200,000. A weekly Substack of 8,000 people is about 34,667 emails, which is Growth at $39, not Starter. There is no free hosted tier to soften the landing. The import path from Substack is documented: export all columns, import the CSV, keep disabled addresses unsubscribed. Details are in the [MailCheap review](/mailcheap-review/). The link on this site may be an affiliate link. Substack’s export docs are not.
+
+## MailerLite and Mailchimp
+
+MailerLite’s paid plans can send a paid newsletter. Comfort is $49 a month at the 5,000-subscriber tier and $89 at 10,000, with an email cap of 10 times the tier. That is a plausible Substack alternative for an operator who wants automations and a site and does not care about either company’s social layer. Mailchimp can also mail the list and is rarely cheaper or simpler than what you are leaving. Its free plan is 250 contacts. We would not move a Substack publication onto Mailchimp to “own the list” unless a store integration was the actual requirement. [Mailchimp alternatives](/mailchimp-alternatives/) explains the contact math.
+
+## Owning the list, precisely
+
+“Own your list” means three files and a domain, not a vibe. You want: a CSV of subscribers with status and signup date, DNS you control for the from-address, and a way to mail that CSV from more than one vendor. Substack already lets you export. The domain is the piece many publications skip, because `publication.substack.com` works and the $50 custom domain feels cosmetic. It is not cosmetic on the day you leave. Readers who know a Substack URL can be redirected only if you control something. Put a domain on the publication before you need it, whether you stay or go.
+
+Owning the list does not mean owning the relationship Substack mediated. A reader who subscribed because another Substack recommended you may not remember your name. Mail them as the publication they recognize, from a from-name that matches, for several issues, before you redesign anything.
+
+## How to leave without a missed issue
+
+Export All columns. Confirm paid versus free in the file if the next tool needs to know who should see a paywall, and accept that the Stripe subscription itself is a second project. Ghost’s import and Stripe’s subscription tools are the usual path for a paid move. We are not going to invent a one-click transfer. Read Ghost’s current migration notes when you are ready to charge. For a free list, the CSV is enough.
+
+Authenticate the domain. Send a test. Mail recent readers first. Keep Substack alive until one full issue has gone out on the new platform and the complaint rate looks normal. Then turn off paid on Substack so you are not double-charging, and tell paying readers where the membership went, in the issue and in a receipt. The writers who get this wrong send a single “we’ve moved” note from a brand-new domain to the entire file, including people who had email disabled. Do not be that export.
+
+If you are starting a newsletter rather than leaving one, Substack remains a reasonable $0 start, and so does Kit, and so does beehiiv Free. The guide for that decision is [how to start a newsletter](/how-to-start-a-newsletter/). The fee you might resent in year three is not a reason to overbuild the stack in week one.
