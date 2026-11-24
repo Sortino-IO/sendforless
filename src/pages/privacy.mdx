@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/ArticleLayout.astro
 title: "Privacy"
-description: "What sendforless collects. The site is static, does not run analytics cookies, and does not sell personal information."
+description: "What sendforless collects. The site uses Google Analytics 4, including cookies, and does not sell personal information."
 kicker: Privacy
 lede: "sendforless is a static website. Reading it does not require an account. This page describes the limited cases where you might still send us information."
 crumb: Privacy
@@ -32,13 +32,15 @@ You can read every page on sendforless without giving us your name, email addres
 
 If you email [hello@sendforless.com](mailto:hello@sendforless.com), we receive whatever you put in that message, including your address and any details you volunteer. We use it to answer you or to correct a price. We do not sell that email, add it to a marketing list, or pass it to MailCheap. Delete requests go to the same address. We will remove the correspondence we still have, except where we need to keep it for a legal obligation.
 
-The site is hosted as static files. A host’s ordinary server logs can include an IP address, a browser type, and the page requested. We do not use those logs to build a profile, and we do not sell them. Hosting is set up so the site can be deployed on Vercel. Vercel’s own processing, if the deployment uses it, is described in Vercel’s privacy policy, not in a tracker we added.
+The site is hosted as static files. A host’s ordinary server logs can include an IP address, a browser type, and the page requested. We do not use those logs to build a profile, and we do not sell them. Hosting is set up so the site can be deployed on Vercel. Vercel’s own processing, if the deployment uses it, is described in Vercel’s privacy policy. Google Analytics, which we do add, is described below.
 
 ## Cookies and analytics
 
-sendforless does not set analytics cookies, advertising cookies, or a cookie banner for a tracker that is not there. The cost calculator runs in your browser. The subscriber count you type stays in the page. It is not sent to us.
+Every page loads Google Analytics 4, measurement ID `G-G7X8CD2S9Y`. The tag is the async `gtag.js` script from Google. Google Analytics sets cookies, including `_ga` and related cookies, and receives usage data: the page you view, a rough location derived from your IP address, and device and browser information. We use that to see which guides are read.
 
-If that changes, this page will change first, and the change will be a real tracker with a name, not a vague “partners.”
+When you click a link whose host is `mailcheap.ai` or a subdomain of it, the page also sends a Google Analytics event named `affiliate_click`. The event includes the link URL (`link_url`), the hostname (`link_domain`), and the visible link text (`link_text`). It is sent with `transport_type: beacon` so the hit can leave as you navigate away. That is how we count use of the MailCheap affiliate links. It is not a record of whether you bought a plan.
+
+The cost calculator still runs in your browser. The subscriber count you type is not sent as its own field. We do not sell analytics data. Google’s processing is described in [Google’s privacy policy](https://policies.google.com/privacy). You can block the tag with your browser or with an extension that blocks Google Analytics.
 
 ## Affiliate links
 

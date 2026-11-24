@@ -1,0 +1,34 @@
+---
+const GA_MEASUREMENT_ID = "G-G7X8CD2S9Y";
+---
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", GA_MEASUREMENT_ID);
+
+  document.addEventListener("click", function (event) {
+    var node = event.target;
+    if (!node || typeof node.closest !== "function") return;
+    var link = node.closest("a");
+    if (!link || !link.href) return;
+    var url;
+    try {
+      url = new URL(link.href);
+    } catch (error) {
+      return;
+    }
+    var host = url.hostname.toLowerCase();
+    if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
+    var text = (link.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
+    gtag("event", "affiliate_click", {
+      link_url: url.href,
+      link_domain: host,
+      link_text: text,
+      transport_type: "beacon",
+    });
+  });
+</script>
