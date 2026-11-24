@@ -36,8 +36,34 @@ const useGtm = GTM_ID.length > 0;
     </script>
   </>
 )}
-{placement === "head" && (
-  <script is:inline define:vars={{ useGtm }}>
+{placement === "head" && useGtm && (
+  <script is:inline>
+    document.addEventListener("click", function (event) {
+      var node = event.target;
+      if (!node || typeof node.closest !== "function") return;
+      var link = node.closest("a");
+      if (!link || !link.href) return;
+      var url;
+      try {
+        url = new URL(link.href);
+      } catch (error) {
+        return;
+      }
+      var host = url.hostname.toLowerCase();
+      if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
+      var text = (link.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "affiliate_click",
+        link_url: url.href,
+        link_text: text,
+        page_path: location.pathname,
+      });
+    });
+  </script>
+)}
+{placement === "head" && !useGtm && (
+  <script is:inline>
     document.addEventListener("click", function (event) {
       var node = event.target;
       if (!node || typeof node.closest !== "function") return;
@@ -60,7 +86,7 @@ const useGtm = GTM_ID.length > 0;
       };
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(payload);
-      if (!useGtm && typeof window.gtag === "function") {
+      if (typeof window.gtag === "function") {
         window.gtag("event", "affiliate_click", {
           link_url: payload.link_url,
           link_text: payload.link_text,

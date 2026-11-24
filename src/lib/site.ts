@@ -14,10 +14,11 @@ export const PRICE_CHECKED_LABEL = "24 November 2026";
 
 /**
  * Google Tag Manager container ID.
- * Leave empty until the real container exists. While this is empty, pages
- * load GA4 directly. Set it to `GTM-XXXX` to switch every page to Tag Manager.
+ * While this is set, pages load this container and do not load gtag.js directly.
+ * The container GTM-TFBLV8WQ already includes the GA4 tag G-G7X8CD2S9Y and an
+ * affiliate_click event tag. Leave this empty only to fall back to direct GA4.
  */
-export const GTM_ID = "";
+export const GTM_ID = "GTM-TFBLV8WQ";
 
 /** Direct GA4 measurement ID. Used only while GTM_ID is empty. */
 export const GA_MEASUREMENT_ID = "G-G7X8CD2S9Y";
