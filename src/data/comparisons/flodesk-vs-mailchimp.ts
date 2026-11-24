@@ -48,8 +48,8 @@ export const flodeskVsMailchimp: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `Flodesk's annual price is two months free against monthly, which is how $46 becomes $38 and $99 becomes $79. Pay the yearly total up front. Do not describe $38 as the month-to-month rate. Legacy Lite, Pro, and older unlimited plans are not for sale to new members. If you already have one, Flodesk's help says it keeps its price until you switch, and you cannot return to it after you leave.`,
-    `Mailchimp Essentials stores up to 50,000 contacts and allows 10 times that limit in sends. Standard stores up to 100,000 and allows 12 times. Premium stores up to 200,000 and allows 15 times, with a base tier that includes 10,000 contacts. We do not print a Premium price. A contact is subscribed, unsubscribed, or non-subscribed. Archive people you no longer mail before you accept a tier.`,
+    `Flodesk's annual price is two months free against monthly, which is how $46 becomes $38 and $99 becomes $79. Pay the yearly total up front. Legacy Lite, Pro, and older unlimited plans are not for sale to new members. If you already have one, Flodesk's help says it keeps its price until you switch, and you cannot return to it after you leave. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
+    `Mailchimp Essentials stores up to 50,000 contacts and allows 10 times that limit in sends. Standard stores up to 100,000 and allows 12 times. Premium stores up to 200,000 and allows 15 times, with a base tier that includes 10,000 contacts. Premium's dollar amount is on mailchimp.com. A contact is subscribed, unsubscribed, or non-subscribed. Archive people you no longer mail before you accept a tier.`,
     `The calculator above is these two plans only, at whatever list size you type. The table under it is locked to one issue a week so it still makes sense with JavaScript off. Flodesk does not meter that issue. Mailchimp does, at 10 or 12 times the contact limit depending on the plan.`,
   ],
   featuresIntro: [
@@ -103,7 +103,7 @@ export const flodeskVsMailchimp: CompareDoc = {
       id: "automations",
       title: "Automations and segments",
       paragraphs: [
-        `Flodesk lists workflow automations on the paid plans: welcome series and nurture sequences. The Free plan's FAQ says workflows are not included. Audience segmentation is listed, including on the feature grid, so you can group subscribers by interest or behavior. We did not find a published cap on the number of workflows in the pricing FAQ, so this page does not invent one.`,
+        `Flodesk lists workflow automations on the paid plans: welcome series and nurture sequences. The Free plan's FAQ says workflows are not included. Audience segmentation is listed, including on the feature grid, so you can group subscribers by interest or behavior. Flodesk's pricing FAQ does not publish a cap on the number of workflows.`,
         `Mailchimp is more explicit and more limited on the cheap plan. Essentials is single email automations and flows of up to 4 steps. Standard is where expanded flows, templates for flows, and advanced segmentation start. If the Mailchimp account's value is a 12-step commerce journey, Flodesk is a redesign, not a discount, until you have rebuilt that journey and confirmed the workflow list is long enough.`,
         `Segments are also how you avoid mailing people who should not be imported. Flodesk says you can download the subscriber list. Mailchimp's export can split subscribed from unsubscribed. Bring the subscribed file only.`,
       ],
@@ -114,7 +114,7 @@ export const flodeskVsMailchimp: CompareDoc = {
       paragraphs: [
         `Flodesk's pricing page lists a Deliverability Center and a custom domain "to improve email deliverability." That is their description of the feature, not a measurement from this site. Paid plans send unlimited email to unlimited subscribers. There is no contact tier to outgrow and no 10x send cap to do the math on. The trade is the flat $46, which is expensive at 300 people and easier to justify when the list is large and Mailchimp's unpublished tier is higher.`,
         `Mailchimp meters sends. Tests count. Free adds a 250-a-day cap. Paid overages bill rather than hard-stop, according to the pricing help. Unsubscribed contacts inflate the tier. Archive them before you compare a Mailchimp quote with $46. A weekly letter to 25,000 people is about 108,334 emails. Standard's send allowance is 12 times the contact limit, so a 25,000-contact limit allows 300,000 sends, which covers that weekly issue. The price of the 25,000 tier is still check current pricing.`,
-        `After a move, authenticate the domain on the new platform and send a test. Flodesk's first campaigns from a new domain are not something we timed. Do not treat either vendor's deliverability page as a placement rate.`,
+        `After a move, authenticate the domain on the new platform and send a test. A deliverability page is not a placement rate.`,
       ],
     },
   ],
@@ -157,13 +157,13 @@ export const flodeskVsMailchimp: CompareDoc = {
     `In either direction, point the sending domain at the new tool and mail yourself before the list. Forms embedded on your site need the new snippet. Old landing-page URLs do not redirect themselves. Paid subscribers, if any, are checkout records, not rows in the CSV.`,
   ],
   cheaper: [
-    `If you do not need Flodesk's templates or Mailchimp's contact database, MailCheap prices the emails. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 people and one issue a week the estimate is about 17,334 emails. A five-send month is 4,000 x 5 = 20,000, which fills Starter before welcomes and tests. Price Growth at $39 in that case. At 25,000 weekly subscribers the estimate is about 108,334 emails, which is MailCheap Pro at $79, still a published number next to Flodesk's $46. At that size Flodesk can be the lower verified bill, because $46 does not climb and $79 does. Run your cadence in the calculator before you call either one cheaper.`,
+    `If you do not need Flodesk's templates or Mailchimp's contact database, MailCheap prices the emails. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 people and one issue a week the estimate is about 17,334 emails. At 25,000 weekly subscribers the estimate is about 108,334 emails, which is MailCheap Pro at $79, next to Flodesk's $46. At that size Flodesk's $46 can be under Pro, because $46 does not climb. Run your cadence in the calculator.`,
     `MailCheap does not include Flodesk's checkout or Mailchimp's store journeys. It does include a website, forms, automations, and segments on the paid plan, documented on mailcheap.ai. The toggle above adds the row. The link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>, and it is an affiliate link.`,
   ],
   faqs: [
     {
       q: "Is Flodesk cheaper than Mailchimp?",
-      a: "<p>At 500 contacts, no, on the numbers we can publish. Mailchimp Standard starts at $20 and Essentials at $13. Flodesk Email is $46 a month. Above 500 contacts, compare $46 with the quote on Mailchimp's pricing page. We do not print that quote here.</p>",
+      a: "<p>At 500 contacts, no, on the numbers published here. Mailchimp Standard starts at $20 and Essentials at $13. Flodesk Email is $46 a month. Above 500 contacts, compare $46 with the quote on Mailchimp's pricing page.</p>",
     },
     {
       q: "Does Flodesk's free plan send email?",

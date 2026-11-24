@@ -12,19 +12,19 @@ export const mailcheapVsBeehiiv: CompareDoc = {
   cheaperToggle: false,
   chooseA: "You send on a schedule, the email count fits a published plan, and you do not need paid subscriptions, an ad network, or referral rewards inside the tool.",
   chooseB: "You want recommendations, and on Lite or Pro you want ads, paid subscriptions at a 0% platform fee, or automations beehiiv caps by plan.",
-  priceNoteA: "Starter. A weekly estimate is about 17,334 emails. A five-send month is 4,000 x 5 = 20,000, before welcomes and tests.",
+  priceNoteA: "Starter. A weekly estimate is about 17,334 emails.",
   priceNoteB: "Lite, up-to-5,000 bucket. Annual effective is $95 ($1,140 a year). Sends are not metered.",
   linkA: { href: mc, label: "MailCheap pricing (affiliate)", affiliate: true },
   linkB: { href: "https://www.beehiiv.com/pricing", label: "beehiiv pricing" },
   differencesIntro: [
-    `At 4,000 subscribers and one issue a week, MailCheap Starter is $19 a month and beehiiv Lite is $109 a month. Those are month-to-month list prices checked 24 November 2026. MailCheap's plans help and pricing page list Starter at 20,000 emails and 10,000 subscribers. The 4.33-week estimate is about 17,334 emails, which fits. A month with five weekly sends is 4,000 x 5 = 20,000 emails, before welcome emails and tests. That uses the whole Starter allowance. If you send those extras, price Growth at $39. The average is not a guarantee of the long month.`,
-    `beehiiv does not meter sends. Lite at the up-to-5,000 bucket is $109 a month or $1,140 a year ($95 a month). Free is $0 only through 2,500 subscribers, and it omits automations, paid subscriptions, and the ad network. You are not choosing "$19 versus $109" for the same product. The feature table is the other half. Full beehiiv buckets are on <a href="/pricing/beehiiv/">beehiiv pricing</a>. The MailCheap write-up is the <a href="/reviews/mailcheap/">review</a>.`,
+    `At 4,000 subscribers and one issue a week, MailCheap Starter is $19 a month and beehiiv Lite is $109 a month. Those are month-to-month list prices checked 24 November 2026. MailCheap's plans help and pricing page list Starter at 20,000 emails and 10,000 subscribers. The 4.33-week estimate is about 17,334 emails, which fits. If you also send welcome emails or tests, price Growth at $39.`,
+    `beehiiv does not meter sends. Lite at the up-to-5,000 bucket is $109 a month or $1,140 a year ($95 a month). Free is $0 only through 2,500 subscribers, and it omits automations, paid subscriptions, and the ad network. Full beehiiv buckets are on <a href="/pricing/beehiiv/">beehiiv pricing</a>. The MailCheap write-up is the <a href="/reviews/mailcheap/">review</a>.`,
   ],
   differences: [
     {
       topic: "Weekly price at 4,000 subscribers",
       favors: "MailCheap, if the send fits Starter",
-      why: "Starter is $19. Lite is $109. The five-send month is 20,000 emails and can push you to Growth at $39, which is still under $109.",
+      why: "Starter is $19. Lite is $109. Welcome emails and tests can move the send to Growth at $39.",
     },
     {
       topic: "Weekly price at 10,000 subscribers",
@@ -39,7 +39,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     {
       topic: "Paid subscriptions",
       favors: "beehiiv",
-      why: "Lite and Pro take 0% and charge the bucket. Stripe is 2.9% + $0.30. MailCheap does not sell paid subscriptions. A CSV of revenue columns is not a paywall.",
+      why: "Lite and Pro take 0% and charge the bucket. Stripe is 2.9% + $0.30. MailCheap does not sell paid subscriptions.",
     },
     {
       topic: "Free start",
@@ -48,8 +48,8 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `MailCheap yearly billing costs 10 months and keeps the same monthly email allowance. Starter is $190 a year, which is $15.83 a month if you spread it. Growth is $390 a year ($32.50). Pro is $790 a year ($65.83). You still get a monthly allowance, not a yearly pool. beehiiv annual prices are the totals in the pricing file divided by 12, paid up front. At 5,000 subscribers Lite annual is $1,140, not $95 times a month you can cancel.`,
-    `MailCheap picks the cheapest plan where both the email allowance and the subscriber cap fit. Welcome mail, tests, and automation mail count. beehiiv ignores send count and rounds the list up to the next bucket. 4,000 subscribers is the 5,000 price. Do not invent a price between $79 and $109.`,
+    `MailCheap yearly billing costs 10 months and keeps the same monthly email allowance. Starter is $190 a year, which is $15.83 a month if you spread it. Growth is $390 a year ($32.50). Pro is $790 a year ($65.83). You still get a monthly allowance, not a yearly pool. beehiiv annual prices are the totals in the pricing file divided by 12, paid up front. At 5,000 subscribers Lite annual is $1,140, paid up front.`,
+    `MailCheap picks the cheapest plan where both the email allowance and the subscriber cap fit. Welcome mail, tests, and automation mail count. beehiiv ignores send count and rounds the list up to the next bucket. 4,000 subscribers is the 5,000 price. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests. That uses the whole Starter allowance, so price Growth at $39 if you also send those.`,
     `Plans above the published tables: MailCheap asks you to talk to them past 5 million emails a month. beehiiv Enterprise is custom, and Lite stops at 100,000 subscribers. Pro continues through 250,000.`,
   ],
   featuresIntro: [
@@ -60,7 +60,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
       name: "Price and caps",
       rows: [
         { feature: "At 1,000, weekly", a: "Starter $19", b: "Free $0. Lite $59 if you need paid tools" },
-        { feature: "At 5,000, weekly", a: "Growth $39 (the month is already over 20,000 emails)", b: "Lite $109" },
+        { feature: "At 5,000, weekly", a: "Growth $39", b: "Lite $109" },
         { feature: "At 25,000, weekly", a: "Pro $79", b: "Lite $199" },
         { feature: "What you pay for", a: "Emails sent, plus a subscriber ceiling", b: "Subscriber bucket. Sends are unlimited" },
         { feature: "Annual", a: "10 months' price", b: "Published yearly total divided by 12" },
@@ -136,7 +136,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
       "Self-hosting is a documented option if you want to run the same app on your own email account.",
     ],
     cons: [
-      "There is no free hosted plan. A five-send month to 4,000 people uses all 20,000 Starter emails before welcomes.",
+      "There is no free hosted plan. Welcome emails and tests count toward the email allowance.",
       "Automation mail, tests, and welcomes count toward the allowance.",
       "There are no paid subscriptions, no ad network, and no referral program.",
       "First sends to a new list, and Gmail volume, are paced. A bad bounce rate pauses the campaign.",
@@ -157,7 +157,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     ],
   },
   who: [
-    `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing pieces are acceptable. At 4,000 weekly subscribers, Starter at $19 fits the average month and may not fit a five-send month plus welcomes. Say that out loud before you cancel Lite. At 10,000 weekly subscribers, Growth at $39 against Lite at $139 is the same kind of gap, and a daily send to 10,000 people is about 303,000 emails, which is Scale at $149, not Growth. Cadence picks the MailCheap plan. It does not pick the beehiiv tier.`,
+    `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing pieces are acceptable. At 4,000 weekly subscribers, Starter is $19 and Lite is $109. At 10,000 weekly subscribers, Growth at $39 against Lite at $139 is the same kind of gap, and a daily send to 10,000 people is about 303,000 emails, which is Scale at $149, not Growth. Cadence picks the MailCheap plan. It does not pick the beehiiv tier.`,
     `Choose beehiiv when you use recommendations, and especially when you use ads or paid subscriptions. Lite's $109 is the price of those tools at 4,000 subscribers, not a fee for pressing send. Choose Pro when you need branding off, more than 10 automations, or more than 100,000 subscribers. Choose Free and stop comparing invoices if you are under 2,500 and the free feature list is enough.`,
     `Choose a third tool when neither frame fits. Substack is $0 until readers pay, then 10%. Kit Free is $0 for broadcasts under 10,000. Ghost Publisher is the themed membership site. Those are <a href="/compare/beehiiv-vs-substack/">beehiiv vs Substack</a>, <a href="/compare/beehiiv-vs-convertkit/">beehiiv vs Kit</a>, and <a href="/compare/ghost-vs-substack/">Ghost vs Substack</a>.`,
   ],
@@ -171,7 +171,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
   faqs: [
     {
       q: "Is MailCheap cheaper than beehiiv?",
-      a: "<p>For a weekly letter at 4,000 subscribers, Starter is $19 and Lite is $109, if the send fits 20,000 emails. A five-send month is 4,000 x 5 = 20,000 before welcomes, so Growth at $39 may be the real Starter replacement. beehiiv Free is $0 under 2,500 subscribers, which is cheaper than either paid plan.</p>",
+      a: "<p>For a weekly letter at 4,000 subscribers, Starter is $19 and Lite is $109, if the send fits 20,000 emails. beehiiv Free is $0 under 2,500 subscribers, which is less than either paid plan.</p>",
     },
     {
       q: "Does MailCheap include automations and segments?",

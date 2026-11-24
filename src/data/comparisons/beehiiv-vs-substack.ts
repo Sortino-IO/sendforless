@@ -49,8 +49,8 @@ export const beehiivVsSubstack: CompareDoc = {
   ],
   pricingIntro: [
     `Do not interpolate beehiiv tiers. 4,000 subscribers pays the up-to-5,000 price, not a point between 2,500 and 5,000. Lite runs through 100,000 subscribers ($469 a month at that bucket, or $399 annual effective). Pro starts at $109 a month at 1,000 subscribers and is the plan that removes beehiiv branding. Enterprise is custom.`,
-    `Substack's $0 is the platform subscription, not the cost of a paid list. Add 10% of what readers actually pay, then Stripe. Do not average the 10% into a fake monthly "Substack plan." A writer with $0 of subscription revenue pays Substack $0. A writer with $10,000 a month of subscription revenue pays $1,000 plus Stripe, and still pays beehiiv the tier if they move, even in a slow sales month.`,
-    `Annual beehiiv is prepaid. At the 5,000 bucket, Lite annual is $1,140 instead of $109 x 12 = $1,308. The $95 figure is $1,140 divided by 12. It is not the price of a single month if you cancel in month two.`,
+    `Substack's $0 is the platform subscription, not the cost of a paid list. Add 10% of what readers actually pay, then Stripe. A writer with $0 of subscription revenue pays Substack $0. A writer with $10,000 a month of subscription revenue pays $1,000 plus Stripe, and still pays beehiiv the tier if they move, even in a slow sales month.`,
+    `Annual beehiiv is prepaid. At the 5,000 bucket, Lite annual is $1,140 instead of $109 × 12 = $1,308. The $95 figure is $1,140 divided by 12. It is the yearly charge divided by 12, paid up front. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
     `beehiiv's feature rows are from beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Substack's rows are from the cost article and the export article. Where Substack does not publish a comparable limit, the cell says so.`,
@@ -86,7 +86,7 @@ export const beehiivVsSubstack: CompareDoc = {
       title: "Paid newsletters and the fee",
       fees: "beehiiv",
       paragraphs: [
-        `Read the fee column before the plan column. Substack's 10% is $100 on $1,000 of subscription revenue, $500 on $5,000, and $1,000 on $10,000. That is the platform fee only. Stripe's 2.9% + $0.30 and the 0.7% Billing fee are extra, and they depend on how many payments make up the month. This table does not invent an average order size to fold Stripe in.`,
+        `Read the fee column before the plan column. Substack's 10% is $100 on $1,000 of subscription revenue, $500 on $5,000, and $1,000 on $10,000. That is the platform fee only. Stripe's 2.9% + $0.30 and the 0.7% Billing fee are extra, and they depend on how many payments make up the month.`,
         `beehiiv's paid plans take 0% and still charge Lite or Pro every month, including months when sales dip. At 4,000 subscribers, Lite is $109 whether readers pay you $0 or $5,000. Break-even against a pure 10% fee, ignoring Stripe on both sides, is when 10% of revenue equals the tier. At $109, that is $1,090 a month of subscription revenue. At the 10,000-subscriber Lite price of $139, it is $1,390. Your list size moves the line. Your revenue moves the 10%.`,
         `Free beehiiv cannot take paid subscriptions. If you are under 2,500 subscribers and you want to charge, the choice is Substack's 10% or Lite at the 1,000 bucket ($59) or the 2,500 bucket ($79). Under about $590 a month of revenue, 10% is less than $59. The network and the editor are the rest of the decision, not a second copy of the same math.`,
         `In-app purchases on Substack can be priced higher to cover Apple, or left the same so you absorb it. Substack's 10% on those purchases is based on your web price, according to the help article. beehiiv's 0% does not remove Stripe. Quote both payment processors from the vendor pages if the list pays mostly by card.`,
@@ -107,7 +107,7 @@ export const beehiivVsSubstack: CompareDoc = {
       paragraphs: [
         `beehiiv includes a website on every plan, with unlimited posts and a sitemap-style web presence described in the feature table. Custom domains, more than one custom page on the low end (Free is 1 custom page, Lite is 10, Pro is unlimited), and surveys start on Lite. Pro adds custom robots.txt and AI bot control. Podcast downloads are capped by plan: 5,000 a month on Free, 15,000 on Lite, 50,000 on Pro. A podcast-heavy publication can outgrow Free before the subscriber cap does.`,
         `Substack includes the publication site and the archive in the $0 product. The custom domain is a $50 one-time charge, not a monthly tier. Posts can be exported. beehiiv lists data exports on every plan, including Free. The archive readers already have bookmarked will break if you change domains without redirects. Set the new domain, export, and keep the old site up until links you care about point at the new host.`,
-        `SEO claims are easy to overstate. Both products render public posts. This page does not rank them. If search traffic matters, look at your own analytics before you move, and do not assume a new domain inherits the old one.`,
+        `Both products render public posts. If search traffic matters, look at your own analytics before you move, and do not assume a new domain inherits the old one.`,
       ],
     },
     {
@@ -115,7 +115,7 @@ export const beehiivVsSubstack: CompareDoc = {
       title: "API, MCP, and AI agents",
       paragraphs: [
         `beehiiv's pricing file lists API access on Free, excluding the Send API. MCP read access and a read-only agent are on Free. Write access for MCP and the agent starts on Lite. The Send API is Pro, and it is not in the trial. If an assistant posts drafts, Free may be enough. If an assistant sends the campaign, read the Pro line before you assume Lite includes it.`,
-        `Substack's cost article does not describe an MCP server or a send API. Do not treat silence as a feature comparison you can score. If an agent workflow is a requirement, beehiiv is the product in this pair that publishes the gate. MailCheap publishes a different MCP, with sending on paid hosted plans, and that is a send tool rather than a paid-newsletter host. It is linked below for the case where you do not need the 0% fee or the 10% fee because you do not charge inside the tool.`,
+        `Substack's cost article does not describe an MCP server or a send API. If an agent workflow is a requirement, beehiiv is the product in this pair that publishes the gate. MailCheap publishes a different MCP, with sending on paid hosted plans, and that is a send tool rather than a paid-newsletter host. It is linked below for the case where you do not need the 0% fee or the 10% fee because you do not charge inside the tool.`,
       ],
     },
   ],
@@ -159,7 +159,7 @@ export const beehiivVsSubstack: CompareDoc = {
     `DNS: Substack's custom domain is a $50 one-time setup. Point it at beehiiv only after Lite is ready to serve the domain, because custom domains are not on beehiiv Free. Send a test post to yourself. Keep the old publication online until the export is downloaded and a paying reader has a new checkout. There is no warm-up number in Substack's cost article. beehiiv does not meter the first send. Still mail a small group if the list was dormant.`,
   ],
   cheaper: [
-    `MailCheap is cheaper when you only send and you do not need paid subscriptions, recommendations, or ads. At 4,000 subscribers and one issue a week, Starter is $19 a month for 20,000 emails. The 4.33-week estimate is about 17,334 emails. A month with five sends is 4,000 x 5 = 20,000 emails, before welcomes and tests. That fills Starter. Price Growth at $39 if those extra messages matter. beehiiv Lite at the same list is $109 and does not meter sends. Substack is $0 until readers pay. MailCheap is not cheaper than Substack's $0.`,
+    `MailCheap is the lower bill when you only send and you do not need paid subscriptions, recommendations, or ads. At 4,000 subscribers and one issue a week, Starter is $19 a month for 20,000 emails. The 4.33-week estimate is about 17,334 emails. beehiiv Lite at the same list is $109 and does not meter sends. Substack is $0 until readers pay. MailCheap is more than Substack's $0.`,
     `Use MailCheap when both the percent and the Lite tier are for features you will not use. The toggle adds the row. <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a> is an affiliate link. The <a href="/reviews/mailcheap/">review</a> lists what the $19 plan does not include.`,
   ],
   faqs: [

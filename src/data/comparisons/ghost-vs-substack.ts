@@ -50,7 +50,7 @@ export const ghostVsSubstack: CompareDoc = {
   pricingIntro: [
     `Starter is the wrong row for a paid membership. It is $18 a month, one staff user, one newsletter, no paid subscriptions, no custom theme, and no custom sending domain. Use it only for a free letter under 1,000 members. Publisher is the plan this comparison uses once members pay or the list passes 1,000. The pricing page lists 3 staff users on Publisher, custom themes, and a 0% transaction fee. Business adds 15 staff users and a higher member floor: the data file prices Business at $239 a month from 1,000 through 10,000 members.`,
     `Annual Ghost prices in the table are the yearly charge divided by 12. Publisher at 5,000 members is $756 a year, which is $63 a month only when you pay the year. Monthly billing stays $75. Substack has no annual platform plan. The 10% applies to each payment.`,
-    `Do not treat a Ghost self-host install as $0 in this table. The pricing page contrasts Ghost(Pro) with self-hosting and does not publish a hosting bill for it. This page prices Ghost(Pro).`,
+    `Ghost's pricing page contrasts Ghost(Pro) with self-hosting and does not publish a hosting bill for running it yourself. The prices below are Ghost(Pro). At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
     `Ghost rows combine the pricing page's feature table with the price file. Substack rows are the cost article and the export article. Staff counts follow the public pricing page (Publisher 3, Business 15, Starter 1).`,
@@ -88,7 +88,7 @@ export const ghostVsSubstack: CompareDoc = {
       paragraphs: [
         `Ghost's member documentation says membership, customer, and business data is yours to control, and that subscriptions are billed in your Stripe account. The import format includes stripe_customer_id so an existing Stripe customer can be attached. That is the ownership claim that matters for a move: you can take the customer id if the subscription was already in Stripe you control. Substack's 10% model does not hand you that id in the cost article. The export is the list, the posts, and statistics.`,
         `Themes are a Publisher feature. The pricing page says Starter uses built-in design settings and that marketplace themes and custom themes start on the higher plans. If the publication is a blog you redesign, Publisher is the plan, at $35 a month at 1,000 members and $75 at the 5,000 band. Substack does not sell that theme layer as a monthly upgrade. You trade it for $0 and for discovery inside Substack.`,
-        `Discovery is the part that does not export. Ghost's pricing page lists a Ghost Explore network and recommendations on every plan, plus ActivityPub distribution. This page does not measure whether Explore replaces Substack's app. Writers who get a large share of new readers from Substack recommendations should assume that channel stops on the day they leave, and that Ghost Explore is a different directory. Count the fee against the tier only after you have another way to be found.`,
+        `Discovery inside Substack does not export. Ghost's pricing page lists a Ghost Explore network and recommendations on every plan, plus ActivityPub distribution. Writers who get a large share of new readers from Substack recommendations should assume that channel stops when they leave. Ghost Explore is a separate directory. Count the fee against the tier only after you have another way to be found.`,
         `The archive is yours in the sense that Ghost can export members and content, and Substack's export zip includes posts. Redirects and the domain still have to be pointed by you. A custom Ghost domain is included on Ghost(Pro), with a note on the pricing page about a one-year .link registration that renews at normal rates. Substack's custom domain is $50 once. Those are setup fees, not the monthly comparison.`,
       ],
     },
@@ -153,7 +153,7 @@ export const ghostVsSubstack: CompareDoc = {
     `Self-hosting Ghost is a third path the pricing page acknowledges and does not price. Do not start a self-host migration in the same week you move paid members unless you already run that server. Ghost(Pro) is the priced option in this table.`,
   ],
   cheaper: [
-    `MailCheap does not replace Ghost or Substack for a paid membership. It has no paid subscriptions. It is the lower bill when the job is the send. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 members and one issue a week the estimate is about 17,334 emails. A five-send month is 4,000 x 5 = 20,000 emails before welcomes and tests, which uses all of Starter. Publisher at that size is $75 and takes 0% if you charge. Substack is $0 plus 10% if you charge. MailCheap at $19 is cheaper than Publisher and more expensive than Substack's $0, and it will not log members into a themed site.`,
+    `MailCheap does not replace Ghost or Substack for a paid membership. It has no paid subscriptions. It is the lower bill when the job is the send. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 members and one issue a week the estimate is about 17,334 emails. Publisher at that size is $75 and takes 0% if you charge. Substack is $0 plus 10% if you charge. MailCheap at $19 is under Publisher and above Substack's $0, and it will not log members into a themed site.`,
     `The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>. Read the <a href="/reviews/mailcheap/">MailCheap review</a> if the only feature you use today is the weekly send.`,
   ],
   faqs: [
@@ -183,7 +183,7 @@ export const ghostVsSubstack: CompareDoc = {
     },
     {
       q: "Is there a free Ghost plan?",
-      a: "<p>Not on Ghost(Pro). The cheapest hosted plan is Starter at $18 a month. Substack publishes for $0. Self-hosting Ghost is separate and is not given a dollar on this page.</p>",
+      a: "<p>Not on Ghost(Pro). The cheapest hosted plan is Starter at $18 a month. Substack publishes for $0. Self-hosting Ghost is separate, and Ghost's pricing page does not list a hosting price for it.</p>",
     },
   ],
   related: [

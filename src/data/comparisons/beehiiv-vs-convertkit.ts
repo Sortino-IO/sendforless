@@ -48,8 +48,8 @@ export const beehiivVsConvertkit: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so Creator is check current pricing, and beehiiv Lite is $199 a month, or $169 annual effective. Do not fill Kit's blank with a guessed slider price.`,
-    `beehiiv annual is the yearly total divided by 12. Kit annual is 10 months' price for 12 months, which is a different discount. Compare monthly with monthly, or annual with annual. Do not subtract Kit's $32.50 effective rate from beehiiv's $109 monthly rate and call the gap the savings.`,
+    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so Creator is check current pricing, and beehiiv Lite is $199 a month, or $169 annual effective. Creator above 3,000 subscribers is on kit.com/pricing.`,
+    `beehiiv annual is the yearly total divided by 12. Kit annual is 10 months' price for 12 months, which is a different discount. Compare monthly with monthly, or annual with annual. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
     `beehiiv cells are from the pricing file. Kit cells are from the free-plan article (23 September 2026), the billing article, and the pricing page. Checked 24 November 2026.`,
@@ -73,7 +73,7 @@ export const beehiivVsConvertkit: CompareDoc = {
         { feature: "Paid recommendations", a: "Lite and Pro", b: "Earning requires a paid plan" },
         { feature: "Ad network", a: "Lite and Pro, not every region, not in trial", b: "Not in the Kit docs we read" },
         { feature: "Automations", a: "Lite: 10 live. Pro: unlimited. Free: no", b: "Creator and Pro. Free can view the screens only" },
-        { feature: "Paid subscriptions", a: "Lite and Pro, 0% platform fee", b: "Digital products and subscriptions are on Free" },
+        { feature: "Paid subscriptions", a: "Lite and Pro, 0% platform fee", b: "On Free. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026)." },
         { feature: "API and agents", a: "Read MCP on Free. Write on Lite. Send API on Pro", b: "API on Free. AI connectors on paid plans" },
       ],
     },
@@ -84,7 +84,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       title: "Growth tools: recommendations and the Creator Network",
       paragraphs: [
         `beehiiv's recommendation network is on Free. Paid recommendations, the ad network, and referral rewards start on Lite. Lite allows 3 referral milestones. Pro makes that unlimited and adds a sponsorship storefront. The ad network is excluded from the trial and is not offered in every region. If you are under 2,500 subscribers and you only want to recommend other newsletters, Free is the plan. You do not need the $59 Lite bucket at 1,000 subscribers for the basic network.`,
-        `Kit enrolls you in the Creator Network on signup. The free-plan article says you get five Smart Recommendation slots, filled with similar creators and editable by you, and that other creators can feature you. Paid plans get priority and a larger share of those recommendations. Earning money from Paid Recommendations needs a paid plan. You can turn the network off without changing the rest of the plan. Five slots on Free is a documented number. beehiiv does not publish an equivalent "five slots" line in the pricing file, so this page does not invent one.`,
+        `Kit enrolls you in the Creator Network on signup. The free-plan article says you get five Smart Recommendation slots, filled with similar creators and editable by you, and that other creators can feature you. Paid plans get priority and a larger share of those recommendations. Earning money from Paid Recommendations needs a paid plan. You can turn the network off without changing the rest of the plan. Five slots on Free is a documented number. beehiiv's pricing file does not publish a slot count for recommendations.`,
         `These are different growth bets. beehiiv pairs recommendations with an ad network and a publication site. Kit pairs recommendations with a creator CRM: tags, products, and, once you pay, sequences. A writer who wants boost-style ads is reading the beehiiv column. A writer who wants other creators to recommend a newsletter and then run a sequence is reading the Kit column. Neither network's signup volume is measured here.`,
         `Past 2,500 subscribers, beehiiv's network is no longer free. You pay Lite to keep the account, even if you never turn on ads. Kit's network stays on the $0 plan until 10,000 subscribers, with the smaller share the help article describes. That is the practical gap at 4,000 subscribers: $109 a month versus $0, before you ask which network your topic actually uses.`,
       ],
@@ -103,7 +103,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       title: "Paid newsletters",
       paragraphs: [
         `beehiiv takes 0% of paid subscription revenue on Lite and Pro and charges the subscriber tier instead. Stripe is 2.9% + $0.30. Free cannot sell subscriptions. One paid tier is on Lite. Unlimited tiers are on Pro. Digital products exist on Free with a cap of 1 product.`,
-        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, Creator is the bill.`,
+        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026). You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, Creator is the bill.`,
         `Moving a paid subscriber between these two does not move the card on file. Export the address, recreate the offer, and charge again. beehiiv data exports are listed on every plan. Kit's paid plans mention a migration service. Confirm that service on Kit's site if you are paying for it.`,
       ],
     },
@@ -141,7 +141,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       "Sequences and visual automations do not run on Free.",
       "Creator's price above 3,000 subscribers is check current pricing.",
       "Paid plans get a larger share of Creator Network recommendations.",
-      "There is no beehiiv-style ad network in the docs this page uses.",
+      "Kit's pricing and free-plan articles do not list an ad network.",
     ],
   },
   who: [
@@ -156,7 +156,7 @@ export const beehiivVsConvertkit: CompareDoc = {
   ],
   cheaper: [
     `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid bill when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator, whose price at 10,000 is check current pricing.`,
-    `At 4,000 weekly subscribers, Starter is $19. A five-send month is 4,000 x 5 = 20,000 emails, which uses the Starter allowance before welcomes and tests. That caveat matters only if you are leaving a $0 plan for MailCheap. Most people in this comparison should stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `At 4,000 weekly subscribers, Starter is $19. Most people in this comparison should stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {

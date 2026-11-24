@@ -35,7 +35,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
 <section id="short-answer">
   <h2>{doc.a} vs {doc.b}: the short answer</h2>
   <p>
-    Prices in the cards are for {DEFAULT_SUBS.toLocaleString("en-US")} subscribers and {DEFAULT_ISSUES} issue a week, month-to-month USD, checked {PRICE_CHECKED_LABEL}. They stay on the page if JavaScript is off. The calculator further down uses the same list prices.
+    Prices in the cards are for {DEFAULT_SUBS.toLocaleString("en-US")} subscribers and {DEFAULT_ISSUES} issue a week, month-to-month USD, checked {PRICE_CHECKED_LABEL}.
   </p>
   <div class="choice-grid">
     <article class="card choice-card">
@@ -128,9 +128,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
       </tbody>
     </table>
   </div>
-  <p class="method-note">
-    The table is one issue a week and does not follow the calculator. Where a tool meters emails, the count is subscribers x 4.33, rounded up. A month with five send weeks is subscribers x 5, before welcome emails and tests. That 4.33 figure is an average, not a guarantee of every month. Annual effective is the yearly charge divided by 12, or the vendor's documented yearly discount. It is not a second month-to-month price. Sources are linked in the sections above and below. Checked {PRICE_CHECKED_LABEL}.
-  </p>
+  <p class="method-note">Emails are subscribers × 4.33 a week, rounded up; annual is the yearly charge ÷ 12.</p>
 </section>
 
 <section id="features">
@@ -169,14 +167,13 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
       <div class="table-wrap">
         <table>
           <caption>
-            Platform fee on subscription revenue, {feeName(section.fees)} vs Substack, checked {PRICE_CHECKED_LABEL}. Stripe is extra on both and is not folded into these dollars.
+            Platform fee on subscription revenue, {feeName(section.fees)} vs Substack, checked {PRICE_CHECKED_LABEL}. Stripe is extra on both. The plan price is separate and follows the subscriber or member count, not this revenue.
           </caption>
           <thead>
             <tr>
               <th scope="col">Subscription revenue / month</th>
               <th scope="col">Substack 10% platform fee</th>
               <th scope="col">{feeName(section.fees)} platform fee</th>
-              <th scope="col">Plan price, separate from the fee</th>
             </tr>
           </thead>
           <tbody>
@@ -185,7 +182,6 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
                 <th scope="row">{money(mrr)}</th>
                 <td data-label="Substack 10%">{money(mrr / 10)}</td>
                 <td data-label={`${feeName(section.fees)} fee`}>$0 on the paid plan</td>
-                <td data-label="Plan price">Set by subscriber or member count, not by this revenue</td>
               </tr>
             ))}
           </tbody>
