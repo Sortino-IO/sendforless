@@ -9,7 +9,7 @@ export type Guide = {
 export const guides: Guide[] = [
   {
     slug: "mailchimp-alternatives",
-    href: "/mailchimp-alternatives/",
+    href: "/alternatives/mailchimp/",
     kicker: "Roundup",
     title: "Mailchimp alternatives",
     blurb:
@@ -17,7 +17,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "mailerlite-alternatives",
-    href: "/mailerlite-alternatives/",
+    href: "/alternatives/mailerlite/",
     kicker: "Roundup",
     title: "MailerLite alternatives",
     blurb:
@@ -25,7 +25,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "beehiiv-pricing",
-    href: "/beehiiv-pricing/",
+    href: "/pricing/beehiiv/",
     kicker: "Pricing",
     title: "Beehiiv pricing, explained",
     blurb:
@@ -33,7 +33,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "substack-alternatives",
-    href: "/substack-alternatives/",
+    href: "/alternatives/substack/",
     kicker: "Roundup",
     title: "Substack alternatives",
     blurb:
@@ -41,7 +41,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "convertkit-alternatives",
-    href: "/convertkit-alternatives/",
+    href: "/alternatives/convertkit/",
     kicker: "Roundup",
     title: "Kit (ConvertKit) alternatives",
     blurb:
@@ -49,7 +49,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "ghost-alternatives",
-    href: "/ghost-alternatives/",
+    href: "/alternatives/ghost/",
     kicker: "Roundup",
     title: "Ghost alternatives",
     blurb:
@@ -57,7 +57,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "beehiiv-alternatives",
-    href: "/beehiiv-alternatives/",
+    href: "/alternatives/beehiiv/",
     kicker: "Roundup",
     title: "Beehiiv alternatives",
     blurb:
@@ -65,7 +65,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "mailcheap-vs-beehiiv",
-    href: "/mailcheap-vs-beehiiv/",
+    href: "/compare/mailcheap-vs-beehiiv/",
     kicker: "Comparison",
     title: "MailCheap vs beehiiv",
     blurb:
@@ -73,7 +73,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "beehiiv-vs-substack",
-    href: "/beehiiv-vs-substack/",
+    href: "/compare/beehiiv-vs-substack/",
     kicker: "Comparison",
     title: "beehiiv vs Substack",
     blurb:
@@ -81,7 +81,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "mailcheap-review",
-    href: "/mailcheap-review/",
+    href: "/reviews/mailcheap/",
     kicker: "Review",
     title: "MailCheap review",
     blurb:
@@ -89,7 +89,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "how-to-start-a-newsletter",
-    href: "/how-to-start-a-newsletter/",
+    href: "/guides/how-to-start-a-newsletter/",
     kicker: "Guide",
     title: "How to start a newsletter",
     blurb:

@@ -1,5 +1,7 @@
 ---
-layout: ../layouts/ArticleLayout.astro
+layout: ../../layouts/ArticleLayout.astro
+sectionName: "Comparisons"
+sectionHref: "/compare/"
 title: "MailCheap vs beehiiv: which is cheaper for a weekly newsletter?"
 description: "Independent comparison of MailCheap and beehiiv list prices, features, and who should pick each platform. Includes a verdict for a 4,000-subscriber weekly newsletter."
 kicker: Comparison
@@ -45,7 +47,7 @@ faqs:
     a: "<p>If you subscribe to MailCheap through an affiliate link on this site, we may receive a commission. That is disclosed next to the links and in the bar at the top of every page. We do not run paid ads for MailCheap, and we do not run a coupon site.</p>"
 ---
 
-import { mailcheapHref } from "../lib/site";
+import { mailcheapHref } from "../../lib/site";
 
 <section class="verdict" id="verdict">
   <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Our take</p>
@@ -240,7 +242,7 @@ At 4,000 subscribers, one issue a week is about 17,334 emails and fits Starter. 
 
 The same trap runs the other way for a small list. At 1,000 subscribers, beehiiv Free is $0 and includes unlimited sends, a website, a podcast within its download cap, and the recommendation network. MailCheap is $19 before you have written the first paid-for issue, and it still will not sell subscriptions. Recommending MailCheap under beehiiv’s free cap is a way to spend money for a shorter product. We do not do that.
 
-There is a third case: you want Lite’s features and your list is still inside Free. You would pay $59 a month at 1,000 subscribers for automations, polls, and paid subscriptions, or $49 a month on annual billing. That is a feature purchase. MailCheap at $19 does not substitute for it. The honest comparison is Free versus staying put, or Lite versus another paid product that has the feature you came for. Kit’s free plan, covered in the [Kit alternatives](/convertkit-alternatives/) guide, is the other $0 option up to 10,000 subscribers if all you send is broadcasts.
+There is a third case: you want Lite’s features and your list is still inside Free. You would pay $59 a month at 1,000 subscribers for automations, polls, and paid subscriptions, or $49 a month on annual billing. That is a feature purchase. MailCheap at $19 does not substitute for it. The honest comparison is Free versus staying put, or Lite versus another paid product that has the feature you came for. Kit’s free plan, covered in the [Kit alternatives](/alternatives/convertkit/) guide, is the other $0 option up to 10,000 subscribers if all you send is broadcasts.
 
 ## Moving a list from beehiiv
 
@@ -251,8 +253,8 @@ A few things the file will not move for you:
 - Paid subscription state. MailCheap cannot bill those readers. If you have paying subscribers, this migration is the wrong project until you have another way to charge them.
 - Recommendations, boosts, and the ad network. Those are beehiiv’s marketplace. They do not export.
 - Automations. Rebuild only the ones you actually use. A welcome email is the one that matters on day one.
-- Your beehiiv website, podcast, and community. Those stay on beehiiv unless you rebuild them somewhere else. Ghost is the usual answer when the site is the product. See [Ghost alternatives](/ghost-alternatives/) if you are choosing a publication host instead of a sender.
+- Your beehiiv website, podcast, and community. Those stay on beehiiv unless you rebuild them somewhere else. Ghost is the usual answer when the site is the product. See [Ghost alternatives](/alternatives/ghost/) if you are choosing a publication host instead of a sender.
 
 Send a test to yourself, then a plain issue to a segment of people who have opened recently, before you mail the whole file. MailCheap’s import can read open and click fields when the export contains them, and it says the first issue goes to the most engaged readers first. That is a sensible default. It is not a substitute for looking at the list. A bought or scraped list is against MailCheap’s import rules and will get an account blocked. Only move people who signed up.
 
-If the migration is really about leaving subscriber pricing, read the longer [beehiiv alternatives](/beehiiv-alternatives/) roundup. Kit, Ghost, Substack, and MailerLite solve different pieces of what beehiiv bundles, and several of them are $0 at list sizes where MailCheap is already $19. The [beehiiv pricing](/beehiiv-pricing/) guide shows every published Lite and Pro bucket if you want the invoice you would be walking away from, in both monthly and annual form.
+If the migration is really about leaving subscriber pricing, read the longer [beehiiv alternatives](/alternatives/beehiiv/) roundup. Kit, Ghost, Substack, and MailerLite solve different pieces of what beehiiv bundles, and several of them are $0 at list sizes where MailCheap is already $19. The [beehiiv pricing](/pricing/beehiiv/) guide shows every published Lite and Pro bucket if you want the invoice you would be walking away from, in both monthly and annual form.
