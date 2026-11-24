@@ -1,5 +1,4 @@
 {
-  "trailingSlash": true,
   "redirects": [
     { "source": "/mailchimp-alternatives", "destination": "/alternatives/mailchimp/", "statusCode": 301 },
     { "source": "/mailchimp-alternatives/", "destination": "/alternatives/mailchimp/", "statusCode": 301 },
@@ -22,7 +21,22 @@
     { "source": "/mailcheap-review", "destination": "/reviews/mailcheap/", "statusCode": 301 },
     { "source": "/mailcheap-review/", "destination": "/reviews/mailcheap/", "statusCode": 301 },
     { "source": "/how-to-start-a-newsletter", "destination": "/guides/how-to-start-a-newsletter/", "statusCode": 301 },
-    { "source": "/how-to-start-a-newsletter/", "destination": "/guides/how-to-start-a-newsletter/", "statusCode": 301 }
+    { "source": "/how-to-start-a-newsletter/", "destination": "/guides/how-to-start-a-newsletter/", "statusCode": 301 },
+    { "source": "/alternatives", "destination": "/alternatives/", "statusCode": 308 },
+    { "source": "/alternatives/:slug", "destination": "/alternatives/:slug/", "statusCode": 308 },
+    { "source": "/pricing", "destination": "/pricing/", "statusCode": 308 },
+    { "source": "/pricing/:slug", "destination": "/pricing/:slug/", "statusCode": 308 },
+    { "source": "/compare", "destination": "/compare/", "statusCode": 308 },
+    { "source": "/compare/:slug", "destination": "/compare/:slug/", "statusCode": 308 },
+    { "source": "/reviews", "destination": "/reviews/", "statusCode": 308 },
+    { "source": "/reviews/:slug", "destination": "/reviews/:slug/", "statusCode": 308 },
+    { "source": "/guides", "destination": "/guides/", "statusCode": 308 },
+    { "source": "/guides/:slug", "destination": "/guides/:slug/", "statusCode": 308 },
+    { "source": "/about", "destination": "/about/", "statusCode": 308 },
+    { "source": "/how-we-test", "destination": "/how-we-test/", "statusCode": 308 },
+    { "source": "/affiliate-disclosure", "destination": "/affiliate-disclosure/", "statusCode": 308 },
+    { "source": "/privacy", "destination": "/privacy/", "statusCode": 308 },
+    { "source": "/contact", "destination": "/contact/", "statusCode": 308 }
   ],
   "headers": [
     {
