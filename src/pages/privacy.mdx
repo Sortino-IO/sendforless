@@ -38,7 +38,7 @@ The site is hosted as static files. A host’s ordinary server logs can include 
 
 Every page loads Google Analytics 4, measurement ID `G-G7X8CD2S9Y`. The tag is the async `gtag.js` script from Google. Google Analytics sets cookies, including `_ga` and related cookies, and receives usage data: the page you view, a rough location derived from your IP address, and device and browser information. We use that to see which guides are read.
 
-When you click a link whose host is `mailcheap.ai` or a subdomain of it, the page also sends a Google Analytics event named `affiliate_click`. The event includes the link URL (`link_url`), the hostname (`link_domain`), and the visible link text (`link_text`). It is sent with `transport_type: beacon` so the hit can leave as you navigate away. That is how we count use of the MailCheap affiliate links. It is not a record of whether you bought a plan.
+When you click a link whose host is `mailcheap.ai` or a subdomain of it, the page records an `affiliate_click` event with the link URL (`link_url`), the visible link text (`link_text`), and the page path (`page_path`). While Google Analytics is loaded directly, that hit is sent with `transport_type: beacon` so it can leave as you navigate away. The same event is pushed to `dataLayer`, which is what Google Tag Manager reads if a container is connected later. It is not a record of whether you bought a plan.
 
 The cost calculator still runs in your browser. The subscriber count you type is not sent as its own field. We do not sell analytics data. Google’s processing is described in [Google’s privacy policy](https://policies.google.com/privacy). You can block the tag with your browser or with an extension that blocks Google Analytics.
 

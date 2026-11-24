@@ -53,6 +53,7 @@ const blocks = [organization, website, ...jsonLd];
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="google-site-verification" content="M7PES0bHN85Y02FFz1qEPVownQx95WZQmugDgTTswZg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
@@ -82,6 +83,7 @@ const blocks = [organization, website, ...jsonLd];
     <Analytics />
   </head>
   <body>
+    <Analytics placement="body" />
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <Disclosure text={disclosure} />
