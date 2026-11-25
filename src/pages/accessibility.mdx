@@ -1,0 +1,62 @@
+---
+layout: ../layouts/ArticleLayout.astro
+title: "Accessibility"
+description: "sendforless aims to conform to WCAG 2.1 Level AA, which also covers the web criteria in Israeli Standard IS 5568."
+kicker: Accessibility
+lede: "sendforless should be readable and usable with a keyboard, a screen reader, and a small screen. This statement says what we aim for, what we do, and where we still fall short."
+crumb: Accessibility
+affiliate: false
+showPriceByline: false
+schemaType: WebPage
+datePublished: 2026-11-25
+dateModified: 2026-11-25
+toc:
+  - id: commitment
+    label: Commitment
+  - id: measures
+    label: Measures
+  - id: limits
+    label: Known limitations
+  - id: contact
+    label: Contact
+related: []
+faqs: []
+---
+
+import EmailLink from "../components/EmailLink.astro";
+
+<h2 id="commitment">Commitment</h2>
+
+sendforless aims to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. WCAG 2.1 Level AA includes the WCAG 2.0 Level AA success criteria that Israeli Standard IS 5568 is based on, so this is also the target we use for IS 5568.
+
+This is a public commitment, not a certificate. We have not hired an auditor to sign a conformance claim.
+
+This statement was last updated on 25 November 2026.
+
+<h2 id="measures">Measures</h2>
+
+- The page language is set to English (`lang="en"`).
+- A skip link moves keyboard focus to the main content.
+- Pages use a header, navigation, a main region, and a footer.
+- Links, buttons, and fields show a visible focus style.
+- The cost calculator and the contact form name each field with a label. Buttons use visible text.
+- Price charts include a text title and a description. Decorative marks are hidden from assistive technology.
+- The lowest price is named in text, not signaled by color alone.
+- The cookie notice does not block the page. Reject and Accept are the same size and the same contrast. Cookie settings in the footer opens it again.
+- Animation is reduced when the device asks for less motion.
+- Text reflows on a narrow screen instead of requiring sideways scrolling for the article.
+
+<h2 id="limits">Known limitations</h2>
+
+- Google Tag Manager, and the Cloudflare Turnstile check on the contact form, are third-party components. Their frames can change without a new release of this site.
+- The cost calculator replaces the result list as the numbers change. Some screen readers announce that update more than once.
+- The cookie notice sits over the bottom of the page so the rest of the layout does not jump. Escape, Reject, or Accept dismisses it.
+- Some supporting text is smaller than the body copy.
+- We test with a keyboard and with automated checks. We have not tested every page with every assistive technology.
+- The site is published in English.
+
+<h2 id="contact">Contact</h2>
+
+If a page is hard to use, email <EmailLink />. Name the page address and what you were trying to do. We use that note to fix the page.
+
+Choices about analytics cookies are described on the [privacy page](/privacy/).

@@ -1,5 +1,6 @@
 ---
 import { GA_MEASUREMENT_ID, GTM_ID } from "../lib/site";
+import { consentBootSource, gtagConfigSource, gtmBootSource } from "../lib/head-scripts";
 
 interface Props {
   placement?: "head" | "body";
@@ -8,102 +9,21 @@ interface Props {
 const { placement = "head" } = Astro.props;
 const useGtm = GTM_ID.length > 0;
 ---
-{placement === "head" && useGtm && (
-  <script is:inline define:vars={{ GTM_ID }}>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", GTM_ID);
-  </script>
-)}
+{placement === "head" && <script is:inline set:html={consentBootSource()}></script>}
+{placement === "head" && useGtm && <script is:inline set:html={gtmBootSource()}></script>}
 {placement === "head" && !useGtm && (
   <>
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
-    <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      window.gtag = gtag;
-      gtag("js", new Date());
-      gtag("config", GA_MEASUREMENT_ID);
-    </script>
+    <script is:inline set:html={gtagConfigSource()}></script>
   </>
-)}
-{placement === "head" && useGtm && (
-  <script is:inline>
-    document.addEventListener("click", function (event) {
-      var node = event.target;
-      if (!node || typeof node.closest !== "function") return;
-      var link = node.closest("a");
-      if (!link || !link.href) return;
-      var url;
-      try {
-        url = new URL(link.href);
-      } catch (error) {
-        return;
-      }
-      var host = url.hostname.toLowerCase();
-      if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
-      var text = (link.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "affiliate_click",
-        link_url: url.href,
-        link_text: text,
-        page_path: location.pathname,
-      });
-    });
-  </script>
-)}
-{placement === "head" && !useGtm && (
-  <script is:inline>
-    document.addEventListener("click", function (event) {
-      var node = event.target;
-      if (!node || typeof node.closest !== "function") return;
-      var link = node.closest("a");
-      if (!link || !link.href) return;
-      var url;
-      try {
-        url = new URL(link.href);
-      } catch (error) {
-        return;
-      }
-      var host = url.hostname.toLowerCase();
-      if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
-      var text = (link.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
-      var payload = {
-        event: "affiliate_click",
-        link_url: url.href,
-        link_text: text,
-        page_path: location.pathname,
-      };
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(payload);
-      if (typeof window.gtag === "function") {
-        window.gtag("event", "affiliate_click", {
-          link_url: payload.link_url,
-          link_text: payload.link_text,
-          page_path: payload.page_path,
-          transport_type: "beacon",
-        });
-      }
-    });
-  </script>
 )}
 {placement === "body" && useGtm && (
   <noscript>
     <iframe
+      class="gtm-noscript"
       src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
       height="0"
       width="0"
-      style="display:none;visibility:hidden"
       title="Google Tag Manager"></iframe>
   </noscript>
 )}

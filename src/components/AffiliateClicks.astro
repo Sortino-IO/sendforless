@@ -1,0 +1,37 @@
+<script>
+  document.addEventListener("click", (event) => {
+    const node = event.target;
+    if (!(node instanceof Element)) return;
+    const link = node.closest("a");
+    if (!link?.href) return;
+    let url: URL;
+    try {
+      url = new URL(link.href);
+    } catch {
+      return;
+    }
+    const host = url.hostname.toLowerCase();
+    if (host !== "mailcheap.ai" && !host.endsWith(".mailcheap.ai")) return;
+    const text = (link.textContent || "").replace(/\s+/g, " ").trim().slice(0, 100);
+    const payload = {
+      event: "affiliate_click",
+      link_url: url.href,
+      link_text: text,
+      page_path: location.pathname,
+    };
+    const w = window as Window & {
+      dataLayer?: Record<string, unknown>[];
+      gtag?: (...args: unknown[]) => void;
+    };
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push(payload);
+    if (document.body.dataset.gtm !== "1" && typeof w.gtag === "function") {
+      w.gtag("event", "affiliate_click", {
+        link_url: payload.link_url,
+        link_text: payload.link_text,
+        page_path: payload.page_path,
+        transport_type: "beacon",
+      });
+    }
+  });
+</script>

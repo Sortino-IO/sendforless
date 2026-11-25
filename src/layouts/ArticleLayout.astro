@@ -2,7 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import HeroMark from "../components/HeroMark.astro";
 import { guidesBySlug, hubGuides } from "../lib/guides";
-import { mailcheapHref, PRICE_CHECKED_ISO, PRICE_CHECKED_LABEL, SITE_NAME, SITE_URL } from "../lib/site";
+import { formatIsoDate, mailcheapHref, PRICE_CHECKED_ISO, SITE_NAME, SITE_URL } from "../lib/site";
 
 interface TocItem {
   id: string;
@@ -64,21 +64,7 @@ const {
   itemListFromGuides = false,
 } = frontmatter;
 
-const MONTHS = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
-];
-
-function longDate(value: string | Date): string {
-  const iso = value instanceof Date ? value.toISOString().slice(0, 10) : String(value);
-  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
-  if (!match) return PRICE_CHECKED_LABEL;
-  const month = MONTHS[Number(match[2]) - 1];
-  if (!month) return PRICE_CHECKED_LABEL;
-  return `${Number(match[3])} ${month} ${match[1]}`;
-}
-
-const updatedLabel = longDate(dateModified);
+const modifiedIso = (dateModified instanceof Date ? dateModified.toISOString() : String(dateModified)).slice(0, 10);
 const resolvedItemList = itemListFromGuides
   ? hubGuides().map((guide) => ({ name: guide.title, url: guide.href }))
   : itemList;
@@ -228,7 +214,7 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema, itemListSchema].f
         <p class="lede">{lede}</p>
         <p class="byline">
           <span>By sendforless</span>
-          <span>Updated <time datetime={dateModified}>{updatedLabel}</time></span>
+          <span>Updated <time datetime={modifiedIso}>{formatIsoDate(dateModified)}</time></span>
           {showPriceByline && <span>Prices from official pages, month-to-month USD list rates</span>}
         </p>
         </div>

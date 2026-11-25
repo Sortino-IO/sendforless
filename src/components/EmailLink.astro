@@ -1,0 +1,7 @@
+---
+/** Base64 of user|host|tld. The served HTML never contains the assembled address. */
+const encoded = "b2ZmaWNlfHNvcnRpbm98aW8=";
+const script =
+  '(function(el){if(!el)return;var p=atob(el.getAttribute("data-mail")).split("|");var a=p[0]+String.fromCharCode(64)+p[1]+"."+p[2];el.textContent=a;el.setAttribute("href",String.fromCharCode(109,97,105,108,116,111,58)+a);el.removeAttribute("data-mail");})(document.currentScript&&document.currentScript.previousElementSibling);';
+---
+<a data-mail={encoded} href="#email"><noscript>office [at] sortino [dot] io</noscript></a><script is:inline set:html={script}></script>

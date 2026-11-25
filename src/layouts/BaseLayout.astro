@@ -4,7 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Disclosure from "../components/Disclosure.astro";
 import Analytics from "../components/Analytics.astro";
-import { CONTACT_EMAIL, SITE_NAME, SITE_URL } from "../lib/site";
+import AffiliateClicks from "../components/AffiliateClicks.astro";
+import CookieBanner from "../components/CookieBanner.astro";
+import { GTM_ID, SITE_NAME, SITE_URL } from "../lib/site";
 
 interface Props {
   title: string;
@@ -38,7 +40,6 @@ const organization = {
   name: SITE_NAME,
   url: `${SITE_URL}/`,
   logo: `${SITE_URL}/logo.svg`,
-  email: CONTACT_EMAIL,
   description:
     "Independent editorial comparisons of newsletter platforms, ranked by what a send actually costs.",
 };
@@ -86,12 +87,14 @@ const blocks = [organization, website, ...jsonLd];
     <link rel="stylesheet" href={globalCss} />
     <Analytics />
   </head>
-  <body>
+  <body data-gtm={GTM_ID.length > 0 ? "1" : "0"}>
     <Analytics placement="body" />
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <Disclosure text={disclosure} />
     <slot />
     <Footer />
+    <CookieBanner />
+    <AffiliateClicks />
   </body>
 </html>
