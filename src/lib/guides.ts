@@ -119,7 +119,7 @@ export const guides: Guide[] = [
     href: "/compare/mailerlite-vs-mailchimp/",
     kicker: "Comparison",
     title: "MailerLite vs Mailchimp",
-    blurb: "Comfort’s published tiers against Mailchimp’s starting prices, and MailCheap when the job is a weekly send.",
+    blurb: "Comfort’s published tiers against Mailchimp’s starting prices, and MailCheap when you send weekly.",
   },
   {
     slug: "convertkit-vs-mailchimp",
@@ -189,7 +189,7 @@ export const guides: Guide[] = [
     href: "/guides/newsletter-platforms/",
     kicker: "Guide",
     title: "Newsletter platforms compared",
-    blurb: "Eight platforms compared by the job they fit and the price at 1,000, 5,000, and 10,000 subscribers.",
+    blurb: "Eight platforms compared by the newsletter they fit and the price at 1,000, 5,000, and 10,000 subscribers.",
   },
   {
     slug: "newsletter-monetization",

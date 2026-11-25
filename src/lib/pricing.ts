@@ -1,22 +1,22 @@
 /**
  * Month-to-month USD list prices used by the calculator and articles.
- * Promotions are ignored. Checked 25 November 2026.
+ * Promotions are ignored. Checked November 25, 2026.
  *
  * A dollar amount is included only when it was read from the vendor’s own
- * pricing page, pricing file, or help article on that date. If a list size
+ * pricing page or help article on that date. If a list size
  * is not in that material, the calculator says to check current pricing
  * and does not rank the tool.
  *
  * Sources:
  * - MailCheap plans: https://mailcheap.ai/help/plans?via=analyst and https://mailcheap.ai/pricing?via=analyst
- * - beehiiv tiers: https://www.beehiiv.com/pricing.md
- * - Ghost(Pro): https://ghost.org/js/pricing.min.js, loaded by https://ghost.org/pricing/
- * - MailerLite: https://www.mailerlite.com/pricing.md (file last updated 8 September 2026)
- * - Substack: https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost (updated 29 October 2026)
- * - Kit free plan: https://help.kit.com/en/articles/16627071-the-kit-free-plan (23 September 2026)
+ * - beehiiv tiers: https://www.beehiiv.com/pricing
+ * - Ghost(Pro): https://ghost.org/pricing/
+ * - MailerLite: https://www.mailerlite.com/pricing (updated September 8, 2026)
+ * - Substack: https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost (updated October 29, 2026)
+ * - Kit free plan: https://help.kit.com/en/articles/16627071-the-kit-free-plan (September 23, 2026)
  *   Creator $39 up to 1,000 and the $59 / 3,000 example: https://help.kit.com/en/articles/2502679-billing-at-kit
  *   Pro $79 at 1,000 subscribers, monthly: https://kit.com/pricing
- * - Flodesk Email and Everything: https://flodesk.com/pricing and https://help.flodesk.com/en/articles/14551297 (edited 19 November 2026)
+ * - Flodesk Email and Everything: https://flodesk.com/pricing and https://help.flodesk.com/en/articles/14551297 (edited November 19, 2026)
  * - Mailchimp Free limits: https://mailchimp.com/help/about-mailchimp-pricing-plans/
  *   Essentials from $13 and Standard from $20 at 500 contacts: Mailchimp’s plan pages.
  *   Prices above 500 contacts are not published as a static table here.
@@ -83,7 +83,7 @@ export const GHOST_PUBLISHER: Band[] = [
   { max: 100000, monthly: 329, yearlyMo: 274 },
 ];
 
-/** MailerLite Comfort / Power, monthly billing, from the official pricing markdown. */
+/** MailerLite Comfort / Power, monthly billing, from the official pricing page. */
 export const MAILERLITE = [
   { max: 500, comfort: 12, power: 25 },
   { max: 1000, comfort: 19, power: 39 },
@@ -363,7 +363,7 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     platform: "Constant Contact",
     plan: "Lite",
     monthly: null,
-    note: "Lite starts at $12/mo, Standard at $35/mo, and Premium at $80/mo. The bill then depends on contacts and sends, so for a specific list size, check current pricing. Prepay for 12 months is up to 15% off those starting prices ($10.20, $29.75, and $68). A 50% offer for three months is a promotion, not the list price. Checked 25 November 2026.",
+    note: "Lite starts at $12/mo, Standard at $35/mo, and Premium at $80/mo. The bill then depends on contacts and sends, so for a specific list size, check current pricing. Prepay for 12 months is up to 15% off those starting prices ($10.20, $29.75, and $68). A 50% offer for three months is a promotion, not the list price. Checked November 25, 2026.",
     href: "https://www.constantcontact.com/pricing",
     affiliate: false,
     available: false,

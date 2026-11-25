@@ -17,7 +17,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
   linkA: { href: "https://www.mailerlite.com/pricing", label: "MailerLite pricing" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `Both tools send campaigns and run automations. The real difference is what you pay. MailerLite publishes every Comfort and Power tier through 200,000 subscribers in <a href="https://www.mailerlite.com/pricing.md">mailerlite.com/pricing.md</a> (file dated 8 September 2026, checked 25 November 2026). Mailchimp's marketing pricing page does not show a static dollar above 500 contacts. <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> starts at $13 a month and <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month, each for up to 500 contacts.`,
+    `Both tools send campaigns and run automations. The real difference is what you pay. MailerLite publishes every Comfort and Power tier through 200,000 subscribers on <a href="https://www.mailerlite.com/pricing">MailerLite's pricing page</a> (updated September 8, 2026, checked November 25, 2026). Mailchimp's marketing pricing page does not show a static dollar above 500 contacts. <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> starts at $13 a month and <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month, each for up to 500 contacts.`,
     `A second difference is who counts. MailerLite bills active subscribers. Unsubscribed and bounced people do not count, but anyone active at any point in the billing cycle still counts until the anniversary, even if you delete them. Mailchimp's help counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not. A list you never cleaned can cost more on Mailchimp than the active-reader count suggests.`,
   ],
   differences: [
@@ -49,7 +49,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     {
       topic: "Paid newsletters",
       favors: "MailerLite, if that is the product",
-      why: "MailerLite's pricing file puts paid newsletters and recurring subscriptions on Comfort and Power, not on Free. Mailchimp is a contact database that can connect a store. It does not publish a newsletter take rate.",
+      why: "MailerLite's pricing page puts paid newsletters and recurring subscriptions on Comfort and Power, not on Free. Mailchimp is a contact database that can connect a store. It does not publish a newsletter take rate.",
     },
   ],
   pricingIntro: [
@@ -58,7 +58,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     `Annual on MailerLite is 10% off the monthly rate, billed as the lower monthly figure in their yearly column. Pay the monthly rate or the annual rate. Mailchimp's annual rate above 500 contacts is on mailchimp.com, so those cells say check current pricing.`,
   ],
   featuresIntro: [
-    `Rows come from MailerLite's pricing file and from Mailchimp's help article "About Mailchimp Pricing Plans," plus the Essentials and Standard landers for the $13 and $20 starting prices. The table says "Check current pricing" or "Not in the docs" when the source page did not state the limit.`,
+    `Rows come from MailerLite's pricing page and from Mailchimp's help article "About Mailchimp Pricing Plans," plus the Essentials and Standard pages for the $13 and $20 starting prices. The table says "Check current pricing" or "Not in the docs" when the source page did not state the limit.`,
     `MailerLite says paid plans share one feature set and you pay for subscribers and sending volume. That is not quite true of the free plan, which caps automations at 3, websites and landing pages at 1 each, forms at 3, and blocks API and MCP sending. Mailchimp gates automations, seats, and audiences by plan name.`,
   ],
   matrix: [
@@ -186,7 +186,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
     {
       q: "How much is MailerLite for 10,000 subscribers?",
-      a: "<p>Comfort is $89 a month, or $80.10 on annual billing. Power is $129 a month, or $116.10 annually. Comfort's email cap at that tier is 100,000. A weekly issue uses about 43,334 of them. Checked 25 November 2026 in MailerLite's pricing file.</p>",
+      a: "<p>Comfort is $89 a month, or $80.10 on annual billing. Power is $129 a month, or $116.10 annually. Comfort's email cap at that tier is 100,000. A weekly issue uses about 43,334 of them. Checked November 25, 2026 on MailerLite's pricing page.</p>",
     },
     {
       q: "Does Mailchimp charge for unsubscribed contacts?",
@@ -202,7 +202,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
     {
       q: "Does MailerLite send paid newsletters?",
-      a: "<p>On Comfort and Power, yes, according to the pricing file. Free is marked no. Mailchimp does not publish a newsletter revenue share. If you sell through a connected store, price that setup separately.</p>",
+      a: "<p>On Comfort and Power, yes, according to the pricing page. Free is marked no. Mailchimp does not publish a newsletter revenue share. If you sell through a connected store, price that setup separately.</p>",
     },
     {
       q: "What is the free plan limit on each?",

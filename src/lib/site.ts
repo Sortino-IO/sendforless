@@ -9,7 +9,7 @@ export const SITE_URL = "https://sendforless.com";
 export const SITE_NAME = "sendforless";
 
 export const PRICE_CHECKED_ISO = "2026-11-25";
-export const PRICE_CHECKED_LABEL = "25 November 2026";
+export const PRICE_CHECKED_LABEL = "November 25, 2026";
 
 const ISO_MONTHS = [
   "January",
@@ -26,7 +26,7 @@ const ISO_MONTHS = [
   "December",
 ];
 
-/** Format YYYY-MM-DD as "25 November 2026". Falls back to the price-check label. */
+/** Format YYYY-MM-DD as "November 25, 2026". Falls back to the price-check label. */
 export function formatIsoDate(value: string | Date): string {
   const raw = value instanceof Date ? value.toISOString() : String(value);
   const iso = raw.slice(0, 10);
@@ -35,7 +35,7 @@ export function formatIsoDate(value: string | Date): string {
   const month = ISO_MONTHS[Number(match[2]) - 1];
   const day = Number(match[3]);
   if (!month || day < 1 || day > 31) return PRICE_CHECKED_LABEL;
-  return `${day} ${month} ${match[1]}`;
+  return `${month} ${day}, ${match[1]}`;
 }
 
 /**

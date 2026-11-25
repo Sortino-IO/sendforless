@@ -17,7 +17,7 @@ export const beehiivVsSubstack: CompareDoc = {
   linkA: { href: "https://www.beehiiv.com/pricing", label: "beehiiv pricing" },
   linkB: { href: "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost", label: "Substack pricing help" },
   differencesIntro: [
-    `Substack's help article, updated 29 October 2026, says publishing is free at any list size. If you turn on paid subscriptions, Substack keeps 10% of subscription revenue. Stripe adds its own fees. For US cards the article quotes 2.9% + $0.30, plus 0.7% for Stripe Billing on recurring payments. A custom domain is $50 once. Readers pay the price you set. iOS in-app purchases can cost more if you choose to cover Apple's fee.`,
+    `Substack's help article, updated October 29, 2026, says publishing is free at any list size. If you turn on paid subscriptions, Substack keeps 10% of subscription revenue. Stripe adds its own fees. For US cards the article quotes 2.9% + $0.30, plus 0.7% for Stripe Billing on recurring payments. A custom domain is $50 once. Readers pay the price you set. iOS in-app purchases can cost more if you choose to cover Apple's fee.`,
     `beehiiv charges for the subscriber bucket and, on paid plans, takes 0% of subscription revenue. Stripe is still 2.9% + $0.30 per transaction, in beehiiv's pricing FAQ. Free is $0 up to 2,500 subscribers and does not include paid subscriptions, automations, or the ad network. At 4,000 subscribers you are in the up-to-5,000 Lite bucket: $109 a month, or $95 a month billed annually ($1,140 a year). The tier table is on <a href="/pricing/beehiiv/">beehiiv pricing</a>. Substack has no matching monthly tier. The fee table is further down.`,
   ],
   differences: [
@@ -53,7 +53,7 @@ export const beehiivVsSubstack: CompareDoc = {
     `Annual beehiiv is prepaid. At the 5,000 bucket, Lite annual is $1,140 instead of $109 × 12 = $1,308. The $95 figure is $1,140 divided by 12. It is the yearly charge divided by 12, paid up front. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
-    `beehiiv's feature rows are from beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Substack's rows are from the cost article and the export article. Where Substack does not publish a comparable limit, the table notes that.`,
+    `beehiiv's feature rows are from <a href="https://www.beehiiv.com/pricing">beehiiv's pricing page</a>. Substack's rows are from the cost article and the export article. Where Substack does not publish a comparable limit, the table notes that.`,
   ],
   matrix: [
     {
@@ -98,7 +98,7 @@ export const beehiivVsSubstack: CompareDoc = {
       paragraphs: [
         `beehiiv's recommendation network is on Free. The ad network, paid recommendations, and the referral program with rewards are paid-plan features. The ad network is not in every region and is not in the trial. Lite caps referral milestones at 3. Pro removes that cap and adds a sponsorship storefront. If you moved to beehiiv to replace Substack's discovery, the free network is the part that exists before Lite. The ads are why Lite costs money.`,
         `Substack's discovery is the app and the recommendations other writers make there. The export help (the article that covers posts and the subscriber list) gives you a zip of your publication's data. It does not give you the people who found you because you were recommended inside Substack. Budget a drop in new signups if that is how the list grew. The cost article does not put a price on recommendations because they are part of the $0 publishing product.`,
-        `Referral counts are not in either vendor's pricing file. If recommendations are the business, stay until the 10% is painful or until beehiiv's network is the one your topic actually uses. Price is the wrong only reason to move a list that still grows inside the app.`,
+        `Referral counts are not on either vendor's pricing page. If recommendations are the business, stay until the 10% is painful or until beehiiv's network is the one your topic actually uses. Price is the wrong only reason to move a list that still grows inside the app.`,
       ],
     },
     {
@@ -114,7 +114,7 @@ export const beehiivVsSubstack: CompareDoc = {
       id: "agents",
       title: "API, MCP, and AI agents",
       paragraphs: [
-        `beehiiv's pricing file lists API access on Free, excluding the Send API. MCP read access and a read-only agent are on Free. Write access for MCP and the agent starts on Lite. The Send API is Pro, and it is not in the trial. If an assistant posts drafts, Free may be enough. If an assistant sends the campaign, read the Pro line before you assume Lite includes it.`,
+        `beehiiv's pricing page lists API access on Free, excluding the Send API. MCP read access and a read-only agent are on Free. Write access for MCP and the agent starts on Lite. The Send API is Pro, and it is not in the trial. If an assistant posts drafts, Free may be enough. If an assistant sends the campaign, read the Pro line before you assume Lite includes it.`,
         `Substack's cost article does not describe an MCP server or a send API. If an agent workflow is a requirement, beehiiv is the product in this pair that publishes the gate. MailCheap publishes a different MCP, with sending on paid hosted plans, and that is a send tool rather than a paid-newsletter host. It is linked below for the case where you do not need the 0% fee or the 10% fee because you do not charge inside the tool.`,
       ],
     },
@@ -153,7 +153,7 @@ export const beehiivVsSubstack: CompareDoc = {
     `Choose a different tool when you do not charge readers and you do not use the network. Under 10,000 subscribers, Kit Free broadcasts are $0. A send-only weekly letter past the free caps is the MailCheap case in the next section. A membership site you theme yourself is <a href="/compare/ghost-vs-substack/">Ghost vs Substack</a>.`,
   ],
   switching: [
-    `From beehiiv to Substack, use beehiiv's export. MailCheap's import help, which documents several vendor files, describes beehiiv's full subscriber export as Settings, then Export data, then Export all subscribers, so custom fields, tags, and stats are in the file. The quick export is email and status only. beehiiv's pricing file lists data exports on every plan. Substack's import path in its Ghost migration article accepts a CSV and sets those people to a free status. Paid beehiiv subscriptions do not become paid Substack subscriptions. Ask paying readers to subscribe again. Turn off beehiiv recommendations only after the new publication has a way to be found.`,
+    `From beehiiv to Substack, use beehiiv's export. MailCheap's import help, which documents several vendor files, describes beehiiv's full subscriber export as Settings, then Export data, then Export all subscribers, so custom fields, tags, and stats are in the file. The quick export is email and status only. beehiiv's pricing page lists data exports on every plan. Substack's import path in its Ghost migration article accepts a CSV and sets those people to a free status. Paid beehiiv subscriptions do not become paid Substack subscriptions. Ask paying readers to subscribe again. Turn off beehiiv recommendations only after the new publication has a way to be found.`,
     `From Substack to beehiiv, Substack's export help says to open the publication Settings, click Exports, and create a new export. The zip includes posts, the subscriber list, and statistics. You get an email when it is ready. Import subscribers into beehiiv and do not treat the file as an active paid subscription. Recreate tiers on Lite or Pro. beehiiv Free cannot charge readers. If you are over 2,500 subscribers you will be on Lite immediately, at the bucket price, even before the first paid sale.`,
     `Automations on beehiiv do not exist as a Substack workflow you can import, and Substack does not give you beehiiv's 10-automation canvas. Tags in the beehiiv full export are described by MailCheap's importer as something a CSV can carry. Confirm the columns on your own file. Revenue, plan names, and platform ids are the kind of column MailCheap says it leaves out of an import. Assume billing fields are not portable.`,
     `DNS: Substack's custom domain is a $50 one-time setup. Point it at beehiiv only after Lite is ready to serve the domain, because custom domains are not on beehiiv Free. Send a test post to yourself. Keep the old publication online until the export is downloaded and a paying reader has a new checkout. There is no warm-up number in Substack's cost article. beehiiv does not meter the first send. Still mail a small group if the list was dormant.`,
@@ -177,7 +177,7 @@ export const beehiivVsSubstack: CompareDoc = {
     },
     {
       q: "What is beehiiv at 10,000 subscribers?",
-      a: "<p>Lite is $139 a month, or $119 a month billed annually ($1,428 a year). Pro is $239 a month, or $199 annual effective. Sends are unlimited. Checked 25 November 2026.</p>",
+      a: "<p>Lite is $139 a month, or $119 a month billed annually ($1,428 a year). Pro is $239 a month, or $199 annual effective. Sends are unlimited. Checked November 25, 2026.</p>",
     },
     {
       q: "Can I move paid subscribers from Substack to beehiiv?",

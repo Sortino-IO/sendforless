@@ -18,7 +18,7 @@ export const beehiivVsMailchimp: CompareDoc = {
   linkA: { href: "https://www.beehiiv.com/pricing", label: "beehiiv pricing" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `beehiiv vs Mailchimp splits a publication from a contact database. beehiiv Free is $0 up to 2,500 subscribers and includes unlimited sends. It does not include automations, the ad network, or paid subscriptions. Lite at 4,000 subscribers is the up-to-5,000 bucket, $109 a month, or $95 a month billed annually ($1,140 a year). Checked 25 November 2026 on beehiiv.com/pricing.md.`,
+    `beehiiv vs Mailchimp compares a publication with a contact database. beehiiv Free is $0 up to 2,500 subscribers and includes unlimited sends. It does not include automations, the ad network, or paid subscriptions. Lite at 4,000 subscribers is the up-to-5,000 bucket, $109 a month, or $95 a month billed annually ($1,140 a year). Checked November 25, 2026 on beehiiv's pricing page.`,
     `Mailchimp vs beehiiv has no published Mailchimp price above 500 contacts. Free is 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Unsubscribed contacts count. The feature limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
@@ -53,7 +53,7 @@ export const beehiivVsMailchimp: CompareDoc = {
     `Mailchimp's send multiple is why a daily letter and a weekly letter are different products there, and the same product on beehiiv. A weekly letter to 4,000 people is about 17,300 emails. That does not change Lite. It may or may not fit the Mailchimp tier you have not been shown yet.`,
   ],
   featuresIntro: [
-    `beehiiv rows are from pricing.md. Mailchimp rows are from the marketing pricing page and About Mailchimp Pricing Plans. Checked 25 November 2026.`,
+    `beehiiv rows are from the pricing page. Mailchimp rows are from the marketing pricing page and About Mailchimp Pricing Plans. Checked November 25, 2026.`,
   ],
   matrix: [
     {
@@ -137,7 +137,7 @@ export const beehiivVsMailchimp: CompareDoc = {
     },
     {
       q: "Is Mailchimp vs beehiiv a store comparison?",
-      a: "<p>Only in one direction. Mailchimp vs beehiiv favors Mailchimp when the shop and the journeys stay. It favors beehiiv when the publication, the recommendations, or a 0% subscription fee are the job.</p>",
+      a: "<p>Only in one direction. Mailchimp vs beehiiv favors Mailchimp when the shop and the journeys stay. It favors beehiiv when the publication, the recommendations, or a 0% subscription fee are what you need.</p>",
     },
   ],
   related: [
