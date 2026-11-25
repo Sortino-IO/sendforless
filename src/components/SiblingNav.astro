@@ -1,0 +1,139 @@
+---
+interface Item {
+  href: string;
+  label: string;
+  note: string;
+}
+
+const path = Astro.url.pathname;
+
+const pricing: Item[] = [
+  { href: "/pricing/beehiiv/", label: "beehiiv pricing", note: "Free, Lite, and Pro by list size" },
+  { href: "/pricing/convertkit/", label: "Kit (ConvertKit) pricing", note: "Free, Creator, and Pro" },
+  { href: "/pricing/flodesk/", label: "Flodesk pricing", note: "Email and Everything, any list size" },
+  { href: "/pricing/ghost/", label: "Ghost pricing", note: "Starter, Publisher, and Business" },
+  { href: "/pricing/mailchimp/", label: "Mailchimp pricing", note: "Free, Essentials, Standard, Premium" },
+  { href: "/pricing/mailerlite/", label: "MailerLite pricing", note: "Free, Comfort, and Power" },
+  { href: "/pricing/substack/", label: "Substack pricing", note: "The 10% fee and the $0 plan" },
+];
+
+const reviews: Item[] = [
+  { href: "/reviews/beehiiv/", label: "beehiiv review", note: "Pricing, features, and who it fits" },
+  { href: "/reviews/mailcheap/", label: "MailCheap review", note: "Plans, caps, and who it fits" },
+  { href: "/reviews/mailerlite/", label: "MailerLite review", note: "Comfort, Power, and the free plan" },
+  { href: "/reviews/mailchimp/", label: "Mailchimp review", note: "Who it fits, and why people leave" },
+];
+
+const related: Record<string, Item[]> = {
+  "/pricing/": [
+    { href: "/alternatives/", label: "Newsletter platform alternatives", note: "When a cheaper tool still does the job" },
+    { href: "/compare/", label: "Newsletter platform comparisons", note: "Pairs priced at 4,000 subscribers" },
+    { href: "/reviews/", label: "Newsletter platform reviews", note: "Who each product fits" },
+  ],
+  "/pricing/beehiiv/": [
+    { href: "/alternatives/beehiiv/", label: "beehiiv alternatives", note: "Cheaper options compared" },
+    { href: "/reviews/beehiiv/", label: "beehiiv review", note: "Who the growth tools fit" },
+    { href: "/compare/beehiiv-vs-substack/", label: "beehiiv vs Substack", note: "The bucket price against the 10% fee" },
+    { href: "/compare/beehiiv-vs-convertkit/", label: "beehiiv vs Kit (ConvertKit)", note: "Recommendations against sequences" },
+    { href: "/compare/mailcheap-vs-beehiiv/", label: "MailCheap vs beehiiv", note: "A counted send against Lite" },
+  ],
+  "/pricing/convertkit/": [
+    { href: "/alternatives/convertkit/", label: "ConvertKit (Kit) alternatives", note: "Cheaper options compared" },
+    { href: "/compare/convertkit-vs-mailchimp/", label: "Kit (ConvertKit) vs Mailchimp", note: "Free to 10,000 against a 250-contact cap" },
+    { href: "/compare/beehiiv-vs-convertkit/", label: "beehiiv vs Kit (ConvertKit)", note: "A publication site against sequences" },
+  ],
+  "/pricing/flodesk/": [
+    { href: "/compare/flodesk-vs-mailchimp/", label: "Flodesk vs Mailchimp", note: "A flat price against contact tiers" },
+    { href: "/alternatives/mailchimp/", label: "Mailchimp alternatives", note: "Other exits from a contact bill" },
+    { href: "/pricing/mailchimp/", label: "Mailchimp pricing", note: "Free, Essentials, and Standard" },
+  ],
+  "/pricing/ghost/": [
+    { href: "/alternatives/ghost/", label: "Ghost alternatives", note: "When you do not need a membership site" },
+    { href: "/compare/ghost-vs-substack/", label: "Ghost vs Substack", note: "Publisher against the 10% fee" },
+    { href: "/pricing/substack/", label: "Substack pricing", note: "The 10% fee and the $0 plan" },
+  ],
+  "/pricing/mailchimp/": [
+    { href: "/alternatives/mailchimp/", label: "Mailchimp alternatives", note: "Cheaper options by list size" },
+    { href: "/compare/mailerlite-vs-mailchimp/", label: "MailerLite vs Mailchimp", note: "Comfort from $12, Essentials from $13" },
+    { href: "/compare/flodesk-vs-mailchimp/", label: "Flodesk vs Mailchimp", note: "A flat price against contact tiers" },
+    { href: "/compare/convertkit-vs-mailchimp/", label: "Kit (ConvertKit) vs Mailchimp", note: "Free to 10,000 subscribers" },
+  ],
+  "/pricing/mailerlite/": [
+    { href: "/alternatives/mailerlite/", label: "MailerLite alternatives", note: "Cheaper options compared" },
+    { href: "/reviews/mailerlite/", label: "MailerLite review", note: "Who Comfort and Power fit" },
+    { href: "/compare/mailerlite-vs-mailchimp/", label: "MailerLite vs Mailchimp", note: "Prices, automations, and sites" },
+  ],
+  "/pricing/substack/": [
+    { href: "/alternatives/substack/", label: "Substack alternatives", note: "Platforms without the 10% fee" },
+    { href: "/compare/beehiiv-vs-substack/", label: "beehiiv vs Substack", note: "A bucket price against 10%" },
+    { href: "/compare/ghost-vs-substack/", label: "Ghost vs Substack", note: "A membership site against 10%" },
+  ],
+  "/reviews/": [
+    { href: "/pricing/", label: "Newsletter platform pricing", note: "Plans by list size" },
+    { href: "/alternatives/", label: "Newsletter platform alternatives", note: "Cheaper options" },
+    { href: "/compare/", label: "Newsletter platform comparisons", note: "Pairs at 4,000 subscribers" },
+  ],
+  "/reviews/beehiiv/": [
+    { href: "/pricing/beehiiv/", label: "beehiiv pricing", note: "Free, Lite, and Pro" },
+    { href: "/alternatives/beehiiv/", label: "beehiiv alternatives", note: "Cheaper options compared" },
+    { href: "/compare/beehiiv-vs-substack/", label: "beehiiv vs Substack", note: "The 10% fee against Lite" },
+    { href: "/compare/mailcheap-vs-beehiiv/", label: "MailCheap vs beehiiv", note: "Switching from beehiiv" },
+  ],
+  "/reviews/mailcheap/": [
+    { href: "/compare/mailcheap-vs-beehiiv/", label: "MailCheap vs beehiiv", note: "Starter against Lite" },
+    { href: "/alternatives/beehiiv/", label: "beehiiv alternatives", note: "When Lite is the wrong bill" },
+    { href: "/pricing/beehiiv/", label: "beehiiv pricing", note: "The buckets MailCheap is priced against" },
+  ],
+  "/reviews/mailerlite/": [
+    { href: "/pricing/mailerlite/", label: "MailerLite pricing", note: "Every Comfort and Power tier" },
+    { href: "/alternatives/mailerlite/", label: "MailerLite alternatives", note: "Cheaper options compared" },
+    { href: "/compare/mailerlite-vs-mailchimp/", label: "MailerLite vs Mailchimp", note: "Comfort against Essentials and Standard" },
+  ],
+  "/reviews/mailchimp/": [
+    { href: "/pricing/mailchimp/", label: "Mailchimp pricing", note: "Free, Essentials, Standard, and Premium" },
+    { href: "/alternatives/mailchimp/", label: "Mailchimp alternatives", note: "Cheaper options by list size" },
+    { href: "/compare/mailerlite-vs-mailchimp/", label: "MailerLite vs Mailchimp", note: "Comfort against Essentials and Standard" },
+    { href: "/compare/constant-contact-vs-mailchimp/", label: "Constant Contact vs Mailchimp", note: "Two contact bills" },
+    { href: "/compare/convertkit-vs-mailchimp/", label: "Kit (ConvertKit) vs Mailchimp", note: "Free broadcasts to 10,000" },
+  ],
+};
+
+const pricingPage = path.startsWith("/pricing/");
+const reviewPage = path.startsWith("/reviews/");
+const siblings = pricingPage ? pricing : reviewPage ? reviews : [];
+const others = siblings.filter((item) => item.href !== path);
+const extra = related[path] ?? [];
+const siblingHeading = pricingPage ? "Other pricing pages" : "Other reviews";
+const extraHeading = pricingPage ? "Alternatives and comparisons" : "Pricing, alternatives, and comparisons";
+---
+
+{(others.length > 0 || extra.length > 0) && (
+  <div class="related sibling-nav">
+    {others.length > 0 && (
+      <div>
+        <h2>{siblingHeading}</h2>
+        <div class="related-grid">
+          {others.map((item) => (
+            <a class="card" href={item.href}>
+              <strong>{item.label}</strong>
+              <p>{item.note}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+    {extra.length > 0 && (
+      <div>
+        <h2>{extraHeading}</h2>
+        <div class="related-grid">
+          {extra.map((item) => (
+            <a class="card" href={item.href}>
+              <strong>{item.label}</strong>
+              <p>{item.note}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+)}

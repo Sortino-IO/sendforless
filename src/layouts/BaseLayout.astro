@@ -32,7 +32,8 @@ const skipSuffix =
   Astro.url.pathname.startsWith("/compare/") ||
   Astro.url.pathname.startsWith("/pricing/") ||
   Astro.url.pathname.startsWith("/guides/");
-const fullTitle = skipSuffix || title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+const branded = `${title} | ${SITE_NAME}`;
+const fullTitle = skipSuffix || title.includes(SITE_NAME) || branded.length > 60 ? title : branded;
 
 const organization = {
   "@context": "https://schema.org",

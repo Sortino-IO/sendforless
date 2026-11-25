@@ -1,0 +1,90 @@
+---
+layout: ../layouts/ArticleLayout.astro
+title: "How we compare prices"
+description: "How sendforless compares newsletter prices: official sources, how a month of emails is counted, and which documented limits stay off the comparison."
+kicker: Method
+lede: "Comparisons use published list prices and documented limits. A dollar amount appears only when the vendor publishes it on their own page."
+crumb: "How we compare prices"
+affiliate: false
+datePublished: 2026-11-24
+dateModified: 2026-11-25
+toc:
+  - id: scope
+    label: What a comparison is
+  - id: sources
+    label: Price sources
+  - id: math
+    label: Counting a month of email
+  - id: recommend
+    label: When MailCheap is named
+  - id: not
+    label: What the pages leave out
+  - id: faq
+    label: FAQ
+related:
+  - mailcheap-review
+  - beehiiv-pricing
+  - about
+faqs:
+  - q: Where do the dollar amounts come from?
+    a: "<p>From each vendor's pricing page, pricing file, or help article, checked on 25 November 2026 unless a paragraph names an older source date. Inbox placement, send speed, and support response times are not part of the comparison.</p>"
+  - q: Why is Mailchimp missing a price at a few thousand contacts?
+    a: "<p>Mailchimp publishes Free (250 contacts, 500 sends), Essentials from $13 a month, and Standard from $20 a month, both starting prices for up to 500 contacts. Premium starts at $350 a month. Above 500 contacts on Essentials and Standard, the tier price is on Mailchimp's pricing page. The row says to check current pricing.</p>"
+  - q: Why ignore promotions?
+    a: "<p>A percentage off the first months changes the first invoice, not the renewal. Kit's pricing page showed 50% off the first three months of Creator, then $39, with the offer ending 1 December 2026. Comparisons use $39. Annual billing that a vendor documents as the ordinary yearly price is included, and labeled as annual.</p>"
+---
+
+import EmailLink from "../components/EmailLink.astro";
+
+## What a comparison is
+
+sendforless answers a narrow pair of questions. For a given list size and a given number of issues per week, what monthly list price does each platform's public pricing imply? Which documented features make that price the wrong comparison?
+
+Worked examples are a 4,000-person weekly letter, a daily letter that trips an email cap, and an import path you can follow from the vendor's own steps.
+
+The date on each page is the date of that check: 25 November 2026. If a number here and a number on a vendor page disagree, the vendor's page is correct. Write to <EmailLink /> and name the URL.
+
+## Price sources
+
+| Platform | What counts as the price | Checked |
+| --- | --- | --- |
+| MailCheap | Plan table on <a href="https://mailcheap.ai/help/plans?via=analyst" rel="sponsored nofollow noopener" target="_blank">mailcheap.ai/help/plans</a> and the <a href="https://mailcheap.ai/pricing?via=analyst" rel="sponsored nofollow noopener" target="_blank">pricing page</a>. Affiliate links. Starter $19 through Ultra $799. Yearly billing costs 10 months. | 25 November 2026 |
+| beehiiv | beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Every Lite and Pro bucket. | 25 November 2026 |
+| Ghost(Pro) | Price objects in ghost.org/js/pricing.min.js, the file the pricing page loads. | 25 November 2026 |
+| MailerLite | mailerlite.com/pricing.md. The file says it was last updated 8 September 2026. | Re-checked 25 November 2026 |
+| Substack | Help article "How much does Substack cost?", updated 29 October 2026. | Re-checked 25 November 2026 |
+| Kit (ConvertKit) | Free plan help article (23 September 2026): $0 up to 10,000 subscribers. Creator $39 a month up to 1,000 subscribers, and the billing help's $59 example for up to 3,000. Pro $79 a month on the pricing page. | 25 November 2026 |
+| Flodesk | flodesk.com/pricing. Email $46 a month, or $38 a month billed annually ($456 a year). Everything $99 a month, or $79 a month billed annually ($948 a year). | 25 November 2026 |
+| Mailchimp | Free limits from the help center. Essentials starts at $13 a month and Standard at $20 a month, both for up to 500 contacts, on the marketing pricing page. Premium starts at $350 a month. | 25 November 2026 |
+
+Where a list size is not in that material, the page says to check current pricing and links the vendor. A tool is not ranked on a number that was not on the vendor's page. Kit's Creator price above 3,000 subscribers, and Mailchimp's Essentials and Standard prices above 500 contacts, are in that group.
+
+Do not interpolate between published buckets. On beehiiv, 4,000 subscribers pays the up-to-5,000 price.
+
+## Counting a month of email
+
+The planning estimate is subscribers × issues per week × 4.33, rounded up. The 4.33 is 52 weeks ÷ 12 months. It keeps a weekly newsletter from being priced as if every month had four sends.
+
+A 4,000-person weekly letter is about 17,334 emails on that estimate. A month with five weekly sends to the same 4,000 people is 20,000 emails, before welcome emails and tests. MailCheap Starter includes 20,000 emails. The average month fits. The long month uses the whole allowance before those extra messages. If you also send welcomes or tests, price the next plan.
+
+The cheapest published plan is the one where both the email allowance and the subscriber allowance fit. Welcome mail, tests, and automation mail are not added on top of the issue estimate. On MailCheap they count. The row says so. It does not guess your welcome volume.
+
+Payment processing, taxes, and add-on seats are excluded. So are promotions. Annual prices are labeled as annual, and the per-month figure is the yearly charge divided by 12 when the vendor publishes it that way.
+
+## When MailCheap is named
+
+MailCheap is named when all of these are true:
+
+- A free plan does not already cover the send. Under 10,000 subscribers, Kit Free often does. Under 2,500, beehiiv Free often does. Substack has no monthly fee until readers pay.
+- The cadence fits a published MailCheap plan at a price below the other paid tools that also fit.
+- You do not need paid subscriptions, an ad network, a referral program, or A/B tests inside the sending tool.
+
+If one of those fails, the page says which other product fits. A lower price is not a recommendation by itself. Ghost can be the right higher bill when the site is the product. beehiiv can be the right higher bill when you use the ad network or paid subscriptions. Staying on Mailchimp can be the right higher bill when the account runs a store.
+
+The calculator sorts known prices and labels the MailCheap row as Affiliate. "Lowest paid price" appears on whichever known paid row is cheapest in that scenario. A $0 plan can still be the one that fits.
+
+MailCheap links use `?via=analyst`. The commission does not change the price on MailCheap's page, and it does not add features the plan table leaves out.
+
+## What the pages leave out
+
+Inbox placement. Deliverability over time. Support response times. Whether a recommendation network will work for your topic. Private enterprise quotes. Prices in currencies other than the vendor's published USD list. The quality of an editor, beyond the limits the vendor documents.

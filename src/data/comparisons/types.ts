@@ -29,6 +29,10 @@ export type CompareDoc = {
   who: string[];
   switching: string[];
   cheaper: string[] | null;
+  /** Overrides the switching heading. Default is "Switching from A to B". */
+  switchingTitle?: string;
+  /** When false, the 1,000 to 25,000 price table is omitted. */
+  showScenarioTable?: boolean;
   faqs: { q: string; a: string }[];
   related: RelatedLink[];
 };

@@ -79,6 +79,9 @@ export function scenarioCell(platform: string, subs: number): ScenarioCell {
     };
   }
   if (platform === "Substack") return { monthly: "$0 platform fee", annual: "$0 platform fee" };
+  if (platform === "Constant Contact") {
+    return { monthly: "Check current pricing", annual: "Check current pricing" };
+  }
   if (platform === "MailCheap") {
     const plan = mailcheapPlan(subs, emails);
     if (!plan) return { monthly: "Custom", annual: "Custom" };

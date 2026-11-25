@@ -98,7 +98,7 @@ export const beehiivVsSubstack: CompareDoc = {
       paragraphs: [
         `beehiiv's recommendation network is on Free. The ad network, paid recommendations, and the referral program with rewards are paid-plan features. The ad network is not in every region and is not in the trial. Lite caps referral milestones at 3. Pro removes that cap and adds a sponsorship storefront. If you moved to beehiiv to replace Substack's discovery, the free network is the part that exists before Lite. The ads are why Lite costs money.`,
         `Substack's discovery is the app and the recommendations other writers make there. The export help (the article that covers posts and the subscriber list) gives you a zip of your publication's data. It does not give you the people who found you because you were recommended inside Substack. Budget a drop in new signups if that is how the list grew. The cost article does not put a price on recommendations because they are part of the $0 publishing product.`,
-        `Neither network is something this site measured. We did not count referrals. If recommendations are the business, stay until the 10% is painful or until beehiiv's network is the one your topic actually uses. Price is the wrong only reason to move a list that still grows inside the app.`,
+        `Referral counts are not in either vendor's pricing file. If recommendations are the business, stay until the 10% is painful or until beehiiv's network is the one your topic actually uses. Price is the wrong only reason to move a list that still grows inside the app.`,
       ],
     },
     {
@@ -177,7 +177,7 @@ export const beehiivVsSubstack: CompareDoc = {
     },
     {
       q: "What is beehiiv at 10,000 subscribers?",
-      a: "<p>Lite is $139 a month, or $119 a month billed annually ($1,428 a year). Pro is $239 a month, or $199 annual effective. Sends are unlimited. Checked 24 November 2026.</p>",
+      a: "<p>Lite is $139 a month, or $119 a month billed annually ($1,428 a year). Pro is $239 a month, or $199 annual effective. Sends are unlimited. Checked 25 November 2026.</p>",
     },
     {
       q: "Can I move paid subscribers from Substack to beehiiv?",

@@ -78,7 +78,7 @@
       try {
         localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({ choice, exp: Date.now() + CONSENT_TTL_MS }));
       } catch {
-        // The choice still applies for this page view when storage is blocked.
+        // The choice still applies for the current view when storage is blocked.
       }
       pushUpdate(choice);
       closeBanner();

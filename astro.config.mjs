@@ -11,4 +11,7 @@ export default defineConfig({
     format: "directory",
   },
   compressHTML: true,
+  redirects: {
+    "/how-we-test/": "/how-we-compare/",
+  },
 });

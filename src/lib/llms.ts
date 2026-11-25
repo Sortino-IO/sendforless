@@ -39,11 +39,15 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
       "compare/ghost-vs-substack",
       "compare/beehiiv-vs-convertkit",
       "compare/flodesk-vs-mailchimp",
+      "compare/constant-contact-vs-mailchimp",
+      "compare/beehiiv-vs-mailchimp",
+      "compare/substack-vs-mailchimp",
+      "compare/mailcheap-vs-mailchimp",
     ],
   },
   {
     heading: "Reviews",
-    slugs: ["reviews/index", "reviews/mailcheap", "reviews/beehiiv", "reviews/mailerlite"],
+    slugs: ["reviews/index", "reviews/mailcheap", "reviews/beehiiv", "reviews/mailerlite", "reviews/mailchimp"],
   },
   {
     heading: "Home",
@@ -61,7 +65,7 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
   },
   {
     heading: "About",
-    slugs: ["about", "how-we-test", "affiliate-disclosure", "privacy", "accessibility", "contact"],
+    slugs: ["about", "how-we-compare", "affiliate-disclosure", "privacy", "accessibility", "contact"],
   },
 ];
 

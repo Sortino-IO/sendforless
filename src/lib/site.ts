@@ -8,8 +8,8 @@ export const AFFILIATE_CODE = "analyst";
 export const SITE_URL = "https://sendforless.com";
 export const SITE_NAME = "sendforless";
 
-export const PRICE_CHECKED_ISO = "2026-11-24";
-export const PRICE_CHECKED_LABEL = "24 November 2026";
+export const PRICE_CHECKED_ISO = "2026-11-25";
+export const PRICE_CHECKED_LABEL = "25 November 2026";
 
 const ISO_MONTHS = [
   "January",

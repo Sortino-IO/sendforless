@@ -4,10 +4,12 @@ import Logo from "./Logo.astro";
 const path = Astro.url.pathname;
 const links = [
   { href: "/#calculator", label: "Calculator" },
-  { href: "/guides/", label: "Guides" },
   { href: "/pricing/", label: "Pricing" },
+  { href: "/alternatives/", label: "Alternatives" },
+  { href: "/reviews/", label: "Reviews" },
   { href: "/compare/", label: "Comparisons" },
-  { href: "/how-we-test/", label: "How we compare prices" },
+  { href: "/guides/", label: "Guides" },
+  { href: "/how-we-compare/", label: "How we compare" },
 ];
 
 function current(href: string) {
@@ -28,14 +30,12 @@ function current(href: string) {
         {links.map((link) => (
           <a href={link.href} aria-current={current(link.href)}>{link.label}</a>
         ))}
-        <a class="btn btn-primary nav-cta" href="/#calculator">Compare costs</a>
       </nav>
     </details>
     <nav class="nav-menu" aria-label="Primary">
       {links.map((link) => (
         <a href={link.href} aria-current={current(link.href)}>{link.label}</a>
       ))}
-      <a class="btn btn-primary nav-cta" href="/#calculator">Compare costs</a>
     </nav>
   </div>
 </header>
