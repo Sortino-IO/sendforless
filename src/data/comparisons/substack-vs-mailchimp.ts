@@ -19,7 +19,7 @@ export const substackVsMailchimp: CompareDoc = {
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
     `Substack vs Mailchimp is a fee against a contact tier. Substack's help article, updated 29 October 2026 and checked 25 November 2026, says publishing is free at any list size. Paid subscriptions cost 10% of subscription revenue. Stripe adds its own processing. The article quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once.`,
-    `Mailchimp vs Substack comes down to the contact bill. Free is 250 contacts and 500 sends a month, with a daily cap of 250. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Above that, check current pricing. There is no 10% publication fee, because Mailchimp is not priced as a share of reader revenue.`,
+    `Mailchimp vs Substack comes down to what you pay for stored contacts. Free is 250 contacts and 500 sends a month, with a daily cap of 250. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Above that, check current pricing. There is no 10% publication fee, because Mailchimp is not priced as a share of reader revenue.`,
   ],
   differences: [
     {

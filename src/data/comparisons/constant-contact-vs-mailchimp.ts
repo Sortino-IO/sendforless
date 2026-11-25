@@ -86,7 +86,7 @@ export const constantContactVsMailchimp: CompareDoc = {
       id: "contacts",
       title: "How each one counts people",
       paragraphs: [
-        `Mailchimp's help article counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not count. Constant Contact's pricing FAQ says you pay for the contacts on the list and that every plan's send limit is a multiple of that count. It does not, on the page checked 25 November 2026, spell out unsubscribed people the way Mailchimp's help article does. Archive in Mailchimp before you compare both tiers, or you will include people you no longer mail.`,
+        `Mailchimp's help article counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not count. Constant Contact's pricing FAQ says you pay for the contacts on the list and that every plan's send limit is a multiple of that count. It does not, on the page checked 25 November 2026, spell out unsubscribed people the way Mailchimp's help article does. Archive in Mailchimp before you compare both tiers, or you will pay for people you no longer mail.`,
       ],
     },
     {
@@ -145,7 +145,7 @@ export const constantContactVsMailchimp: CompareDoc = {
     },
     {
       q: "Is Constant Contact better than Mailchimp?",
-      a: "<p>It depends on the job. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Above those starting prices, check current pricing on both sites. The main difference between Mailchimp and Constant Contact is the tools around the send: store journeys on Mailchimp, events and phone support on Constant Contact.</p>",
+      a: "<p>It depends on what you need. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Above those starting prices, check current pricing on both sites. The main difference between Mailchimp and Constant Contact is the tools around the send: store journeys on Mailchimp, events and phone support on Constant Contact.</p>",
     },
     {
       q: "Is Constant Contact free?",

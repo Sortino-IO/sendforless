@@ -149,7 +149,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     `Add the new platform's DNS records for the sending domain. Send a test. Kit has no send cap to trip on the first issue. Mailchimp will count every test toward the monthly allowance, and Free will also hit the daily cap of 250. Do not test a 4,000-person list from Mailchimp Free.`,
   ],
   cheaper: [
-    `Under 10,000 subscribers, Kit Free is already $0 for broadcasts. MailCheap at $19 is not cheaper than $0. MailCheap becomes the lower bill when you pass 10,000, or when you do not want to pay Creator's price for sequences and you only need to send. At 25,000 weekly subscribers the email estimate is about 108,334. MailCheap Pro is $79 a month for 200,000 emails. At that size, check Creator's current pricing on Kit's page. Compare those two numbers on the vendors' pages. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `Under 10,000 subscribers, Kit Free is already $0 for broadcasts. MailCheap at $19 is not cheaper than $0. MailCheap becomes the lower price when you pass 10,000, or when you do not want to pay Creator's price for sequences and you only need to send. At 25,000 weekly subscribers the email estimate is about 108,334. MailCheap Pro is $79 a month for 200,000 emails. At that size, check Creator's current pricing on Kit's page. Compare those two numbers on the vendors' pages. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {

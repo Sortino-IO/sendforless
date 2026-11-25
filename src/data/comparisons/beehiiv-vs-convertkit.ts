@@ -48,7 +48,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so check Creator's current pricing, and beehiiv Lite is $199 a month, or $169 annual effective. Creator above 3,000 subscribers is on kit.com/pricing.`,
+    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so check Creator's current pricing. beehiiv Lite is $199 a month, or $169 annual effective. Creator above 3,000 subscribers is on kit.com/pricing.`,
     `beehiiv annual is the yearly total divided by 12. Kit annual is 10 months' price for 12 months, which is a different discount. Compare monthly with monthly, or annual with annual. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
