@@ -38,7 +38,7 @@ faqs:
   - q: Does Mailchimp have a pay-as-you-go plan?
     a: "<p>Yes. Pay As You Go is an alternative to a monthly marketing plan. You buy email credits when you send, and the help article says the plan uses the same feature set as Essentials. Mailchimp does not publish a fixed credit price on the help page. Check current pricing on the marketing pricing page before you treat credits as cheaper than Essentials.</p>"
   - q: Why is Mailchimp so expensive?
-    a: "<p>The bill is a contact tier, not a count of people you mailed this month. Subscribed, unsubscribed, and non-subscribed contacts all count until you archive, clean, or delete them. The published starts are $13 for Essentials and $20 for Standard, each at up to 500 contacts. Above that, the tier price is on Mailchimp's page, so a stored list of old contacts can move you into a higher tier than the list you actually send to.</p>"
+    a: "<p>You pay for a contact tier, not for how many people you mailed this month. Subscribed, unsubscribed, and non-subscribed contacts all count until you archive, clean, or delete them. The published starting prices are $13 for Essentials and $20 for Standard, each for up to 500 contacts. Above that, the tier price is on Mailchimp's page, so a stored list of old contacts can move you into a higher tier than the list you actually send to.</p>"
   - q: Does Mailchimp have an annual plan?
     a: "<p>The marketing pricing page says annual plans are available for Premium and for Standard plans at 10,000 contacts or more, and that you contact sales for the price and the eligibility. It does not publish a percent-off figure for that annual rate. Introductory discounts on the pricing page are promotions, not the renewal price.</p>"
   - q: Do unsubscribed or archived contacts count toward Mailchimp pricing?
@@ -53,17 +53,17 @@ import { mailcheapHref } from "../../lib/site";
 import Shot from "../../components/Shot.astro";
 import CostChart from "../../components/CostChart.astro";
 
-Mailchimp pricing for 2026 is a contact tier plus a plan. Read Mailchimp pricing as a start price plus a limit, not as a single number for every list. The rest of this Mailchimp pricing guide uses only dollars the marketing page or the help center actually prints. When a Mailchimp pricing tier is missing, it says check current pricing instead of a guessed multiple of $13. You choose how many contacts to store. That choice sets the contact limit, the monthly send limit, and the bill. The marketing pricing page, checked 25 November 2026, is the dollar source. The help article [About Mailchimp Pricing Plans](https://mailchimp.com/help/about-mailchimp-pricing-plans/) is the source for who counts and what each plan includes. Where a list size is not a published dollar, the line says check current pricing.
+Mailchimp pricing for 2026 is a contact tier plus a plan. Read Mailchimp pricing as a starting price plus a limit, not as one number for every list. This Mailchimp pricing guide uses only dollars the marketing page or the help center prints. When a Mailchimp pricing tier is missing, check current pricing instead of guessing a multiple of $13. You choose how many contacts to store. That choice sets the contact limit, the monthly send limit, and the bill. The marketing pricing page, checked 25 November 2026, is the source for the dollars. The help article [About Mailchimp Pricing Plans](https://mailchimp.com/help/about-mailchimp-pricing-plans/) is the source for who counts and what each plan includes. Where a list size has no published dollar, check current pricing.
 
 ## How much does Mailchimp cost in 2026?
 
-Two figures are the published starts for a list of up to 500 contacts. Essentials starts at $13 a month. Standard starts at $20 a month. Both were on the marketing pricing page as "starts at" prices on 25 November 2026. The same page shows a 15% offer for the first 12 months at 10,000 contacts or more, and other introductory offers. Those change the first invoices. They are not the renewal rate used here.
+Both figures are published starting prices for a list of up to 500 contacts. Essentials starts at $13 a month. Standard starts at $20 a month. Both were on the marketing pricing page as "starts at" prices on 25 November 2026. The same page shows a 15% offer for the first 12 months at 10,000 contacts or more, and other introductory offers. Those change the first invoices. They are not the renewal rate.
 
 Premium starts at $350 a month on that same page. The help article says the Premium base includes 10,000 contacts, and that Premium can store up to 200,000. Other Premium tiers are not a static table. Check current pricing for a Premium list that is not the base.
 
 Free is $0. It is a separate plan with a hard stop at 250 contacts and 500 sends a month.
 
-| Plan | Published start | Contact note | Monthly sends |
+| Plan | Starting price | Contact note | Monthly sends |
 | --- | --- | --- | --- |
 | Free | $0 | Up to 250 contacts | 500 a month, and 250 a day |
 | Essentials | $13 a month | Starts at up to 500 contacts. Stores up to 50,000. | 10 × the contact limit |
@@ -76,7 +76,7 @@ A contact limit is the maximum you can store at any point in the billing cycle. 
 
 <CostChart
   title="Mailchimp pricing at the published starting tiers"
-  description="Mailchimp pricing for 2026 at the prices the marketing page states as starts. Essentials and Standard are for up to 500 contacts. Premium starts at $350. Free is $0."
+  description="Mailchimp pricing for 2026 at the starting prices the marketing page lists. Essentials and Standard are for up to 500 contacts. Premium starts at $350. Free is $0."
   caption="Source: mailchimp.com/pricing/marketing/, checked 25 November 2026. Not a quote for 5,000 or 10,000 contacts on Essentials or Standard."
   rows={[
     { label: "Free", value: 0, note: "250 contacts" },
@@ -110,14 +110,14 @@ Mailchimp plans are four marketing plans: Free, Essentials, Standard, and Premiu
 
 **Standard** starts at $20 a month for up to 500 contacts and can store up to 100,000. The send limit is 12 times the contact limit. The help article lists 5 audiences and 5 seats, with Owner, Admin, Author, or Viewer roles. It lists expanded automation flows, advanced segmentation, custom-coded templates, multivariate testing, custom reports, one onboarding session, and 24/7 email and chat. The pricing page describes Standard and Premium flows as up to 200 steps, with branching. Generative AI is included on Standard at no extra cost, in the countries and languages Mailchimp lists. SMS with MMS is an add-on in select locations. A 14-day trial of Standard or Essentials is the offer on the pricing page for eligible new customers and recent Free accounts. The trial is not the renewal price.
 
-**Premium** starts at $350 a month. The help article says the base includes 10,000 contacts, storage runs to 200,000, and the send limit is 15 times the contact limit. Audiences are unlimited. Seats are unlimited, with Owner, Admin, Author, Manager, or Viewer roles. Phone support and longer onboarding are included. Above 200,000 contacts, the plan is custom. The $350 figure is the start, not a promise that 50,000 contacts still costs $350. Check current pricing for any other Premium tier.
+**Premium** starts at $350 a month. The help article says the base includes 10,000 contacts, storage runs to 200,000, and the send limit is 15 times the contact limit. Audiences are unlimited. Seats are unlimited, with Owner, Admin, Author, Manager, or Viewer roles. Phone support and longer onboarding are included. Above 200,000 contacts, the plan is custom. The $350 figure is the starting price, not a promise that 50,000 contacts still costs $350. Check current pricing for any other Premium tier.
 
-Pay As You Go sits beside these plans. It uses the Essentials feature set and sells credits instead of a monthly contact tier. Use it when you send a few times a year. The credit price is on the pricing page. It is not repeated here, because the help article describes the plan and does not print a per-credit dollar.
+Pay As You Go sits beside these plans. It uses the Essentials feature set and sells credits instead of a monthly contact tier. Use it when you send a few times a year. The credit price is on the pricing page. The help article describes the plan and does not print a per-credit dollar.
 
 | Feature | Free | Essentials | Standard | Premium |
 | --- | --- | --- | --- | --- |
-| Published start | $0 | $13 a month | $20 a month | $350 a month |
-| Contacts at that start | 250 | 500 | 500 | 10,000 on the base |
+| Starting price | $0 | $13 a month | $20 a month | $350 a month |
+| Contacts at that price | 250 | 500 | 500 | 10,000 on the base |
 | Maximum contacts | 250 | 50,000 | 100,000 | 200,000, then custom |
 | Sends | 500 a month, 250 a day | 10 × the contact limit | 12 × the contact limit | 15 × the contact limit |
 | Seats | 1 | 3 | 5 | Unlimited |
@@ -125,7 +125,7 @@ Pay As You Go sits beside these plans. It uses the Essentials feature set and se
 | Automations | Not included | Up to 4 steps | Expanded, up to 200 steps on the pricing page | Same flow length as Standard, plus phone support |
 | AI features | Not included | Not included | Included, no extra cost | Included, no extra cost |
 
-Which plan fits is a job question. Essentials fits a small list that needs a schedule, templates, and a short automation, and that can live with 3 seats. Standard fits when the journey is longer than 4 steps, when more than one person needs an author role, or when the reporting has to be custom. Premium fits a team that wants phone support and a base of 10,000 contacts, and that has already checked the $350 start against the tier the slider shows for their real contact total. A store that already runs on Mailchimp journeys is a reason to stay on Standard or Premium even when another sender is cheaper for a plain newsletter. The journeys do not export.
+Which plan fits depends on what you need it to do. Essentials fits a small list that needs a schedule, templates, and a short automation, and that can live with 3 seats. Standard fits when the journey is longer than 4 steps, when more than one person needs an author role, or when the reporting has to be custom. Premium fits a team that wants phone support and a base of 10,000 contacts, and that has already checked the $350 starting price against the tier the slider shows for their real contact total. A store that already runs on Mailchimp journeys is a reason to stay on Standard or Premium even when another sender is cheaper for a plain newsletter. The journeys do not export.
 
 ## Who counts toward Mailchimp pricing?
 
@@ -145,7 +145,7 @@ The send limit is a multiple of the contact limit you bought, not of the people 
 
 Essentials allows 10 times the contact limit. A 500-contact Essentials plan allows 5,000 sends. A higher Essentials tier allows 10 times that higher limit. Standard allows 12 times. Premium allows 15 times. Free has fixed caps: 500 sends a month and 250 a day, whichever you hit first.
 
-A weekly letter does the math as subscribers × issues per week × 4.33. At 500 contacts and one issue a week, that is about 2,165 sends, inside both the Essentials and Standard allowances at the 500-contact start. A daily letter to the same 500 people is about 15,165 sends, which is over 10 times 500 and over 12 times 500. Daily sending at that size needs a higher contact tier, even if you only have 500 people, or it needs a plan whose multiple covers the month. The dollar for that higher tier is check current pricing.
+For a weekly newsletter, monthly sends = subscribers × issues per week × 4.33. At 500 contacts and one issue a week, that is about 2,165 sends, inside both the Essentials and Standard allowances at the 500-contact starting price. A daily letter to the same 500 people is about 15,165 sends, which is over 10 times 500 and over 12 times 500. Daily sending at that size needs a higher contact tier, even if you only have 500 people, or it needs a plan whose multiple covers the month. For that higher tier, check current pricing.
 
 Welcome emails, tests, and automation mail sit on top of the issue estimate. They are not in the 4.33 figure. On a tight month they are what pushes a plan over.
 
@@ -163,7 +163,7 @@ Sales tax exemption is a different request. The nonprofit discount does not auto
 
 ## How does Mailchimp pricing compare at 500 contacts?
 
-At 500 contacts, the published Mailchimp pricing can be set next to other published starts. This is the only list size where Essentials and Standard have a dollar on the page. At 1,000, 4,000, or 10,000 contacts, Mailchimp is check current pricing.
+At 500 contacts, Mailchimp's published prices can be compared with other published starting prices. This is the only list size where Essentials and Standard have a dollar on the page. At 1,000, 4,000, or 10,000 contacts, check Mailchimp's current pricing.
 
 | At 500 contacts | Monthly list price | What the price is for |
 | --- | --- | --- |

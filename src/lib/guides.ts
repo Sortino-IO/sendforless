@@ -56,7 +56,7 @@ export const guides: Guide[] = [
     href: "/pricing/mailchimp/",
     kicker: "Pricing",
     title: "Mailchimp pricing",
-    blurb: "Free limits, the $13 and $20 starts at 500 contacts, and why larger tiers say to check current pricing.",
+    blurb: "Free limits, the $13 and $20 starting prices at 500 contacts, and why you should check current pricing on larger tiers.",
   },
   {
     slug: "ghost-pricing",
@@ -203,7 +203,7 @@ export const guides: Guide[] = [
     href: "/how-we-compare/",
     kicker: "Method",
     title: "How we compare prices",
-    blurb: "Which official pages the prices come from, how a month of sends is counted, and what we do not measure.",
+    blurb: "Which official pages the prices come from, how a month of sends is counted, and what stays off the comparison.",
   },
   {
     slug: "mailchimp-review",

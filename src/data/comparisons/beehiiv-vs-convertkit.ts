@@ -48,7 +48,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so Creator is check current pricing, and beehiiv Lite is $199 a month, or $169 annual effective. Creator above 3,000 subscribers is on kit.com/pricing.`,
+    `At 10,000 subscribers, Kit Free is still $0 for broadcasts and beehiiv Lite is $139 a month, or $119 billed annually ($1,428 a year). At 25,000, Kit Free has ended, so check Creator's current pricing. beehiiv Lite is $199 a month, or $169 annual effective. Creator above 3,000 subscribers is on kit.com/pricing.`,
     `beehiiv annual is the yearly total divided by 12. Kit annual is 10 months' price for 12 months, which is a different discount. Compare monthly with monthly, or annual with annual. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
@@ -139,7 +139,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     ],
     cons: [
       "Sequences and visual automations do not run on Free.",
-      "Creator's price above 3,000 subscribers is check current pricing.",
+      "Above 3,000 subscribers, check Creator's current pricing.",
       "Paid plans get a larger share of Creator Network recommendations.",
       "Kit's pricing and free-plan articles do not list an ad network.",
     ],
@@ -155,7 +155,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     `Kit's pricing FAQ says paid plans include a migration service for lists and automations. If that is why you would pay Creator, confirm the current terms on Kit's site. Free-to-free moves are a CSV you handle. DNS for a custom domain is a Lite feature on beehiiv and a setup step on whichever Kit plan you use for a custom sending domain. Send a test broadcast before you delete the old account. Neither free plan meters the number of emails in that test the way Mailchimp does. The subscriber cap still applies.`,
   ],
   cheaper: [
-    `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid bill when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator, whose price at 10,000 is check current pricing.`,
+    `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid bill when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator. At 10,000 subscribers, check Creator's current pricing.`,
     `At 4,000 weekly subscribers, Starter is $19. Most lists under 10,000 subscribers can stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [

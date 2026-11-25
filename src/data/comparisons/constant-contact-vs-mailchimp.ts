@@ -13,20 +13,20 @@ export const constantContactVsMailchimp: CompareDoc = {
   showScenarioTable: false,
   switchingTitle: "Switching from Mailchimp to Constant Contact",
   chooseA: "You want phone and chat support on the entry plan, and you will read the contact tier on Constant Contact's page before you pay.",
-  chooseB: "The account already runs a store or journeys in Mailchimp, or the list is still inside the $13 or $20 start for 500 contacts.",
-  priceNoteA: "Lite starts at $12. The price at 4,000 contacts is check current pricing.",
+  chooseB: "The account already runs a store or journeys in Mailchimp, or the list is still at the $13 or $20 starting price for 500 contacts.",
+  priceNoteA: "Lite starts at $12. At 4,000 contacts, check current pricing.",
   priceNoteB: "Above 500 contacts. Essentials starts at $13 and Standard at $20, both for up to 500 contacts.",
   linkA: { href: "https://www.constantcontact.com/pricing", label: "Constant Contact pricing" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `A Mailchimp Constant Contact search is two contact bills. Constant Contact is the contact-priced competitor in this pair. Constant Contact's pricing page, checked 25 November 2026, says Lite starts at $12 a month, Standard at $35, and Premium at $80. The same page shows 50% off for three months. That offer is a promotion, not the list price used here. Prepay for 12 months is up to 15% off the starting prices: $10.20, $29.75, and $68. The exact tier still depends on contacts and sends.`,
-    `Mailchimp vs Constant Contact uses the same rule on the other side. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Above 500 contacts on Essentials and Standard, check current pricing. Unsubscribed contacts count on Mailchimp until you archive them. Full notes are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
+    `Mailchimp and Constant Contact are both priced by the contacts you store. Constant Contact's pricing page, checked 25 November 2026, says Lite starts at $12 a month, Standard at $35, and Premium at $80. The same page shows 50% off for three months. That offer is a promotion, not the list price. Prepay for 12 months is up to 15% off the starting prices: $10.20, $29.75, and $68. The exact tier still depends on contacts and sends.`,
+    `Mailchimp vs Constant Contact follows the same rule. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Above 500 contacts on Essentials and Standard, check current pricing. Unsubscribed contacts count on Mailchimp until you archive them. Full notes are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
     {
-      topic: "Published start",
+      topic: "Starting price",
       favors: "Close, before the tier",
-      why: "Lite starts at $12. Essentials starts at $13. Standard on Constant Contact starts at $35. Standard on Mailchimp starts at $20. Those are starts, not the price at a few thousand contacts.",
+      why: "Lite starts at $12. Essentials starts at $13. Standard on Constant Contact starts at $35. Standard on Mailchimp starts at $20. Those are starting prices, not the price at a few thousand contacts.",
     },
     {
       topic: "Price at 4,000 contacts",
@@ -62,12 +62,12 @@ export const constantContactVsMailchimp: CompareDoc = {
       name: "Price and sending",
       rows: [
         { feature: "Entry list price", a: "Lite from $12/mo", b: "Essentials from $13/mo, up to 500 contacts" },
-        { feature: "Next plan start", a: "Standard from $35/mo", b: "Standard from $20/mo, up to 500 contacts" },
-        { feature: "Top published start", a: "Premium from $80/mo", b: "Premium from $350/mo" },
+        { feature: "Next plan's starting price", a: "Standard from $35/mo", b: "Standard from $20/mo, up to 500 contacts" },
+        { feature: "Highest starting price", a: "Premium from $80/mo", b: "Premium from $350/mo" },
         { feature: "Price at 4,000 contacts", a: "Check current pricing", b: "Check current pricing" },
         { feature: "Send multiple", a: "10×, 12×, or 24× contacts", b: "10×, 12×, or 15× the contact limit" },
         { feature: "Overage", a: "$0.002 per extra send", b: "Paid plans bill the overage. Free pauses." },
-        { feature: "12-month prepay", a: "Up to 15% off the start ($10.20, $29.75, $68)", b: "Annual for Premium and Standard at 10,000+ contacts. Contact sales." },
+        { feature: "12-month prepay", a: "Up to 15% off the starting price ($10.20, $29.75, $68)", b: "Annual for Premium and Standard at 10,000+ contacts. Contact sales." },
       ],
     },
     {
@@ -86,7 +86,7 @@ export const constantContactVsMailchimp: CompareDoc = {
       id: "contacts",
       title: "How each one counts people",
       paragraphs: [
-        `Mailchimp's help article counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not count. Constant Contact's pricing FAQ says you pay for the contacts on the list and that every plan's send limit is a multiple of that count. It does not, on the page checked 25 November 2026, spell out unsubscribed people the way Mailchimp's help article does. Archive in Mailchimp before you compare the two tiers, or you will price people you no longer mail.`,
+        `Mailchimp's help article counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not count. Constant Contact's pricing FAQ says you pay for the contacts on the list and that every plan's send limit is a multiple of that count. It does not, on the page checked 25 November 2026, spell out unsubscribed people the way Mailchimp's help article does. Archive in Mailchimp before you compare both tiers, or you will pay for people you no longer mail.`,
       ],
     },
     {
@@ -120,13 +120,13 @@ export const constantContactVsMailchimp: CompareDoc = {
     ],
     cons: [
       "Unsubscribed contacts count until you archive them.",
-      "Above 500 contacts, Essentials and Standard are check current pricing.",
+      "Above 500 contacts, check current pricing for Essentials and Standard.",
       "Phone support is Premium, which starts at $350 a month.",
       "A free weekly letter to 200 people can miss the 500-send cap.",
     ],
   },
   who: [
-    `Choose Constant Contact when phone support on the cheap plan matters, and when you have opened the tier for your contact count. Lite at $12 is the start, not a quote for 4,000 people.`,
+    `Choose Constant Contact when phone support on the cheap plan matters, and when you have opened the tier for your contact count. Lite at $12 is the starting price, not a quote for 4,000 people.`,
     `Choose Mailchimp when the store is already there, or when 500 contacts at $13 or $20 still covers the account. Choose Free and stop if you are under 250 contacts and 500 sends.`,
     `Choose MailCheap when you only send, the email count fits a published plan, and you do not need events, social posts, or store journeys. Choose Kit (ConvertKit) Free if you only broadcast and you are under 10,000 subscribers.`,
   ],
@@ -136,7 +136,7 @@ export const constantContactVsMailchimp: CompareDoc = {
     `Deleting a Mailchimp account is permanent. Pause or Cancel Your Account is the help article: Manage my plan, Delete my account, type DELETE. Export first.`,
   ],
   cheaper: [
-    `At 4,000 weekly subscribers MailCheap Starter is $19 if the month fits 20,000 emails. Both Constant Contact and Mailchimp are check current pricing at that size. Kit Free is $0 for broadcasts under 10,000 subscribers. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `At 4,000 weekly subscribers MailCheap Starter is $19 if the month fits 20,000 emails. At that size, check current pricing for both Constant Contact and Mailchimp. Kit Free is $0 for broadcasts under 10,000 subscribers. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {
@@ -145,7 +145,7 @@ export const constantContactVsMailchimp: CompareDoc = {
     },
     {
       q: "Is Constant Contact better than Mailchimp?",
-      a: "<p>It depends on the job. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Mailchimp vs Constant Contact pricing above those starts is check current pricing on both sites. The main difference between Mailchimp and Constant Contact is the tools around the send: store journeys on Mailchimp, events and phone support on Constant Contact.</p>",
+      a: "<p>It depends on what you need. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Above those starting prices, check current pricing on both sites. The main difference between Mailchimp and Constant Contact is the tools around the send: store journeys on Mailchimp, events and phone support on Constant Contact.</p>",
     },
     {
       q: "Is Constant Contact free?",

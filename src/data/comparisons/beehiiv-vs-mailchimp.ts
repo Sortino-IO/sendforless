@@ -19,7 +19,7 @@ export const beehiivVsMailchimp: CompareDoc = {
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
     `beehiiv vs Mailchimp splits a publication from a contact database. beehiiv Free is $0 up to 2,500 subscribers and includes unlimited sends. It does not include automations, the ad network, or paid subscriptions. Lite at 4,000 subscribers is the up-to-5,000 bucket, $109 a month, or $95 a month billed annually ($1,140 a year). Checked 25 November 2026 on beehiiv.com/pricing.md.`,
-    `Mailchimp vs beehiiv on price stops being a number above 500 contacts. Free is 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Unsubscribed contacts count. The feature limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
+    `Mailchimp vs beehiiv has no published Mailchimp price above 500 contacts. Free is 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Unsubscribed contacts count. The feature limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
     {
@@ -30,7 +30,7 @@ export const beehiivVsMailchimp: CompareDoc = {
     {
       topic: "At 4,000 subscribers",
       favors: "Open Mailchimp before you decide",
-      why: "Lite is $109 a month. Mailchimp is check current pricing. A store that lives in Mailchimp can still be worth the unpublished tier.",
+      why: "Lite is $109 a month. For Mailchimp, check current pricing. A store that lives in Mailchimp can still be worth the unpublished tier.",
     },
     {
       topic: "Sends",
@@ -60,7 +60,7 @@ export const beehiivVsMailchimp: CompareDoc = {
       name: "Price and sending",
       rows: [
         { feature: "Free cap", a: "2,500 subscribers, unlimited sends", b: "250 contacts, 500 sends a month" },
-        { feature: "Paid start", a: "Lite $59/mo up to 1,000", b: "Essentials $13/mo up to 500 contacts" },
+        { feature: "Paid starting price", a: "Lite $59/mo up to 1,000", b: "Essentials $13/mo up to 500 contacts" },
         { feature: "At 4,000, monthly", a: "Lite $109", b: "Check current pricing" },
         { feature: "At 4,000, annual effective", a: "Lite $95", b: "Check current pricing" },
         { feature: "Platform fee on paid subs", a: "0% on Lite and Pro", b: "Not the same product" },
@@ -103,7 +103,7 @@ export const beehiivVsMailchimp: CompareDoc = {
   prosB: {
     pros: [
       "Free sends, up to a small cap.",
-      "Essentials and Standard have published starts at 500 contacts.",
+      "Essentials and Standard have published starting prices at 500 contacts.",
       "Store connections and journeys can stay.",
       "Short automations start at $13.",
     ],
@@ -124,12 +124,12 @@ export const beehiivVsMailchimp: CompareDoc = {
     `If the list is over 2,500, you are on a paid beehiiv bucket immediately. Recommendations on Free do not require Lite. Ads and paid subscriptions do.`,
   ],
   cheaper: [
-    `MailCheap Starter is $19 a month for a weekly letter at 4,000 subscribers if the emails fit 20,000. Lite is $109. Mailchimp is check current pricing. MailCheap does not include recommendations, ads, or paid subscriptions. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `MailCheap Starter is $19 a month for a weekly letter at 4,000 subscribers if the emails fit 20,000. Lite is $109. For Mailchimp, check current pricing. MailCheap does not include recommendations, ads, or paid subscriptions. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {
       q: "Is beehiiv cheaper than Mailchimp?",
-      a: "<p>Under 2,500 subscribers, beehiiv Free is $0 and Mailchimp Free stops at 250 contacts. At 4,000 subscribers Lite is $109 and Mailchimp is check current pricing. Compare your Mailchimp tier on Mailchimp's page before you call Lite cheaper.</p>",
+      a: "<p>Under 2,500 subscribers, beehiiv Free is $0 and Mailchimp Free stops at 250 contacts. At 4,000 subscribers Lite is $109. For Mailchimp, check current pricing. Compare your Mailchimp tier on Mailchimp's page before you call Lite cheaper.</p>",
     },
     {
       q: "Does beehiiv charge per email the way Mailchimp limits sends?",

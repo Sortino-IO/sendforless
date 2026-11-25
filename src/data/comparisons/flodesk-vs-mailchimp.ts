@@ -11,7 +11,7 @@ export const flodeskVsMailchimp: CompareDoc = {
   platformB: "Mailchimp",
   cheaperToggle: true,
   chooseA: "You want one sending price that does not move when the list grows, and you will use the templates and workflows more than a store database.",
-  chooseB: "You already run audiences, ads, or journeys in Mailchimp, or the list is still inside the 500-contact start where Standard is $20.",
+  chooseB: "You already run audiences, ads, or journeys in Mailchimp, or the list is still at the 500-contact starting price, where Standard is $20.",
   priceNoteA: "Email plan, any list size. Annual billing is $38 a month ($456 a year).",
   priceNoteB: "Above 500 contacts. Essentials starts at $13 and Standard at $20, both only for up to 500 contacts.",
   linkA: { href: "https://flodesk.com/pricing", label: "Flodesk pricing" },
@@ -29,7 +29,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     {
       topic: "Price at 4,000 subscribers",
       favors: "Unknown until you open Mailchimp",
-      why: "Flodesk Email stays $46 a month ($38 annual). Mailchimp is past 500 contacts, so the cell says check current pricing rather than a guessed tier.",
+      why: "Flodesk Email stays $46 a month ($38 annual). Mailchimp is past 500 contacts, so check current pricing rather than guessing a tier.",
     },
     {
       topic: "Price at 25,000 subscribers",
@@ -94,7 +94,7 @@ export const flodeskVsMailchimp: CompareDoc = {
       title: "Design and templates",
       paragraphs: [
         `Flodesk's pricing page leads with designer templates, custom fonts you upload, and a builder for emails, forms, pages, and checkouts. Personalized links and a link-in-bio page are on the same list. The Email plan is the one that adds sending, workflow automations, subject-line A/B tests, resend to people who did not open, and removal of Flodesk branding. Free keeps the forms and the templates' design tools in the sense that you can build pages, and it stops before a campaign goes out.`,
-        `That is a different bet from Mailchimp. Mailchimp Free includes a limited set of basic, featured, and themed templates. Essentials opens the full template library, A/B testing, and scheduled sends. Standard adds custom-coded templates and multivariate tests. If your requirement is "the message must be HTML we control," Standard is the Mailchimp plan that says so, and its price above 500 contacts is check current pricing. If your requirement is "start from a designed layout and do not watch a contact tier," Flodesk Email is the published $46.`,
+        `That is a different bet from Mailchimp. Mailchimp Free includes a limited set of basic, featured, and themed templates. Essentials opens the full template library, A/B testing, and scheduled sends. Standard adds custom-coded templates and multivariate tests. If the message has to be HTML you control, Standard is the Mailchimp plan that says so, and above 500 contacts, check current pricing. If you want to start from a designed layout and not track a contact tier, Flodesk Email is the published $46.`,
         `Templates do not export. A Flodesk layout stays in Flodesk. A Mailchimp template stays in Mailchimp. Budget time to rebuild the two or three emails you actually send, not the whole gallery. Custom fonts on Flodesk are part of that rebuild if you leave.`,
         `Everything is the plan when the page also checks out. It adds sales pages, payment plans, upsells, subscription payments, sales tax processing, and two extra seats (three total). It is $99 a month, or $948 a year. Do not buy Everything to get a nicer template. Email already has the designer templates. Buy Everything when you sell through Flodesk and you have read what happens to checkout if you later move down: Flodesk's help says sales pages unpublish and active checkout subscriptions end.`,
       ],
@@ -127,7 +127,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     ],
     cons: [
       "Free does not send email or run workflows.",
-      "$46 is more than Mailchimp's $20 Standard start at 500 contacts.",
+      "$46 is more than Mailchimp's $20 Standard starting price at 500 contacts.",
       "Checkout is a second plan at $99 a month, and downgrading unpublishes sales pages.",
       "Email includes one seat. A team of three means Everything.",
     ],
@@ -140,7 +140,7 @@ export const flodeskVsMailchimp: CompareDoc = {
       "The account can be the store audience, not only the letter.",
     ],
     cons: [
-      "The price above 500 contacts is check current pricing.",
+      "Above 500 contacts, check current pricing.",
       "Unsubscribed contacts count until archived.",
       "Essentials automation flows stop at 4 steps.",
       "Send limits scale with the contact tier, and tests count toward them.",
@@ -163,11 +163,11 @@ export const flodeskVsMailchimp: CompareDoc = {
   faqs: [
     {
       q: "How does Mailchimp vs Flodesk compare?",
-      a: "<p>At 500 contacts, Essentials is $13 and Standard is $20, and Flodesk Email is $46. At 4,000 subscribers Flodesk stays $46 and Mailchimp is check current pricing.</p>",
+      a: "<p>At 500 contacts, Essentials is $13 and Standard is $20, and Flodesk Email is $46. At 4,000 subscribers Flodesk stays $46. For Mailchimp, check current pricing.</p>",
     },
     {
       q: "Is Flodesk cheaper than Mailchimp?",
-      a: "<p>At 500 contacts, no, on the numbers published here. Mailchimp Standard starts at $20 and Essentials at $13. Flodesk Email is $46 a month. Above 500 contacts, compare $46 with the quote on Mailchimp's pricing page.</p>",
+      a: "<p>At 500 contacts, no. Mailchimp Standard starts at $20 and Essentials at $13. Flodesk Email is $46 a month. Above 500 contacts, compare $46 with the quote on Mailchimp's pricing page.</p>",
     },
     {
       q: "Does Flodesk's free plan send email?",
