@@ -1,0 +1,99 @@
+<div id="cookie-banner" class="cookie-banner" role="region" aria-labelledby="cookie-banner-title" tabindex="-1" hidden>
+  <p id="cookie-banner-title" class="cookie-title">Cookies</p>
+  <p class="cookie-copy">
+    We use Google Analytics to see which guides are read. In the EEA, the UK, Switzerland, Iceland, Liechtenstein, and Norway, those cookies stay off unless you accept. Elsewhere they stay on until you reject. Your choice is saved for six months.
+    <a href="/privacy/">Privacy policy</a>
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-choice" id="cookie-reject">Reject</button>
+    <button type="button" class="cookie-choice" id="cookie-accept">Accept</button>
+  </div>
+</div>
+<script>
+  import { CONSENT_STORAGE_KEY, CONSENT_TTL_MS, type ConsentChoice } from "../lib/consent";
+
+  const banner = document.getElementById("cookie-banner");
+  const accept = document.getElementById("cookie-accept");
+  const reject = document.getElementById("cookie-reject");
+  if (banner && accept instanceof HTMLButtonElement && reject instanceof HTMLButtonElement && banner.dataset.bound !== "1") {
+    banner.dataset.bound = "1";
+
+    function setExpanded(open: boolean) {
+      document.querySelectorAll<HTMLButtonElement>("[data-cookie-settings]").forEach((button) => {
+        button.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+
+    function closeBanner() {
+      banner.hidden = true;
+      setExpanded(false);
+      const active = document.activeElement;
+      if (active instanceof HTMLElement && banner.contains(active)) {
+        const opener = document.querySelector<HTMLButtonElement>("[data-cookie-settings]");
+        opener?.focus();
+      }
+    }
+
+    function openBanner(focus: boolean) {
+      banner.hidden = false;
+      setExpanded(true);
+      if (focus) reject.focus();
+    }
+
+    function storedChoice(): ConsentChoice | null {
+      try {
+        const raw = localStorage.getItem(CONSENT_STORAGE_KEY);
+        if (!raw) return null;
+        const saved = JSON.parse(raw) as { choice?: unknown; exp?: unknown };
+        if (
+          (saved.choice === "accepted" || saved.choice === "rejected") &&
+          typeof saved.exp === "number" &&
+          saved.exp > Date.now()
+        ) {
+          return saved.choice;
+        }
+        localStorage.removeItem(CONSENT_STORAGE_KEY);
+      } catch {
+        return null;
+      }
+      return null;
+    }
+
+    function pushUpdate(choice: ConsentChoice) {
+      const state = choice === "accepted" ? "granted" : "denied";
+      const update = {
+        ad_storage: state,
+        ad_user_data: state,
+        ad_personalization: state,
+        analytics_storage: state,
+      };
+      const w = window as Window & { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void };
+      w.dataLayer = w.dataLayer || [];
+      if (typeof w.gtag === "function") w.gtag("consent", "update", update);
+      else w.dataLayer.push(["consent", "update", update]);
+      w.dataLayer.push({ event: "consent_update", consent_choice: choice });
+    }
+
+    function choose(choice: ConsentChoice) {
+      try {
+        localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify({ choice, exp: Date.now() + CONSENT_TTL_MS }));
+      } catch {
+        // The choice still applies for this page view when storage is blocked.
+      }
+      pushUpdate(choice);
+      closeBanner();
+    }
+
+    accept.addEventListener("click", () => choose("accepted"));
+    reject.addEventListener("click", () => choose("rejected"));
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element) || !target.closest("[data-cookie-settings]")) return;
+      openBanner(true);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !banner.hidden) closeBanner();
+    });
+    if (!storedChoice()) openBanner(false);
+  }
+</script>

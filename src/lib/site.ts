@@ -7,10 +7,34 @@ export const AFFILIATE_CODE = "analyst";
 
 export const SITE_URL = "https://sendforless.com";
 export const SITE_NAME = "sendforless";
-export const CONTACT_EMAIL = "hello@sendforless.com";
 
 export const PRICE_CHECKED_ISO = "2026-11-24";
 export const PRICE_CHECKED_LABEL = "24 November 2026";
+
+const ISO_MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+/** Format YYYY-MM-DD as "25 November 2026". Falls back to the price-check label. */
+export function formatIsoDate(iso: string): string {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!match) return PRICE_CHECKED_LABEL;
+  const month = ISO_MONTHS[Number(match[2]) - 1];
+  const day = Number(match[3]);
+  if (!month || day < 1 || day > 31) return PRICE_CHECKED_LABEL;
+  return `${day} ${month} ${match[1]}`;
+}
 
 /**
  * Google Tag Manager container ID.

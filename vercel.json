@@ -36,7 +36,8 @@
     { "source": "/how-we-test", "destination": "/how-we-test/", "statusCode": 308 },
     { "source": "/affiliate-disclosure", "destination": "/affiliate-disclosure/", "statusCode": 308 },
     { "source": "/privacy", "destination": "/privacy/", "statusCode": 308 },
-    { "source": "/contact", "destination": "/contact/", "statusCode": 308 }
+    { "source": "/contact", "destination": "/contact/", "statusCode": 308 },
+    { "source": "/accessibility", "destination": "/accessibility/", "statusCode": 308 }
   ],
   "headers": [
     {
@@ -49,7 +50,15 @@
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'sha256-gR0J4bQInnVana0eJNFQ7S0ipQymu1ayAISFYHuSTds=' 'sha256-3pEL+0txxgKqExQbxzkJibHLia5z0+fUaWFbzmxn+dg=' 'sha256-ke6CFx5BZ+jsFo/k3YaVroLO73VZ20Dhi7OUmiFytF0=' 'sha256-GiJO5mdzo6Hvbh4FSDxlSOkuz32VdSAPlhrt63t1R9c=' 'sha256-HzqnERFgLKVwDQFOccuVVuviCgUOg30PApf3cq44UHM=' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://www.google.com https://stats.g.doubleclick.net; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://www.google.com https://stats.g.doubleclick.net; frame-src https://www.googletagmanager.com; upgrade-insecure-requests"
+        }
       ]
     }
   ]
