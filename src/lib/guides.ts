@@ -200,10 +200,45 @@ export const guides: Guide[] = [
   },
   {
     slug: "how-we-test",
-    href: "/how-we-test/",
+    href: "/how-we-compare/",
     kicker: "Method",
-    title: "How we test",
+    title: "How we compare prices",
     blurb: "Which official pages the prices come from, how a month of sends is counted, and what we do not measure.",
+  },
+  {
+    slug: "mailchimp-review",
+    href: "/reviews/mailchimp/",
+    kicker: "Review",
+    title: "Mailchimp review",
+    blurb: "Who Mailchimp still fits, why people leave, and which job belongs on another tool.",
+  },
+  {
+    slug: "constant-contact-vs-mailchimp",
+    href: "/compare/constant-contact-vs-mailchimp/",
+    kicker: "Comparison",
+    title: "Constant Contact vs Mailchimp",
+    blurb: "Starting prices, send multiples, and which list size is still check current pricing.",
+  },
+  {
+    slug: "beehiiv-vs-mailchimp",
+    href: "/compare/beehiiv-vs-mailchimp/",
+    kicker: "Comparison",
+    title: "beehiiv vs Mailchimp",
+    blurb: "A subscriber bucket against a contact tier, including the free caps.",
+  },
+  {
+    slug: "substack-vs-mailchimp",
+    href: "/compare/substack-vs-mailchimp/",
+    kicker: "Comparison",
+    title: "Substack vs Mailchimp",
+    blurb: "A 10% fee and a $0 publishing plan against Mailchimp's contact bill.",
+  },
+  {
+    slug: "mailcheap-vs-mailchimp",
+    href: "/compare/mailcheap-vs-mailchimp/",
+    kicker: "Comparison",
+    title: "MailCheap vs Mailchimp",
+    blurb: "A counted send against a contact tier, and the features MailCheap does not include.",
   },
 ];
 

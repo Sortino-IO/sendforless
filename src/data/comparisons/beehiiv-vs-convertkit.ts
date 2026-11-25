@@ -52,7 +52,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     `beehiiv annual is the yearly total divided by 12. Kit annual is 10 months' price for 12 months, which is a different discount. Compare monthly with monthly, or annual with annual. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
-    `beehiiv cells are from the pricing file. Kit cells are from the free-plan article (23 September 2026), the billing article, and the pricing page. Checked 24 November 2026.`,
+    `beehiiv cells are from the pricing file. Kit cells are from the free-plan article (23 September 2026), the billing article, and the pricing page. Checked 25 November 2026.`,
   ],
   matrix: [
     {
@@ -71,9 +71,9 @@ export const beehiivVsConvertkit: CompareDoc = {
       rows: [
         { feature: "Recommendations", a: "On every plan, including Free", b: "Creator Network on Free. Paid plans get priority and a larger share" },
         { feature: "Paid recommendations", a: "Lite and Pro", b: "Earning requires a paid plan" },
-        { feature: "Ad network", a: "Lite and Pro, not every region, not in trial", b: "Not in the Kit docs we read" },
+        { feature: "Ad network", a: "Lite and Pro, not every region, not in trial", b: "Not in the Kit docs" },
         { feature: "Automations", a: "Lite: 10 live. Pro: unlimited. Free: no", b: "Creator and Pro. Free can view the screens only" },
-        { feature: "Paid subscriptions", a: "Lite and Pro, 0% platform fee", b: "On Free. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026)." },
+        { feature: "Paid subscriptions", a: "Lite and Pro, 0% platform fee", b: "On Free. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 25 November 2026)." },
         { feature: "API and agents", a: "Read MCP on Free. Write on Lite. Send API on Pro", b: "API on Free. AI connectors on paid plans" },
       ],
     },
@@ -94,7 +94,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       title: "Sequences, automations, and segments",
       paragraphs: [
         `Kit Free does not run sequences. Creator does. At 1,000 subscribers Creator is $39 a month, against beehiiv Lite at $59 for the same bucket if you need beehiiv automations. Lite includes 10 live automations, with email, delay, tags, branches, and triggers for signups, tags, surveys, and purchases. Click-triggered automations and A/B splits inside automations are Pro. If you need 11 live workflows, Lite's cap is the reason to look at Pro or at Kit.`,
-        `Kit segments and tags are on Free. beehiiv segments are capped: 3 on Free, 10 on Lite, unlimited on Pro. A free beehiiv account can outgrow segments before it outgrows the 2,500-subscriber cap. Kit's free plan does not have that segment count in the article we read. It says tagging and segmentation are included.`,
+        `Kit segments and tags are on Free. beehiiv segments are capped: 3 on Free, 10 on Lite, unlimited on Pro. A free beehiiv account can outgrow segments before it outgrows the 2,500-subscriber cap. Kit's free plan does not have that segment count in the help article. It says tagging and segmentation are included.`,
         `Above 3,000 subscribers, do not assume Creator stays at $59. The billing article's published example stops at the 3,000 tier. Check Kit's pricing page and write that number next to Lite. At 10,000 subscribers Lite is $139 a month. Kit broadcasts are $0 until you need the sequence.`,
       ],
     },
@@ -103,7 +103,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       title: "Paid newsletters",
       paragraphs: [
         `beehiiv takes 0% of paid subscription revenue on Lite and Pro and charges the subscriber tier instead. Stripe is 2.9% + $0.30. Free cannot sell subscriptions. One paid tier is on Lite. Unlimited tiers are on Pro. Digital products exist on Free with a cap of 1 product.`,
-        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026). You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, Creator is the bill.`,
+        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 25 November 2026). You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, Creator is the bill.`,
         `Moving a paid subscriber between these two does not move the card on file. Export the address, recreate the offer, and charge again. beehiiv data exports are listed on every plan. Kit's paid plans mention a migration service. Confirm that service on Kit's site if you are paying for it.`,
       ],
     },

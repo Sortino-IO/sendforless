@@ -17,7 +17,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
   linkA: { href: "https://www.mailerlite.com/pricing", label: "MailerLite pricing" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `Both tools send campaigns and run automations. The invoice is the split. MailerLite publishes every Comfort and Power tier through 200,000 subscribers in <a href="https://www.mailerlite.com/pricing.md">mailerlite.com/pricing.md</a> (file dated 8 September 2026, re-read 24 November 2026). Mailchimp's marketing pricing page does not show a static dollar above 500 contacts. <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> starts at $13 a month and <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month, each for up to 500 contacts.`,
+    `Both tools send campaigns and run automations. The invoice is the split. MailerLite publishes every Comfort and Power tier through 200,000 subscribers in <a href="https://www.mailerlite.com/pricing.md">mailerlite.com/pricing.md</a> (file dated 8 September 2026, checked 25 November 2026). Mailchimp's marketing pricing page does not show a static dollar above 500 contacts. <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> starts at $13 a month and <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month, each for up to 500 contacts.`,
     `A second split is who counts. MailerLite bills active subscribers. Unsubscribed and bounced people do not count, but anyone active at any point in the billing cycle still counts until the anniversary, even if you delete them. Mailchimp's help counts subscribed, unsubscribed, and non-subscribed contacts. Archived, cleaned, and deleted contacts do not. A list you never cleaned can cost more on Mailchimp than the active-reader count suggests.`,
   ],
   differences: [
@@ -58,7 +58,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     `Annual on MailerLite is 10% off the monthly rate, billed as the lower monthly figure in their yearly column. Pay the monthly rate or the annual rate. Mailchimp's annual rate above 500 contacts is on mailchimp.com, so those cells say check current pricing.`,
   ],
   featuresIntro: [
-    `Rows come from MailerLite's pricing file and from Mailchimp's help article "About Mailchimp Pricing Plans," plus the Essentials and Standard landers for the $13 and $20 starting prices. A cell says "Check current pricing" or "Not in the docs we read" when the page did not state the limit.`,
+    `Rows come from MailerLite's pricing file and from Mailchimp's help article "About Mailchimp Pricing Plans," plus the Essentials and Standard landers for the $13 and $20 starting prices. A cell says "Check current pricing" or "Not in the docs" when the page did not state the limit.`,
     `MailerLite says paid plans share one feature set and you pay for subscribers and sending volume. That is not quite true of the free plan, which caps automations at 3, websites and landing pages at 1 each, forms at 3, and blocks API and MCP sending. Mailchimp gates automations, seats, and audiences by plan name.`,
   ],
   matrix: [
@@ -122,7 +122,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
         `MailerLite's pricing FAQ says it may monitor lists, content, and response data so shared IPs stay usable, and that it does not rent or sell customer data. Data is stored in the EU in an ISO 27001 data center. A dedicated IP is an add-on on Comfort and part of the Enterprise description, which also lists a deliverability consultation. That is a paid extra, not the default Comfort inbox.`,
         `Comfort stops sending when the monthly email cap is used up. You can move to Power or wait for the billing date. The cap is 10 times the top of the tier, not 10 times your exact subscriber count. At the up-to-10,000 tier the cap is 100,000 emails. A weekly issue to 10,000 people is about 43,334 emails, so it fits. A daily issue is subscribers × 7 × 4.33, about 303,000 emails, which does not fit Comfort. Price Power at $129 a month at that tier if you send most days.`,
         `Mailchimp counts every send, including tests and transactional mail, against the monthly limit. Free adds a daily cap of 250. If Free goes over 250 contacts, sending of live and test mail is held until you upgrade or delete contacts. On paid plans, going over the contact limit does not stop the account. Mailchimp bills an extra charge and asks you to raise the tier if the growth is permanent. Unsubscribed people keep counting until you archive them.`,
-        `None of these rules is an inbox-placement test. We did not send mail on either platform. Authentication (SPF, DKIM, and a custom sending domain where the plan allows it) is still your step after the import. MailerLite puts custom domains on Comfort and Power. Mailchimp's pricing help does not use those words in the feature list we quoted, so confirm the domain steps in the account you actually buy.`,
+        `None of these rules is an inbox-placement test. Authentication (SPF, DKIM, and a custom sending domain where the plan allows it) is still your step after the import. MailerLite puts custom domains on Comfort and Power. Mailchimp's pricing help does not use those words in the feature list we quoted, so confirm the domain steps in the account you actually buy.`,
       ],
     },
     {
@@ -157,7 +157,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
       "Going over a paid contact limit bills extra instead of hard-stopping the send.",
     ],
     cons: [
-      "Above 500 contacts the dollar amount is check current pricing, not a table on this site.",
+      "Above 500 contacts the dollar amount is check current pricing, not a published table.",
       "Unsubscribed and non-subscribed contacts count until you archive them.",
       "Essentials flows stop at 4 steps. Longer automation means Standard.",
       "Free is 500 sends a month and 250 a day, which a weekly letter outgrows quickly.",
@@ -186,7 +186,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
     {
       q: "How much is MailerLite for 10,000 subscribers?",
-      a: "<p>Comfort is $89 a month, or $80.10 on annual billing. Power is $129 a month, or $116.10 annually. Comfort's email cap at that tier is 100,000. A weekly issue uses about 43,334 of them. Checked 24 November 2026 in MailerLite's pricing file.</p>",
+      a: "<p>Comfort is $89 a month, or $80.10 on annual billing. Power is $129 a month, or $116.10 annually. Comfort's email cap at that tier is 100,000. A weekly issue uses about 43,334 of them. Checked 25 November 2026 in MailerLite's pricing file.</p>",
     },
     {
       q: "Does Mailchimp charge for unsubscribed contacts?",
@@ -194,7 +194,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
     {
       q: "Which one has better automations?",
-      a: "<p>MailerLite Comfort includes 50 automations and 100 steps. Mailchimp Essentials stops at flows of 4 steps, and Standard is where expanded flows start. Pick from the workflow you can describe, not from a score. We did not run either builder.</p>",
+      a: "<p>MailerLite Comfort includes 50 automations and 100 steps. Mailchimp Essentials stops at flows of 4 steps, and Standard is where expanded flows start. Pick from the workflow you can describe. The figures are the vendors' documented limits.</p>",
     },
     {
       q: "Can I move automations from Mailchimp to MailerLite?",
@@ -209,8 +209,12 @@ export const mailerliteVsMailchimp: CompareDoc = {
       a: "<p>MailerLite Free is 250 active subscribers and 2,500 emails a month. Mailchimp Free is 250 contacts, 500 sends a month, and a daily cap of 250. Neither free plan covers a 4,000-person weekly letter.</p>",
     },
     {
+      q: "How does Mailchimp vs MailerLite differ?",
+      a: "<p>Comfort has a published price at each subscriber tier. Mailchimp above 500 contacts is check current pricing. Stay on Mailchimp when the store stays. Price MailerLite when you want the ladder and the pages.</p>",
+    },
+    {
       q: "When is MailCheap the lower bill?",
-      a: "<p>When you only need to send, the cadence fits a published MailCheap plan, and you do not need paid newsletters, a stack of landing pages, or store journeys. At 4,000 weekly subscribers Starter is $19. Links to MailCheap on this site are affiliate links.</p>",
+      a: "<p>When you only need to send, the cadence fits a published MailCheap plan, and you do not need paid newsletters, a stack of landing pages, or store journeys. At 4,000 weekly subscribers Starter is $19. Links to MailCheap are affiliate links.</p>",
     },
   ],
   related: [

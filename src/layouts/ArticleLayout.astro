@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import HeroMark from "../components/HeroMark.astro";
+import SiblingNav from "../components/SiblingNav.astro";
 import { guidesBySlug, hubGuides } from "../lib/guides";
 import { formatIsoDate, mailcheapHref, PRICE_CHECKED_ISO, SITE_NAME, SITE_URL } from "../lib/site";
 
@@ -254,6 +255,7 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema, itemListSchema].f
             <span class="btn-note">Affiliate link. We may earn a commission. This does not change the price you pay. sendforless is not MailCheap.</span>
           </p>
         )}
+        <SiblingNav />
         {relatedGuides.length > 0 && (
           <div class="related">
             <h2>Related reading</h2>

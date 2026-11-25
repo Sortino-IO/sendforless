@@ -1,5 +1,6 @@
 ---
 import Calculator from "./Calculator.astro";
+import CostChart from "./CostChart.astro";
 import { DEFAULT_ISSUES, DEFAULT_SUBS, money, quote } from "../lib/pricing";
 import { FEE_MRR, SCENARIO_SUBS, scenarioCell } from "../lib/scenarios";
 import { PRICE_CHECKED_LABEL, mailcheapHref } from "../lib/site";
@@ -30,6 +31,14 @@ const cardB = {
 };
 
 const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Lite or Pro" : "Ghost(Pro) Publisher");
+
+const chartRows = [rowA, rowB]
+  .filter((row): row is NonNullable<typeof rowA> => Boolean(row && typeof row.monthly === "number"))
+  .map((row) => ({
+    label: row.platform,
+    value: row.monthly as number,
+    note: row.plan,
+  }));
 ---
 
 <section id="short-answer">
@@ -62,7 +71,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
 </section>
 
 <section id="differences">
-  <h2>Key differences between {doc.a} and {doc.b}</h2>
+  <h2>Key differences</h2>
   {doc.differencesIntro.map((html) => <p set:html={html} />)}
   <div class="table-wrap">
     <table>
@@ -88,7 +97,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
 </section>
 
 <section id="pricing">
-  <h2>{doc.a} vs {doc.b} pricing at 1,000 to 25,000 subscribers</h2>
+  <h2>How does {doc.a} vs {doc.b} pricing compare?</h2>
   {doc.pricingIntro.map((html) => <p set:html={html} />)}
   <Calculator
     platforms={[doc.platformA, doc.platformB]}
@@ -97,6 +106,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
     defaultSubs={DEFAULT_SUBS}
     defaultIssues={DEFAULT_ISSUES}
   />
+  {doc.showScenarioTable !== false && (
   <div class="table-wrap">
     <table>
       <caption>
@@ -128,11 +138,20 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
       </tbody>
     </table>
   </div>
+  )}
   <p class="method-note">Emails are subscribers × 4.33 a week, rounded up; annual is the yearly charge ÷ 12.</p>
+  {chartRows.length > 0 && (
+    <CostChart
+      title={`${doc.a} vs ${doc.b} pricing at 4,000 subscribers`}
+      description={`Month-to-month list price for one issue a week. Checked ${PRICE_CHECKED_LABEL}. A missing bar means that price is not a published fixed dollar.`}
+      caption={`Verified dollars only. Checked ${PRICE_CHECKED_LABEL}.`}
+      rows={chartRows}
+    />
+  )}
 </section>
 
 <section id="features">
-  <h2>{doc.a} vs {doc.b} features compared</h2>
+  <h2>Features</h2>
   {doc.featuresIntro.map((html) => <p set:html={html} />)}
   {doc.matrix.map((group) => (
     <div class="table-wrap">
@@ -228,12 +247,12 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
 </section>
 
 <section id="who">
-  <h2>Who should choose {doc.a} vs {doc.b}</h2>
+  <h2>Who should choose which</h2>
   {doc.who.map((html) => <p set:html={html} />)}
 </section>
 
 <section id="switching">
-  <h2>Switching from {doc.a} to {doc.b}</h2>
+  <h2>{doc.switchingTitle ?? `Switching from ${doc.a} to ${doc.b}`}</h2>
   {doc.switching.map((html) => <p set:html={html} />)}
 </section>
 
@@ -250,7 +269,7 @@ const feeName = (kind: "beehiiv" | "ghost") => (kind === "beehiiv" ? "beehiiv Li
 )}
 
 <section id="faq">
-  <h2>{doc.a} vs {doc.b} FAQ</h2>
+  <h2>FAQ</h2>
   <div class="faq">
     {doc.faqs.map((item, index) => (
       <details open={index === 0}>

@@ -17,7 +17,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
   linkA: { href: mc, label: "MailCheap pricing (affiliate)", affiliate: true },
   linkB: { href: "https://www.beehiiv.com/pricing", label: "beehiiv pricing" },
   differencesIntro: [
-    `At 4,000 subscribers and one issue a week, MailCheap Starter is $19 a month and beehiiv Lite is $109 a month. Those are month-to-month list prices checked 24 November 2026. MailCheap's plans help and pricing page list Starter at 20,000 emails and 10,000 subscribers. The 4.33-week estimate is about 17,334 emails, which fits. If you also send welcome emails or tests, price Growth at $39.`,
+    `At 4,000 subscribers and one issue a week, MailCheap Starter is $19 a month and beehiiv Lite is $109 a month. Those are month-to-month list prices checked 25 November 2026. MailCheap's plans help and pricing page list Starter at 20,000 emails and 10,000 subscribers. The 4.33-week estimate is about 17,334 emails, which fits. If you also send welcome emails or tests, price Growth at $39.`,
     `beehiiv does not meter sends. Lite at the up-to-5,000 bucket is $109 a month or $1,140 a year ($95 a month). Free is $0 only through 2,500 subscribers, and it omits automations, paid subscriptions, and the ad network. Full beehiiv buckets are on <a href="/pricing/beehiiv/">beehiiv pricing</a>. The MailCheap write-up is the <a href="/reviews/mailcheap/">review</a>.`,
   ],
   differences: [
@@ -53,7 +53,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     `Plans above the published tables: MailCheap asks you to talk to them past 5 million emails a month. beehiiv Enterprise is custom, and Lite stops at 100,000 subscribers. Pro continues through 250,000.`,
   ],
   featuresIntro: [
-    `MailCheap says every hosted plan includes the same features and the plan picks the volume. The rows below use the plans help, the sending and deliverability help, the MCP docs, the self-hosted page, and the November 2026 changelog notes for automations, segments, and themes. beehiiv rows use the pricing file. Checked 24 November 2026.`,
+    `MailCheap says every hosted plan includes the same features and the plan picks the volume. The rows below use the plans help, the sending and deliverability help, the MCP docs, the self-hosted page, and the November 2026 changelog notes for automations, segments, and themes. beehiiv rows use the pricing file. Checked 25 November 2026.`,
   ],
   matrix: [
     {
@@ -104,7 +104,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
       paragraphs: [
         `MailCheap's sending-pace help says most issues go out at once, and two cases go slower. The first send to contacts who have never received an issue, such as a fresh import, goes in steps once the group is over 1,000 people: 1,000 first, then about 30% more, then the rest. Each step waits at least 30 minutes, and it continues only if bounces, complaints, and refusals stay low. A list of 5,000 new contacts is described as 1,000, then 1,500, then 2,500. Automations count toward the same new-contact steps. With 1,000 or fewer new contacts, they go at once.`,
         `Gmail traffic is paced per sending domain. The help's table starts at 2,000 Gmail readers on day one, then 4,000, 8,000, 16,000, and 24,000 as the ceiling grows. Other inboxes are not on that ramp. A domain that already sends its volume does not start over. If Gmail asks the sender to slow down, MailCheap pauses that domain's sends for 6 hours and then resumes from a lower ceiling. You cannot skip the hours by switching domains.`,
-        `The deliverability help states the pause thresholds. A campaign pauses when more than 2.5% hard bounce (at least 5), more than 0.08% are marked spam (at least 2), or more than 2% are refused (at least 10). You can resume from the campaign page after you know why. Above 5% refused (at least 25), a person at MailCheap reviews the rest. An automation turns off on the same kind of rule, and people wait in place. These are the documented gates. They are not an inbox-placement score, and this site did not send a test campaign.`,
+        `The deliverability help states the pause thresholds. A campaign pauses when more than 2.5% hard bounce (at least 5), more than 0.08% are marked spam (at least 2), or more than 2% are refused (at least 10). You can resume from the campaign page after you know why. Above 5% refused (at least 25), a person at MailCheap reviews the rest. An automation turns off on the same kind of rule, and people wait in place. These are the documented gates. They are documented gates, not an inbox-placement score.`,
         `At the email cap, signups still work. A campaign that needs more emails than you have left waits. Welcome emails pause once the allowance is gone, and people who join in the meantime do not get one later. Automation emails wait and go out when you upgrade or the next month starts. beehiiv does not have this meter. Its deliverability line in the pricing file is "optimized deliverability" on every plan, and deliverability reports are an Enterprise item marked as coming later. That is a feature label, not a rate we measured.`,
         `Signup velocity is capped too, so a script cannot flood the list. Starter allows 100 signup emails every 10 minutes, 1,000 confirmation emails a day, 600 API signups an hour, and 300 form signups every 10 minutes. Higher plans raise those numbers. Past the limit, new people may join without a confirmation until the window clears. If you import a bought list, MailCheap's import help says bounces and complaints can pause sending and block the account. Import people who asked for the letter.`,
       ],
@@ -122,7 +122,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
       id: "website",
       title: "Website, branding, and self-hosting",
       paragraphs: [
-        `Each MailCheap newsletter has a public site: a home page, a page per issue, and an author page. It is on for new newsletters and goes live after the first issue, at a mailcheap.ai host or on a subdomain you verify. Search engines get a sitemap. Themes cover fonts, colors, corners, and light or dark appearance. The changelog describes eight themes and separate light and dark colors. Buttons follow the theme. There is no beehiiv logo to remove, because branding removal is not the product. The footer does print a postal address. Until you save yours, the help says emails print MailCheap's business address. Set the address before the first real send.`,
+        `Each MailCheap newsletter has a public site: a home page, a page per issue, and an author page. It is on for new newsletters and goes live after the first issue, at a mailcheap.ai host or on a subdomain you verify. Search engines get a sitemap. Themes cover fonts, colors, corners, and light or dark appearance. The changelog describes eight themes and separate light and dark colors. Buttons follow the theme. There is no beehiiv logo to remove, because beehiiv does not add one. The footer does print a postal address. Until you save yours, the help says emails print MailCheap's business address. Set the address before the first real send.`,
         `beehiiv includes a website on every plan. Removing beehiiv branding is Pro. Custom domains start on Lite. Free is one custom page. Lite is 10. Podcast downloads are capped. If the site is a publication with a paywall and ads, that is the beehiiv column. If the site is an archive of issues plus a signup form, MailCheap documents that on the paid plan.`,
         `Self-hosting is mailcheap.ai/self-hosted. The page says the app is AGPL-3.0, you run it with your own Amazon SES or PostShiba account, and there is no plan cap and no MailCheap support. Their illustration is 10,000 readers and 4 issues a month at about $4 to $6 of SES, plus free tiers of the database, queue, and host, against Growth at $39 on the hosted product. That illustration is theirs, for that volume. It is not a quote for your server, and it does not include the time to keep the app updated. beehiiv's pricing file does not offer a matching self-host price. Hosted MailCheap and hosted beehiiv are the bills in the table above.`,
       ],
@@ -168,6 +168,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     `Tags can travel in the file. Automations, the website theme, and any beehiiv ad setup do not. DNS for a custom domain is a Lite feature on beehiiv and a domain you verify on MailCheap. Keep the old account until one campaign has left the new tool and a reader who replies to the old from-address still reaches you.`,
   ],
   cheaper: null,
+  switchingTitle: "Switching from beehiiv to MailCheap",
   faqs: [
     {
       q: "Is MailCheap cheaper than beehiiv?",
@@ -198,8 +199,8 @@ export const mailcheapVsBeehiiv: CompareDoc = {
       a: "<p>No. Unlimited sends are on every plan. You pay the subscriber bucket. A second issue in the week does not raise Lite. On MailCheap it doubles the emails and can raise the plan.</p>",
     },
     {
-      q: "Are MailCheap links on this page affiliate links?",
-      a: "<p>Yes. sendforless may earn a commission. The price you pay does not change. The comparison still uses MailCheap's published plan table, including the features it does not have.</p>",
+      q: "Are MailCheap links affiliate links?",
+      a: "<p>Yes. sendforless may earn a commission if you buy through those links. The price you pay does not change. The comparison still uses MailCheap's published plan table, including the features it does not have.</p>",
     },
   ],
   related: [
@@ -210,6 +211,6 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     { href: "/reviews/beehiiv/", kicker: "Review", title: "beehiiv review" },
     { href: "/alternatives/beehiiv/", kicker: "Alternatives", title: "beehiiv alternatives" },
     { href: "/compare/beehiiv-vs-substack/", kicker: "Comparison", title: "beehiiv vs Substack" },
-    { href: "/how-we-test/", kicker: "Method", title: "How we compare prices" },
+    { href: "/how-we-compare/", kicker: "Method", title: "How we compare prices" },
   ],
 };

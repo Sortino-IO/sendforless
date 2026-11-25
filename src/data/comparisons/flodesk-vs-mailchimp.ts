@@ -29,7 +29,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     {
       topic: "Price at 4,000 subscribers",
       favors: "Unknown until you open Mailchimp",
-      why: "Flodesk Email stays $46 a month ($38 annual). Mailchimp is past 500 contacts, so this site prints check current pricing rather than a guessed tier.",
+      why: "Flodesk Email stays $46 a month ($38 annual). Mailchimp is past 500 contacts, so the cell says check current pricing rather than a guessed tier.",
     },
     {
       topic: "Price at 25,000 subscribers",
@@ -53,7 +53,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     `The calculator above is these two plans only, at whatever list size you type. The table under it is locked to one issue a week so it still makes sense with JavaScript off. Flodesk does not meter that issue. Mailchimp does, at 10 or 12 times the contact limit depending on the plan.`,
   ],
   featuresIntro: [
-    `Flodesk rows come from flodesk.com/pricing and the unlimited-plans help article edited 19 November 2026. Mailchimp rows come from the pricing-plans help and the Essentials and Standard landers. Checked 24 November 2026.`,
+    `Flodesk rows come from flodesk.com/pricing and the unlimited-plans help article edited 19 November 2026. Mailchimp rows come from the pricing-plans help and the Essentials and Standard landers. Checked 25 November 2026.`,
   ],
   matrix: [
     {
@@ -84,7 +84,7 @@ export const flodeskVsMailchimp: CompareDoc = {
         { feature: "CSV export", a: "Yes, listed on the pricing page", b: "Yes. Audience export. Reports are separate" },
         { feature: "Custom sending domain", a: "Listed, to authenticate the sender", b: "Confirm in the account. Not in the short pricing help list" },
         { feature: "Subscriptions and checkout", a: "Everything plan", b: "Store and transactional products are separate from the newsletter tier" },
-        { feature: "Deliverability tools", a: "Deliverability Center on the pricing page", b: "Not a named center in the pricing help we read" },
+        { feature: "Deliverability tools", a: "Deliverability Center on the pricing page", b: "Not a named center in the pricing help" },
       ],
     },
   ],
@@ -112,9 +112,9 @@ export const flodeskVsMailchimp: CompareDoc = {
       id: "deliverability",
       title: "Deliverability and sending rules",
       paragraphs: [
-        `Flodesk's pricing page lists a Deliverability Center and a custom domain "to improve email deliverability." That is their description of the feature, not a measurement from this site. Paid plans send unlimited email to unlimited subscribers. There is no contact tier to outgrow and no 10x send cap to do the math on. The trade is the flat $46, which is expensive at 300 people and easier to justify when the list is large and Mailchimp's unpublished tier is higher.`,
+        `Flodesk's pricing page lists a Deliverability Center and a custom domain "to improve email deliverability." That is their description of the feature. Paid plans send unlimited email to unlimited subscribers. There is no contact tier to outgrow and no 10× send cap to do the math on. The trade is the flat $46, which is expensive at 300 people and easier to justify when the list is large and Mailchimp's unpublished tier is higher.`,
         `Mailchimp meters sends. Tests count. Free adds a 250-a-day cap. Paid overages bill rather than hard-stop, according to the pricing help. Unsubscribed contacts inflate the tier. Archive them before you compare a Mailchimp quote with $46. A weekly letter to 25,000 people is about 108,334 emails. Standard's send allowance is 12 times the contact limit, so a 25,000-contact limit allows 300,000 sends, which covers that weekly issue. The price of the 25,000 tier is still check current pricing.`,
-        `After a move, authenticate the domain on the new platform and send a test. A deliverability page is not a placement rate.`,
+        `After a move, authenticate the domain on the new platform and send a test.`,
       ],
     },
   ],
@@ -162,6 +162,10 @@ export const flodeskVsMailchimp: CompareDoc = {
   ],
   faqs: [
     {
+      q: "How does Mailchimp vs Flodesk compare?",
+      a: "<p>At 500 contacts, Essentials is $13 and Standard is $20, and Flodesk Email is $46. At 4,000 subscribers Flodesk stays $46 and Mailchimp is check current pricing.</p>",
+    },
+    {
       q: "Is Flodesk cheaper than Mailchimp?",
       a: "<p>At 500 contacts, no, on the numbers published here. Mailchimp Standard starts at $20 and Essentials at $13. Flodesk Email is $46 a month. Above 500 contacts, compare $46 with the quote on Mailchimp's pricing page.</p>",
     },
@@ -171,7 +175,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     },
     {
       q: "What is Flodesk's annual price?",
-      a: "<p>Email is $456 a year, shown as $38 a month. Everything is $948 a year, shown as $79 a month. Monthly billing stays $46 and $99. Checked 24 November 2026.</p>",
+      a: "<p>Email is $456 a year, shown as $38 a month. Everything is $948 a year, shown as $79 a month. Monthly billing stays $46 and $99. Checked 25 November 2026.</p>",
     },
     {
       q: "Do Flodesk templates work in Mailchimp?",

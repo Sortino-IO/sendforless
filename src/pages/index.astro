@@ -18,16 +18,16 @@ const homeGuides = [
 ].map((slug) => guides.find((guide) => guide.slug === slug)!);
 
 const description =
-  "What a weekly newsletter costs on MailCheap, beehiiv, Kit, Ghost, Flodesk, MailerLite, Mailchimp, and Substack. Prices are month-to-month USD list rates checked on 24 November 2026.";
+  "What a newsletter costs at your list size on beehiiv, Kit, Ghost, Flodesk, MailerLite, Mailchimp, Substack and MailCheap. Free calculator, official prices.";
 ---
-<BaseLayout title="Newsletter platform costs, by list size" description={description} ogImage="/og/home.png">
+<BaseLayout title="Newsletter Platform Pricing Calculator (2026)" description={description} ogImage="/og/home.png">
   <main id="main">
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
           <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Newsletter platforms</p>
-          <h1>What your newsletter costs, at your list size</h1>
-          <p class="lede">Newsletter platforms charge by subscribers, by emails sent, or by a share of paid revenue. Enter your list size and how often you send to see each bill.</p>
+          <h1>Newsletter platform pricing calculator</h1>
+          <p class="lede">A newsletter platform pricing calculator shows what a list costs on beehiiv, Kit (ConvertKit), Ghost, Flodesk, MailerLite, Mailchimp, Substack, and MailCheap. Enter a list size and how often you send.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#calculator">Open the calculator</a>
             <a class="btn btn-secondary" href="/compare/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a>
@@ -36,7 +36,7 @@ const description =
             <p class="hint">Jump to a platform</p>
             <a class="chip" href="/reviews/mailcheap/"><span class="avatar av-violet">MC</span> MailCheap</a>
             <a class="chip" href="/pricing/beehiiv/"><span class="avatar av-gold">bh</span> beehiiv</a>
-            <a class="chip" href="/pricing/convertkit/"><span class="avatar av-green">Kt</span> Kit</a>
+            <a class="chip" href="/pricing/convertkit/"><span class="avatar av-green">Kt</span> Kit (ConvertKit)</a>
             <a class="chip" href="/pricing/flodesk/"><span class="avatar av-teal">Fd</span> Flodesk</a>
             <a class="chip" href="/alternatives/mailchimp/"><span class="avatar av-yellow">Ch</span> Mailchimp</a>
             <a class="chip" href="/alternatives/substack/"><span class="avatar av-orange">Sb</span> Substack</a>
@@ -62,7 +62,7 @@ const description =
                 <span class="sub">Monthly billing, up to 5,000 subscribers</span>
               </div>
             </div>
-            <p class="chart-foot">A month with five weekly sends to 4,000 people is 20,000 emails, before welcome emails and tests. That uses all of Starter. If you send those too, price Growth at $39. Kit and Substack can still be $0 here. Prices checked 24 November 2026.</p>
+            <p class="chart-foot">A month with five weekly sends to 4,000 people is 20,000 emails, before welcome emails and tests. That uses all of Starter. If you send those too, price Growth at $39. Kit and Substack can still be $0 here. Prices checked 25 November 2026.</p>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ const description =
         </div>
         <Calculator />
         <p class="method-note" id="method">
-          Prices checked 24 November 2026. The monthly estimate is subscribers times issues per week times 4.33, so a typical month is included. A month with five send weeks is higher, and MailCheap also counts welcome emails and tests. Short promotions are ignored, including Kit’s introductory price on Creator through 1 December 2026. Sources are on <a href="/how-we-test/">How we test</a>.
+          Prices checked 25 November 2026. The monthly estimate is subscribers times issues per week times 4.33, so a typical month is included. A month with five send weeks is higher, and MailCheap also counts welcome emails and tests. Short promotions are ignored, including Kit’s introductory price on Creator through 1 December 2026. Sources are on <a href="/how-we-compare/">How we compare prices</a>.
         </p>
 
         <CostChart

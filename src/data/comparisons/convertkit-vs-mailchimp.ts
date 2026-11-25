@@ -48,7 +48,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `Ignore the introductory Creator offer if you see one. On 24 November 2026 Kit's pricing page showed 50% off the first three months, through 1 December 2026. This site uses the $39 list price. A discount that ends is not the renewal.`,
+    `Ignore the introductory Creator offer if you see one. On 25 November 2026 Kit's pricing page showed 50% off the first three months, through 1 December 2026. Comparisons use the $39 list price. A discount that ends is not the renewal.`,
     `Kit moves you up a tier automatically when you pass it. Moving down is a switch you make in billing, and it starts on the next bill, not today. The billing help's worked example: 1,200 subscribers at $59, cleaned to 800, can move to the $39 tier. Sales tax can apply based on your billing address. That tax is not in the $39.`,
     `Mailchimp's send math still matters if you stay. At a 10,000-contact Standard limit the allowance is 12 times 10,000, which is 120,000 sends. A weekly letter is about 43,334 emails. The allowance can fit while the price remains on Mailchimp's page. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
@@ -71,7 +71,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       name: "Sequences, selling, and growth",
       rows: [
         { feature: "Visual automations and sequences", a: "Creator and Pro, not Free", b: "Essentials up to 4 steps. Standard expands them" },
-        { feature: "Digital products and subscriptions", a: "On Free. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026).", b: "Store connections, not a published newsletter take rate" },
+        { feature: "Digital products and subscriptions", a: "On Free. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 25 November 2026).", b: "Store connections, not a published newsletter take rate" },
         { feature: "Recommendations", a: "Creator Network on Free. Paid plans get more distribution", b: "Not the same network. Mailchimp is the audience you already have" },
         { feature: "Forms and landing pages", a: "Unlimited on Free", b: "Available, including a trial of them on Free" },
         { feature: "A/B tests on broadcasts", a: "On Free", b: "Essentials and up" },
@@ -94,7 +94,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       id: "paid",
       title: "Paid newsletters and products",
       paragraphs: [
-        `Kit's free-plan article lists digital products and subscriptions on Free, so you can sell from the list without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026). Earning from Paid Recommendations is paid-plan only. Free and Smart Recommendations through the Creator Network are on Free, with five Smart Recommendation slots you can edit. Paid plans get priority and a larger share. You can turn recommendations off without changing the rest of the plan.`,
+        `Kit's free-plan article lists digital products and subscriptions on Free, so you can sell from the list without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 25 November 2026). Earning from Paid Recommendations is paid-plan only. Free and Smart Recommendations through the Creator Network are on Free, with five Smart Recommendation slots you can edit. Paid plans get priority and a larger share. You can turn recommendations off without changing the rest of the plan.`,
         `That is easy to misread as "Kit Free cannot make money." It can sell a product. It cannot run the sequence that pitches the product over a week unless you pay, and it cannot take Paid Recommendation revenue on Free. If the business is the recommendation network, compare <a href="/compare/beehiiv-vs-convertkit/">beehiiv vs Kit</a> before you compare Kit with Mailchimp.`,
         `Mailchimp does not publish a 10% or 0% newsletter fee. Commerce is a connected store, audiences, and journeys. A Kit subscription product does not become a Mailchimp journey. Export buyers as tagged subscribers if the file has the tag, and set up the new checkout before you turn the old one off. Kit's pricing FAQ says paid plans include a free migration service that handles lists and automations. Free does not get that service. Read the current offer on Kit's site if you are about to pay, because a migration perk can change.`,
       ],
@@ -105,7 +105,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       paragraphs: [
         `Kit says there is no sending limit on any plan. The limit that stops Free is 10,000 subscribers. Past that, you upgrade to keep sending, and the automations you could not run on Free unlock. Mailchimp stops Free at 250 contacts, with 500 sends a month and 250 a day. Paid Mailchimp send caps are multiples of the contact limit, and test emails count.`,
         `Kit bills confirmed subscribers. Cleaning the list can qualify you for a lower tier at the next bill if you switch. It does not refund the current period. Mailchimp keeps charging for unsubscribed contacts until they are archived. The same CSV can look like 8,000 people in Mailchimp and 5,000 confirmed subscribers in Kit. Price both counts.`,
-        `Pro is where Kit lists deliverability reporting. That is a dashboard on a $79 plan at 1,000 subscribers, not a placement guarantee, and we did not send mail to measure it. Authenticate your domain on whichever tool you keep, and mail a test before the imported list.`,
+        `Pro is where Kit lists deliverability reporting. That is a dashboard on a $79 plan at 1,000 subscribers, not a placement guarantee. Authenticate your domain on whichever tool you keep, and mail a test before the imported list.`,
       ],
     },
   ],
@@ -144,7 +144,7 @@ export const convertkitVsMailchimp: CompareDoc = {
   ],
   switching: [
     `From Kit to Mailchimp, export subscribers from Kit and import the people who should be mailed. Map tags into Mailchimp if you still want them. Sequences do not become customer journeys. On Mailchimp, Essentials will not hold a long sequence. Confirm Standard's price at your contact count, which will be higher than Kit's confirmed-subscriber count if unsubscribed addresses come along. Kit's billing help says a downgrade or cancellation keeps paid features until the period you already paid for ends. You do not need to rush the export on the morning you click cancel.`,
-    `From Mailchimp to Kit, which is the move these pages get asked about, export the audience as CSV. Mailchimp's help says the ZIP can separate subscribed, unsubscribed, non-subscribed, and cleaned contacts, and that contact exports omit open and click reports. Import subscribed people into Kit and stay under 10,000 if you want Free. Kit's free-plan article says you can import an existing list and that passing 10,000 requires a paid plan to keep sending. Unsubscribed addresses should not be imported as active.`,
+    `From Mailchimp to Kit, export the audience as CSV. Mailchimp's help says the ZIP can separate subscribed, unsubscribed, non-subscribed, and cleaned contacts, and that contact exports omit open and click reports. Import subscribed people into Kit and stay under 10,000 if you want Free. Kit's free-plan article says you can import an existing list and that passing 10,000 requires a paid plan to keep sending. Unsubscribed addresses should not be imported as active.`,
     `Paid products and Paid Recommendations do not move as billing. Recreate the offer. Automations you built on Kit stay in the Kit account if you later downgrade to Free, and they stop running until you upgrade again. Mailchimp journeys stay in Mailchimp. Screenshot both before you close an account.`,
     `Add the new platform's DNS records for the sending domain. Send a test. Kit has no send cap to trip on the first issue. Mailchimp will count every test toward the monthly allowance, and Free will also hit the daily cap of 250. Do not test a 4,000-person list from Mailchimp Free.`,
   ],
@@ -152,6 +152,10 @@ export const convertkitVsMailchimp: CompareDoc = {
     `Under 10,000 subscribers, Kit Free is already $0 for broadcasts. MailCheap at $19 is not cheaper than $0. The MailCheap case starts when you pass 10,000, or when you refuse Creator's price for sequences and you only need to send. At 25,000 weekly subscribers the email estimate is about 108,334. MailCheap Pro is $79 a month for 200,000 emails. Creator at that size is check current pricing on Kit's page. Compare those two numbers on the vendors' pages. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
+    {
+      q: "How does Mailchimp vs Kit (ConvertKit) compare?",
+      a: "<p>Mailchimp vs Kit, and Mailchimp vs ConvertKit, are this pair read from the other side. Kit Free covers broadcasts to 10,000 subscribers. Mailchimp Free stops at 250 contacts. Sequences on Kit start at $39 a month. A store that already runs in Mailchimp is the reason to stay.</p>",
+    },
     {
       q: "Is Kit the same product as ConvertKit?",
       a: "<p>Yes. Kit is the current name. Pricing pages and the help center use Kit. This comparison uses both names so the old ConvertKit query still lands on the current product.</p>",
@@ -170,7 +174,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     },
     {
       q: "Can I sell a newsletter on Kit Free?",
-      a: "<p>The free-plan article says digital products and subscriptions are included, so you can sell from the list. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 24 November 2026). Earning from Paid Recommendations needs a paid plan. A multi-email pitch sequence also needs Creator.</p>",
+      a: "<p>The free-plan article says digital products and subscriptions are included, so you can sell from the list. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked 25 November 2026). Earning from Paid Recommendations needs a paid plan. A multi-email pitch sequence also needs Creator.</p>",
     },
     {
       q: "Will Mailchimp automations import into Kit?",

@@ -17,7 +17,7 @@ export const ghostVsSubstack: CompareDoc = {
   linkA: { href: "https://ghost.org/pricing/", label: "Ghost pricing" },
   linkB: { href: "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost", label: "Substack pricing help" },
   differencesIntro: [
-    `Ghost(Pro) prices members, not a percent of revenue. The numbers below are from ghost.org/js/pricing.min.js, the file the pricing page loads, read 24 November 2026. Starter is $18 a month or $180 a year ($15 a month) and stops at 1,000 members. It does not include paid subscriptions. Publisher at 1,000 members is $35 a month or $348 a year ($29 a month). At the up-to-5,000 band, Publisher is $75 a month or $756 a year ($63). At 10,000 members it is $105 a month or $1,056 a year ($88). At 25,000 it is $169 a month or $1,692 a year ($141). Business is $239 a month through 10,000 members, or $2,388 a year ($199).`,
+    `Ghost(Pro) prices members, not a percent of revenue. The numbers below are from ghost.org/js/pricing.min.js, the file the pricing page loads, read 25 November 2026. Starter is $18 a month or $180 a year ($15 a month) and stops at 1,000 members. It does not include paid subscriptions. Publisher at 1,000 members is $35 a month or $348 a year ($29 a month). At the up-to-5,000 band, Publisher is $75 a month or $756 a year ($63). At 10,000 members it is $105 a month or $1,056 a year ($88). At 25,000 it is $169 a month or $1,692 a year ($141). Business is $239 a month through 10,000 members, or $2,388 a year ($199).`,
     `Substack charges $0 to publish at any list size and 10% when readers pay, plus Stripe. The help article updated 29 October 2026 quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once. Ghost's pricing page says paid plans take 0% from Ghost. You pay Stripe yourself, because the customer record is yours. See <a href="/pricing/ghost/">Ghost pricing</a> and <a href="/pricing/substack/">Substack pricing</a>.`,
   ],
   differences: [
@@ -107,7 +107,7 @@ export const ghostVsSubstack: CompareDoc = {
       id: "deliverability",
       title: "Deliverability and sending rules",
       paragraphs: [
-        `Ghost lists unlimited email sends, managed deliverability, and, from Publisher up, a custom sending domain with the authentication that implies. Starter sends from Ghost's setup and does not include the custom sending domain. Multiple newsletters start at 3 on Publisher and 10 on Business. None of that is a placement rate. We did not send a campaign.`,
+        `Ghost lists unlimited email sends, managed deliverability, and, from Publisher up, a custom sending domain with the authentication that implies. Starter sends from Ghost's setup and does not include the custom sending domain. Multiple newsletters start at 3 on Publisher and 10 on Business. None of that is a placement rate.`,
         `Substack does not publish a monthly send cap in the cost article. Leaving Substack means the new Ghost domain needs the DNS records Ghost shows you, then a test issue, then the full list. Ghost's import does not, by itself, warm a new domain. Mail a confirmation to yourself and to a small group of members who expect the move.`,
         `Member tags and labels exist on Ghost, including on Starter according to the pricing table. Custom fields start on Publisher. If you segment by a field you collected on Substack, check that the export column has a Ghost field to land in. The import template's optional columns are name, note, subscribed_to_emails, stripe_customer_id, complimentary_plan, labels, and created_at. Email is required.`,
       ],
@@ -138,7 +138,6 @@ export const ghostVsSubstack: CompareDoc = {
       "10% of a large membership is more than Publisher. At $10,000 a month the fee is $1,000.",
       "Paid status does not survive a move as an active charge.",
       "Recommendations inside Substack stay there.",
-      "The cost article is not a theme or membership-site product sheet.",
     ],
   },
   who: [
@@ -163,7 +162,7 @@ export const ghostVsSubstack: CompareDoc = {
     },
     {
       q: "How much is Ghost at 10,000 members?",
-      a: "<p>Publisher is $105 a month, or $88 a month billed annually ($1,056 a year). Business is $239 a month, or $199 a month billed annually ($2,388 a year). Starter does not cover 10,000 members. Checked 24 November 2026 in Ghost's pricing file.</p>",
+      a: "<p>Publisher is $105 a month, or $88 a month billed annually ($1,056 a year). Business is $239 a month, or $199 a month billed annually ($2,388 a year). Starter does not cover 10,000 members. Checked 25 November 2026 in Ghost's pricing file.</p>",
     },
     {
       q: "Does Ghost take a percentage?",

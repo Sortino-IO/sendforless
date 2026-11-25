@@ -2,23 +2,27 @@
 layout: ../../layouts/ArticleLayout.astro
 sectionName: "Alternatives"
 sectionHref: "/alternatives/"
-title: "Mailchimp alternatives"
-description: "Mailchimp alternatives for newsletters that outgrew the contact bill. Free plans, verified list prices, and when you should stay."
+title: "Mailchimp Alternatives (2026): Cheaper Options by List Size"
+description: "Mailchimp alternatives for 2026, priced at your list size: Kit, MailerLite, beehiiv, Ghost, Substack and MailCheap, and when staying costs less."
 kicker: Roundup
-lede: "Mailchimp Free fits under 250 contacts. After that you pay for contacts you store, including people who are not subscribed. These are the alternatives worth pricing, and the case for staying if the account runs a store."
+lede: "Mailchimp alternatives are worth pricing when the contact bill no longer matches the list you mail. Free covers 250 contacts. Essentials starts at $13 a month and Standard at $20 a month, both for up to 500 contacts. Above that, check current pricing, then compare the tools below at your list size."
 crumb: "Mailchimp alternatives"
 affiliate: true
 datePublished: 2026-11-24
-dateModified: 2026-11-24
+dateModified: 2026-11-25
 toc:
   - id: stay
     label: When to stay
+  - id: free
+    label: Free alternatives
   - id: prices
-    label: What else costs
-  - id: options
-    label: The alternatives
-  - id: move
-    label: Moving the list
+    label: Prices by list size
+  - id: nonprofit
+    label: Nonprofits
+  - id: cancel
+    label: Cancel and export
+  - id: glance
+    label: At a glance
   - id: faq
     label: FAQ
 related:
@@ -26,64 +30,143 @@ related:
   - convertkit-alternatives
   - mailcheap-review
   - flodesk-vs-mailchimp
+  - how-we-test
 faqs:
   - q: What is a cheaper Mailchimp alternative for a weekly newsletter?
-    a: "<p>Under 250 contacts, Mailchimp Free is already $0. From there to 10,000 subscribers, Kit’s free plan covers broadcasts. Past the free caps, MailCheap Starter is $19 a month for up to 20,000 emails and 10,000 subscribers, if that allowance covers the month including welcome emails. It is the wrong choice if you need paid subscriptions, ads, or A/B tests.</p>"
-  - q: Does Mailchimp count unsubscribed people?
-    a: "<p>Yes. Subscribed, unsubscribed, and non-subscribed contacts count. Archived, cleaned, and deleted contacts do not. Archive people you will never mail before you compare invoices.</p>"
-  - q: Can you quote Mailchimp at 5,000 or 10,000 contacts?
-    a: "<p>No. Standard starts at $20 a month for 500 contacts, and the price rises by tier on Mailchimp’s pricing page. Check current pricing there.</p>"
+    a: "<p>Under 10,000 subscribers, Kit (ConvertKit) Free covers broadcasts at $0. Past that, or when the month is a counted send, MailCheap Starter is $19 a month for up to 20,000 emails and 10,000 subscribers if the allowance covers welcome mail too. MailCheap is the wrong switch if you need paid subscriptions, an ad network, or A/B tests.</p>"
+  - q: Are there free Mailchimp alternatives that can send?
+    a: "<p>Kit Free sends broadcasts up to 10,000 subscribers. beehiiv Free sends with no email cap up to 2,500 subscribers. Substack charges $0 to publish at any list size. Mailchimp's own free plan stops at 250 contacts and 500 sends. Flodesk's free plan does not send.</p>"
+  - q: Should a nonprofit leave Mailchimp for the 15% discount?
+    a: "<p>Not on the discount alone. Mailchimp's nonprofit discount is 15% after approval, and it is not retroactive. Constant Contact's nonprofit rate is a prepay discount, 20% for six months or 30% for 12 months, with no monthly discount. Compare the tier you would actually pay, after the discount, with a free plan that already covers the list.</p>"
+  - q: What does a Mailchimp export leave behind?
+    a: "<p>A contact export is a CSV of audience fields. It does not include open and click rates, purchase history, journeys, templates, or ads. Account export can include audiences and email HTML. Landing pages, websites, and ad content are not in the account export. Rebuild the welcome automation on the next tool before you delete the account.</p>"
 ---
 
 import { mailcheapHref } from "../../lib/site";
 import Shot from "../../components/Shot.astro";
+import CostChart from "../../components/CostChart.astro";
 
-<section class="verdict" id="stay">
-  <p class="kicker"><span class="kicker-dot" aria-hidden="true"></span> Mailchimp alternatives</p>
-  <h2>Leave if you're paying for contacts you don't mail. Stay if Mailchimp runs your store.</h2>
-  <p>Mailchimp’s marketing plans are Free, Essentials, Standard, and Premium. A contact is a person stored in your audiences. You pick a contact limit, and that limit sets the price and the send allowance. If you drift over the limit, Mailchimp adds a charge rather than stopping the month.</p>
-  <p>Free includes up to 250 contacts and 500 sends a month, with a daily cap of 250. Essentials starts at $13 a month and Standard at $20 a month, both for up to 500 contacts. Essentials allows sends equal to 10 times the contact limit and stores up to 50,000 contacts. Standard allows 12 times the contact limit and supports larger lists. Check current pricing for your size on [Mailchimp’s pricing page](https://mailchimp.com/pricing/marketing/).</p>
-</section>
+Mailchimp alternatives in 2026 are a list-size decision, not a brand ranking. The Mailchimp alternatives below are priced only where the vendor publishes the dollar. Mailchimp charges for contacts you store. Subscribed, unsubscribed, and non-subscribed people all count until you archive, clean, or delete them. A cheaper invoice only helps if the next tool still does the job: a store, a membership site, a sequence, or a plain weekly letter. Prices below were checked on vendor pages on 25 November 2026. Mailchimp's own tier above 500 contacts stays "check current pricing."
+
+## When should you stay on Mailchimp?
+
+Stay when Mailchimp runs the store. Journeys tied to purchases, audiences built from a connected shop, and ads that use those audiences do not move with a CSV. Rebuilding that stack on a sender that has no store connection can cost more than the contact tier, even when the newsletter line looks high.
+
+Stay when the stored list is still inside a published start. Essentials starts at $13 a month and Standard at $20 a month, both for up to 500 contacts, on the marketing pricing page checked 25 November 2026. Premium starts at $350 a month, and the help article says that base includes 10,000 contacts. If your real tier is still the $13 or $20 start, most paid alternatives are not cheaper. Kit (ConvertKit) Free can still be $0 if you only broadcast.
+
+Leave when you are paying for people you do not mail. Archive them first and read the new tier. If the bill is still a contact ladder you do not need, the alternatives below are the ones with a published price at a given list size.
 
 <Shot
   name="mailchimp-pricing"
-  alt="Mailchimp Standard plan page showing a starting price of $20 a month for up to 500 contacts."
-  caption="Mailchimp’s pricing page on 24 November 2026. The $20 figure is the Standard start for 500 contacts, not a quote for a larger list."
+  alt="Mailchimp alternatives comparison starting from the Mailchimp pricing page and its contact tiers."
+  caption="Mailchimp's pricing page prices a contact count you select. Above 500 contacts, read that page rather than a guessed tier. Checked 25 November 2026."
 />
 
-## What a weekly list costs elsewhere
+## Free Mailchimp alternatives
 
-Month-to-month USD, 24 November 2026. Mailchimp isn't in this table because it doesn't publish a fixed price above 500 contacts.
+Free Mailchimp alternatives that can still send are Kit, beehiiv, and Substack. Each free cap is different, and each one leaves something out.
 
-| List size, weekly | Kit | beehiiv | MailCheap | MailerLite Comfort | Ghost(Pro) |
+**Kit (ConvertKit) Free** is $0 up to 10,000 subscribers for unlimited broadcasts, forms, landing pages, tagging, and segmentation. The free plan help article, dated 23 September 2026 and re-checked 25 November 2026, says visual automations, sequences, rules, and RSS need a paid plan. Creator starts at $39 a month for up to 1,000 subscribers when you need sequences, and Kit's billing help uses $59 a month as the Creator price up to 3,000. Pro is $79 a month at 1,000 subscribers on the pricing page. Above those published points, check current pricing. Details are on [Kit (ConvertKit) pricing](/pricing/convertkit/) and [Kit vs Mailchimp](/compare/convertkit-vs-mailchimp/).
+
+**beehiiv Free** is $0 up to 2,500 subscribers with unlimited sends and the recommendation network. Automations, paid subscriptions, and the ad network start on Lite, not on Free. Lite is $59 a month at the up-to-1,000 bucket, or $49 a month if you pay annually, and $109 a month at the up-to-5,000 bucket. The ladder is [beehiiv pricing](/pricing/beehiiv/).
+
+**Substack** is $0 to publish at any list size. Paid subscriptions cost 10% of subscription revenue plus Stripe. A custom domain is $50 once. There is no contact tier. See [Substack pricing](/pricing/substack/).
+
+Mailchimp's own free plan is the fourth $0 option, and it is the smallest. It stops at 250 contacts and 500 sends a month, with a daily cap of 250. If that still covers the letter, you do not need an alternative yet.
+
+Flodesk's free plan includes forms and landing pages. The pricing FAQ says it does not include email sending. It is not a free sending alternative.
+
+## What do Mailchimp alternatives cost by list size?
+
+The table uses one issue a week. Emails, where a tool meters them, are subscribers × 4.33, rounded up. Mailchimp is omitted above 500 contacts because that dollar is not a published table. Constant Contact starts at $12, $35, and $80 a month and then varies by contacts, so those rows are also check current pricing rather than a guessed tier.
+
+| Weekly list | Kit (ConvertKit) | beehiiv | MailerLite Comfort | Ghost(Pro) Publisher | MailCheap |
 | --- | --- | --- | --- | --- | --- |
-| 1,000 | $0 for broadcasts. Creator is $39 if you need sequences. | $0 Free. Lite is $59 if you need paid features. | $19 Starter | $19 | $18 Starter, no paid members |
-| 4,000 | $0 | $109 Lite | $19 Starter | $49 | $75 Publisher |
-| 10,000 | $0 at the cap | $139 Lite | $39 Growth | $89 | $105 Publisher |
-| 25,000 | Check current pricing | $199 Lite | $79 Pro | $179 | $169 Publisher |
+| 1,000 | $0 for broadcasts. Creator $39 if you need sequences. | $0 Free. Lite $59 if you need paid features. | $19, 10,000 emails | $35, or Starter $18 with no paid members | $19 Starter if the month fits 20,000 emails |
+| 4,000 | $0 for broadcasts | $109 Lite | $49, 50,000 emails | $75 | $19 Starter, with a five-week month at the cap |
+| 10,000 | $0 at the free cap. Above it, check current pricing. | $139 Lite | $89, 100,000 emails | $105 | $39 Growth |
+| 25,000 | Check current pricing | $199 Lite | $179, 250,000 emails | $169 | $79 Pro |
 
-Substack is $0 to publish at every row. Paid subscriptions cost 10% plus Stripe. Flodesk Email is $46 at every row. The head-to-head is [Flodesk vs Mailchimp](/compare/flodesk-vs-mailchimp/).
+Flodesk Email is $46 a month at every row, or $38 a month if you pay $456 for the year. Substack's platform fee is $0 at every row until readers pay.
 
-## The alternatives
+<CostChart
+  title="Mailchimp alternatives at 4,000 subscribers, one issue a week"
+  description="Published month-to-month prices for Mailchimp alternatives at 4,000 subscribers. Mailchimp and Constant Contact are omitted because their price at this list size is check current pricing."
+  caption="Checked 25 November 2026. Kit is $0 for broadcasts. MailCheap Starter is $19 if the emails fit 20,000."
+  rows={[
+    { label: "Kit Free", value: 0, note: "Broadcasts" },
+    { label: "Substack", value: 0, note: "Platform fee" },
+    { label: "MailCheap", value: 19, note: "Starter" },
+    { label: "Flodesk", value: 46, note: "Email" },
+    { label: "MailerLite", value: 49, note: "Comfort" },
+    { label: "Ghost", value: 75, note: "Publisher" },
+    { label: "beehiiv", value: 109, note: "Lite" },
+  ]}
+/>
 
-**Kit Free** is the strongest $0 option under 10,000 subscribers if you broadcast. Visual automations are paid. Details are on [Kit pricing](/pricing/convertkit/) and [Kit vs Mailchimp](/compare/convertkit-vs-mailchimp/).
+**MailerLite Comfort** is the all-rounder with a published ladder. It starts at $12 a month for 500 subscribers and is $19 at 1,000 and $49 at 5,000. Emails on Comfort are 10 times the tier ceiling. Power starts at $25 and removes that cap, up to 200,000 subscribers, subject to fair use. Annual billing is 10% less than monthly. See [MailerLite vs Mailchimp](/compare/mailerlite-vs-mailchimp/) and [MailerLite pricing](/pricing/mailerlite/).
 
-**beehiiv Free** stops at 2,500 subscribers and includes unlimited sends and the recommendation network. Automations and paid subscriptions start on Lite. The ladder is [beehiiv pricing](/pricing/beehiiv/).
+**MailCheap** meters emails and caps subscribers on each plan. Starter is $19 for 20,000 emails and 10,000 subscribers. Growth is $39 for 75,000 emails and 40,000 subscribers. Pro is $79 for 200,000 emails and 100,000 subscribers. A weekly letter to 4,000 people is about 17,300 emails, which fits Starter. A month with five weekly sends is 20,000 emails before welcomes and tests, which uses the whole Starter allowance. There is no hosted free plan. Paid subscriptions, an ad network, a referral program, and A/B tests are not in the product. The write-up is the [MailCheap review](/reviews/mailcheap/). The button below is an affiliate link.
 
-**MailerLite Comfort** starts at $12 at 500 subscribers and is $49 at the 5,000 tier. That can be the all-rounder if you want pages and automations. See [MailerLite vs Mailchimp](/compare/mailerlite-vs-mailchimp/) and [MailerLite pricing](/pricing/mailerlite/). The limits on Mailchimp's own plans are on [Mailchimp pricing](/pricing/mailchimp/).
+**Ghost(Pro)** fits when members log into a site you theme. Publisher is $35 a month at 1,000 members and $75 at the up-to-5,000 band. Starter is $18 a month up to 1,000 members and cannot charge readers. There is no hosted free plan. The platform fee on paid subscriptions is 0%. Stripe still applies.
 
-**MailCheap** plans are a fixed price per email volume: Starter $19, Growth $39, Pro $79, on the allowances in the [review](/reviews/mailcheap/). Use it when the cadence fits and you do not need Mailchimp’s store journeys or A/B tests. There is no free hosted plan.
+**Constant Contact** is the other contact-priced marketing suite. Lite starts at $12 a month, Standard at $35, and Premium at $80, and the price then moves with contacts and sends. There is no free sending plan. A trial is free, and new plans have a 30-day refund. The pair is [Constant Contact vs Mailchimp](/compare/constant-contact-vs-mailchimp/).
 
-**Ghost(Pro)** is the alternative when the site and the members are the product, not the campaign. **Substack** is the alternative when you want $0 until readers pay.
+Cheaper than Mailchimp is not automatic. At 500 contacts, Essentials at $13 can be less than Flodesk at $46 and less than Creator at $39. Alternatives to Mailchimp win on price when the list is past the free caps of Kit or beehiiv and you are not using the store. Mailchimp competitors that publish a full ladder (MailerLite, beehiiv, Ghost, Flodesk, MailCheap) can be ranked. Mailchimp itself cannot, above 500 contacts, until you read the tier.
+
+## Mailchimp alternatives for nonprofits
+
+Mailchimp alternatives for nonprofits start with the discount you can actually get, then the list size.
+
+Mailchimp's help article About the Nonprofit Discount, checked 25 November 2026, offers 15% to verified nonprofits and charities. It is not retroactive. Add an EIN in the United States before you apply. Mailchimp may ask for a 501(c)(3) letter. International groups send a website link and may be asked for more. The request is a billing contact form. Fifteen percent off an unpublished tier is still an unpublished tier. Read the contact price first.
+
+Constant Contact's pricing page says nonprofits get 20% off when they prepay for six months, or 30% off when they prepay for 12 months. There is no discount on monthly billing. A United States group sends a 501(c)(3) or 501(c)(6) determination letter. Buy the prepay plan only after Constant Contact confirms the rate. The starting list prices before that discount are Lite $12, Standard $35, and Premium $80 a month.
+
+A nonprofit under 10,000 subscribers that only sends a newsletter can stay on Kit Free at $0, which is less than 15% off any paid Mailchimp tier. A nonprofit that needs landing pages, a short automation, and a published ladder can price MailerLite Comfort, including the 30% nonprofit rate MailerLite documents on its own nonprofit page, against the discounted Mailchimp tier. Do not stack those discounts in your head as if one vendor honors the other.
+
+If the organization sells memberships or tickets inside the email tool, Ghost or a paid beehiiv plan may be the fit even at a higher monthly number, because the 15% Mailchimp discount does not add a membership site.
+
+## How to cancel Mailchimp and export your contacts
+
+Cancel the subscription only after the export is in your hands. Mailchimp's help splits "pause" from "delete." Pause keeps the data. Delete removes audiences, campaign archives, and reports, and the account cannot be restored. These steps are from [Pause or Cancel Your Account](https://mailchimp.com/help/close-an-account/), [View or Export Your Contacts](https://mailchimp.com/help/view-export-contacts/), and [Export and Back Up Account Data](https://mailchimp.com/help/export-back-up-data/), checked 25 November 2026.
+
+Export the audience first.
+
+1. Click Audience.
+2. If you have more than one audience, choose it in the Audience drop-down.
+3. Click Export audience.
+4. In the confirmation, click Export CSV. Mailchimp emails you when the file is ready.
+
+Owners and Admins can export an audience. A segment, tag, or group exports from that view with Export segment or the matching control. The file may be a ZIP with separate CSVs for subscribed, unsubscribed, non-subscribed, and cleaned contacts. Exports stay available for 30 days under More options, Export history. The contact CSV does not include open and click rates, purchase history, or signup source. Download an email report separately if you need those numbers.
+
+For a wider backup, use Manage my data. Profile icon, Account, Settings, Manage my data. Check the data types, pick a time frame, and click Export Data. You get one account export per 24 hours. The ZIP can include audiences and the HTML of regular emails. It does not include billing receipts, deleted audiences, or the content of websites, landing pages, and ads.
+
+Then decide whether you are pausing or deleting.
+
+Pause, if you might come back: profile icon, Account and billing, Settings, Manage my plan, Pause my plan. Choose 3 or 6 months. Mailchimp allows 2 pauses every 12 months. You can still edit emails and manage the audience. A Websites plan stays active. Billing for the marketing plan stops for the pause. Restart from the banner when you return, and turn automations back on.
+
+Delete, if you are done: the same Manage my plan screen, then Delete my account. You may see suggestions or a support prompt. Continue to delete, confirm your password, type DELETE, and click Permanently delete. Pay any outstanding balance first. After this, the audiences are gone. The CSV on your computer is the list.
+
+Import only people who agreed to the next sender's mail. Do not import cleaned or unsubscribed addresses as active. Journeys and templates do not come along. Write the welcome message on the new tool before the first campaign. MailCheap's import help accepts a Mailchimp CSV. Send a test to yourself before the list gets an issue.
 
 <p class="cta-row">
   <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
-  <a class="btn btn-secondary" href="https://mailchimp.com/pricing/marketing/" rel="noopener" target="_blank">Mailchimp pricing</a>
+  <a class="btn btn-secondary" href="https://mailchimp.com/help/view-export-contacts/" rel="noopener" target="_blank">Mailchimp export help</a>
   <span class="btn-note">The MailCheap button is an affiliate link. The Mailchimp button is not.</span>
 </p>
 
-## Moving the list
+## Mailchimp vs the alternatives at a glance
 
-Export contacts. Archive or omit people you must not mail, and do not import them as active. Journeys, templates, and store connections do not move with a CSV. Rebuild the welcome email first. If Mailchimp also runs store automations you can't rebuild elsewhere, stay.
+Each link is one pair, with the price rule for that pair. The fit line names who should pick which tool.
 
-MailCheap’s import help lists Mailchimp among the CSVs it can read. Send a test to yourself before the list sees an issue.
+| Pair | Pick the left side if | Pick Mailchimp if |
+| --- | --- | --- |
+| [MailerLite vs Mailchimp](/compare/mailerlite-vs-mailchimp/) | You want a published tier, pages, and automations. Comfort is $19 at 1,000 subscribers. | The account also runs a store, or 500 contacts at $13 or $20 still covers you. |
+| [Flodesk vs Mailchimp](/compare/flodesk-vs-mailchimp/) | You want one design-led price at any list size. Email is $46 a month. | You are still at the $20 Standard start, or the journeys stay. |
+| [Kit (ConvertKit) vs Mailchimp](/compare/convertkit-vs-mailchimp/) | You broadcast under 10,000 subscribers, or you need sequences from $39. | The store and the audiences stay in Mailchimp. |
+| [Constant Contact vs Mailchimp](/compare/constant-contact-vs-mailchimp/) | You want phone support on the entry plan and will check the contact tier. Lite starts at $12. | You already have the store connected and the Mailchimp tier is the one you can see. |
+| [beehiiv vs Mailchimp](/compare/beehiiv-vs-mailchimp/) | You want recommendations, and on Lite a 0% cut of paid subscriptions. | You need the contact database more than a publication site. |
+| [Substack vs Mailchimp](/compare/substack-vs-mailchimp/) | You want $0 until readers pay, then 10%. | You need automations, a store, or more than a publication. |
+| [MailCheap vs Mailchimp](/compare/mailcheap-vs-mailchimp/) | The job is a scheduled send that fits a published email cap, and you do not need a store. | You need journeys, A/B tests, or the audiences you already built. |
+
+Mailchimp alternatives that are cheaper on a weekly letter past a few thousand people are usually Kit Free, while it lasts, then MailCheap or Flodesk or MailerLite, depending on whether you need sequences, a flat design plan, or pages. Read the Mailchimp alternatives that match the job you still need, not the longest feature list. A second pass through those Mailchimp alternatives, at your real contact total after you archive unsubscribed people, is the comparison that changes the invoice. beehiiv and Ghost cost more at 4,000 subscribers and buy a publication or a membership site. Staying is the right call when the store is the product and the contact tier, once you have read it, is still tolerable.
