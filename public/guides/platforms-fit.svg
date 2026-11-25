@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" role="img">
+  <rect width="880" height="300" fill="#0c0c14"/>
+  <g font-family="Inter, system-ui, sans-serif" fill="#f5f5f7">
+    <text x="24" y="36" font-size="13" fill="#c4b5fd">Job</text>
+    <text x="430" y="36" font-size="13" fill="#c4b5fd">Fits when</text>
+    <g>
+      <rect x="24" y="52" width="832" height="48" rx="10" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="82" font-size="16">Free broadcast</text>
+      <text x="430" y="82" font-size="15" fill="#b0b0bc">Kit under 10,000, or beehiiv under 2,500</text>
+    </g>
+    <g>
+      <rect x="24" y="112" width="832" height="48" rx="10" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="142" font-size="16">Readers pay you</text>
+      <text x="430" y="142" font-size="15" fill="#b0b0bc">Substack, beehiiv paid, Ghost, Kit, MailerLite</text>
+    </g>
+    <g>
+      <rect x="24" y="172" width="832" height="48" rx="10" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="202" font-size="16">Flat sending price</text>
+      <text x="430" y="202" font-size="15" fill="#b0b0bc">Flodesk Email, any list size</text>
+    </g>
+    <g>
+      <rect x="24" y="232" width="832" height="48" rx="10" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="262" font-size="16">Counted weekly send</text>
+      <text x="430" y="262" font-size="15" fill="#b0b0bc">MailCheap, if you sell somewhere else</text>
+    </g>
+  </g>
+</svg>

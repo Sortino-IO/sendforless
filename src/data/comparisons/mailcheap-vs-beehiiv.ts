@@ -203,6 +203,8 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
+    { href: "/guides/email-marketing-cost/", kicker: "Guide", title: "How much does email marketing cost?" },
     { href: "/reviews/mailcheap/", kicker: "Review", title: "MailCheap review" },
     { href: "/pricing/beehiiv/", kicker: "Pricing", title: "beehiiv pricing" },
     { href: "/reviews/beehiiv/", kicker: "Review", title: "beehiiv review" },

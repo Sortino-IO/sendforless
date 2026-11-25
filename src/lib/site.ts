@@ -27,7 +27,9 @@ const ISO_MONTHS = [
 ];
 
 /** Format YYYY-MM-DD as "25 November 2026". Falls back to the price-check label. */
-export function formatIsoDate(iso: string): string {
+export function formatIsoDate(value: string | Date): string {
+  const raw = value instanceof Date ? value.toISOString() : String(value);
+  const iso = raw.slice(0, 10);
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
   if (!match) return PRICE_CHECKED_LABEL;
   const month = ISO_MONTHS[Number(match[2]) - 1];

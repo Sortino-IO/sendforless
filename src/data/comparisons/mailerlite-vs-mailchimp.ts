@@ -214,6 +214,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
     { href: "/pricing/mailerlite/", kicker: "Pricing", title: "MailerLite pricing" },
     { href: "/pricing/mailchimp/", kicker: "Pricing", title: "Mailchimp pricing" },
     { href: "/reviews/mailerlite/", kicker: "Review", title: "MailerLite review" },

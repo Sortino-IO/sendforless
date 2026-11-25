@@ -1,64 +1,98 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: "Newsletter guides"
-description: "Practical guides for starting a newsletter and reading a platform bill, including how sendforless checks prices."
+title: "Newsletter Guides: Start, Price and Compare Platforms"
+description: "Newsletter guides for starting a letter, pricing a list, and comparing platforms. Monthly and annual rates from vendor pages, checked 25 November 2026."
 kicker: Guides
-lede: "Start free if a free plan covers your list. Compare paid plans once it doesn't."
+lede: "Newsletter guides follow the job in front of you: start the letter, read the invoice, compare two products, or leave one you already pay for. A price is a list rate from the vendor's own page."
 crumb: Guides
-schemaType: WebPage
+schemaType: CollectionPage
+itemListFromGuides: true
 affiliate: false
 showPriceByline: true
 datePublished: 2026-11-24
-dateModified: 2026-11-24
+dateModified: 2026-11-25
 toc:
+  - id: groups
+    label: By job
   - id: start
-    label: Where to start
-  - id: pages
-    label: The guides
+    label: Start
+  - id: costs
+    label: Costs
+  - id: compare
+    label: Compare
+  - id: switch
+    label: Switch
 related:
   - how-to-start-a-newsletter
+  - email-marketing-cost
+  - newsletter-platforms
   - how-we-test
-  - mailchimp-alternatives
 faqs: []
 ---
 
-import { mailcheapHref } from "../../lib/site";
+import { guidesInHub } from "../../lib/guides";
 
-## Where to start
+<figure>
+  <img src="/guides/guides-map.svg" width="880" height="200" alt="Newsletter guides in four groups: start, costs, compare, and switch." />
+  <figcaption>Use the group that matches the decision. The lists under each heading are the pages in that group.</figcaption>
+</figure>
 
-If the list is still small, a free plan is often enough. Kit’s free plan covers broadcasts up to 10,000 subscribers. beehiiv Free stops at 2,500. Substack has no monthly fee until you charge readers, and then it keeps 10%.
+A free plan is the right start when it already sends. Kit's free plan covers broadcasts up to 10,000 subscribers. beehiiv Free stops at 2,500. Substack has no monthly platform fee until readers pay, and then it keeps 10% plus Stripe. Those figures were checked on 25 November 2026. Annual prices are a separate charge.
 
-When the list no longer fits those caps, or you are already paying a bill that climbs with subscribers, compare the monthly cost of a real send. A weekly issue is about 4.33 sends a month.
+Pay when the free cap is gone, or when the free plan withholds the feature. Sequences on Kit, paid subscriptions on beehiiv, and any send on Flodesk's free plan are in that group. Flodesk's pricing page says the free plan does not send. MailCheap and Ghost(Pro) have no hosted free plan. Ghost Starter is $18 a month and cannot sell memberships.
 
-MailCheap Starter is $19 a month for 20,000 emails and 10,000 subscribers. Use it when that allowance covers the way you send, and when you do not need paid subscriptions, an ad network, a referral program, or A/B tests inside the tool. The [calculator](/#calculator) runs the same comparison at your numbers. [How we compare prices](/how-we-test/) lists the official sources behind the dollars.
+<h2 id="groups">Newsletter guides by job</h2>
 
-<p class="cta-row">
-  <a class="btn btn-primary" href="/#calculator">Compare your list</a>
-  <a class="btn btn-secondary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
-  <span class="btn-note">Affiliate link. We may earn a commission. The price you pay does not change. Use it when a free plan no longer covers the send.</span>
-</p>
+The pages are the same set as the footer and the related links elsewhere on the site. They are grouped here so a setup question does not land on a cancellation page, and a price question does not land on a feature tour.
 
-## The guides
+<h3 id="start">Start</h3>
 
-<div class="card-grid">
-  <a class="card article-card" href="/guides/how-to-start-a-newsletter/">
-    <p class="kicker">Guide</p>
-    <h3>How to start a newsletter</h3>
-    <p>Define the audience, pick a schedule you can keep, and match a platform to your list size and bill.</p>
-    <span class="arrow">Read</span>
-  </a>
-  <a class="card article-card" href="/#calculator">
-    <p class="kicker">Calculator</p>
-    <h3>Cost at your list size</h3>
-    <p>Enter subscribers and issues per week. Known list prices are plotted. Missing prices are left as a link to the vendor.</p>
-    <span class="arrow">Open the calculator</span>
-  </a>
-  <a class="card article-card" href="/how-we-test/">
-    <p class="kicker">Method</p>
-    <h3>How we test</h3>
-    <p>Official sources, the email estimate, and where Mailchimp and Kit say to check the current price.</p>
-    <span class="arrow">Read the method</span>
-  </a>
-</div>
+How to start a newsletter covers the audience, the schedule, the signup page, the parts of an issue, the sending domain, and the commercial-email rules that apply in the United States. Newsletter monetization is the later page: what a platform keeps when readers pay, and which products cannot charge readers at all. Read that one before you pick a tool for a paid letter. MailCheap can send the issue and cannot sell the subscription.
 
-If you already pay a platform, the [alternatives](/alternatives/) roundups are the next step.
+<ul>
+  {guidesInHub("start").map((guide) => (
+    <li>
+      <a href={guide.href}>{guide.title}</a>. {guide.blurb}
+    </li>
+  ))}
+</ul>
+
+<h3 id="costs">Costs</h3>
+
+The cost guide prices a list at several sizes and at more than one send frequency. A weekly planning estimate is subscribers times 4.33. Tools that meter emails can move up a plan when you add a second issue. Tools that charge for subscribers, or a flat rate, often do not. The [pricing hub](/pricing/) is the index of the vendor tables. The [calculator](/#calculator) runs the same list prices at a list size you type. [How we compare prices](/how-we-test/) names each source.
+
+<ul>
+  {guidesInHub("costs").map((guide) => (
+    <li>
+      <a href={guide.href}>{guide.title}</a>
+      {guide.kicker === "Guide" ? <>. {guide.blurb}</> : null}
+    </li>
+  ))}
+</ul>
+
+<h3 id="compare">Compare</h3>
+
+The platform guide puts eight products in one matrix and says which situation each one fits. When you are down to two names, use a pair page. All pairs are listed below. A cheaper row that cannot do the job is a different product.
+
+<ul>
+  {guidesInHub("compare").map((guide) => (
+    <li>
+      <a href={guide.href}>{guide.title}</a>
+      {guide.kicker === "Guide" ? <>. {guide.blurb}</> : null}
+    </li>
+  ))}
+</ul>
+
+<h3 id="switch">Switch</h3>
+
+Switch pages are for an account you already pay. They record what you give up if you leave. Read the cost guide first if you do not yet know the new invoice. Paid subscriptions and automations do not move just because the contacts do.
+
+<ul>
+  {guidesInHub("switch").map((guide) => (
+    <li>
+      <a href={guide.href}>{guide.title}</a>
+    </li>
+  ))}
+</ul>
+
+MailCheap is one row in those comparisons, with the same limits named as the other products. Links to MailCheap on the other guides are affiliate links. The commission does not change the price. [How we compare prices](/how-we-test/) is where a number is checked against the vendor.

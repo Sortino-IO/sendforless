@@ -1,112 +1,267 @@
 ---
 layout: ../../layouts/ArticleLayout.astro
-title: "How to start a newsletter"
-description: "Practical steps for starting a newsletter: who it is for, a schedule you can keep, the list, and a platform whose price matches that send."
+title: "How to Start a Newsletter in 2026: Steps, Platforms, Cost"
+description: "How to start a newsletter: name the reader, keep a schedule, and price a platform for that list. Free plans, the first issue, and the bill at 1,000 subscribers."
 kicker: Guide
-lede: "Before you pick software, decide who the newsletter is for, how often you can send it, and how many people you can email today. Those three facts set the price."
+lede: "How to start a newsletter: choose who it is for, a schedule, and a platform, then set up your domain and send the first issue. A free plan covers many first lists. Pay when that plan cannot send the issue, or withholds the one feature you already need."
 crumb: "How to start a newsletter"
+sectionName: Guides
+sectionHref: /guides/
 affiliate: true
 datePublished: 2026-11-24
-dateModified: 2026-11-24
+dateModified: 2026-11-25
 toc:
-  - id: promise
-    label: Decide who it's for
+  - id: what
+    label: What a newsletter is
   - id: cadence
-    label: Pick a cadence
-  - id: list
-    label: Count the list
+    label: How often to send
+  - id: free
+    label: Starting for free
   - id: platform
-    label: Choose a platform
-  - id: setup
-    label: Set up the first send
-  - id: later
-    label: When the bill changes
+    label: Pick a platform
+  - id: issue
+    label: The issue and welcome
+  - id: signup
+    label: Signup page
+  - id: growth
+    label: List growth
+  - id: domain
+    label: Sending domain
+  - id: legal
+    label: Commercial email rules
+  - id: metrics
+    label: What to measure
+  - id: money
+    label: Charging readers
   - id: faq
     label: FAQ
 related:
-  - beehiiv-pricing
+  - email-marketing-cost
+  - newsletter-platforms
+  - newsletter-monetization
   - convertkit-pricing
-  - mailcheap-review
+  - beehiiv-pricing
+  - substack-pricing
+  - mailerlite-pricing
   - how-we-test
 faqs:
-  - q: Do I need a paid plan on day one?
-    a: "<p>Usually no. Kit’s free plan sends broadcasts to 10,000 subscribers. beehiiv Free sends to 2,500. Substack has no monthly fee until readers pay. MailCheap’s hosted plans start at $19 and fit once you are past those caps, or once you are paying a bill that climbs with the list and you do not need a paywall inside the tool.</p>"
-  - q: How many emails is a weekly newsletter?
-    a: "<p>Use subscribers times 4.33 for a typical month. At 1,000 people that is about 4,300 emails. At 4,000 people it is about 17,300. A month with five weekly sends is subscribers times 5.</p>"
-  - q: Can I charge readers later if I start on MailCheap?
-    a: "<p>Not inside MailCheap. It does not sell newsletter subscriptions. If you expect to charge on the platform this year, start on Substack, beehiiv, Kit, Ghost, or MailerLite. You can still sell a course or a sponsorship yourself from a MailCheap issue.</p>"
+  - q: How do I start a newsletter for free?
+    a: "<p>Use a plan that already sends at $0. Kit's free plan broadcasts to 10,000 subscribers. beehiiv Free sends to 2,500. Substack publishes at $0 until readers pay. MailerLite Free and Mailchimp Free are smaller caps, 250 subscribers and 250 contacts. Flodesk's free plan does not send. Ghost and MailCheap have no hosted free sending plan.</p>"
+  - q: How often should you send a newsletter?
+    a: "<p>Weekly is the schedule most people can keep beside a job. Daily multiplies the email count by about seven and can move a metered plan up a tier. Write the next six send days on a calendar. If two of them are already impossible, do not promise them.</p>"
+  - q: What should a newsletter include?
+    a: "<p>One job for that issue, a subject line that matches it, working links, a way to unsubscribe, and a postal address on commercial mail. A welcome note, sent once to each new person, should restate what they signed up for and when the next issue comes.</p>"
+  - q: How do I get newsletter subscribers?
+    a: "<p>Ask people who already hear from you, in one place you already have, with a sentence that says what they will get. Do not buy a list. A purchased list is a deliverability problem on every platform here, and several of them will refuse the account or the import.</p>"
+  - q: Do I need a website to send an email newsletter?
+    a: "<p>You need a place for the form. That can be a page on a site you have, or a landing page the email tool hosts. You do not need a full site on day one. You do need a domain you control if you expect to leave the first tool.</p>"
+  - q: How much does it cost to start?
+    a: "<p>Often $0 until the list or the feature outgrows the free plan. At 1,000 subscribers and one issue a week, paid options that fit include MailerLite Comfort and MailCheap Starter at $19 a month, Ghost Starter at $18, and Flodesk Email at $46. The cost guide has the 5,000 and 10,000 rows. Annual prices are a separate, prepaid charge.</p>"
+  - q: What is double opt-in?
+    a: "<p>The person enters an address, then clicks a confirmation email before they count as subscribed. The FTC's CAN-SPAM guide does not require that second click. Yahoo's sender recommendations describe it as a way to keep bad addresses off the list. Some platforms send the confirmation and count it as an email.</p>"
+  - q: Can I charge readers later?
+    a: "<p>Only on a tool that sells subscriptions. Substack, Kit, beehiiv's paid plans, Ghost Publisher, MailerLite's paid plans, and Flodesk Everything can. Ghost Starter, beehiiv Free, MailerLite Free, and MailCheap cannot. If you expect to charge inside the tool this year, do not start on a product that lacks the feature.</p>"
 ---
 
 import { mailcheapHref } from "../../lib/site";
+import Calculator from "../../components/Calculator.astro";
 
-## Decide who it's for
+<figure>
+  <img src="/guides/how-to-start-steps.svg" width="880" height="280" alt="How to start a newsletter in six steps: audience, schedule, list size, platform, signup page, and the first issue." />
+  <figcaption>The platform is step four. The list size and the schedule decide which row in the price table is the real one.</figcaption>
+</figure>
 
-One sentence is enough: who it is for, and what they get that they would not get by browsing. “A Tuesday note on independent bookstore news for people who buy from shops, not chains” is specific. “Thoughts on books and life” is only a topic.
+Prices in the platform step are month-to-month USD list rates unless a sentence says the charge is annual. They were checked on 25 November 2026, except Mailchimp's contact starts and Kit's Pro price at 1,000 subscribers, which are from 24 November 2026 and labeled that way. The source list is [How we compare prices](/how-we-test/).
 
-Put that sentence at the top of the signup page. If you cannot say what the next four issues are, wait a week and draft them before you pick software.
+<h2 id="what">1. What is a newsletter, and who is it for</h2>
 
-## Pick a cadence
+A newsletter is a repeating email to people who asked for it. An email newsletter is that same thing when the point is the inbox, not a social feed. Newsletters differ by promise, not by the software logo. A shop can send one note a week about what arrived. A founder can send a product letter. A writer can send an interview series and later charge for it. Those are newsletter examples of a promise. A personal newsletter is the same form, aimed at people who want that person's notes.
 
-Weekly is the schedule most people can keep next to a job. Daily is a different product: it multiplies the email count by about seven, and some plans that look cheap for a weekly letter run out of sends.
+One sentence is enough: who it is for, and what they get that they would not get by browsing. "A Tuesday note on independent bookstore news for people who buy from shops, not chains" is specific. "Thoughts on books and life" is only a topic. Put that sentence on the signup page. If you cannot name the next four issues, draft them before you open an account. How to set up a newsletter is the sequence below. How to publish a newsletter on the web can wait until the first issue has gone to the inbox. A few newsletter tips cover the first month: one promise, one schedule, and a test send to yourself.
 
-Write the day on a calendar for the next six weeks. If two of those weeks are already impossible, do not promise daily, and do not promise twice a week.
+<h2 id="cadence">2. How often should you send a newsletter</h2>
 
-Example: a Sunday letter about one shop, one book, and one link. That is one send. A welcome email is a second send, once, to each new person. Tests are extra sends. Count them when you price MailCheap, because MailCheap counts every email it sends for you.
+Weekly is the schedule most people can keep next to a job. Daily is a different product. It multiplies the email count by about seven, and some plans that look cheap for a weekly letter run out of sends. Twice a week is a choice you should write down, not drift into.
 
-## Count the list you will actually have
+Write the next six send days on a calendar. If two are already impossible, do not promise them. Yahoo's sender guidance says to honor the frequency people were told. A weekly list that becomes a daily list is a complaint risk, not a growth tactic.
 
-Start from people who asked to hear from you: an existing site, a checkout, a talk, a form you already run.
+The planning month is subscribers times issues per week times 4.33. At 1,000 people, one issue a week is about 4,300 emails. Seven issues a week is about 30,300. Kit, beehiiv, Ghost, and Flodesk's paid plans do not charge per issue. MailCheap and MailerLite Comfort do. The [cost guide](/guides/email-marketing-cost/) is that table. The default below is one issue a week. The rest of the setup follows from that weekly rhythm.
 
-Three useful planning numbers:
+A welcome email is a second send, once, to each new person. A confirmation click, if you use it, is another. Tests are extra. On MailCheap those messages count toward the monthly cap. The issue can still be once a week.
 
-- **Now.** The people you can mail this month.
-- **In six months.** A plain guess, such as “double, if the letter stays weekly.”
-- **A long month.** Subscribers times the number of issues in a five-week month.
+<h2 id="free">3. How to start a newsletter for free</h2>
 
-At 4,000 subscribers, one issue a week is about 17,300 emails in the 4.33-week estimate.
+You can start a newsletter for free when the plan's cap and its feature list both cover the first six months, not just the first afternoon.
 
-## Choose a platform for that send
+**Kit Free** is $0 for up to 10,000 subscribers, with unlimited broadcasts, forms, and landing pages. The help article, updated 23 September 2026 and checked 25 November 2026, says sequences, visual automations, rules, and RSS need a paid plan. You can sell a digital product or a subscription on Free. The commerce fee is separate from the $0 plan: 3.5% plus $0.30 per USD sale. Creator, if you need sequences now, is $39 a month up to 1,000 subscribers. That $39 is not required to broadcast.
 
-Use the row that matches the letter, not a general ranking. Prices below are month-to-month USD list rates checked on 24 November 2026. Sources are on [How we test](/how-we-test/).
+**beehiiv Free** is $0 up to 2,500 subscribers and unlimited sends, with a site and the recommendation network. Automations, paid subscriptions, the ad network, and custom domains start on Lite. Lite at the up-to-1,000 bucket is $59 a month, or $588 for the year. Stay on Free while 2,500 is enough and Free already does the job.
 
-| Situation | Platform | What you pay |
-| --- | --- | --- |
-| Broadcasts only, under 10,000 subscribers | Kit Free | $0. Sequences and visual automations need Creator, which is $39 a month up to 1,000 subscribers. |
-| A site and recommendations, under 2,500 subscribers | beehiiv Free | $0. Paid subscriptions, ads, and automations start on Lite. |
-| You will charge readers on the platform, and revenue is still small | Substack | $0 to publish. 10% of subscription revenue, plus Stripe, when readers pay. |
-| You send on a schedule, you are past those free caps, and you sell elsewhere | MailCheap | Starter is $19 a month for 20,000 emails and 10,000 subscribers. Growth is $39. |
-| You want the price to stay flat as the list grows | Flodesk Email | $46 a month, or $38 a month billed annually. Unlimited subscribers and sends. The free plan does not send. |
-| Members log in to a site | Ghost(Pro) | Starter is $18 a month up to 1,000 members and cannot sell memberships. Publisher starts at $35. |
+**Substack** is $0 to publish at any list size. Paid subscriptions cost 10% of subscription revenue, plus Stripe. A custom domain is $50 once. If you will not charge readers, there is no monthly platform bill to look up. The help article was updated 29 October 2026 and checked 25 November 2026.
 
-MailCheap is the lower paid bill for a weekly letter that fits Starter or Growth and does not need a paywall, an ad network, a referral program, or A/B tests. At 4,000 subscribers and one issue a week, Starter’s $19 covers the 4.33-week estimate. A month with five weekly sends uses all 20,000 emails. If you also send welcome emails, price Growth at $39 before you switch.
+**MailerLite Free** is 250 active subscribers and 2,500 emails a month. That is a real free plan, and it is a small one. Comfort at 500 subscribers is $12 a month. At 1,000 subscribers Comfort is $19 a month.
 
-If Kit Free or beehiiv Free already sends the issue, stay there. A $19 plan is an extra bill, not a requirement.
+**Mailchimp Free** is 250 contacts and 500 sends a month, with a daily cap of 250, as read on 24 November 2026. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Above that, check current pricing.
+
+**Flodesk's free plan does not send.** The pricing FAQ, checked 25 November 2026, says it is for forms, landing pages, and a link-in-bio page, and that email sending is not included. The first sending plan is Email at $46 a month, or $456 for the year.
+
+**Ghost(Pro) has no hosted free plan.** Starter is $18 a month, or $180 for the year, up to 1,000 members, and the pricing page marks paid subscriptions as not included. Publisher, which can charge members and takes 0% of payments, is $35 a month at 1,000 members, or $348 for the year.
+
+**MailCheap has no hosted free plan.** You can draft without paying. Sending, the public signup form, and your own domain need a plan. Starter is $19 a month for 20,000 emails and up to 10,000 subscribers, or $190 for the year. Yearly billing costs the price of 10 months. If Kit Free or beehiiv Free already sends the issue, Starter is an extra bill, not a step you owe the process.
+
+To create a newsletter for free, pick the $0 plan that includes the feature you need. The upgrade is for a missing feature.
+
+<h2 id="platform">4. Choose a platform for the list you will actually have</h2>
+
+Count the people you can mail this month because they asked, and a plain six-month guess you will not treat as a forecast. At 1,000 people, a month with five weekly sends is 5,000 emails, still inside MailCheap Starter's 20,000. At 5,000 people, the ordinary 4.33-week month is already about 21,700 emails, over Starter, so the row is Growth at $39.
+
+The calculator is set to 1,000 subscribers and a weekly issue. It includes Kit, beehiiv, Substack, MailerLite, and MailCheap. Ghost, Flodesk, and Mailchimp are in the table under it. Reviews of [MailCheap](/reviews/mailcheap/) and [beehiiv](/reviews/beehiiv/) sit next to the [Kit alternatives](/alternatives/convertkit/), [beehiiv alternatives](/alternatives/beehiiv/), [Mailchimp alternatives](/alternatives/mailchimp/), and [MailerLite alternatives](/alternatives/mailerlite/).
+
+<Calculator
+  idPrefix="start"
+  platforms={["Kit", "beehiiv", "Substack", "MailerLite", "MailCheap"]}
+  defaultSubs={1000}
+  defaultIssues={1}
+/>
+
+<div class="table-wrap">
+  <table>
+    <caption>Month-to-month list price for one issue a week. Annual prices are stated in the paragraphs, not mixed into these cells. Checked 25 November 2026 unless a cell says otherwise.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Subscribers</th>
+        <th scope="col">Kit, broadcasts</th>
+        <th scope="col">beehiiv</th>
+        <th scope="col">Substack</th>
+        <th scope="col">MailerLite Comfort</th>
+        <th scope="col">MailCheap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">0, before anyone joins</th>
+        <td>$0</td>
+        <td>$0</td>
+        <td>$0</td>
+        <td>$0 on Free, until 250 subscribers</td>
+        <td>$19 if you send. Drafting can be unpaid.</td>
+      </tr>
+      <tr>
+        <th scope="row">1,000</th>
+        <td>$0</td>
+        <td>$0 Free, or $59 Lite</td>
+        <td>$0 to publish</td>
+        <td>$19</td>
+        <td>$19 Starter</td>
+      </tr>
+      <tr>
+        <th scope="row">5,000</th>
+        <td>$0</td>
+        <td>$109 Lite</td>
+        <td>$0 to publish</td>
+        <td>$49</td>
+        <td>$39 Growth</td>
+      </tr>
+      <tr>
+        <th scope="row">10,000</th>
+        <td>$0, at the cap</td>
+        <td>$139 Lite</td>
+        <td>$0 to publish</td>
+        <td>$89</td>
+        <td>$39 Growth</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+Ghost Starter is $18 a month up to 1,000 members and cannot sell memberships. At 5,000 members Publisher is $75 a month. At 10,000, Publisher is $105 a month. Flodesk Email is $46 a month at every row, or $456 for the year, and the free plan does not send. Mailchimp at 1,000, 5,000, and 10,000 contacts: check current pricing. The vendor pages are [Kit](/pricing/convertkit/), [beehiiv](/pricing/beehiiv/), [Substack](/pricing/substack/), [MailerLite](/pricing/mailerlite/), [Ghost](/pricing/ghost/), [Flodesk](/pricing/flodesk/), and [Mailchimp](/pricing/mailchimp/). The [pricing hub](/pricing/) is the index.
+
+MailCheap is the lower paid bill when a free plan does not cover the send, the email count fits a published plan, and you do not need paid subscriptions, an ad network, a referral program, or A/B tests in the tool. At 1,000 subscribers and one weekly issue, Kit Free at $0 still covers the broadcast. Prefer that $0 plan when it does the job. The pair pages are [MailCheap vs beehiiv](/compare/mailcheap-vs-beehiiv/), [beehiiv vs Substack](/compare/beehiiv-vs-substack/), [beehiiv vs Kit](/compare/beehiiv-vs-convertkit/), [Kit vs Mailchimp](/compare/convertkit-vs-mailchimp/), [MailerLite vs Mailchimp](/compare/mailerlite-vs-mailchimp/), [Ghost vs Substack](/compare/ghost-vs-substack/), and [Flodesk vs Mailchimp](/compare/flodesk-vs-mailchimp/). The [comparisons hub](/compare/) lists them together. The full matrix is [newsletter platforms](/guides/newsletter-platforms/).
 
 <p class="cta-row">
   <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap pricing</a>
-  <a class="btn btn-secondary" href="/#calculator">Run your numbers</a>
-  <span class="btn-note">Affiliate link. We may earn a commission. The price you pay does not change.</span>
+  <a class="btn btn-secondary" href="/guides/email-marketing-cost/">See the cost by list size</a>
+  <span class="btn-note">Affiliate link. We may earn a commission. The price you pay does not change. Use the $19 plan when a free plan no longer covers the send.</span>
 </p>
 
-The longer price pages are [beehiiv pricing](/pricing/beehiiv/), [Kit pricing](/pricing/convertkit/), and [Flodesk pricing](/pricing/flodesk/).
+<h2 id="issue">5. How to create a newsletter issue, and the welcome</h2>
 
-## Set up the first send
+To make an email newsletter issue, open the platform's editor and start from a template.
 
-1. Buy a domain you control if you expect to leave the first platform. Substack charges $50 once for a custom domain. beehiiv includes custom domains on paid plans, not on Free. MailCheap includes a custom domain on paid plans.
-2. Turn on the welcome email before you announce the letter. On a free Kit plan you can broadcast, and sequences need Creator. A single welcome issue can be a broadcast you send by hand for the first month.
-3. Mail yourself, then ten people who will tell you if the links break.
-4. Publish the signup form in one place you already have an audience. Do not open five networks on day one.
-5. Send the first real issue on the day you named.
+How to write an email newsletter that matches the signup promise:
 
-Import only people who asked for the letter. A purchased list is a deliverability problem on every platform in this guide, and <a href="https://mailcheap.ai/help/importing-contacts?via=analyst" rel="sponsored nofollow noopener" target="_blank">MailCheap’s import rules</a> say it can get an account blocked. Affiliate link.
+1. A from-name a stranger can recognize, on an address at a domain you control once you have one.
+2. A subject line that describes the issue. A clever subject that hides the topic trains people to ignore the next one.
+3. The point, in the first screen, before a logo and a stack of links.
+4. Links you have clicked yourself.
+5. A sign-off that says when the next issue comes.
+6. A visible way to unsubscribe.
+7. A postal address on commercial mail. The legal section says why.
 
-## When the bill changes
+One shop, one book, and one link can be the whole issue. Before you send the email newsletter, mail it to yourself and then to ten people who will say if a link breaks.
 
-Come back when one of these happens:
+The welcome email goes once to each new person, before you announce the letter. Restate the promise, the schedule, and how to leave. On Kit Free you can broadcast, and a sequence needs Creator, so the first month can be a welcome you send by hand if the volume is small. On MailCheap, welcome and confirmation emails count toward the cap. Turn the welcome on before the announcement. Do not build week one as a paywall unless charging is the product. The last section is the short version.
 
-- You cross 2,500 subscribers and beehiiv Free has ended. Lite at the up-to-5,000 bucket is $109 a month. [beehiiv vs Substack](/compare/beehiiv-vs-substack/) is the page if readers are paying you.
-- You cross 10,000 subscribers and Kit Free stops sending. The Creator price for that list size is on [Kit’s pricing page](https://kit.com/pricing). For a weekly broadcast, MailCheap Growth is $39 at 10,000 subscribers (about 43,300 emails). See the [Kit alternatives](/alternatives/convertkit/).
-- You turn on paid subscriptions. Substack’s 10% becomes a real invoice. Compare it with beehiiv Lite, Ghost Publisher, and MailerLite Comfort before you assume a monthly plan is cheaper.
-- A five-week month plus welcome emails no longer fits the MailCheap plan you bought. Move up one plan, or send less.
+<h2 id="signup">6. Newsletter sign up: one form, one page</h2>
 
-Rerun the [calculator](/#calculator) whenever your list size or schedule changes.
+A newsletter sign up fails when the form is in five places and the sentence above it is different in each. Use one form, in one place you already have an audience. That place can be an existing site, a checkout receipt, or a landing page the email tool hosts. Kit, MailerLite, beehiiv, and Flodesk all host pages. Flodesk's free plan can host the page and still cannot send the letter. Do not collect addresses on a tool that cannot mail them, unless you already know which sender you will connect.
+
+The page needs the promise, the schedule, and the form. Say what the next issue is. If you use double opt-in, say they must click the confirmation. People who miss that click are not subscribers yet.
+
+Sign up from your own address before you share the page. Check the confirmation, the welcome, and the footer. Then send the link to those ten people. Launch the newsletter to people who already asked, on the day you named.
+
+You need a URL for the form, not a blog, a shop, and a podcast. A newsletter website, the public archive, can come later. Several of these tools host it. If you already have a site, put the form there.
+
+<h2 id="growth">7. Newsletter growth from people who asked</h2>
+
+Newsletter subscribers are an asset only if they wanted the letter. Newsletter growth, in the first months, is one channel you already use: the shop counter, the last slide of a talk, the receipt, the site you have had for a year. Ask once, with the promise sentence, and a reason to join this week rather than "someday."
+
+Do not buy a list, scrape one, or add buyers because consent was buried in a footer. Inbox providers treat that as spam whether or not the software blocks the account. MailCheap reviews who is sending before the first issues, and the plans page says a new account it cannot take is canceled and the first payment refunded. That review is not a substitute for permission.
+
+Import only people who asked, and keep the file. A move carries addresses, not automations, paid billing, or a recommendation network. The [platform guide](/guides/newsletter-platforms/) notes what does not transfer. The [alternatives hub](/alternatives/) is for when you already pay a tool. One list and one schedule, until the calendar proves you can keep two.
+
+<h2 id="domain">8. Set the sending domain before the list is large</h2>
+
+Buy a domain you control if you expect to leave the first platform. A shared sending domain is fine for a test and a poor long-term from-address.
+
+Substack charges $50 once for a custom domain. beehiiv includes custom domains on paid plans, not on Free. MailCheap includes your own domain on a paid plan. Ghost's pricing page, read 25 November 2026, lists a custom website domain on Starter, and lists the custom sending domain (the domain on the email) on Publisher, not on Starter. Those are different settings. A website can live at your domain while the email still leaves from the host. For deliverability you care about the sending domain.
+
+Three DNS records are the usual set. You add them at the company that holds the domain. The email platform shows the values. Paste those, and mail a test before the list sees the domain.
+
+**SPF** lists servers allowed to send for the domain. If your newsletter platform is not listed in SPF, receivers are more likely to treat the message as forged.
+
+**DKIM** is a signature receivers use to check that the message still matches what the domain owner signed. Google's sender guidelines ask for a key of at least 1024 bits for mail to personal Gmail accounts, and recommend 2048 bits where the registrar supports it.
+
+**DMARC** says what to do when SPF or DKIM fails, and it requires the authenticated domain to line up with the From address. A policy of `p=none` monitors. Quarantine and reject are stricter. Read the reports before you jump to reject.
+
+Google's [email sender guidelines](https://support.google.com/a/answer/81126) split all senders from bulk senders. All senders need SPF or DKIM, and a spam rate under 0.3% in Postmaster Tools. More than 5,000 messages a day to Gmail accounts also needs SPF and DKIM, DMARC of at least `p=none`, alignment with the From domain, and one-click unsubscribe on marketing mail. Yahoo's [sender best practices](https://senders.yahooinc.com/best-practices/) ask all senders for SPF or DKIM and a spam rate under 0.3%. Bulk senders there need both SPF and DKIM, DMARC of at least `p=none`, one-click unsubscribe, a visible unsubscribe, and opt-outs honored within 2 days. A 200-person letter is not that bulk tier. Set the records anyway. Mail yourself from the new domain before you announce it.
+
+<h2 id="legal">9. Commercial email rules: CAN-SPAM, unsubscribe, double opt-in</h2>
+
+This is a reading of public guidance, not a legal opinion. Rules outside the United States, including in the European Union, can be stricter. The US baseline is the FTC's [CAN-SPAM compliance guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business).
+
+The guide's requirements, in short, are these. Do not use false or misleading header information. Do not use a deceptive subject line. Identify the message as an ad if it is one. Include a valid physical postal address. Tell people how to opt out of future commercial email. Honor opt-out requests within 10 business days. Monitor what other people do on your behalf, including an agency or a freelancer who sends under your name. A receipt or a similar transactional message is treated differently from a promotional issue. If the issue is the product pitch, assume the commercial rules apply.
+
+Unsubscribe has to work. The footer link is the visible version. One-click unsubscribe is the mailbox button Google and Yahoo require of bulk senders. Confirm it on a test to Gmail. CAN-SPAM allows 10 business days. Yahoo's bulk rule says 2 days. Meet the shorter one if you might be in that bulk group. Do not make people log in to leave.
+
+Double opt-in is the extra click: they submit the form, then confirm from the inbox. CAN-SPAM does not require it. Yahoo recommends that click so typos and bots stay off the list. Kit, beehiiv, MailerLite, and MailCheap can send the confirmation. MailCheap counts it toward the email allowance. Use it on a public form. A purchased list fails this section. Do not import one.
+
+<h2 id="metrics">10. What to measure after the first sends</h2>
+
+Measure the numbers that tell you whether to keep the schedule, not a score you can post.
+
+**Delivered, bounced, and complained.** Bounces mean the address was bad. Complaints mean someone marked the mail as spam. Google and Yahoo both talk about a spam rate under 0.3%. You do not need a dashboard metaphor to act on a spike. Stop, find the source of the addresses, and do not send the next issue to that segment until you know.
+
+**Unsubscribes.** A few after a sharp issue are normal. A jump after you changed the schedule or the topic means the promise on the signup page and the issue diverged. Fix the promise or fix the issue. Do not email the people who left.
+
+**Clicks.** They show that a link was the point of the issue and that it worked. They are a cleaner signal than opens.
+
+**Opens.** Open rates vary by list and by how each tool counts opens, so compare your own issues over time.
+
+**List growth.** New confirmed subscribers, minus unsubscribes and bounces, over a month. If that is flat and the issue matches the promise, the form is in the wrong place or the sentence is vague. That is not a reason to buy addresses. Kit, beehiiv, Ghost, MailerLite, Flodesk, Substack, Mailchimp, and MailCheap all show some version of these counts. The labels differ.
+
+<h2 id="money">11. A short note on charging readers</h2>
+
+You can start free and charge later only if the tool can sell the subscription when you are ready. Substack can, and then keeps 10% plus Stripe. Kit can, including on Free, at 3.5% plus $0.30 per USD sale. beehiiv can on Lite and Pro, not on Free, and takes 0% of the payment on those paid plans. Ghost can on Publisher and Business, not on Starter, at 0%. MailerLite can on Comfort and Power, not on Free. Flodesk can on the Everything plan, not on Email or Free. MailCheap cannot sell subscriptions at all. You can still mention a sponsor or link to a checkout you run somewhere else.
+
+If you already know you will charge inside the tool this year, start on a tool that can. A free-list move is a CSV. A paid relationship is a new checkout unless the Stripe account is yours. The fees at $1,000, $5,000, and $10,000 a month are on [newsletter monetization](/guides/newsletter-monetization/). The software bill is broken down in the [email marketing cost guide](/guides/email-marketing-cost/). When the list crosses 2,500 subscribers on beehiiv, 10,000 on Kit, or the MailCheap email cap, how to start a newsletter means a new row in that table. The schedule stays the one you can keep. A $0 plan that still sends is still the right plan.
