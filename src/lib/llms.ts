@@ -55,7 +55,7 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
   },
   {
     heading: "About",
-    slugs: ["about", "how-we-test", "affiliate-disclosure", "privacy", "contact"],
+    slugs: ["about", "how-we-test", "affiliate-disclosure", "privacy", "accessibility", "contact"],
   },
 ];
 

@@ -2,7 +2,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import HeroMark from "../components/HeroMark.astro";
 import { guidesBySlug } from "../lib/guides";
-import { mailcheapHref, PRICE_CHECKED_ISO, PRICE_CHECKED_LABEL, SITE_NAME, SITE_URL } from "../lib/site";
+import { formatIsoDate, mailcheapHref, PRICE_CHECKED_ISO, SITE_NAME, SITE_URL } from "../lib/site";
 
 interface TocItem {
   id: string;
@@ -193,7 +193,7 @@ const jsonLd = [breadcrumbs, article, faqSchema, reviewSchema, itemListSchema].f
         <p class="lede">{lede}</p>
         <p class="byline">
           <span>By sendforless</span>
-          <span>Updated <time datetime={dateModified}>{PRICE_CHECKED_LABEL}</time></span>
+          <span>Updated <time datetime={dateModified}>{formatIsoDate(dateModified)}</time></span>
           {showPriceByline && <span>Prices from official pages, month-to-month USD list rates</span>}
         </p>
         </div>
