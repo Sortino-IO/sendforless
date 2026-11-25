@@ -42,9 +42,9 @@ export const convertkitVsMailchimp: CompareDoc = {
       why: "Kit's pricing FAQ says no plan has a sending limit. Mailchimp Free is 500 a month. Paid Mailchimp plans allow 10, 12, or 15 times the contact limit.",
     },
     {
-      topic: "Who counts toward the bill",
+      topic: "Who you pay for",
       favors: "Kit, if you confirmed subscribers only",
-      why: "Kit's billing help says the bill is confirmed subscribers. Mailchimp counts unsubscribed and non-subscribed contacts until you archive them.",
+      why: "Kit bills only for confirmed subscribers. Mailchimp counts unsubscribed and non-subscribed contacts until you archive them.",
     },
   ],
   pricingIntro: [
@@ -86,7 +86,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       paragraphs: [
         `Kit's free plan lets you open the visual automation and sequence screens. Creating one asks you to upgrade. Rules and RSS campaigns are on the same paid list. Free still sends unlimited broadcasts, tags and segments the audience, and runs A/B tests on those broadcasts. A single welcome issue can be a broadcast you send by hand. A sequence that waits three days and branches on a click is Creator.`,
         `At 1,000 subscribers that upgrade is $39 a month, or $390 a year. At 3,000 it is $59 a month, or $590 a year, using the billing help's annual rule of 12 months for the price of 10. At 4,000 subscribers, broadcasts remain free, and for Creator, check current pricing. Pro at 1,000 subscribers is $79 a month and adds the reporting and referral items on Kit's pricing page, including deliverability reporting and a newsletter referral system. Do not buy Pro to get sequences. Sequences start on Creator.`,
-        `Mailchimp Essentials is the wrong place to rebuild a long Kit sequence. The pricing help caps Essentials flows at 4 steps. Standard is the expanded automation plan, and above 500 contacts its price is on Mailchimp's site. If you are leaving Mailchimp because of the contact bill and you do not use journeys, Kit Free is the comparison. If you are leaving because you want sequences, price Creator at your confirmed-subscriber count, not at Mailchimp's contact total. Those counts differ when unsubscribed people are still in Mailchimp.`,
+        `Mailchimp Essentials is the wrong place to rebuild a long Kit sequence. The pricing help caps Essentials flows at 4 steps. Standard is the expanded automation plan, and above 500 contacts its price is on Mailchimp's site. If you are leaving Mailchimp because of the contact price and you do not use journeys, Kit Free is the comparison. If you are leaving because you want sequences, price Creator at your confirmed-subscriber count, not at Mailchimp's contact total. Those counts differ when unsubscribed people are still in Mailchimp.`,
         `Kit support on Free is answered in the order received, within 24 hours, according to the free-plan article. That is a queue statement, not a review of how helpful the replies are.`,
       ],
     },
@@ -114,7 +114,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       "Broadcasts, forms, landing pages, tagging, and product sales are $0 up to 10,000 subscribers.",
       "No send cap on the free plan, unlike Mailchimp's 500 emails.",
       "Creator is a published $39 up to 1,000 subscribers and $59 up to 3,000 when you need sequences.",
-      "The bill follows confirmed subscribers, and annual billing is 12 months for the price of 10.",
+      "You pay for confirmed subscribers, and annual billing is 12 months for the price of 10.",
     ],
     cons: [
       "Sequences, visual automations, rules, and RSS need a paid plan.",

@@ -159,7 +159,7 @@ export const beehiivVsSubstack: CompareDoc = {
     `DNS: Substack's custom domain is a $50 one-time setup. Point it at beehiiv only after Lite is ready to serve the domain, because custom domains are not on beehiiv Free. Send a test post to yourself. Keep the old publication online until the export is downloaded and a paying reader has a new checkout. There is no warm-up number in Substack's cost article. beehiiv does not meter the first send. Still mail a small group if the list was dormant.`,
   ],
   cheaper: [
-    `MailCheap is the lower bill when you only send and you do not need paid subscriptions, recommendations, or ads. At 4,000 subscribers and one issue a week, Starter is $19 a month for 20,000 emails. The 4.33-week estimate is about 17,334 emails. beehiiv Lite at the same list is $109 and does not meter sends. Substack is $0 until readers pay. MailCheap is more than Substack's $0.`,
+    `MailCheap costs less when you only send and you do not need paid subscriptions, recommendations, or ads. At 4,000 subscribers and one issue a week, Starter is $19 a month for 20,000 emails. The 4.33-week estimate is about 17,334 emails. beehiiv Lite at the same list is $109 and does not cap the number of emails. Substack is $0 until readers pay. MailCheap is more than Substack's $0.`,
     `Use MailCheap when both the percent and the Lite tier are for features you will not use. The toggle adds the row. <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a> is an affiliate link. The <a href="/reviews/mailcheap/">review</a> lists what the $19 plan does not include.`,
   ],
   faqs: [

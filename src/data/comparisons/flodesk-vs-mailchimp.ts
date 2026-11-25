@@ -34,7 +34,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     {
       topic: "Price at 25,000 subscribers",
       favors: "Flodesk, on the number we can verify",
-      why: "Email is still $46 a month and sends are unlimited. Mailchimp Standard can store up to 100,000 contacts, but the dollar for 25,000 is on Mailchimp's pricing page.",
+      why: "Email is still $46 a month and sends are unlimited. Mailchimp Standard can store up to 100,000 contacts, but Mailchimp's price at 25,000 contacts is on its pricing page.",
     },
     {
       topic: "Free plan",

@@ -34,7 +34,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
     {
       topic: "Price at 25,000 subscribers, weekly",
       favors: "Whichever quote you actually open",
-      why: "Comfort is $179 a month ($161.10 annual). Power, with no email cap, is $239 a month. Mailchimp Standard stores up to 100,000 contacts, but the dollar is on Mailchimp's page.",
+      why: "Comfort is $179 a month ($161.10 annual). Power, with no email cap, is $239 a month. Mailchimp Standard stores up to 100,000 contacts, but that price is on Mailchimp's page.",
     },
     {
       topic: "Free plan that can send",
@@ -109,7 +109,7 @@ export const mailerliteVsMailchimp: CompareDoc = {
       id: "forms",
       title: "Forms, landing pages, and the website",
       paragraphs: [
-        `MailerLite sells the site as part of the same bill. Free includes 1 website, 1 landing page, and 3 active forms. Comfort raises that to 10 websites and landing pages and 10 forms. Power removes the cap. Custom domains and custom code are Comfort and Power. Landing-page A/B tests are too. The free plan can still embed a form, pop up, and use the blog section, but the published site count is one.`,
+        `MailerLite includes the site in the same price. Free includes 1 website, 1 landing page, and 3 active forms. Comfort raises that to 10 websites and landing pages and 10 forms. Power removes the cap. Custom domains and custom code are Comfort and Power. Landing-page A/B tests are too. The free plan can still embed a form, pop up, and use the blog section, but the published site count is one.`,
         `SEO tools for sites, click maps, password pages, and a favicon are listed on every MailerLite plan. The AI landing-page builder is "once" on Free and open on paid plans. If the newsletter is also the homepage, Comfort is the first plan where a custom domain is a documented yes.`,
         `Mailchimp's pricing help says Free can try landing pages and forms, with a limited template set. Essentials includes all email templates. Standard adds custom-coded templates. The Essentials lander mentions a library of email and landing-page templates and says the Mailchimp logo can come off emails. Mailchimp's pricing help does not publish a cap on the number of landing pages.`,
         `Pages do not move in a subscriber export. MailerLite's migration page is the vendor's offer of help for large lists. It is not a promise that a Mailchimp landing page becomes a MailerLite page. Rebuild the form, point the domain, and send a test signup before you announce the new URL.`,
@@ -210,10 +210,10 @@ export const mailerliteVsMailchimp: CompareDoc = {
     },
     {
       q: "How does Mailchimp vs MailerLite differ?",
-      a: "<p>Comfort has a published price at each subscriber tier. Above 500 contacts, check Mailchimp's current pricing. Stay on Mailchimp when the store stays. Price MailerLite when you want the ladder and the pages.</p>",
+      a: "<p>Comfort has a published price at each subscriber tier. Above 500 contacts, check Mailchimp's current pricing. Stay on Mailchimp when the store stays. Price MailerLite when you want the published prices and the pages.</p>",
     },
     {
-      q: "When is MailCheap the lower bill?",
+      q: "When does MailCheap cost less?",
       a: "<p>When you only need to send, the cadence fits a published MailCheap plan, and you do not need paid newsletters, a stack of landing pages, or store journeys. At 4,000 weekly subscribers Starter is $19. Links to MailCheap are affiliate links.</p>",
     },
   ],

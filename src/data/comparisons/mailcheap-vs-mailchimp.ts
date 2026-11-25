@@ -115,7 +115,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
     ],
   },
   who: [
-    `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing features are acceptable.`,
+    `Choose MailCheap when you send on a schedule, you can count the emails, and the missing features are acceptable.`,
     `Choose Mailchimp when the store or the journeys are why the account exists, or when Free or the $13 starting price still covers you.`,
     `Choose Kit (ConvertKit) Free, not either paid plan, when you only send the newsletter and you are under 10,000 subscribers.`,
   ],

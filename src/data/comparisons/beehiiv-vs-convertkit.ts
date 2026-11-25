@@ -103,7 +103,7 @@ export const beehiivVsConvertkit: CompareDoc = {
       title: "Paid newsletters",
       paragraphs: [
         `beehiiv takes 0% of paid subscription revenue on Lite and Pro and charges the subscriber tier instead. Stripe is 2.9% + $0.30. Free cannot sell subscriptions. One paid tier is on Lite. Unlimited tiers are on Pro. Digital products exist on Free with a cap of 1 product.`,
-        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked November 25, 2026). You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, Creator is the bill.`,
+        `Kit's free-plan article puts digital products and subscriptions on Free. You can sell without Creator. Kit charges 3.5% + 30¢ per sale on Free, card processing included (kit.com/pricing, checked November 25, 2026). You cannot earn from Paid Recommendations on Free, and you cannot run the email sequence that sells the product unless you upgrade. If the sale is a single checkout link inside a broadcast, Kit Free can be enough. If the sale is a week of emails, you need Creator.`,
         `Moving a paid subscriber between these two does not move the card on file. Export the address, recreate the offer, and charge again. beehiiv data exports are listed on every plan. Kit's paid plans mention a migration service. Confirm that service on Kit's site if you are paying for it.`,
       ],
     },
@@ -155,7 +155,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     `Kit's pricing FAQ says paid plans include a migration service for lists and automations. If that is why you would pay Creator, confirm the current terms on Kit's site. Free-to-free moves are a CSV you handle. DNS for a custom domain is a Lite feature on beehiiv and a setup step on whichever Kit plan you use for a custom sending domain. Send a test broadcast before you delete the old account. Neither free plan meters the number of emails in that test the way Mailchimp does. The subscriber cap still applies.`,
   ],
   cheaper: [
-    `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid bill when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator. At 10,000 subscribers, check Creator's current pricing.`,
+    `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid price when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator. At 10,000 subscribers, check Creator's current pricing.`,
     `At 4,000 weekly subscribers, Starter is $19. Most lists under 10,000 subscribers can stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [

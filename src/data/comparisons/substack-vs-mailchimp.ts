@@ -108,7 +108,7 @@ export const substackVsMailchimp: CompareDoc = {
     ],
   },
   who: [
-    `Choose Substack when the letter is the product and 10% of paid revenue is acceptable. Choose it at $0 if nobody pays.`,
+    `Choose Substack when the newsletter is what you sell and 10% of paid revenue is acceptable. Choose it at $0 if nobody pays.`,
     `Choose Mailchimp when you need the audiences and the journeys, or when a priced Mailchimp tier is already lower than 10%.`,
     `Choose a flat sender when 10% has passed the monthly tool you would actually use. MailCheap, Kit, and MailerLite are priced on their own pages.`,
   ],

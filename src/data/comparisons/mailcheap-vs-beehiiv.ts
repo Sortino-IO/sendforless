@@ -18,7 +18,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
   linkB: { href: "https://www.beehiiv.com/pricing", label: "beehiiv pricing" },
   differencesIntro: [
     `At 4,000 subscribers and one issue a week, MailCheap Starter is $19 a month and beehiiv Lite is $109 a month. Those are month-to-month list prices checked November 25, 2026. MailCheap's plans help and pricing page list Starter at 20,000 emails and 10,000 subscribers. The 4.33-week estimate is about 17,334 emails, which fits. If you also send welcome emails or tests, price Growth at $39.`,
-    `beehiiv does not meter sends. Lite at the up-to-5,000 bucket is $109 a month or $1,140 a year ($95 a month). Free is $0 only through 2,500 subscribers, and it omits automations, paid subscriptions, and the ad network. Full beehiiv buckets are on <a href="/pricing/beehiiv/">beehiiv pricing</a>. The MailCheap write-up is the <a href="/reviews/mailcheap/">review</a>.`,
+    `beehiiv does not meter sends. Lite at the up-to-5,000 bucket is $109 a month or $1,140 a year ($95 a month). Free is $0 only through 2,500 subscribers, and it omits automations, paid subscriptions, and the ad network. Full beehiiv buckets are on <a href="/pricing/beehiiv/">beehiiv pricing</a>. Read the <a href="/reviews/mailcheap/">MailCheap review</a>.`,
   ],
   differences: [
     {
@@ -157,7 +157,7 @@ export const mailcheapVsBeehiiv: CompareDoc = {
     ],
   },
   who: [
-    `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing pieces are acceptable. At 4,000 weekly subscribers, Starter is $19 and Lite is $109. At 10,000 weekly subscribers, Growth at $39 against Lite at $139 is the same kind of gap, and a daily send to 10,000 people is about 303,000 emails, which is Scale at $149, not Growth. Cadence picks the MailCheap plan. It does not pick the beehiiv tier.`,
+    `Choose MailCheap when you send on a schedule, you can count the emails, and the missing pieces are acceptable. At 4,000 weekly subscribers, Starter is $19 and Lite is $109. At 10,000 weekly subscribers, Growth at $39 against Lite at $139 is the same kind of gap, and a daily send to 10,000 people is about 303,000 emails, which is Scale at $149, not Growth. Cadence picks the MailCheap plan. It does not pick the beehiiv tier.`,
     `Choose beehiiv when you use recommendations, and especially when you use ads or paid subscriptions. Lite's $109 is the price of those tools at 4,000 subscribers, not a fee for pressing send. Choose Pro when you need branding off, more than 10 automations, or more than 100,000 subscribers. Choose Free and stop comparing invoices if you are under 2,500 and the free feature list is enough.`,
     `Choose a third tool when neither frame fits. Substack is $0 until readers pay, then 10%. Kit Free is $0 for broadcasts under 10,000. Ghost Publisher is the themed membership site. Those are <a href="/compare/beehiiv-vs-substack/">beehiiv vs Substack</a>, <a href="/compare/beehiiv-vs-convertkit/">beehiiv vs Kit</a>, and <a href="/compare/ghost-vs-substack/">Ghost vs Substack</a>.`,
   ],
