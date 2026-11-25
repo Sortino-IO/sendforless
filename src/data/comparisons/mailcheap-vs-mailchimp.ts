@@ -17,7 +17,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
   linkA: { href: mc, label: "MailCheap pricing (affiliate)", affiliate: true },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `MailCheap vs Mailchimp compares an email allowance with a contact tier. MailCheap Starter is $19 a month for 20,000 emails and 10,000 subscribers. Growth is $39 for 75,000 emails and 40,000 subscribers. Pro is $79 for 200,000 emails and 100,000 subscribers. Scale is $149, Max is $349, Ultra is $799. Yearly billing costs 10 months. Checked 25 November 2026 on the plans help and the pricing page. There is no hosted free plan.`,
+    `MailCheap vs Mailchimp compares an email allowance with a contact tier. MailCheap Starter is $19 a month for 20,000 emails and 10,000 subscribers. Growth is $39 for 75,000 emails and 40,000 subscribers. Pro is $79 for 200,000 emails and 100,000 subscribers. Scale is $149, Max is $349, Ultra is $799. Yearly billing costs 10 months. Checked November 25, 2026 on the plans help and the pricing page. There is no hosted free plan.`,
     `Mailchimp vs MailCheap at the published starting prices: Free is $0 up to 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Above 500 contacts, check current pricing. Unsubscribed contacts count until you archive them. The limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
@@ -52,7 +52,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
     `Links to MailCheap are affiliate links. The commission does not change the price and does not add A/B tests, paid subscriptions, or a store.`,
   ],
   featuresIntro: [
-    `MailCheap rows are from the plans table. Mailchimp rows are from the pricing page and About Mailchimp Pricing Plans. Checked 25 November 2026.`,
+    `MailCheap rows are from the plans table. Mailchimp rows are from the pricing page and About Mailchimp Pricing Plans. Checked November 25, 2026.`,
   ],
   matrix: [
     {
@@ -115,9 +115,9 @@ export const mailcheapVsMailchimp: CompareDoc = {
     ],
   },
   who: [
-    `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing features are acceptable.`,
+    `Choose MailCheap when you send on a schedule, you can count the emails, and the missing features are acceptable.`,
     `Choose Mailchimp when the store or the journeys are why the account exists, or when Free or the $13 starting price still covers you.`,
-    `Choose Kit (ConvertKit) Free, not either paid plan, when you only broadcast and you are under 10,000 subscribers.`,
+    `Choose Kit (ConvertKit) Free, not either paid plan, when you only send the newsletter and you are under 10,000 subscribers.`,
   ],
   switchingTitle: "Switching from Mailchimp to MailCheap",
   switching: [

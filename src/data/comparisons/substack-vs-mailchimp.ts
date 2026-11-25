@@ -18,7 +18,7 @@ export const substackVsMailchimp: CompareDoc = {
   linkA: { href: "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost", label: "Substack pricing help" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
-    `Substack vs Mailchimp is a fee against a contact tier. Substack's help article, updated 29 October 2026 and checked 25 November 2026, says publishing is free at any list size. Paid subscriptions cost 10% of subscription revenue. Stripe adds its own processing. The article quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once.`,
+    `Substack vs Mailchimp is a fee against a contact tier. Substack's help article, updated October 29, 2026 and checked November 25, 2026, says publishing is free at any list size. Paid subscriptions cost 10% of subscription revenue. Stripe adds its own processing. The article quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once.`,
     `Mailchimp vs Substack comes down to what you pay for stored contacts. Free is 250 contacts and 500 sends a month, with a daily cap of 250. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Above that, check current pricing. There is no 10% publication fee, because Mailchimp is not priced as a share of reader revenue.`,
   ],
   differences: [
@@ -47,7 +47,7 @@ export const substackVsMailchimp: CompareDoc = {
     `Three revenue examples use Substack's 10% and ignore Stripe, so the card fee is extra. At $2,000 a month in paid subscriptions, 10% is $200. At $5,000, 10% is $500. At $10,000, 10% is $1,000. Mailchimp Essentials at the 500-contact starting price is $13, which is less than those cuts. A larger Mailchimp tier might still be less than $500, or it might not. Check current pricing before you treat 10% as the expensive one.`,
   ],
   featuresIntro: [
-    `Substack rows are from the help article How much does Substack cost? Mailchimp rows are from the pricing page and the pricing-plans help. Checked 25 November 2026.`,
+    `Substack rows are from the help article How much does Substack cost? Mailchimp rows are from the pricing page and the pricing-plans help. Checked November 25, 2026.`,
   ],
   matrix: [
     {
@@ -108,7 +108,7 @@ export const substackVsMailchimp: CompareDoc = {
     ],
   },
   who: [
-    `Choose Substack when the letter is the product and 10% of paid revenue is acceptable. Choose it at $0 if nobody pays.`,
+    `Choose Substack when the newsletter is what you sell and 10% of paid revenue is acceptable. Choose it at $0 if nobody pays.`,
     `Choose Mailchimp when you need the audiences and the journeys, or when a priced Mailchimp tier is already lower than 10%.`,
     `Choose a flat sender when 10% has passed the monthly tool you would actually use. MailCheap, Kit, and MailerLite are priced on their own pages.`,
   ],

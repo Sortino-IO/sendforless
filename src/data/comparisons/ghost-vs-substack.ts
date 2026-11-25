@@ -17,8 +17,8 @@ export const ghostVsSubstack: CompareDoc = {
   linkA: { href: "https://ghost.org/pricing/", label: "Ghost pricing" },
   linkB: { href: "https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost", label: "Substack pricing help" },
   differencesIntro: [
-    `Ghost(Pro) prices members, not a percent of revenue. The numbers below are from ghost.org/js/pricing.min.js, the file the pricing page loads, read 25 November 2026. Starter is $18 a month or $180 a year ($15 a month) and stops at 1,000 members. It does not include paid subscriptions. Publisher at 1,000 members is $35 a month or $348 a year ($29 a month). At the up-to-5,000 band, Publisher is $75 a month or $756 a year ($63). At 10,000 members it is $105 a month or $1,056 a year ($88). At 25,000 it is $169 a month or $1,692 a year ($141). Business is $239 a month through 10,000 members, or $2,388 a year ($199).`,
-    `Substack charges $0 to publish at any list size and 10% when readers pay, plus Stripe. The help article updated 29 October 2026 quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once. Ghost's pricing page says paid plans take 0% from Ghost. You pay Stripe yourself, because the customer record is yours. See <a href="/pricing/ghost/">Ghost pricing</a> and <a href="/pricing/substack/">Substack pricing</a>.`,
+    `Ghost(Pro) prices members, not a percent of revenue. The numbers below are from <a href="https://ghost.org/pricing/">Ghost's pricing page</a>, checked November 25, 2026. Starter is $18 a month or $180 a year ($15 a month) and stops at 1,000 members. It does not include paid subscriptions. Publisher at 1,000 members is $35 a month or $348 a year ($29 a month). At the up-to-5,000 band, Publisher is $75 a month or $756 a year ($63). At 10,000 members it is $105 a month or $1,056 a year ($88). At 25,000 it is $169 a month or $1,692 a year ($141). Business is $239 a month through 10,000 members, or $2,388 a year ($199).`,
+    `Substack charges $0 to publish at any list size and 10% when readers pay, plus Stripe. The help article updated October 29, 2026 quotes 2.9% + $0.30 for US cards and 0.7% for Stripe Billing. A custom domain is $50 once. Ghost's pricing page says paid plans take 0% from Ghost. You pay Stripe yourself, because the customer record is yours. See <a href="/pricing/ghost/">Ghost pricing</a> and <a href="/pricing/substack/">Substack pricing</a>.`,
   ],
   differences: [
     {
@@ -53,7 +53,7 @@ export const ghostVsSubstack: CompareDoc = {
     `Ghost's pricing page contrasts Ghost(Pro) with self-hosting and does not publish a hosting bill for running it yourself. The prices below are Ghost(Pro). At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
-    `Ghost rows combine the pricing page's feature table with the price file. Substack rows are the cost article and the export article. Staff counts follow the public pricing page (Publisher 3, Business 15, Starter 1).`,
+    `Ghost rows are from the pricing page. Substack rows are the cost article and the export article. Staff counts follow the public pricing page (Publisher 3, Business 15, Starter 1).`,
   ],
   matrix: [
     {
@@ -152,7 +152,7 @@ export const ghostVsSubstack: CompareDoc = {
     `Self-hosting Ghost is a third path the pricing page acknowledges and does not price. Do not start a self-host migration in the same week you move paid members unless you already run that server. Ghost(Pro) is the priced option in this table.`,
   ],
   cheaper: [
-    `MailCheap does not replace Ghost or Substack for a paid membership. It has no paid subscriptions. It is the lower bill when the job is the send. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 members and one issue a week the estimate is about 17,334 emails. Publisher at that size is $75 and takes 0% if you charge. Substack is $0 plus 10% if you charge. MailCheap at $19 is under Publisher and above Substack's $0, and it will not log members into a themed site.`,
+    `MailCheap does not replace Ghost or Substack for a paid membership. It has no paid subscriptions. It costs less when you only send the newsletter. Starter is $19 a month for 20,000 emails and 10,000 subscribers. At 4,000 members and one issue a week the estimate is about 17,334 emails. Publisher at that size is $75 and takes 0% if you charge. Substack is $0 plus 10% if you charge. MailCheap at $19 is under Publisher and above Substack's $0, and it will not log members into a themed site.`,
     `The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>. Read the <a href="/reviews/mailcheap/">MailCheap review</a> if the only feature you use today is the weekly send.`,
   ],
   faqs: [
@@ -162,7 +162,7 @@ export const ghostVsSubstack: CompareDoc = {
     },
     {
       q: "How much is Ghost at 10,000 members?",
-      a: "<p>Publisher is $105 a month, or $88 a month billed annually ($1,056 a year). Business is $239 a month, or $199 a month billed annually ($2,388 a year). Starter does not cover 10,000 members. Checked 25 November 2026 in Ghost's pricing file.</p>",
+      a: "<p>Publisher is $105 a month, or $88 a month billed annually ($1,056 a year). Business is $239 a month, or $199 a month billed annually ($2,388 a year). Starter does not cover 10,000 members. Checked November 25, 2026 on Ghost's pricing page.</p>",
     },
     {
       q: "Does Ghost take a percentage?",

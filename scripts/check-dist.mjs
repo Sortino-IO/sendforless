@@ -66,7 +66,7 @@ if (!contactHtml.includes("data-mail=")) fail("contact page is missing the encod
 if (contactHtml.includes("contact-form")) fail("contact form is still in the build");
 
 const accessibility = readFileSync(join(dist, "accessibility", "index.html"), "utf8");
-for (const phrase of ["WCAG", "IS 5568", "25 November 2026", "office [at] sortino [dot] io"]) {
+for (const phrase of ["WCAG", "IS 5568", "November 25, 2026", "office [at] sortino [dot] io"]) {
   if (!accessibility.includes(phrase)) fail(`accessibility page is missing ${phrase}`);
 }
 
