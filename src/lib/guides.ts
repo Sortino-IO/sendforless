@@ -6,6 +6,8 @@ export type Guide = {
   blurb: string;
 };
 
+export type HubGroup = "start" | "costs" | "compare" | "switch";
+
 export const guides: Guide[] = [
   {
     slug: "mailchimp-alternatives",
@@ -176,6 +178,27 @@ export const guides: Guide[] = [
     blurb: "Define the audience, pick a schedule you can keep, and match a platform to your list size and bill.",
   },
   {
+    slug: "newsletter-cost",
+    href: "/guides/newsletter-cost/",
+    kicker: "Guide",
+    title: "How much does email marketing cost?",
+    blurb: "List price by list size and send frequency, for free plans, flat plans, and per-email plans.",
+  },
+  {
+    slug: "newsletter-platforms",
+    href: "/guides/newsletter-platforms/",
+    kicker: "Guide",
+    title: "Best newsletter platforms",
+    blurb: "Eight platforms compared by the job they fit and the price at 1,000, 5,000, and 10,000 subscribers.",
+  },
+  {
+    slug: "newsletter-monetization",
+    href: "/guides/newsletter-monetization/",
+    kicker: "Guide",
+    title: "Newsletter monetization",
+    blurb: "Platform fees on paid subscriptions, and which tools cannot charge readers at all.",
+  },
+  {
     slug: "how-we-test",
     href: "/how-we-test/",
     kicker: "Method",
@@ -188,6 +211,64 @@ export function guidesBySlug(slugs: string[]): Guide[] {
   return slugs
     .map((slug) => guides.find((guide) => guide.slug === slug))
     .filter((guide): guide is Guide => Boolean(guide));
+}
+
+/** Hub groups. Order inside a group is the order of `slugs`. */
+export const hubGroups: { id: HubGroup; title: string; slugs: string[] }[] = [
+  {
+    id: "start",
+    title: "Start",
+    slugs: ["how-to-start-a-newsletter", "newsletter-monetization"],
+  },
+  {
+    id: "costs",
+    title: "Costs",
+    slugs: [
+      "newsletter-cost",
+      "beehiiv-pricing",
+      "convertkit-pricing",
+      "flodesk-pricing",
+      "mailerlite-pricing",
+      "mailchimp-pricing",
+      "ghost-pricing",
+      "substack-pricing",
+    ],
+  },
+  {
+    id: "compare",
+    title: "Compare",
+    slugs: [
+      "newsletter-platforms",
+      "mailcheap-vs-beehiiv",
+      "beehiiv-vs-substack",
+      "mailerlite-vs-mailchimp",
+      "convertkit-vs-mailchimp",
+      "ghost-vs-substack",
+      "beehiiv-vs-convertkit",
+      "flodesk-vs-mailchimp",
+    ],
+  },
+  {
+    id: "switch",
+    title: "Switch",
+    slugs: [
+      "mailchimp-alternatives",
+      "mailerlite-alternatives",
+      "substack-alternatives",
+      "convertkit-alternatives",
+      "ghost-alternatives",
+      "beehiiv-alternatives",
+    ],
+  },
+];
+
+export function guidesInHub(id: HubGroup): Guide[] {
+  const group = hubGroups.find((item) => item.id === id);
+  return group ? guidesBySlug(group.slugs) : [];
+}
+
+export function hubGuides(): Guide[] {
+  return hubGroups.flatMap((group) => guidesInHub(group.id));
 }
 
 export const footerGuideSlugs = [

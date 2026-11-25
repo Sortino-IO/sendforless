@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" role="img">
+  <rect width="880" height="280" fill="#0c0c14"/>
+  <g font-family="Inter, system-ui, sans-serif" fill="#f5f5f7">
+    <g>
+      <rect x="24" y="36" width="250" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="68" font-size="13" fill="#c4b5fd">1</text>
+      <text x="40" y="96" font-size="16">Who it is for</text>
+    </g>
+    <g>
+      <rect x="298" y="36" width="250" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="314" y="68" font-size="13" fill="#c4b5fd">2</text>
+      <text x="314" y="96" font-size="16">Schedule you can keep</text>
+    </g>
+    <g>
+      <rect x="572" y="36" width="284" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="588" y="68" font-size="13" fill="#c4b5fd">3</text>
+      <text x="588" y="96" font-size="16">List you can mail now</text>
+    </g>
+    <g>
+      <rect x="24" y="156" width="250" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="188" font-size="13" fill="#c4b5fd">4</text>
+      <text x="40" y="216" font-size="16">Platform for that send</text>
+    </g>
+    <g>
+      <rect x="298" y="156" width="250" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="314" y="188" font-size="13" fill="#c4b5fd">5</text>
+      <text x="314" y="216" font-size="16">Signup page and form</text>
+    </g>
+    <g>
+      <rect x="572" y="156" width="284" height="92" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="588" y="188" font-size="13" fill="#c4b5fd">6</text>
+      <text x="588" y="216" font-size="16">First real issue</text>
+    </g>
+  </g>
+</svg>

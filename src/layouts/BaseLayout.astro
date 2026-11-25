@@ -26,7 +26,10 @@ const {
 
 const canonical = new URL(Astro.url.pathname, SITE_URL).href;
 const image = new URL(ogImage, SITE_URL).href;
-const skipSuffix = Astro.url.pathname.startsWith("/compare/") || Astro.url.pathname.startsWith("/pricing/");
+const skipSuffix =
+  Astro.url.pathname.startsWith("/compare/") ||
+  Astro.url.pathname.startsWith("/pricing/") ||
+  Astro.url.pathname.startsWith("/guides/");
 const fullTitle = skipSuffix || title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
 const organization = {

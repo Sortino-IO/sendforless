@@ -1068,6 +1068,23 @@ select:focus {
 .article-body p,
 .article-body ul,
 .article-body ol { max-width: 42rem; color: var(--muted); }
+.article-body figure {
+  margin: 1.25rem 0 1.75rem;
+  max-width: 42rem;
+}
+.article-body figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+.article-body figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  color: var(--faint);
+}
 .article-body p strong,
 .article-body li strong { color: var(--text); }
 

@@ -1,0 +1,387 @@
+---
+layout: ../../layouts/ArticleLayout.astro
+title: "How Much Does Email Marketing Cost?"
+description: "How much does email marketing cost at 1,000 to 10,000 subscribers? Monthly and annual prices for weekly and daily sends, from each vendor's pricing page."
+kicker: Guide
+lede: "How much does email marketing cost depends on the list, the schedule, and which plan actually sends. A weekly letter to 1,000 people is $0 on Kit, beehiiv, and Substack. The same list is $19 a month on MailerLite Comfort or MailCheap Starter, $18 on Ghost Starter, and $46 on Flodesk Email. Above the free caps, the bill is a published tier or a note to check current pricing."
+crumb: "Email marketing cost"
+sectionName: Guides
+sectionHref: /guides/
+affiliate: true
+datePublished: 2026-11-25
+dateModified: 2026-11-25
+toc:
+  - id: answer
+    label: The short answer
+  - id: size
+    label: Cost by list size
+  - id: often
+    label: Send frequency
+  - id: models
+    label: Pricing models
+  - id: hidden
+    label: What the plan omits
+  - id: free
+    label: Free plans
+  - id: faq
+    label: FAQ
+related:
+  - newsletter-platforms
+  - newsletter-monetization
+  - how-to-start-a-newsletter
+  - beehiiv-pricing
+  - convertkit-pricing
+  - flodesk-pricing
+  - mailerlite-pricing
+  - mailchimp-pricing
+  - ghost-pricing
+  - substack-pricing
+  - how-we-test
+faqs:
+  - q: Is email marketing expensive?
+    a: "<p>Not at the start, if a free plan already sends broadcasts. It becomes a real invoice when you pass 2,500 subscribers on beehiiv, 10,000 on Kit, or 250 contacts on Mailchimp, or when you need a feature the free plan withholds. A flat $46 plan can then be either the simple bill or the expensive one, depending on list size.</p>"
+  - q: What is the cost of email marketing for about 1,000 subscribers?
+    a: "<p>For one issue a week, about 4,300 emails, the month-to-month list prices on 25 November 2026 are $0 on Kit Free, beehiiv Free, and Substack, $19 on MailerLite Comfort and on MailCheap Starter, $18 on Ghost Starter, and $46 on Flodesk Email. Mailchimp at 1,000 contacts is not given a dollar here. Check current pricing. Annual prices are lower on several of these and are billed for the year.</p>"
+  - q: Does sending more often raise the price?
+    a: "<p>On Kit, beehiiv, Ghost, Flodesk's paid plans, and Substack's monthly fee, no. They do not meter the issue. On MailCheap and on MailerLite Comfort, yes, once the email count leaves the plan you were on. A daily letter to 1,000 people is about 30,300 emails. That is Growth at $39 on MailCheap, not Starter at $19.</p>"
+  - q: What is an email marketing subscription, as a bill?
+    a: "<p>It is the fee you pay the software company, monthly or annually. It is not the fee a reader pays you. Reader payments are a different invoice, covered on the monetization guide. Keep the two amounts in different columns.</p>"
+  - q: Why do some rows say to check current pricing?
+    a: "<p>Mailchimp does not publish a static price above 500 contacts on the pages this site uses. Kit does not publish a fixed Creator price above 3,000 subscribers in the help article that states the $39 and $59 examples. Those cells are links, not guesses.</p>"
+  - q: Are annual prices the monthly price times twelve?
+    a: "<p>No. Vendors that offer an annual term charge less than twelve monthly invoices, and they charge it up front. MailCheap's year costs 10 months. MailerLite's year is 10% off. beehiiv, Ghost, and Flodesk publish their own yearly totals. Use the yearly total when you pay yearly. Use the monthly rate when you pay monthly.</p>"
+---
+
+import { mailcheapHref } from "../../lib/site";
+import Calculator from "../../components/Calculator.astro";
+
+<figure>
+  <img src="/guides/cost-parts.svg" width="880" height="220" alt="How much does email marketing cost: a platform list price, an email allowance, and a separate payment fee." />
+  <figcaption>Three different charges. A comparison that folds them into one number hides which bill you are actually looking at.</figcaption>
+</figure>
+
+Prices below are USD list rates. Monthly and annual are kept apart. Promotions are ignored. The estimate for a typical month is subscribers times issues per week times 4.33, rounded up. The 4.33 is 52 weeks divided by 12 months. Sources are linked in each section and collected on [How we compare prices](/how-we-test/).
+
+<h2 id="answer">How much does email marketing cost</h2>
+
+For a list you already know, use the calculator. It applies the same rules as the tables. Empty dollars stay empty.
+
+<Calculator idPrefix="cost" defaultSubs={1000} defaultIssues={1} />
+
+The picture at 1,000 subscribers and one issue a week, about 4,300 emails, is the one most people mean by a small letter.
+
+<div class="table-wrap">
+  <table>
+    <caption>Month-to-month platform bill for 1,000 subscribers and one issue a week. Annual prices are in the next section, not in this column. Checked 25 November 2026, except Mailchimp and Kit Pro, dated in the notes.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Platform</th>
+        <th scope="col">Plan that fits a weekly send</th>
+        <th scope="col">Monthly list price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Kit</th>
+        <td>Free, if you broadcast. Creator if you need sequences.</td>
+        <td>$0, or $39 on Creator up to 1,000 subscribers</td>
+      </tr>
+      <tr>
+        <th scope="row">beehiiv</th>
+        <td>Free. Lite if you need paid subscriptions, ads, or automations.</td>
+        <td>$0, or $59 on Lite</td>
+      </tr>
+      <tr>
+        <th scope="row">Substack</th>
+        <td>Free publishing</td>
+        <td>$0 until readers pay. Then 10% of subscription revenue, plus Stripe.</td>
+      </tr>
+      <tr>
+        <th scope="row">MailerLite</th>
+        <td>Comfort. Power if you need the higher email cap removed.</td>
+        <td>$19 Comfort, or $39 Power</td>
+      </tr>
+      <tr>
+        <th scope="row">MailCheap</th>
+        <td>Starter, 20,000 emails and 10,000 subscribers</td>
+        <td>$19</td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost(Pro)</th>
+        <td>Starter, if you will not charge members. Publisher if you will.</td>
+        <td>$18 Starter, or $35 Publisher</td>
+      </tr>
+      <tr>
+        <th scope="row">Flodesk</th>
+        <td>Email. The free plan does not send.</td>
+        <td>$46</td>
+      </tr>
+      <tr>
+        <th scope="row">Mailchimp</th>
+        <td>Above the published 500-contact starts</td>
+        <td>Check current pricing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+That spread, $0 to $46 before anyone pays you, is the software. It is not the cost of writing, a registrar, or Stripe. The [monetization guide](/guides/newsletter-monetization/) is the reader-payment line.
+
+<h2 id="size">Email marketing cost by list size</h2>
+
+Zero subscribers is not automatically a $0 bill. Kit, beehiiv, Substack, MailerLite, and Mailchimp can sit at $0 before you have a list, and the first three can send once people join, within the free caps below. Flodesk's free plan is $0 and, on the pricing page re-read 25 November 2026, does not include email sending. Ghost(Pro) has no hosted free plan: Starter is $18 a month, or $180 a year, up to 1,000 members. MailCheap lets you draft with no plan and charges from $19 when you send. There is no hosted free sending plan.
+
+The rows at 1,000, 5,000, and 10,000 assume one issue a week. Daily is in the next section. "Check current pricing" means the vendor's page has the number and this site is not going to estimate it.
+
+<div class="table-wrap">
+  <table>
+    <caption>Monthly list price for one weekly issue. About 4,300 emails at 1,000 subscribers, about 21,700 at 5,000, and about 43,300 at 10,000. Checked 25 November 2026 unless noted.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Platform</th>
+        <th scope="col">1,000</th>
+        <th scope="col">5,000</th>
+        <th scope="col">10,000</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="/pricing/convertkit/">Kit</a>, broadcasts</th>
+        <td>$0</td>
+        <td>$0</td>
+        <td>$0, at the free cap</td>
+      </tr>
+      <tr>
+        <th scope="row">Kit Creator, if you need sequences</th>
+        <td>$39</td>
+        <td>Check current pricing</td>
+        <td>Check current pricing</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/beehiiv/">beehiiv</a></th>
+        <td>$0 Free, or $59 Lite</td>
+        <td>$109 Lite</td>
+        <td>$139 Lite</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/substack/">Substack</a></th>
+        <td>$0 to publish</td>
+        <td>$0 to publish</td>
+        <td>$0 to publish</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/mailerlite/">MailerLite</a> Comfort</th>
+        <td>$19</td>
+        <td>$49</td>
+        <td>$89</td>
+      </tr>
+      <tr>
+        <th scope="row">MailCheap</th>
+        <td>$19 Starter</td>
+        <td>$39 Growth</td>
+        <td>$39 Growth</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/ghost/">Ghost(Pro)</a></th>
+        <td>$18 Starter, or $35 Publisher</td>
+        <td>$75 Publisher</td>
+        <td>$105 Publisher</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/flodesk/">Flodesk</a> Email</th>
+        <td>$46</td>
+        <td>$46</td>
+        <td>$46</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="/pricing/mailchimp/">Mailchimp</a></th>
+        <td>Check current pricing</td>
+        <td>Check current pricing</td>
+        <td>Check current pricing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+At 5,000 subscribers a weekly letter is about 21,700 emails. MailCheap Starter includes 20,000, so the weekly row is Growth at $39, not Starter at $19. beehiiv Free has ended at 2,500, so the row is Lite at the up-to-5,000 bucket, $109 a month. Kit Free still covers broadcasts. Ghost Starter has ended at 1,000 members, so the row is Publisher at $75 a month. Flodesk Email is still $46, because the paid price does not move with the list.
+
+At 10,000 subscribers a weekly letter is about 43,300 emails. Kit Free is at its cap and still $0 for broadcasts. The next subscriber forces a paid Kit plan, and the Creator price for that list is on [kit.com/pricing](https://kit.com/pricing). MailCheap Growth includes 75,000 emails, so $39 still fits the weekly estimate. MailerLite Comfort is $89. Ghost Publisher is $105. beehiiv Lite is $139. Flodesk Email is $46. Substack's platform fee is still $0 until readers pay.
+
+Annual prices, paid up front, for the same weekly list. Do not read the "per month" figure as the amount withdrawn every month.
+
+<div class="table-wrap">
+  <table>
+    <caption>Annual charge for the plans in the monthly table, where the vendor publishes one. The per-month figure is the yearly total divided by 12.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Plan</th>
+        <th scope="col">1,000</th>
+        <th scope="col">5,000</th>
+        <th scope="col">10,000</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Kit Creator, 12 months for the price of 10</th>
+        <td>$390 for the year ($32.50 a month) at the $39 tier</td>
+        <td>Check current pricing</td>
+        <td>Check current pricing</td>
+      </tr>
+      <tr>
+        <th scope="row">beehiiv Lite</th>
+        <td>$588 for the year ($49 a month)</td>
+        <td>$1,140 for the year ($95 a month)</td>
+        <td>$1,428 for the year ($119 a month)</td>
+      </tr>
+      <tr>
+        <th scope="row">MailerLite Comfort, 10% off</th>
+        <td>$17.10 a month, billed for the year</td>
+        <td>$44.10 a month, billed for the year</td>
+        <td>$80.10 a month, billed for the year</td>
+      </tr>
+      <tr>
+        <th scope="row">MailCheap, price of 10 months</th>
+        <td>$190 for the year on Starter</td>
+        <td>$390 for the year on Growth</td>
+        <td>$390 for the year on Growth</td>
+      </tr>
+      <tr>
+        <th scope="row">Ghost</th>
+        <td>Starter $180 for the year. Publisher $348 for the year.</td>
+        <td>Publisher $756 for the year ($63 a month)</td>
+        <td>Publisher $1,056 for the year ($88 a month)</td>
+      </tr>
+      <tr>
+        <th scope="row">Flodesk Email</th>
+        <td colspan="3">$456 for the year ($38 a month), at every list size</td>
+      </tr>
+      <tr>
+        <th scope="row">Substack</th>
+        <td colspan="3">No annual platform tier. The 10% applies whenever readers pay. A custom domain is $50 once.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+MailerLite publishes the annual figure as that lower monthly number in [its pricing file](https://www.mailerlite.com/pricing.md). You pay it for the year. Comfort at 1,000 subscribers is $19 on the monthly invoice and $17.10 a month on the annual schedule. Power at the same tier is $39 a month, or $35.10 a month annually. At 5,000, Power is $69 a month or $62.10 annually. At 10,000, Power is $129 a month or $116.10 annually. Power is the plan that removes Comfort's email cap. The weekly rows above fit Comfort. The daily rows often do not.
+
+<h2 id="often">Email marketing prices when you send more than once a week</h2>
+
+Email marketing pricing plans fall into two groups. One group charges for people or for a flat product, and a second issue in the week does not move the invoice. Kit, beehiiv, Ghost, Flodesk's paid plans, and Substack's $0 publishing fee are in that group. Kit's pricing page says there is no sending limit on the plans this site describes. beehiiv's pricing FAQ says every plan includes unlimited sends. Ghost's pricing page says unlimited email sends. Flodesk's paid plans include unlimited emails.
+
+The other group counts emails. MailCheap's allowance is the plan cap. MailerLite Comfort's allowance is 10 times the subscriber tier. A daily letter, seven issues a week, is about seven times the weekly email count.
+
+<div class="table-wrap">
+  <table>
+    <caption>Plans that change when the cadence changes. Other tools in the weekly table keep the same monthly list price. About 30,300 emails a day-level month at 1,000 subscribers, about 151,700 at 5,000, and about 303,300 at 10,000.</caption>
+    <thead>
+      <tr>
+        <th scope="col">List</th>
+        <th scope="col">Weekly</th>
+        <th scope="col">Daily</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1,000 on MailCheap</th>
+        <td>$19 Starter</td>
+        <td>$39 Growth</td>
+      </tr>
+      <tr>
+        <th scope="row">5,000 on MailCheap</th>
+        <td>$39 Growth</td>
+        <td>$79 Pro</td>
+      </tr>
+      <tr>
+        <th scope="row">10,000 on MailCheap</th>
+        <td>$39 Growth</td>
+        <td>$149 Scale</td>
+      </tr>
+      <tr>
+        <th scope="row">1,000 on MailerLite</th>
+        <td>$19 Comfort</td>
+        <td>$39 Power. Comfort's 10,000-email cap at this tier does not fit.</td>
+      </tr>
+      <tr>
+        <th scope="row">5,000 on MailerLite</th>
+        <td>$49 Comfort</td>
+        <td>$69 Power</td>
+      </tr>
+      <tr>
+        <th scope="row">10,000 on MailerLite</th>
+        <td>$89 Comfort</td>
+        <td>$129 Power</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+A month with five weekly sends is higher than the 4.33-week estimate, before welcome mail and tests. At 1,000 subscribers that month is 5,000 emails and still fits Starter. At 5,000 subscribers the ordinary week-count is already over Starter, so the five-send month is not what moves you to Growth.
+
+MailCheap counts every email it sends for you: the issue, tests, automations, and welcome and confirmation mail. The <a href={mailcheapHref("/help/plans")} rel="sponsored nofollow noopener" target="_blank">plans page</a> says so, and it was re-read on 25 November 2026. Affiliate link. The tables above count the issue only. If you also send a welcome to every new person, the allowance has to hold that mail too. The cheapest plan that fits the issue can be the wrong plan once welcomes are real. Price the next plan when the issue already uses most of the cap.
+
+<p class="cta-row">
+  <a class="btn btn-primary" href={mailcheapHref("/pricing")} rel="sponsored nofollow noopener" target="_blank">See MailCheap plan caps</a>
+  <a class="btn btn-secondary" href="/compare/mailcheap-vs-beehiiv/">MailCheap vs beehiiv</a>
+  <span class="btn-note">Affiliate link. We may earn a commission. The price you pay does not change. beehiiv does not meter sends. MailCheap does.</span>
+</p>
+
+Twice a week sits between those columns. At 1,000 subscribers it is about 8,700 emails, still Starter and still Comfort. At 5,000 it is about 43,300 emails, still Growth on MailCheap and still inside Comfort's 50,000-email cap at the 5,000 tier. At 10,000 it is about 86,700 emails. Growth includes 75,000, so twice a week at 10,000 subscribers is MailCheap Pro at $79, not Growth at $39. Comfort at 10,000 includes 100,000 emails, so $89 still fits that twice-weekly count. The weekly table is not the bill for a two-issue week once you are in this range.
+
+<h2 id="models">Email marketing pricing models</h2>
+
+Email marketing packages on these eight products use four models. The model tells you which number will move next year.
+
+**Per subscriber, or per member.** beehiiv Lite and Pro, Ghost Publisher, MailerLite, and Kit's paid plans move when the list crosses a bucket. You do not pay more for a second issue. You do pay more when the list grows, even if you send less often. Kit bills confirmed subscribers. The billing help, re-read 25 November 2026, uses $39 a month as the Creator price up to 1,000 subscribers and $59 a month as the Creator price up to 3,000. Annual Creator is 12 months for the price of 10, so the $39 tier is $390 for the year. Pro was $79 a month at 1,000 subscribers on [kit.com/pricing](https://kit.com/pricing) on 24 November 2026. This page does not extend Pro past that list size.
+
+**Per email, with a subscriber cap.** MailCheap Starter is $19 for 20,000 emails and up to 10,000 subscribers. Growth is $39 for 75,000 emails and 40,000 subscribers. Pro is $79 for 200,000 emails and 100,000 subscribers. Scale is $149 for 500,000 emails and 250,000 subscribers. A larger list on a quiet cadence can stay on a small plan. A small list on a daily cadence cannot.
+
+**A flat sending price.** Flodesk Email is $46 a month on monthly billing, or $456 a year, at any list size, with unlimited subscribers and sends. Everything, which adds checkout, is $99 a month or $948 a year. The flat price is the lower bill when the alternative is beehiiv Lite at 10,000 subscribers ($139) and you do not need Lite's ads or recommendations. It is the higher bill when Kit Free or MailCheap Growth already does the send you actually do.
+
+**A percent of reader revenue, plus $0 to publish.** Substack. The software subscription is $0. The cost of email marketing on Substack shows up when readers pay: 10%, plus Stripe. At $1,000 a month of subscription revenue the platform fee is $100. At $5,000 it is $500. At $10,000 it is $1,000. Stripe is extra. Details and the $50 custom domain are on [Substack pricing](/pricing/substack/). If you will not charge readers, Substack's platform bill stays $0 at 10,000 subscribers and at 100,000.
+
+Mailchimp is a contact tier. Free is 250 contacts and 500 sends a month, with a daily cap of 250. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts, as read on 24 November 2026. Above 500 contacts, check current pricing on [Mailchimp's pricing page](https://mailchimp.com/pricing/marketing/). Unsubscribed and non-subscribed contacts count until you archive them.
+
+Which model is the lower email marketing cost is a conditional answer. Best for a broadcast under 10,000 subscribers, the free Kit plan is the lowest software bill, at $0, if sequences can wait. Best for a weekly send past the free caps, with no reader paywall inside the tool, MailCheap's published plan is often the lower paid bill. Best for a price that never moves, Flodesk Email is the one that is literally flat. Best for a membership site, Ghost's higher bill can still be the one that fits, because the others are not that site. The [platform guide](/guides/newsletter-platforms/) goes through those situations one at a time.
+
+<h2 id="hidden">What the monthly price does not include</h2>
+
+The sticker is the plan. These are the charges that show up beside it.
+
+**The other term.** A monthly price and an annual price are different products in the checkout. beehiiv Lite at 10,000 subscribers is $139 if you pay each month and $1,428 if you pay for the year. You do not get the $119 figure as a monthly withdrawal. Ghost Publisher at 10,000 members is $105 a month or $1,056 for the year.
+
+**Sales tax on the software.** Kit's billing help says some US states are charged sales tax on the plan, based on the billing address. The $39 example in that article becomes $41.34 with a 6% tax. Other vendors may charge tax too. The list prices here are before that tax.
+
+**Stripe and any platform percent.** They appear when a reader pays. They are $0 when nobody pays. Do not add them to a free broadcast you never monetize. Do add them before you compare Substack with a flat plan. The worked numbers are on [newsletter monetization](/guides/newsletter-monetization/).
+
+**A domain.** Substack charges $50 once for a custom domain. beehiiv includes custom domains on paid plans, not on Free. MailCheap includes your own domain on a paid plan. Ghost's pricing page lists a custom website domain on Starter and lists the custom sending domain, the one on the email itself, on Publisher and not on Starter. A registrar's annual fee for the name is outside all of these invoices.
+
+**A dedicated IP.** Flodesk lists one as an add-on. We did not read a public price, so this page does not quote one. Check current pricing on Flodesk if you want that line.
+
+**Seats and extra mail.** A second login can be included or billed. Read that line on the vendor page if the team is why you are buying. Welcome emails, confirmation emails, and tests do not change an unlimited plan. On MailCheap they consume the cap. On MailerLite Comfort they consume the 10-times allowance.
+
+**The feature you turn on in month two.** Kit Free does not include sequences. beehiiv Free does not include automations, paid subscriptions, or the ad network. Ghost Starter does not include paid subscriptions. Flodesk's free plan does not send. The $0 row is wrong the week you need the missing feature. Price the paid plan in the same table, not as a surprise.
+
+Email marketing subscription cost, meaning this software bill, is also not your payment processor, your accountant, or the freelance editor. People shopping for email marketing services pricing are often pricing an agency. This page does not price agencies, retainers, or design shops. It prices the eight products a person can subscribe to and send from.
+
+<h2 id="free">Free plans, and the first paid tier</h2>
+
+The cost for email marketing can stay at $0 for a long time. It does not stay at $0 for every feature.
+
+Kit's free plan, described in a help article updated 23 September 2026 and re-read 25 November 2026, is $0 up to 10,000 subscribers, with unlimited broadcasts, forms, and landing pages. Sequences, visual automations, rules, and RSS need Creator or Pro. Past 10,000 subscribers you have to pay to keep sending. Commerce, including a paid newsletter, is on the free plan, at 3.5% plus $0.30 per USD sale. That percent is not a monthly plan. It is also not $0.
+
+beehiiv Free is $0 up to 2,500 subscribers and unlimited sends. Leave it early only if you need automations or paid subscriptions, which means Lite. At 2,501 subscribers the price is the up-to-5,000 Lite bucket, $109 a month, unless you move.
+
+Substack is $0 to publish at any size. The first "paid tier" is not a tier. It is 10% of whatever readers pay, plus Stripe.
+
+MailerLite Free is 250 active subscribers and 2,500 emails a month. The first Comfort tier in the pricing file is $12 a month at 500 subscribers, or $10.80 a month on the annual schedule. At 1,000 subscribers Comfort is $19. The free plan can sell one digital product. It cannot send a paid newsletter.
+
+Mailchimp Free stops at 250 contacts and 500 sends. The next published starts, for up to 500 contacts, are $13 and $20. After that, check current pricing.
+
+Flodesk Free does not send. The first sending plan is Email at $46 a month or $456 a year. There is no sending tier between $0 and $46.
+
+Ghost has no $0 hosted plan. The first plan is Starter at $18 a month or $180 a year, without paid memberships. Publisher at $35 a month, or $348 a year, is the first plan that can charge members, at up to 1,000 members.
+
+MailCheap has no $0 hosted plan. The first plan is Starter at $19 a month, or $190 for the year. Use it when the free plans above no longer fit the send, and when you do not need them for paid subscriptions, an ad network, or A/B tests inside the tool. If Kit Free still sends the broadcast, Starter is an extra $19, not a requirement. The [Kit pricing](/pricing/convertkit/) page and the [MailCheap review](/reviews/mailcheap/) are the two write-ups to read before that switch. The head-to-head with a subscriber tier is [MailCheap vs beehiiv](/compare/mailcheap-vs-beehiiv/).
+
+For the eight products together, with the situation each one fits, use [newsletter platforms](/guides/newsletter-platforms/). For the steps before you are looking at an invoice, use [how to start a newsletter](/guides/how-to-start-a-newsletter/).

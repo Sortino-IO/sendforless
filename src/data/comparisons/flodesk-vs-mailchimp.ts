@@ -191,6 +191,7 @@ export const flodeskVsMailchimp: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
     { href: "/pricing/flodesk/", kicker: "Pricing", title: "Flodesk pricing" },
     { href: "/pricing/mailchimp/", kicker: "Pricing", title: "Mailchimp pricing" },
     { href: "/compare/mailerlite-vs-mailchimp/", kicker: "Comparison", title: "MailerLite vs Mailchimp" },

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" role="img">
+  <rect width="880" height="200" fill="#0c0c14"/>
+  <g font-family="Inter, system-ui, sans-serif" fill="#f5f5f7">
+    <g>
+      <rect x="24" y="36" width="196" height="128" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="40" y="78" font-size="18">Start</text>
+      <text x="40" y="110" font-size="13" fill="#b0b0bc">Audience, schedule,</text>
+      <text x="40" y="130" font-size="13" fill="#b0b0bc">first issue</text>
+    </g>
+    <g>
+      <rect x="236" y="36" width="196" height="128" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="252" y="78" font-size="18">Costs</text>
+      <text x="252" y="110" font-size="13" fill="#b0b0bc">List size, cadence,</text>
+      <text x="252" y="130" font-size="13" fill="#b0b0bc">monthly and annual</text>
+    </g>
+    <g>
+      <rect x="448" y="36" width="196" height="128" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="464" y="78" font-size="18">Compare</text>
+      <text x="464" y="110" font-size="13" fill="#b0b0bc">Which job a</text>
+      <text x="464" y="130" font-size="13" fill="#b0b0bc">platform fits</text>
+    </g>
+    <g>
+      <rect x="660" y="36" width="196" height="128" rx="12" fill="#14141f" stroke="rgba(255,255,255,0.14)"/>
+      <text x="676" y="78" font-size="18">Switch</text>
+      <text x="676" y="110" font-size="13" fill="#b0b0bc">What you give up</text>
+      <text x="676" y="130" font-size="13" fill="#b0b0bc">if you leave</text>
+    </g>
+  </g>
+</svg>

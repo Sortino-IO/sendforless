@@ -193,6 +193,8 @@ export const beehiivVsSubstack: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
+    { href: "/guides/newsletter-monetization/", kicker: "Guide", title: "Newsletter monetization" },
     { href: "/pricing/beehiiv/", kicker: "Pricing", title: "beehiiv pricing" },
     { href: "/pricing/substack/", kicker: "Pricing", title: "Substack pricing" },
     { href: "/compare/ghost-vs-substack/", kicker: "Comparison", title: "Ghost vs Substack" },

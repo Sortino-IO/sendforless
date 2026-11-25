@@ -189,6 +189,7 @@ export const beehiivVsConvertkit: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
     { href: "/pricing/beehiiv/", kicker: "Pricing", title: "beehiiv pricing" },
     { href: "/pricing/convertkit/", kicker: "Pricing", title: "Kit pricing" },
     { href: "/compare/beehiiv-vs-substack/", kicker: "Comparison", title: "beehiiv vs Substack" },

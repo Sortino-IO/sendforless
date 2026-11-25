@@ -182,6 +182,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     },
   ],
   related: [
+    { href: "/guides/newsletter-platforms/", kicker: "Guide", title: "Newsletter platforms" },
     { href: "/pricing/convertkit/", kicker: "Pricing", title: "Kit pricing" },
     { href: "/pricing/mailchimp/", kicker: "Pricing", title: "Mailchimp pricing" },
     { href: "/alternatives/convertkit/", kicker: "Alternatives", title: "Kit alternatives" },
