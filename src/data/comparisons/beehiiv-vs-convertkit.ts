@@ -156,7 +156,7 @@ export const beehiivVsConvertkit: CompareDoc = {
   ],
   cheaper: [
     `Between these two, the cheaper broadcast under 10,000 subscribers is Kit Free at $0, and under 2,500 it is a tie at $0. MailCheap is not cheaper than $0. It becomes the lower paid bill when you are past those caps and you do not need recommendations, ads, or sequences. At 10,000 weekly subscribers, about 43,334 emails, MailCheap Growth is $39 a month and beehiiv Lite is $139. Kit is still $0 until you need Creator, whose price at 10,000 is check current pricing.`,
-    `At 4,000 weekly subscribers, Starter is $19. Most people in this comparison should stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `At 4,000 weekly subscribers, Starter is $19. Most lists under 10,000 subscribers can stay on Kit Free until a paid feature has a job. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {

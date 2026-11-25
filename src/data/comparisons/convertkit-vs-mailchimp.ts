@@ -158,7 +158,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     },
     {
       q: "Is Kit the same product as ConvertKit?",
-      a: "<p>Yes. Kit is the current name. Pricing pages and the help center use Kit. This comparison uses both names so the old ConvertKit query still lands on the current product.</p>",
+      a: "<p>Yes. Kit is the current name. Pricing pages and the help center use Kit.</p>",
     },
     {
       q: "Is Kit free compared with Mailchimp?",

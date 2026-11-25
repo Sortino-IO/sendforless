@@ -83,7 +83,7 @@ export const substackVsMailchimp: CompareDoc = {
     pros: [
       "Publishing is $0 at any list size.",
       "Paid subscriptions are built in.",
-      "The fee is a published 10%, not a hidden tier.",
+      "The fee is a published 10%.",
       "A custom domain is a one-time $50.",
     ],
     cons: [

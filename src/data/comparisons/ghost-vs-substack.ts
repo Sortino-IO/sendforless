@@ -48,7 +48,7 @@ export const ghostVsSubstack: CompareDoc = {
     },
   ],
   pricingIntro: [
-    `Starter is the wrong row for a paid membership. It is $18 a month, one staff user, one newsletter, no paid subscriptions, no custom theme, and no custom sending domain. Use it only for a free letter under 1,000 members. Publisher is the plan this comparison uses once members pay or the list passes 1,000. The pricing page lists 3 staff users on Publisher, custom themes, and a 0% transaction fee. Business adds 15 staff users and a higher member floor: the data file prices Business at $239 a month from 1,000 through 10,000 members.`,
+    `Starter is the wrong row for a paid membership. It is $18 a month, one staff user, one newsletter, no paid subscriptions, no custom theme, and no custom sending domain. Use it only for a free letter under 1,000 members. Publisher is the plan to price once members pay or the list passes 1,000. The pricing page lists 3 staff users on Publisher, custom themes, and a 0% transaction fee. Business adds 15 staff users and a higher member floor: the data file prices Business at $239 a month from 1,000 through 10,000 members.`,
     `Annual Ghost prices in the table are the yearly charge divided by 12. Publisher at 5,000 members is $756 a year, which is $63 a month only when you pay the year. Monthly billing stays $75. Substack has no annual platform plan. The 10% applies to each payment.`,
     `Ghost's pricing page contrasts Ghost(Pro) with self-hosting and does not publish a hosting bill for running it yourself. The prices below are Ghost(Pro). At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],

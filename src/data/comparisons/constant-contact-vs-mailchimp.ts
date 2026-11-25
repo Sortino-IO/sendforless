@@ -145,7 +145,7 @@ export const constantContactVsMailchimp: CompareDoc = {
     },
     {
       q: "Is Constant Contact better than Mailchimp?",
-      a: "<p>It depends on the job. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Mailchimp vs Constant Contact pricing above those starts is check current pricing on both sites. The difference between Mailchimp and Constant Contact is the suite around the send, not a single winner.</p>",
+      a: "<p>It depends on the job. Constant Contact fits when you want phone support on the entry plan and you have checked the contact tier. Mailchimp fits when a store or a set of journeys already lives in the account, or when 500 contacts at $13 or $20 still covers you. Mailchimp vs Constant Contact pricing above those starts is check current pricing on both sites. The main difference between Mailchimp and Constant Contact is the tools around the send: store journeys on Mailchimp, events and phone support on Constant Contact.</p>",
     },
     {
       q: "Is Constant Contact free?",
