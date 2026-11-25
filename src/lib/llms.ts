@@ -54,7 +54,7 @@ export const LLMS_SECTIONS: { heading: string; slugs: string[] }[] = [
     slugs: [
       "guides/index",
       "guides/how-to-start-a-newsletter",
-      "guides/newsletter-cost",
+      "guides/email-marketing-cost",
       "guides/newsletter-platforms",
       "guides/newsletter-monetization",
     ],

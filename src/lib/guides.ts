@@ -178,8 +178,8 @@ export const guides: Guide[] = [
     blurb: "Define the audience, pick a schedule you can keep, and match a platform to your list size and bill.",
   },
   {
-    slug: "newsletter-cost",
-    href: "/guides/newsletter-cost/",
+    slug: "email-marketing-cost",
+    href: "/guides/email-marketing-cost/",
     kicker: "Guide",
     title: "How much does email marketing cost?",
     blurb: "List price by list size and send frequency, for free plans, flat plans, and per-email plans.",
@@ -188,7 +188,7 @@ export const guides: Guide[] = [
     slug: "newsletter-platforms",
     href: "/guides/newsletter-platforms/",
     kicker: "Guide",
-    title: "Best newsletter platforms",
+    title: "Newsletter platforms compared",
     blurb: "Eight platforms compared by the job they fit and the price at 1,000, 5,000, and 10,000 subscribers.",
   },
   {
@@ -224,7 +224,7 @@ export const hubGroups: { id: HubGroup; title: string; slugs: string[] }[] = [
     id: "costs",
     title: "Costs",
     slugs: [
-      "newsletter-cost",
+      "email-marketing-cost",
       "beehiiv-pricing",
       "convertkit-pricing",
       "flodesk-pricing",

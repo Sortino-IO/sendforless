@@ -24,8 +24,8 @@ interface Frontmatter {
   description: string;
   kicker?: string;
   lede: string;
-  datePublished?: string;
-  dateModified?: string;
+  datePublished?: string | Date;
+  dateModified?: string | Date;
   toc?: TocItem[];
   faqs?: FaqItem[];
   related?: string[];
@@ -69,8 +69,9 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December",
 ];
 
-function longDate(iso: string): string {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+function longDate(value: string | Date): string {
+  const iso = value instanceof Date ? value.toISOString().slice(0, 10) : String(value);
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
   if (!match) return PRICE_CHECKED_LABEL;
   const month = MONTHS[Number(match[2]) - 1];
   if (!month) return PRICE_CHECKED_LABEL;
