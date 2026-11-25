@@ -124,9 +124,25 @@ for (const file of files.filter((item) => item.endsWith(".html"))) {
 }
 if (!allowsUnsafeInline && hashes.size === 0) fail("no inline scripts were hashed");
 
+// Every table-of-contents link must point to an id that exists on the same page.
+let tocLinks = 0;
+for (const file of files.filter((f) => f.endsWith(".html"))) {
+  const html = readFileSync(file, "utf8");
+  const tocStart = html.indexOf('class="toc"');
+  if (tocStart === -1) continue;
+  const tocEnd = html.indexOf("</nav>", tocStart);
+  const toc = html.slice(tocStart, tocEnd === -1 ? undefined : tocEnd);
+  const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
+  for (const [, target] of toc.matchAll(/href="#([^"]+)"/g)) {
+    tocLinks += 1;
+    if (!ids.has(decode(target))) fail(`${file} TOC links to #${target}, but no element has that id`);
+  }
+}
+if (tocLinks === 0) fail("no table-of-contents links were found to check");
+
 const unique = [...new Set(errors)];
 if (unique.length) {
   console.error(unique.join("\n"));
   process.exit(1);
 }
-console.log(`dist checks passed (${hashes.size} inline script hash${hashes.size === 1 ? "" : "es"})`);
+console.log(`dist checks passed (${hashes.size} inline script hash${hashes.size === 1 ? "" : "es"}, ${tocLinks} TOC links)`);
