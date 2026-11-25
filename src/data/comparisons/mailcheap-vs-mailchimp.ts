@@ -11,20 +11,20 @@ export const mailcheapVsMailchimp: CompareDoc = {
   platformB: "Mailchimp",
   cheaperToggle: false,
   chooseA: "You send on a schedule, the email count fits a published plan, and you do not need a store, A/B tests, or a paywall.",
-  chooseB: "The account runs a shop or long journeys, or you are still inside the free caps or the $13 and $20 starts.",
+  chooseB: "The account runs a shop or long journeys, or you are still inside the free caps or the $13 and $20 starting prices.",
   priceNoteA: "Starter, if about 17,300 emails fit in 20,000. Welcomes can move this to Growth.",
   priceNoteB: "Above 500 contacts. Standard starts at $20 for up to 500 contacts.",
   linkA: { href: mc, label: "MailCheap pricing (affiliate)", affiliate: true },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
     `MailCheap vs Mailchimp compares an email allowance with a contact tier. MailCheap Starter is $19 a month for 20,000 emails and 10,000 subscribers. Growth is $39 for 75,000 emails and 40,000 subscribers. Pro is $79 for 200,000 emails and 100,000 subscribers. Scale is $149, Max is $349, Ultra is $799. Yearly billing costs 10 months. Checked 25 November 2026 on the plans help and the pricing page. There is no hosted free plan.`,
-    `Mailchimp vs MailCheap on the published starts: Free is $0 up to 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Above 500 contacts, check current pricing. Unsubscribed contacts count until you archive them. The limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
+    `Mailchimp vs MailCheap at the published starting prices: Free is $0 up to 250 contacts and 500 sends. Essentials starts at $13 a month and Standard at $20, both for up to 500 contacts. Premium starts at $350. Above 500 contacts, check current pricing. Unsubscribed contacts count until you archive them. The limits are on <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
     {
       topic: "Weekly letter at 4,000 people",
       favors: "MailCheap, on the number that is published",
-      why: "About 17,300 emails fits Starter at $19. A five-week month is 20,000 emails before welcomes, which uses all of Starter. Mailchimp at 4,000 contacts is check current pricing.",
+      why: "About 17,300 emails fits Starter at $19. A five-week month is 20,000 emails before welcomes, which uses all of Starter. At 4,000 contacts, check Mailchimp's current pricing.",
     },
     {
       topic: "Under 250 contacts",
@@ -59,7 +59,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
       name: "Price and caps",
       rows: [
         { feature: "Entry paid price", a: "Starter $19", b: "Essentials $13, up to 500 contacts" },
-        { feature: "What the entry cap is", a: "20,000 emails and 10,000 subscribers", b: "500 contacts and 5,000 sends on that Essentials start" },
+        { feature: "Entry cap", a: "20,000 emails and 10,000 subscribers", b: "500 contacts and 5,000 sends at the Essentials starting price" },
         { feature: "At 4,000, weekly", a: "$19 Starter, if emails fit", b: "Check current pricing" },
         { feature: "At 10,000, weekly", a: "$39 Growth, about 43,300 emails", b: "Check current pricing" },
         { feature: "Free plan", a: "No hosted free plan", b: "250 contacts and 500 sends" },
@@ -116,7 +116,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
   },
   who: [
     `Choose MailCheap when the letter is a scheduled send, you can count the emails, and the missing features are acceptable.`,
-    `Choose Mailchimp when the store or the journeys are why the account exists, or when Free or the $13 start still covers you.`,
+    `Choose Mailchimp when the store or the journeys are why the account exists, or when Free or the $13 starting price still covers you.`,
     `Choose Kit (ConvertKit) Free, not either paid plan, when you only broadcast and you are under 10,000 subscribers.`,
   ],
   switchingTitle: "Switching from Mailchimp to MailCheap",
@@ -129,7 +129,7 @@ export const mailcheapVsMailchimp: CompareDoc = {
   faqs: [
     {
       q: "Is MailCheap cheaper than Mailchimp?",
-      a: "<p>At 4,000 weekly subscribers, Starter is $19 and Mailchimp is check current pricing. At 500 contacts, Essentials is $13 and Starter is $19, so Mailchimp is the lower published start. Under 250 contacts, Mailchimp Free is $0.</p>",
+      a: "<p>At 4,000 weekly subscribers, Starter is $19. For Mailchimp, check current pricing. At 500 contacts, Essentials is $13 and Starter is $19, so Mailchimp has the lower published starting price. Under 250 contacts, Mailchimp Free is $0.</p>",
     },
     {
       q: "Are MailCheap links affiliate links?",

@@ -363,7 +363,7 @@ export function quote(subs: number, issuesPerWeek: number): { emails: number; pe
     platform: "Constant Contact",
     plan: "Lite",
     monthly: null,
-    note: "Lite starts at $12/mo, Standard at $35/mo, and Premium at $80/mo. The bill then depends on contacts and sends, so a specific list size is check current pricing. Prepay for 12 months is up to 15% off those starting prices ($10.20, $29.75, and $68). A 50% offer for three months is a promotion, not the list price. Checked 25 November 2026.",
+    note: "Lite starts at $12/mo, Standard at $35/mo, and Premium at $80/mo. The bill then depends on contacts and sends, so for a specific list size, check current pricing. Prepay for 12 months is up to 15% off those starting prices ($10.20, $29.75, and $68). A 50% offer for three months is a promotion, not the list price. Checked 25 November 2026.",
     href: "https://www.constantcontact.com/pricing",
     affiliate: false,
     available: false,

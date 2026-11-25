@@ -53,7 +53,7 @@ export const beehiivVsSubstack: CompareDoc = {
     `Annual beehiiv is prepaid. At the 5,000 bucket, Lite annual is $1,140 instead of $109 × 12 = $1,308. The $95 figure is $1,140 divided by 12. It is the yearly charge divided by 12, paid up front. At 4,000 subscribers, five weekly sends are 4,000 × 5 = 20,000 emails, before welcome emails and tests.`,
   ],
   featuresIntro: [
-    `beehiiv's feature rows are from beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Substack's rows are from the cost article and the export article. Where Substack does not publish a comparable limit, the cell says so.`,
+    `beehiiv's feature rows are from beehiiv.com/pricing.md, which beehiiv says is generated from the same data as the pricing page. Substack's rows are from the cost article and the export article. Where Substack does not publish a comparable limit, the table notes that.`,
   ],
   matrix: [
     {

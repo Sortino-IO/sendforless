@@ -11,14 +11,14 @@ export const convertkitVsMailchimp: CompareDoc = {
   platformB: "Mailchimp",
   cheaperToggle: true,
   chooseA: "You broadcast to fewer than 10,000 subscribers, or you need sequences and you can pay Creator at a tier Kit actually publishes.",
-  chooseB: "The account is a store audience or a set of journeys, and you have priced the contact tier instead of the $20 starting line.",
+  chooseB: "The account is a store audience or a set of journeys, and you have checked the contact tier instead of stopping at the $20 starting price.",
   priceNoteA: "Free, for broadcasts. Creator above 3,000 subscribers: check current pricing. Pro at 1,000 is $79 a month.",
   priceNoteB: "Past 500 contacts. Essentials starts at $13 and Standard at $20 for up to 500 contacts only.",
   linkA: { href: "https://kit.com/pricing", label: "Kit pricing" },
   linkB: { href: "https://mailchimp.com/pricing/marketing/", label: "Mailchimp pricing" },
   differencesIntro: [
     `Kit, formerly ConvertKit, documents a free plan through 10,000 subscribers for broadcasts, forms, and landing pages. The help article dated 23 September 2026 says sequences and visual automations are not on Free. Creator is $39 a month up to 1,000 subscribers. Kit's billing help uses $59 a month as the Creator price at the 3,000-subscriber tier (the example is 1,200 subscribers paying $59). Pro is $79 a month at 1,000 subscribers on the pricing page. Above 3,000 subscribers on Creator, check kit.com/pricing. Annual plans are 12 months for the price of 10, so the $39 tier is $390 a year, about $32.50 a month, and the $59 tier is $590 a year.`,
-    `Mailchimp Free stops at 250 contacts and 500 sends. <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month and <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> at $13, both for up to 500 contacts. Mailchimp's price above 500 contacts is check current pricing. See <a href="/pricing/convertkit/">Kit pricing</a> and <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
+    `Mailchimp Free stops at 250 contacts and 500 sends. <a href="https://mailchimp.com/landers/pricing/standard/">Standard</a> starts at $20 a month and <a href="https://mailchimp.com/landers/pricing/essentials/">Essentials</a> at $13, both for up to 500 contacts. Above 500 contacts, check Mailchimp's current pricing. See <a href="/pricing/convertkit/">Kit pricing</a> and <a href="/pricing/mailchimp/">Mailchimp pricing</a>.`,
   ],
   differences: [
     {
@@ -29,7 +29,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     {
       topic: "Sequences at 1,000 subscribers",
       favors: "Kit, on a known price",
-      why: "Creator is $39 a month, or about $32.50 billed annually. Mailchimp's longer automations are on Standard, and at 1,000 contacts that price is check current pricing. Essentials flows stop at 4 steps.",
+      why: "Creator is $39 a month, or about $32.50 billed annually. Mailchimp's longer automations are on Standard, and at 1,000 contacts, check current pricing. Essentials flows stop at 4 steps.",
     },
     {
       topic: "Sequences at 4,000 subscribers",
@@ -85,7 +85,7 @@ export const convertkitVsMailchimp: CompareDoc = {
       title: "Sequences and automations",
       paragraphs: [
         `Kit's free plan lets you open the visual automation and sequence screens. Creating one asks you to upgrade. Rules and RSS campaigns are on the same paid list. Free still sends unlimited broadcasts, tags and segments the audience, and runs A/B tests on those broadcasts. A single welcome issue can be a broadcast you send by hand. A sequence that waits three days and branches on a click is Creator.`,
-        `At 1,000 subscribers that upgrade is $39 a month, or $390 a year. At 3,000 it is $59 a month, or $590 a year, using the billing help's annual rule of 12 months for the price of 10. At 4,000 subscribers, broadcasts remain free and the Creator dollar is check current pricing. Pro at 1,000 subscribers is $79 a month and adds the reporting and referral items on Kit's pricing page, including deliverability reporting and a newsletter referral system. Do not buy Pro to get sequences. Sequences start on Creator.`,
+        `At 1,000 subscribers that upgrade is $39 a month, or $390 a year. At 3,000 it is $59 a month, or $590 a year, using the billing help's annual rule of 12 months for the price of 10. At 4,000 subscribers, broadcasts remain free, and for Creator, check current pricing. Pro at 1,000 subscribers is $79 a month and adds the reporting and referral items on Kit's pricing page, including deliverability reporting and a newsletter referral system. Do not buy Pro to get sequences. Sequences start on Creator.`,
         `Mailchimp Essentials is the wrong place to rebuild a long Kit sequence. The pricing help caps Essentials flows at 4 steps. Standard is the expanded automation plan, and above 500 contacts its price is on Mailchimp's site. If you are leaving Mailchimp because of the contact bill and you do not use journeys, Kit Free is the comparison. If you are leaving because you want sequences, price Creator at your confirmed-subscriber count, not at Mailchimp's contact total. Those counts differ when unsubscribed people are still in Mailchimp.`,
         `Kit support on Free is answered in the order received, within 24 hours, according to the free-plan article. That is a queue statement, not a review of how helpful the replies are.`,
       ],
@@ -118,7 +118,7 @@ export const convertkitVsMailchimp: CompareDoc = {
     ],
     cons: [
       "Sequences, visual automations, rules, and RSS need a paid plan.",
-      "Creator's price above 3,000 subscribers is check current pricing.",
+      "Above 3,000 subscribers, check Creator's current pricing.",
       "Paid plans get more of the Creator Network. Free gets five editable slots and a smaller share.",
       "Past 10,000 subscribers, sending stops until you pay.",
     ],
@@ -149,12 +149,12 @@ export const convertkitVsMailchimp: CompareDoc = {
     `Add the new platform's DNS records for the sending domain. Send a test. Kit has no send cap to trip on the first issue. Mailchimp will count every test toward the monthly allowance, and Free will also hit the daily cap of 250. Do not test a 4,000-person list from Mailchimp Free.`,
   ],
   cheaper: [
-    `Under 10,000 subscribers, Kit Free is already $0 for broadcasts. MailCheap at $19 is not cheaper than $0. The MailCheap case starts when you pass 10,000, or when you refuse Creator's price for sequences and you only need to send. At 25,000 weekly subscribers the email estimate is about 108,334. MailCheap Pro is $79 a month for 200,000 emails. Creator at that size is check current pricing on Kit's page. Compare those two numbers on the vendors' pages. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
+    `Under 10,000 subscribers, Kit Free is already $0 for broadcasts. MailCheap at $19 is not cheaper than $0. MailCheap becomes the lower bill when you pass 10,000, or when you do not want to pay Creator's price for sequences and you only need to send. At 25,000 weekly subscribers the email estimate is about 108,334. MailCheap Pro is $79 a month for 200,000 emails. At that size, check Creator's current pricing on Kit's page. Compare those two numbers on the vendors' pages. The affiliate link is <a href="${mc}" rel="sponsored nofollow noopener">MailCheap pricing</a>.`,
   ],
   faqs: [
     {
       q: "How does Mailchimp vs Kit (ConvertKit) compare?",
-      a: "<p>Mailchimp vs Kit, and Mailchimp vs ConvertKit, are this pair read from the other side. Kit Free covers broadcasts to 10,000 subscribers. Mailchimp Free stops at 250 contacts. Sequences on Kit start at $39 a month. A store that already runs in Mailchimp is the reason to stay.</p>",
+      a: "<p>Mailchimp vs Kit, and Mailchimp vs ConvertKit, are the same pair from the other side. Kit Free covers broadcasts to 10,000 subscribers. Mailchimp Free stops at 250 contacts. Sequences on Kit start at $39 a month. A store that already runs in Mailchimp is the reason to stay.</p>",
     },
     {
       q: "Is Kit the same product as ConvertKit?",
